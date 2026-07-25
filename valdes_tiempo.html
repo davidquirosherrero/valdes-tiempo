@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Valdés al Día — ¿Buen tiempo de playa?</title>
+<meta name="description" content="Tiempo real y predicción a 4 días para las playas y parroquias de Valdés (Asturias): viento, presión, oleaje y cielo.">
+<meta name="theme-color" content="#0b1d33">
+<meta property="og:title" content="Valdés al Día — ¿Buen tiempo de playa?">
+<meta property="og:description" content="Tiempo real y predicción para las playas y parroquias de Valdés, Asturias.">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+<style>
+  :root{
+    --navy-deep:#0b1d33; --navy:#122b4a; --chart-cream:#eef1e6;
+    --buoy-yellow:#e8a94c; --seafoam:#5fa8a0; --coral-low:#c65a4e;
+  }
+  *{box-sizing:border-box;}
+  body{ margin:0; background:var(--navy-deep); color:var(--chart-cream); font-family:'Courier New', ui-monospace, monospace; }
+  header{ padding:22px 20px 14px; border-bottom:1px solid rgba(238,241,230,0.15); }
+  .eyebrow{ font-size:10.5px; letter-spacing:0.16em; text-transform:uppercase; color:var(--seafoam); margin:0 0 6px; }
+  h1{ margin:0; font-family:Georgia, 'Times New Roman', serif; font-weight:400; font-size:22px; line-height:1.2; }
+  .tagline{ font-size:12.5px; color:rgba(238,241,230,0.6); margin-top:4px; }
+  main{ max-width:720px; margin:0 auto; }
+
+  .hero{
+    margin:18px 20px; padding:18px; border-radius:8px;
+    background:linear-gradient(135deg, rgba(95,168,160,0.14), rgba(95,168,160,0.02));
+    border:1px solid rgba(95,168,160,0.3);
+  }
+  .hero-label{ font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:var(--seafoam); margin-bottom:8px; }
+  .hero-row{ display:flex; justify-content:space-between; align-items:flex-end; gap:12px; }
+  .hero-etiqueta{ font-family:Georgia, serif; font-size:20px; }
+  .hero-score{ font-size:34px; font-weight:700; line-height:1; }
+  .hero-sub{ font-size:11.5px; color:rgba(238,241,230,0.65); margin-top:8px; line-height:1.6; }
+
+  section{ padding:20px 20px 22px; }
+  section + section{ border-top:1px solid rgba(238,241,230,0.1); }
+  .section-title{ font-size:10.5px; letter-spacing:0.14em; text-transform:uppercase; color:var(--seafoam); margin-bottom:6px; }
+  .section-sub{ font-size:11px; color:rgba(238,241,230,0.5); margin-bottom:14px; line-height:1.5; }
+
+  #map{ height:360px; border-radius:6px; }
+  .leaflet-popup-content-wrapper{ background:var(--navy); color:var(--chart-cream); font-family:'Courier New', monospace; border-radius:4px; }
+  .leaflet-popup-tip{ background:var(--navy); }
+
+  .legend{ display:flex; gap:14px; font-size:10.5px; color:rgba(238,241,230,0.6); margin-bottom:14px; flex-wrap:wrap; }
+  .legend span{ display:inline-flex; align-items:center; gap:5px; }
+  .legend i{ width:9px; height:9px; border-radius:50%; display:inline-block; }
+
+  .day-cards{ display:flex; gap:10px; overflow-x:auto; padding-bottom:6px; }
+  .day-card{
+    min-width:130px; background:rgba(238,241,230,0.04); border:1px solid rgba(238,241,230,0.1);
+    border-radius:6px; padding:12px; flex-shrink:0;
+  }
+  .day-card .d{ font-size:10px; color:var(--seafoam); text-transform:uppercase; letter-spacing:0.05em; }
+  .day-card .t{ font-size:20px; font-weight:700; margin-top:6px; }
+  .day-card .l{ font-size:10.5px; color:rgba(238,241,230,0.6); margin-top:6px; line-height:1.5; }
+
+  .playa-tabs{ display:flex; gap:8px; margin-bottom:14px; }
+  .playa-tab{
+    background:none; border:1px solid rgba(238,241,230,0.25); color:rgba(238,241,230,0.7);
+    font-family:inherit; font-size:11px; padding:6px 12px; border-radius:20px; cursor:pointer;
+  }
+  .playa-tab.active{ background:var(--seafoam); color:var(--navy-deep); border-color:var(--seafoam); font-weight:700; }
+
+  .note{
+    padding:14px 16px; border-left:2px solid var(--buoy-yellow);
+    background:rgba(232,169,76,0.06); font-size:11.5px; line-height:1.55; color:rgba(238,241,230,0.8);
+  }
+  #err{
+    margin:20px; padding:14px 16px; border-left:2px solid var(--coral-low);
+    background:rgba(198,90,78,0.08); font-size:12px; line-height:1.5; display:none;
+  }
+  footer{ padding:18px 20px 32px; font-size:10.5px; color:rgba(238,241,230,0.35); text-align:center; }
+</style>
+</head>
+<body>
+
+<header>
+  <p class="eyebrow">🌤️ VALDÉS AL DÍA</p>
+  <h1>¿Buen tiempo para la playa?</h1>
+  <p class="tagline">Tiempo real + predicción a 4 días, 15 parroquias y 4 playas de Valdés.</p>
+</header>
+
+<div id="err"></div>
+
+<main id="app" style="display:none;">
+  <div class="hero" id="hero"></div>
+
+  <section>
+    <div class="section-title">Predicción — Otur / Luarca</div>
+    <div class="section-sub">Únicas playas de Valdés con ficha propia en AEMET. Cueva y Cadavedo usan la predicción municipal (más abajo).</div>
+    <div class="playa-tabs" id="playaTabs"></div>
+    <div class="day-cards" id="dayCards"></div>
+  </section>
+
+  <section>
+    <div class="section-title">Mapa</div>
+    <div class="legend">
+      <span><i style="background:#5fa8a0"></i> Playa con ficha propia</span>
+      <span><i style="background:#e8a94c"></i> Playa (predicción municipal)</span>
+      <span><i style="background:#7a8ba0"></i> Parroquia</span>
+    </div>
+    <div id="map"></div>
+  </section>
+
+  <section>
+    <div class="section-title">Predicción municipal (Valdés)</div>
+    <div class="section-sub">Aplica por igual a las 9 parroquias de interior y a Cueva/Cadavedo — AEMET no da previsión más fina que por municipio.</div>
+    <div class="day-cards" id="municipioCards"></div>
+  </section>
+
+  <section>
+    <div class="note">
+      <b>Cómo se calcula:</b> el tiempo real y la tendencia de presión vienen de la estación AEMET de
+      Cabo Busto. La predicción de Otur y Luarca es la ficha oficial de "playas" de AEMET (única para
+      esas 2 playas del concejo). El resto de puntos usa la predicción diaria del municipio de Valdés,
+      que es lo más fino que ofrece AEMET a esa escala. La recomendación de arriba es una heurística
+      simple (presión + cielo + viento), no un modelo meteorológico — para decisiones importantes,
+      consulta la predicción oficial de AEMET.
+    </div>
+  </section>
+</main>
+
+<footer>Dato: AEMET OpenData · actualización automática por GitHub Actions</footer>
+
+<script>
+function compass(deg){
+  if(deg === null || deg === undefined) return "";
+  const dirs = ["N","NNE","NE","ENE","E","ESE","SE","SSE","S","SSW","SW","WSW","W","WNW","NW","NNW"];
+  return dirs[Math.round(deg / 22.5) % 16];
+}
+
+function scoreColor(s){
+  if(s >= 65) return "#5fa8a0";
+  if(s >= 40) return "#e8a94c";
+  return "#c65a4e";
+}
+
+function fechaCorta(iso){
+  const f = new Date(iso);
+  return f.toLocaleDateString('es-ES', {weekday:'short', day:'2-digit', month:'2-digit'});
+}
+
+async function loadData(){
+  try{
+    const res = await fetch('valdes.json', { cache: 'no-store' });
+    if(!res.ok) throw new Error('HTTP ' + res.status);
+    const DATA = await res.json();
+    render(DATA);
+  }catch(err){
+    const el = document.getElementById('err');
+    el.style.display = 'block';
+    el.innerHTML = `<b>Error cargando valdes.json:</b> ${err.message}.`;
+  }
+}
+
+let currentPlaya = 'Luarca (1ª, 2ª y 3ª playa)';
+
+function renderDayCards(forecast4d){
+  const el = document.getElementById('dayCards');
+  el.innerHTML = '';
+  if(!forecast4d){ el.innerHTML = '<div class="note">Sin datos para esta playa ahora mismo.</div>'; return; }
+  forecast4d.forEach(d => {
+    const card = document.createElement('div');
+    card.className = 'day-card';
+    const fecha = d.fecha.length === 8
+      ? `${d.fecha.slice(6,8)}/${d.fecha.slice(4,6)}`
+      : d.fecha;
+    card.innerHTML = `
+      <div class="d">${fecha}</div>
+      <div class="t">${d.t_max}°</div>
+      <div class="l">
+        ☁️ ${d.cielo}<br>
+        💨 ${d.viento}<br>
+        🌊 ${d.oleaje}<br>
+        💧 agua ${d.t_agua}° · UV ${d.uv_max}
+      </div>
+    `;
+    el.appendChild(card);
+  });
+}
+
+function render(DATA){
+  document.getElementById('app').style.display = 'block';
+
+  // --- Hero ---
+  const r = DATA.recomendacion;
+  const rt = DATA.real_time;
+  const color = scoreColor(r.score);
+  const trendArrow = rt.pres_tendencia === 'subiendo' ? '↑' : rt.pres_tendencia === 'bajando' ? '↓' : '→';
+  document.getElementById('hero').innerHTML = `
+    <div class="hero-label">Ahora mismo (Cabo Busto)</div>
+    <div class="hero-row">
+      <div>
+        <div class="hero-etiqueta" style="color:${color}">${r.etiqueta}</div>
+        <div class="hero-sub">
+          🌡️ ${rt.temp_c}°C &nbsp; 💨 ${rt.wind_kmh}km/h ${compass(rt.wind_dir)} &nbsp;
+          📟 ${rt.pres_hpa}hPa ${trendArrow} ${rt.pres_tendencia}
+        </div>
+      </div>
+      <div class="hero-score" style="color:${color}">${r.score}</div>
+    </div>
+  `;
+
+  // --- Tabs de playa con ficha ---
+  const playasConFicha = DATA.lugares.filter(l => l.tipo === 'playa' && l.forecast_4d);
+  const tabsEl = document.getElementById('playaTabs');
+  playasConFicha.forEach(p => {
+    const btn = document.createElement('button');
+    btn.className = 'playa-tab' + (p.name === currentPlaya ? ' active' : '');
+    btn.textContent = p.name.split(' (')[0];
+    btn.addEventListener('click', () => {
+      currentPlaya = p.name;
+      document.querySelectorAll('.playa-tab').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      renderDayCards(p.forecast_4d);
+    });
+    tabsEl.appendChild(btn);
+  });
+  const inicial = playasConFicha.find(p => p.name === currentPlaya) || playasConFicha[0];
+  if(inicial) renderDayCards(inicial.forecast_4d);
+
+  // --- Mapa ---
+  const map = L.map('map').setView([43.51, -6.50], 11);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap contributors', maxZoom: 15
+  }).addTo(map);
+
+  DATA.lugares.forEach(l => {
+    let color, radius;
+    if(l.tipo === 'playa' && l.forecast_4d){ color = '#5fa8a0'; radius = 9; }
+    else if(l.tipo === 'playa'){ color = '#e8a94c'; radius = 9; }
+    else { color = '#7a8ba0'; radius = 6; }
+
+    const marker = L.circleMarker([l.lat, l.lon], {
+      radius, color, fillColor: color, fillOpacity: 0.85, weight: 2
+    }).addTo(map);
+
+    let popupHtml = `<div style="font-weight:600;">${l.name}</div>`;
+    if(l.tipo === 'playa' && l.forecast_4d){
+      const hoy = l.forecast_4d[0];
+      popupHtml += `<div style="font-size:11px;opacity:0.8;margin-top:4px;">☁️ ${hoy.cielo} · 💨 ${hoy.viento} · 🌊 ${hoy.oleaje}<br>🌡️ ${hoy.t_max}° · 💧 ${hoy.t_agua}°</div>`;
+    } else {
+      popupHtml += `<div style="font-size:11px;opacity:0.6;margin-top:4px;">Sin ficha propia — ver predicción municipal</div>`;
+    }
+    marker.bindPopup(popupHtml);
+  });
+
+  // --- Predicción municipal ---
+  const munEl = document.getElementById('municipioCards');
+  (DATA.forecast_municipio || []).forEach(d => {
+    const card = document.createElement('div');
+    card.className = 'day-card';
+    card.innerHTML = `
+      <div class="d">${fechaCorta(d.fecha)}</div>
+      <div class="t">${d.t_max}° / ${d.t_min}°</div>
+      <div class="l">
+        ☁️ ${d.cielo || '—'}<br>
+        💨 ${d.viento_kmh ?? '—'}km/h ${d.viento_dir || ''}<br>
+        🌧️ ${d.prob_precipitacion ?? '—'}% lluvia
+      </div>
+    `;
+    munEl.appendChild(card);
+  });
+}
+
+loadData();
+</script>
+</body>
+</html>
