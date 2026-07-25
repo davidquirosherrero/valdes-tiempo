@@ -9,8 +9,7 @@
 <meta property="og:title" content="Valdés al Día — ¿Buen tiempo de playa?">
 <meta property="og:description" content="Tiempo real y predicción para las playas y parroquias de Valdés, Asturias.">
 <meta property="og:type" content="website">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+
 <style>
   :root{
     --navy-deep:#0b1d33; --navy:#122b4a; --chart-cream:#eef1e6;
@@ -40,13 +39,6 @@
   .section-title{ font-size:10.5px; letter-spacing:0.14em; text-transform:uppercase; color:var(--seafoam); margin-bottom:6px; }
   .section-sub{ font-size:11px; color:rgba(238,241,230,0.5); margin-bottom:14px; line-height:1.5; }
 
-  #map{ height:360px; border-radius:6px; }
-  .leaflet-popup-content-wrapper{ background:var(--navy); color:var(--chart-cream); font-family:'Courier New', monospace; border-radius:4px; }
-  .leaflet-popup-tip{ background:var(--navy); }
-
-  .legend{ display:flex; gap:14px; font-size:10.5px; color:rgba(238,241,230,0.6); margin-bottom:14px; flex-wrap:wrap; }
-  .legend span{ display:inline-flex; align-items:center; gap:5px; }
-  .legend i{ width:9px; height:9px; border-radius:50%; display:inline-block; }
 
   .day-cards{ display:flex; gap:10px; overflow-x:auto; padding-bottom:6px; }
   .day-card{
@@ -93,16 +85,6 @@
     <div class="section-sub">Únicas playas de Valdés con ficha propia en AEMET. Cueva y Cadavedo usan la predicción municipal (más abajo).</div>
     <div class="playa-tabs" id="playaTabs"></div>
     <div class="day-cards" id="dayCards"></div>
-  </section>
-
-  <section>
-    <div class="section-title">Mapa</div>
-    <div class="legend">
-      <span><i style="background:#5fa8a0"></i> Playa con ficha propia</span>
-      <span><i style="background:#e8a94c"></i> Playa (predicción municipal)</span>
-      <span><i style="background:#7a8ba0"></i> Parroquia</span>
-    </div>
-    <div id="map"></div>
   </section>
 
   <section>
@@ -221,37 +203,6 @@ function render(DATA){
   });
   const inicial = playasConFicha.find(p => p.name === currentPlaya) || playasConFicha[0];
   if(inicial) renderDayCards(inicial.forecast_4d);
-
-  // --- Mapa ---
-  const map = L.map('map').setView([43.51, -6.50], 11);
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '© OpenStreetMap contributors', maxZoom: 15
-  }).addTo(map);
-
-  DATA.lugares.forEach(l => {
-    let color, radius;
-    if(l.tipo === 'playa' && l.forecast_4d){ color = '#5fa8a0'; radius = 9; }
-    else if(l.tipo === 'playa'){ color = '#e8a94c'; radius = 9; }
-    else { color = '#7a8ba0'; radius = 6; }
-
-    const marker = L.circleMarker([l.lat, l.lon], {
-      radius, color, fillColor: color, fillOpacity: 0.85, weight: 2
-    }).addTo(map);
-
-    let popupHtml = `<div style="font-weight:600;">${l.name}</div>`;
-    if(l.tipo === 'playa' && l.forecast_4d){
-      const hoy = l.forecast_4d[0];
-      popupHtml += `<div style="font-size:11px;opacity:0.8;margin-top:4px;">☁️ ${hoy.cielo} · 💨 ${hoy.viento} · 🌊 ${hoy.oleaje}<br>🌡️ ${hoy.t_max}° · 💧 ${hoy.t_agua}°</div>`;
-    } else {
-      const hoyMun = (DATA.forecast_municipio || [])[0];
-      if(hoyMun){
-        popupHtml += `<div style="font-size:11px;opacity:0.8;margin-top:4px;">☁️ ${hoyMun.cielo || '—'}<br>🌡️ ${hoyMun.t_max}° / ${hoyMun.t_min}° &nbsp; 💨 ${hoyMun.viento_kmh ?? '—'}km/h ${hoyMun.viento_dir || ''}<br>🌧️ ${hoyMun.prob_precipitacion ?? '—'}% lluvia</div>`;
-      } else {
-        popupHtml += `<div style="font-size:11px;opacity:0.6;margin-top:4px;">Sin dato disponible ahora mismo</div>`;
-      }
-    }
-    marker.bindPopup(popupHtml);
-  });
 
   // --- Predicción municipal ---
   const munEl = document.getElementById('municipioCards');
