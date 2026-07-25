@@ -51,6 +51,111 @@
       "prob_precipitacion": null
     }
   ],
+  "forecast_horaria": [
+    {
+      "fecha_hora": "2026-07-25T21:00",
+      "temp": "19",
+      "cielo": "Cubierto con lluvia escasa",
+      "prob_precipitacion": null,
+      "viento_dir": "NO",
+      "viento_kmh": "13"
+    },
+    {
+      "fecha_hora": "2026-07-25T22:00",
+      "temp": "18",
+      "cielo": "Muy nuboso con lluvia escasa",
+      "prob_precipitacion": null,
+      "viento_dir": "O",
+      "viento_kmh": "10"
+    },
+    {
+      "fecha_hora": "2026-07-25T23:00",
+      "temp": "18",
+      "cielo": "Cubierto con lluvia escasa",
+      "prob_precipitacion": null,
+      "viento_dir": "O",
+      "viento_kmh": "10"
+    },
+    {
+      "fecha_hora": "2026-07-26T00:00",
+      "temp": "17",
+      "cielo": "Cubierto con lluvia escasa",
+      "prob_precipitacion": null,
+      "viento_dir": "O",
+      "viento_kmh": "9"
+    },
+    {
+      "fecha_hora": "2026-07-26T01:00",
+      "temp": "17",
+      "cielo": "Muy nuboso con lluvia escasa",
+      "prob_precipitacion": null,
+      "viento_dir": "O",
+      "viento_kmh": "7"
+    },
+    {
+      "fecha_hora": "2026-07-26T02:00",
+      "temp": "17",
+      "cielo": "Cubierto",
+      "prob_precipitacion": null,
+      "viento_dir": "SO",
+      "viento_kmh": "9"
+    },
+    {
+      "fecha_hora": "2026-07-26T03:00",
+      "temp": "17",
+      "cielo": "Cubierto",
+      "prob_precipitacion": null,
+      "viento_dir": "SO",
+      "viento_kmh": "6"
+    },
+    {
+      "fecha_hora": "2026-07-26T04:00",
+      "temp": "17",
+      "cielo": "Poco nuboso",
+      "prob_precipitacion": null,
+      "viento_dir": "SO",
+      "viento_kmh": "8"
+    },
+    {
+      "fecha_hora": "2026-07-26T05:00",
+      "temp": "17",
+      "cielo": "Poco nuboso",
+      "prob_precipitacion": null,
+      "viento_dir": "SO",
+      "viento_kmh": "7"
+    },
+    {
+      "fecha_hora": "2026-07-26T06:00",
+      "temp": "17",
+      "cielo": "Despejado",
+      "prob_precipitacion": null,
+      "viento_dir": "S",
+      "viento_kmh": "7"
+    },
+    {
+      "fecha_hora": "2026-07-26T07:00",
+      "temp": "16",
+      "cielo": "Despejado",
+      "prob_precipitacion": null,
+      "viento_dir": "S",
+      "viento_kmh": "9"
+    },
+    {
+      "fecha_hora": "2026-07-26T08:00",
+      "temp": "17",
+      "cielo": "Muy nuboso",
+      "prob_precipitacion": null,
+      "viento_dir": "S",
+      "viento_kmh": "9"
+    }
+  ],
+  "avisos": [],
+  "maritima": {
+    "texto": "Oeste de Peñas: Componente W 3 o 4, ocasionalmente 5. Marejadilla o marejada. \r\n Este de Peñas: Componente W 4 o 5 amainando a 3 o 4 desde la tarde. Principalmente marejada. \r\n Ambas zonas: Mar de fondo del N o NW en torno a 1 m. Aguaceros ocasionales hasta la mañana.",
+    "avisos_texto": "No hay avisos",
+    "vigencia_inicio": "2026-07-25T20:00:00",
+    "vigencia_fin": "2026-07-26T20:00:00"
+  },
   "lugares": [
     {
       "name": "Otur",
@@ -231,5 +336,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-07-25T21:50:08.787488+00:00"
+  "generated_at": "2026-07-25T22:05:23.998428+00:00"
 }
