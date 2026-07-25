@@ -1,0 +1,235 @@
+{
+  "real_time": {
+    "ts": "2026-07-25T21:00:00+0000",
+    "temp_c": 19.0,
+    "wind_kmh": 15.8,
+    "wind_dir": 279.0,
+    "gust_kmh": 24.1,
+    "pres_hpa": 1012.9,
+    "pres_tendencia": "estable",
+    "humedad": 84.0
+  },
+  "recomendacion": {
+    "score": 60,
+    "etiqueta": "Aceptable, revisa el viento"
+  },
+  "forecast_municipio": [
+    {
+      "fecha": "2026-07-25T00:00:00",
+      "cielo": "Intervalos nubosos con lluvia escasa",
+      "viento_dir": "SO",
+      "viento_kmh": 10,
+      "t_max": 22,
+      "t_min": 16,
+      "prob_precipitacion": 80
+    },
+    {
+      "fecha": "2026-07-26T00:00:00",
+      "cielo": "Nuboso",
+      "viento_dir": "NO",
+      "viento_kmh": 10,
+      "t_max": 24,
+      "t_min": 16,
+      "prob_precipitacion": 5
+    },
+    {
+      "fecha": "2026-07-27T00:00:00",
+      "cielo": "Intervalos nubosos",
+      "viento_dir": "NE",
+      "viento_kmh": 25,
+      "t_max": 25,
+      "t_min": 18,
+      "prob_precipitacion": 10
+    },
+    {
+      "fecha": "2026-07-28T00:00:00",
+      "cielo": "Poco nuboso",
+      "viento_dir": "NE",
+      "viento_kmh": 10,
+      "t_max": 28,
+      "t_min": 16,
+      "prob_precipitacion": null
+    }
+  ],
+  "lugares": [
+    {
+      "name": "Otur",
+      "lat": 43.5523,
+      "lon": -6.597,
+      "tipo": "playa",
+      "ficha_aemet": "Otur",
+      "forecast_4d": [
+        {
+          "fecha": "20260725",
+          "cielo": "nuboso",
+          "viento": "flojo",
+          "oleaje": "moderado",
+          "t_max": 22,
+          "t_agua": 21,
+          "uv_max": 7
+        },
+        {
+          "fecha": "20260726",
+          "cielo": "nuboso",
+          "viento": "flojo",
+          "oleaje": "débil",
+          "t_max": 23,
+          "t_agua": 22,
+          "uv_max": 8
+        },
+        {
+          "fecha": "20260727",
+          "cielo": "despejado",
+          "viento": "flojo",
+          "oleaje": "débil",
+          "t_max": 24,
+          "t_agua": 21,
+          "uv_max": 8
+        }
+      ]
+    },
+    {
+      "name": "Luarca (1ª, 2ª y 3ª playa)",
+      "lat": 43.5493,
+      "lon": -6.5426,
+      "tipo": "playa",
+      "ficha_aemet": "Luarca",
+      "forecast_4d": [
+        {
+          "fecha": "20260725",
+          "cielo": "nuboso",
+          "viento": "flojo",
+          "oleaje": "débil",
+          "t_max": 22,
+          "t_agua": 21,
+          "uv_max": 7
+        },
+        {
+          "fecha": "20260726",
+          "cielo": "nuboso",
+          "viento": "flojo",
+          "oleaje": "débil",
+          "t_max": 23,
+          "t_agua": 22,
+          "uv_max": 8
+        },
+        {
+          "fecha": "20260727",
+          "cielo": "despejado",
+          "viento": "flojo",
+          "oleaje": "débil",
+          "t_max": 25,
+          "t_agua": 22,
+          "uv_max": 8
+        }
+      ]
+    },
+    {
+      "name": "Cueva",
+      "lat": 43.5497,
+      "lon": -6.4722,
+      "tipo": "playa",
+      "ficha_aemet": null,
+      "forecast_4d": null
+    },
+    {
+      "name": "Cadavedo (La Ribeirona)",
+      "lat": 43.5512,
+      "lon": -6.3715,
+      "tipo": "playa",
+      "ficha_aemet": null,
+      "forecast_4d": null
+    },
+    {
+      "name": "Luarca",
+      "lat": 43.543,
+      "lon": -6.535,
+      "tipo": "parroquia"
+    },
+    {
+      "name": "Otur",
+      "lat": 43.561,
+      "lon": -6.59,
+      "tipo": "parroquia"
+    },
+    {
+      "name": "Barcia",
+      "lat": 43.555,
+      "lon": -6.505,
+      "tipo": "parroquia"
+    },
+    {
+      "name": "Canero",
+      "lat": 43.546,
+      "lon": -6.455,
+      "tipo": "parroquia"
+    },
+    {
+      "name": "Cadavedo",
+      "lat": 43.567,
+      "lon": -6.377,
+      "tipo": "parroquia"
+    },
+    {
+      "name": "Muñás",
+      "lat": 43.485,
+      "lon": -6.505,
+      "tipo": "parroquia"
+    },
+    {
+      "name": "Trevías",
+      "lat": 43.455,
+      "lon": -6.525,
+      "tipo": "parroquia"
+    },
+    {
+      "name": "Paredes",
+      "lat": 43.43,
+      "lon": -6.555,
+      "tipo": "parroquia"
+    },
+    {
+      "name": "Santiago",
+      "lat": 43.47,
+      "lon": -6.44,
+      "tipo": "parroquia"
+    },
+    {
+      "name": "Ayones",
+      "lat": 43.42,
+      "lon": -6.47,
+      "tipo": "parroquia"
+    },
+    {
+      "name": "Arcallana",
+      "lat": 43.5,
+      "lon": -6.585,
+      "tipo": "parroquia"
+    },
+    {
+      "name": "Alienes",
+      "lat": 43.46,
+      "lon": -6.585,
+      "tipo": "parroquia"
+    },
+    {
+      "name": "Carcedo",
+      "lat": 43.515,
+      "lon": -6.44,
+      "tipo": "parroquia"
+    },
+    {
+      "name": "Castañeo",
+      "lat": 43.53,
+      "lon": -6.47,
+      "tipo": "parroquia"
+    },
+    {
+      "name": "La Montaña",
+      "lat": 43.44,
+      "lon": -6.47,
+      "tipo": "parroquia"
+    }
+  ],
+  "generated_at": "2026-07-25T21:50:08.787488+00:00"
+}
