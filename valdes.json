@@ -1,13 +1,13 @@
 {
   "real_time": {
-    "ts": "2026-07-25T21:00:00+0000",
-    "temp_c": 19.0,
-    "wind_kmh": 15.8,
-    "wind_dir": 279.0,
-    "gust_kmh": 24.1,
-    "pres_hpa": 1012.9,
+    "ts": "2026-07-25T22:00:00+0000",
+    "temp_c": 18.9,
+    "wind_kmh": 17.6,
+    "wind_dir": 282.0,
+    "gust_kmh": 23.4,
+    "pres_hpa": 1013.2,
     "pres_tendencia": "estable",
-    "humedad": 84.0
+    "humedad": 86.0
   },
   "recomendacion": {
     "score": 60,
@@ -336,5 +336,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-07-25T22:05:23.998428+00:00"
+  "generated_at": "2026-07-25T23:11:44.189993+00:00"
 }
