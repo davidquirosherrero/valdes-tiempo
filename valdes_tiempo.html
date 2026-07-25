@@ -243,7 +243,12 @@ function render(DATA){
       const hoy = l.forecast_4d[0];
       popupHtml += `<div style="font-size:11px;opacity:0.8;margin-top:4px;">☁️ ${hoy.cielo} · 💨 ${hoy.viento} · 🌊 ${hoy.oleaje}<br>🌡️ ${hoy.t_max}° · 💧 ${hoy.t_agua}°</div>`;
     } else {
-      popupHtml += `<div style="font-size:11px;opacity:0.6;margin-top:4px;">Sin ficha propia — ver predicción municipal</div>`;
+      const hoyMun = (DATA.forecast_municipio || [])[0];
+      if(hoyMun){
+        popupHtml += `<div style="font-size:11px;opacity:0.8;margin-top:4px;">☁️ ${hoyMun.cielo || '—'}<br>🌡️ ${hoyMun.t_max}° / ${hoyMun.t_min}° &nbsp; 💨 ${hoyMun.viento_kmh ?? '—'}km/h ${hoyMun.viento_dir || ''}<br>🌧️ ${hoyMun.prob_precipitacion ?? '—'}% lluvia</div>`;
+      } else {
+        popupHtml += `<div style="font-size:11px;opacity:0.6;margin-top:4px;">Sin dato disponible ahora mismo</div>`;
+      }
     }
     marker.bindPopup(popupHtml);
   });
