@@ -34,8 +34,11 @@ DECISIONES TOMADAS, A REVISAR:
 
 import json
 import os
+import io
+import tarfile
 import urllib.request
 import urllib.error
+import xml.etree.ElementTree as ET
 from datetime import datetime, timezone
 
 AEMET_API_KEY = os.environ.get("AEMET_API_KEY", "")
@@ -43,6 +46,14 @@ AEMET_API_KEY = os.environ.get("AEMET_API_KEY", "")
 AEMET_TODAS_URL = "https://opendata.aemet.es/opendata/api/observacion/convencional/todas"
 AEMET_PLAYA_URL = "https://opendata.aemet.es/opendata/api/prediccion/especifica/playa/{id_playa}"
 AEMET_MUNICIPIO_URL = "https://opendata.aemet.es/opendata/api/prediccion/especifica/municipio/diaria/{id_municipio}"
+AEMET_MUNICIPIO_HORARIA_URL = "https://opendata.aemet.es/opendata/api/prediccion/especifica/municipio/horaria/{id_municipio}"
+AEMET_AVISOS_URL = "https://opendata.aemet.es/opendata/api/avisos_cap/ultimoelaborado/area/{area}"
+AEMET_MARITIMA_URL = "https://opendata.aemet.es/opendata/api/prediccion/maritima/costera/costa/{costa}"
+
+AREA_AVISOS_ASTURIAS = "63"
+ZONA_AVISOS_VALDES = "633301"  # "Litoral occidental asturiano"
+COSTA_CANTABRICO = "41"        # Asturias, Cantabria, País Vasco
+ZONA_MARITIMA_ASTURIAS = "Aguas costeras de Asturias"
 
 IDEMA_CABO_BUSTO = "1283U"
 MUNICIPIO_VALDES = "33034"
@@ -180,13 +191,119 @@ def fetch_municipio_forecast():
     return out
 
 
-def recomendacion(real_time, playa_hoy):
-    """Heurística simple: no es un modelo, solo orienta."""
+def fetch_avisos():
+    """
+    Avisos oficiales de AEMET para la zona 'Litoral occidental asturiano'
+    (la de Valdés). Devuelve solo los fenómenos que NO estén en nivel
+    verde (verde = sin aviso relevante), para no llenar la pantalla de
+    ruido -- si todo está en verde, se devuelve una lista vacía.
+    """
+    meta = _get_json(f"{AEMET_AVISOS_URL.format(area=AREA_AVISOS_ASTURIAS)}?api_key={AEMET_API_KEY}")
+    if "datos" not in meta:
+        raise RuntimeError(f"AEMET avisos no devolvió 'datos': {meta}")
+    req = urllib.request.Request(meta["datos"], headers={"User-Agent": "Mozilla/5.0"})
+    with urllib.request.urlopen(req, timeout=20) as resp:
+        raw = resp.read()
+
+    ns = {"cap": "urn:oasis:names:tc:emergency:cap:1.2"}
+    avisos = []
+    with tarfile.open(fileobj=io.BytesIO(raw)) as tar:
+        for name in tar.getnames():
+            xml_bytes = tar.extractfile(name).read()
+            root = ET.fromstring(xml_bytes)
+            for info in root.findall("cap:info", ns):
+                lang = info.find("cap:language", ns)
+                if lang is None or lang.text != "es-ES":
+                    continue  # nos saltamos la copia en inglés
+                event = info.find("cap:event", ns).text
+                for area in info.findall("cap:area", ns):
+                    geocode = area.find("cap:geocode/cap:value", ns)
+                    if geocode is None or geocode.text != ZONA_AVISOS_VALDES:
+                        continue
+                    nivel = None
+                    for param in info.findall("cap:parameter", ns):
+                        if param.find("cap:valueName", ns).text == "AEMET-Meteoalerta nivel":
+                            nivel = param.find("cap:value", ns).text
+                    if nivel == "verde":
+                        continue  # sin relevancia, no lo mostramos
+                    onset = info.find("cap:onset", ns)
+                    expires = info.find("cap:expires", ns)
+                    avisos.append({
+                        "evento": event,
+                        "nivel": nivel,
+                        "onset": onset.text if onset is not None else None,
+                        "expires": expires.text if expires is not None else None,
+                    })
+    return avisos
+
+
+def fetch_maritima():
+    """Boletín marítimo costero de AEMET, zona 'Aguas costeras de Asturias'
+    (distingue 'Oeste de Peñas' -- que es donde está Valdés -- de 'Este de
+    Peñas')."""
+    data = _aemet_fetch(AEMET_MARITIMA_URL.format(costa=COSTA_CANTABRICO))
+    d0 = data[0]
+    for zona in d0["prediccion"]["zona"]:
+        if zona["nombre"] == ZONA_MARITIMA_ASTURIAS:
+            subzona = zona["subzona"][0]
+            return {
+                "texto": subzona["texto"].strip(),
+                "avisos_texto": d0["aviso"]["texto"],
+                "vigencia_inicio": d0["prediccion"]["inicio"],
+                "vigencia_fin": d0["prediccion"]["fin"],
+            }
+    return None
+
+
+def fetch_hourly_forecast(horas=12):
+    """Predicción municipal por horas -- las próximas `horas` horas desde
+    ahora, con cielo, temperatura, viento y probabilidad de lluvia."""
+    data = _aemet_fetch(AEMET_MUNICIPIO_HORARIA_URL.format(id_municipio=MUNICIPIO_VALDES))
+    dias = data[0]["prediccion"]["dia"]
+
+    # Índice de viento: solo nos quedamos con las entradas que traen
+    # direccion+velocidad (las que solo traen 'value' son la racha, aparte)
+    salida = []
+    for dia in dias:
+        fecha_base = dia["fecha"][:10]
+        cielo_por_hora = {c["periodo"]: c.get("descripcion") for c in dia.get("estadoCielo", [])}
+        precip_por_hora = {p["periodo"]: p.get("value") for p in dia.get("probPrecipitacion", [])}
+        viento_por_hora = {}
+        for v in dia.get("vientoAndRachaMax", []):
+            if "direccion" in v:
+                viento_por_hora[v["periodo"]] = {
+                    "dir": v["direccion"][0] if v["direccion"] else None,
+                    "vel": v["velocidad"][0] if v.get("velocidad") else None,
+                }
+        for t in dia.get("temperatura", []):
+            hora = t["periodo"]
+            salida.append({
+                "fecha_hora": f"{fecha_base}T{hora}:00",
+                "temp": t.get("value"),
+                "cielo": cielo_por_hora.get(hora),
+                "prob_precipitacion": precip_por_hora.get(hora),
+                "viento_dir": viento_por_hora.get(hora, {}).get("dir"),
+                "viento_kmh": viento_por_hora.get(hora, {}).get("vel"),
+            })
+        if len(salida) >= horas:
+            break
+    return salida[:horas]
+
+
+def recomendacion(real_time, playa_hoy, avisos):
+    """Heurística simple: no es un modelo, solo orienta. Un aviso oficial
+    activo (naranja/rojo) pesa más que cualquier otra cosa."""
+    if any(a["nivel"] in ("naranja", "rojo") for a in avisos):
+        return 15, "Aviso oficial activo — revisa AEMET antes de salir"
+
     puntos = 50
     if real_time["pres_tendencia"] == "subiendo":
         puntos += 20
     elif real_time["pres_tendencia"] == "bajando":
         puntos -= 20
+
+    if avisos:  # amarillo: penaliza pero no bloquea
+        puntos -= 15
 
     if playa_hoy:
         if playa_hoy["cielo"] in ("despejado", "poco nuboso"):
@@ -230,8 +347,29 @@ def main():
         print(f"AVISO: fallo prediccion municipal: {e}")
         forecast_municipio = None
 
+    try:
+        avisos = fetch_avisos()
+        print(f"Avisos activos (no verdes): {len(avisos)}")
+    except (urllib.error.URLError, RuntimeError, KeyError, tarfile.TarError, ET.ParseError) as e:
+        print(f"AVISO: fallo avisos: {e}")
+        avisos = []
+
+    try:
+        maritima = fetch_maritima()
+        print(f"Marítima costera: {'OK' if maritima else 'sin zona encontrada'}")
+    except (urllib.error.URLError, RuntimeError, KeyError) as e:
+        print(f"AVISO: fallo marítima costera: {e}")
+        maritima = None
+
+    try:
+        horaria = fetch_hourly_forecast()
+        print(f"Predicción horaria: {len(horaria)} horas")
+    except (urllib.error.URLError, RuntimeError, KeyError) as e:
+        print(f"AVISO: fallo predicción horaria: {e}")
+        horaria = []
+
     playa_hoy_otur = forecasts_playas.get("Otur", [None])[0] if forecasts_playas.get("Otur") else None
-    score, etiqueta = recomendacion(real_time, playa_hoy_otur)
+    score, etiqueta = recomendacion(real_time, playa_hoy_otur, avisos)
 
     lugares_out = []
     for p in PLAYAS:
@@ -247,6 +385,9 @@ def main():
         "real_time": real_time,
         "recomendacion": {"score": score, "etiqueta": etiqueta},
         "forecast_municipio": forecast_municipio,
+        "forecast_horaria": horaria,
+        "avisos": avisos,
+        "maritima": maritima,
         "lugares": lugares_out,
         "generated_at": datetime.now(timezone.utc).isoformat(),
     }
