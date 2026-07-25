@@ -64,6 +64,13 @@
     margin:20px; padding:14px 16px; border-left:2px solid var(--coral-low);
     background:rgba(198,90,78,0.08); font-size:12px; line-height:1.5; display:none;
   }
+  .aviso-card{
+    margin:0 20px 18px; padding:14px 16px; border-radius:6px;
+    font-size:12px; line-height:1.6;
+  }
+  .aviso-amarillo{ background:rgba(232,169,76,0.12); border-left:3px solid var(--buoy-yellow); }
+  .aviso-naranja{ background:rgba(230,126,34,0.14); border-left:3px solid #e67e22; }
+  .aviso-rojo{ background:rgba(198,90,78,0.16); border-left:3px solid var(--coral-low); }
   footer{ padding:18px 20px 32px; font-size:10.5px; color:rgba(238,241,230,0.35); text-align:center; }
 </style>
 </head>
@@ -79,6 +86,20 @@
 
 <main id="app" style="display:none;">
   <div class="hero" id="hero"></div>
+
+  <div id="avisosBox"></div>
+
+  <section>
+    <div class="section-title">Próximas horas</div>
+    <div class="section-sub">Predicción horaria del municipio.</div>
+    <div class="day-cards" id="horaCards"></div>
+  </section>
+
+  <section>
+    <div class="section-title">Boletín marítimo — Aguas costeras de Asturias</div>
+    <div class="section-sub">Oeste de Peñas es la franja que incluye Valdés.</div>
+    <div class="note" id="maritimaBox" style="border-color:var(--seafoam);background:rgba(95,168,160,0.06);"></div>
+  </section>
 
   <section>
     <div class="section-title">Predicción — Otur / Luarca</div>
@@ -185,6 +206,45 @@ function render(DATA){
       <div class="hero-score" style="color:${color}">${r.score}</div>
     </div>
   `;
+
+  // --- Avisos oficiales ---
+  const avisosBox = document.getElementById('avisosBox');
+  if(DATA.avisos && DATA.avisos.length > 0){
+    DATA.avisos.forEach(a => {
+      const div = document.createElement('div');
+      div.className = `aviso-card aviso-${a.nivel}`;
+      div.innerHTML = `⚠️ <b>${a.evento}</b> (nivel ${a.nivel})<br>
+        Vigente ${new Date(a.onset).toLocaleString('es-ES', {day:'2-digit', month:'2-digit', hour:'2-digit', minute:'2-digit'})}
+        – ${new Date(a.expires).toLocaleString('es-ES', {day:'2-digit', month:'2-digit', hour:'2-digit', minute:'2-digit'})}`;
+      avisosBox.appendChild(div);
+    });
+  }
+
+  // --- Predicción horaria ---
+  const horaEl = document.getElementById('horaCards');
+  (DATA.forecast_horaria || []).forEach(h => {
+    const card = document.createElement('div');
+    card.className = 'day-card';
+    const hora = h.fecha_hora.split('T')[1].slice(0,5);
+    card.innerHTML = `
+      <div class="d">${hora}h</div>
+      <div class="t">${h.temp}°</div>
+      <div class="l">
+        ☁️ ${h.cielo || '—'}<br>
+        💨 ${h.viento_kmh ?? '—'}km/h ${h.viento_dir || ''}<br>
+        🌧️ ${h.prob_precipitacion ?? '0'}%
+      </div>
+    `;
+    horaEl.appendChild(card);
+  });
+
+  // --- Marítima costera ---
+  const maritimaBox = document.getElementById('maritimaBox');
+  if(DATA.maritima){
+    maritimaBox.innerHTML = `<b>Aviso marítimo:</b> ${DATA.maritima.avisos_texto}<br><br>${DATA.maritima.texto.replace(/\n/g, '<br>')}`;
+  } else {
+    maritimaBox.innerHTML = 'Sin dato marítimo disponible ahora mismo.';
+  }
 
   // --- Tabs de playa con ficha ---
   const playasConFicha = DATA.lugares.filter(l => l.tipo === 'playa' && l.forecast_4d);
