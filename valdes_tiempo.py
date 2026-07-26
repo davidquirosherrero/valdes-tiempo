@@ -38,18 +38,11 @@ import io
 import tarfile
 import urllib.request
 import urllib.error
-import urllib.parse
 import xml.etree.ElementTree as ET
 from datetime import datetime, timezone
 from zoneinfo import ZoneInfo
 
 AEMET_API_KEY = os.environ.get("AEMET_API_KEY", "")
-
-NETATMO_CLIENT_ID = os.environ.get("NETATMO_CLIENT_ID", "")
-NETATMO_CLIENT_SECRET = os.environ.get("NETATMO_CLIENT_SECRET", "")
-NETATMO_REFRESH_TOKEN = os.environ.get("NETATMO_REFRESH_TOKEN", "")
-# Bounding box alrededor de Valdés para estaciones públicas vecinas
-NETATMO_BBOX = {"lat_ne": 43.65, "lon_ne": -6.30, "lat_sw": 43.40, "lon_sw": -6.95}
 
 AEMET_TODAS_URL = "https://opendata.aemet.es/opendata/api/observacion/convencional/todas"
 AEMET_PLAYA_URL = "https://opendata.aemet.es/opendata/api/prediccion/especifica/playa/{id_playa}"
@@ -336,95 +329,6 @@ def fetch_hourly_forecast(horas=18):
     return salida[:horas]
 
 
-def netatmo_refresh_access_token():
-    """Cambia el refresh_token por un access_token nuevo (caduca a las 3h,
-    por eso se pide uno nuevo en cada ejecución del script en vez de
-    guardar uno fijo)."""
-    if not (NETATMO_CLIENT_ID and NETATMO_CLIENT_SECRET and NETATMO_REFRESH_TOKEN):
-        return None
-    data = urllib.parse.urlencode({
-        "grant_type": "refresh_token",
-        "refresh_token": NETATMO_REFRESH_TOKEN,
-        "client_id": NETATMO_CLIENT_ID,
-        "client_secret": NETATMO_CLIENT_SECRET,
-    }).encode()
-    req = urllib.request.Request("https://api.netatmo.com/oauth2/token", data=data,
-                                  headers={"User-Agent": "Mozilla/5.0"})
-    with urllib.request.urlopen(req, timeout=15) as resp:
-        tok = json.loads(resp.read().decode("utf-8"))
-    return tok.get("access_token")
-
-
-def fetch_netatmo_own(access_token):
-    """Datos de tu propia estación: interior, exterior, viento, lluvia,
-    presión con la tendencia que ya calcula el propio Netatmo. No se
-    incluye el nombre que le hayas puesto a la estación (p.ej. "Casa"),
-    ni su ubicación exacta -- solo las lecturas."""
-    url = f"https://api.netatmo.com/api/getstationsdata?access_token={access_token}"
-    data = _get_json(url)
-    devices = data.get("body", {}).get("devices", [])
-    if not devices:
-        return None
-    main = devices[0]
-    dd = main.get("dashboard_data", {})
-    out = {
-        "_device_id": main.get("_id"),  # solo para excluirla de "vecinas"; se quita antes de guardar el JSON
-        "interior": {"temp_c": dd.get("Temperature"), "co2": dd.get("CO2"), "humedad": dd.get("Humidity")},
-        "presion_hpa": dd.get("Pressure"),
-        "presion_tendencia": dd.get("pressure_trend"),
-        "exterior": None,
-        "viento": None,
-        "lluvia": None,
-    }
-    for m in main.get("modules", []):
-        mdd = m.get("dashboard_data", {})
-        if m.get("type") == "NAModule1":  # módulo exterior
-            out["exterior"] = {"temp_c": mdd.get("Temperature"), "humedad": mdd.get("Humidity"),
-                                "tendencia": mdd.get("temp_trend")}
-        elif m.get("type") == "NAModule2":  # anemómetro
-            out["viento"] = {"kmh": mdd.get("WindStrength"), "dir": mdd.get("WindAngle"),
-                              "racha_kmh": mdd.get("GustStrength")}
-        elif m.get("type") == "NAModule3":  # pluviómetro
-            out["lluvia"] = {"mm_1h": mdd.get("sum_rain_1"), "mm_24h": mdd.get("sum_rain_24")}
-    return out
-
-
-def fetch_netatmo_vecinas(access_token, excluir_id=None):
-    """Estaciones públicas de otros vecinos en el bounding box de Valdés."""
-    params = dict(NETATMO_BBOX, filter="true", access_token=access_token)
-    url = "https://api.netatmo.com/api/getpublicdata?" + urllib.parse.urlencode(params)
-    data = _get_json(url)
-    estaciones = data.get("body", [])
-    out = []
-    for est in estaciones:
-        if excluir_id and est.get("_id") == excluir_id:
-            continue
-        temp = humedad = None
-        for modulo in est.get("measures", {}).values():
-            tipos = modulo.get("type", [])
-            valores = list(modulo.get("res", {}).values())
-            if not valores:
-                continue
-            ultimo = valores[-1]
-            if "temperature" in tipos:
-                idx = tipos.index("temperature")
-                temp = ultimo[idx] if idx < len(ultimo) else None
-            if "humidity" in tipos:
-                idx = tipos.index("humidity")
-                humedad = ultimo[idx] if idx < len(ultimo) else None
-        place = est.get("place", {})
-        lat = place.get("location", [None, None])[1]
-        lon = place.get("location", [None, None])[0]
-        out.append({
-            "lat": round(lat, 2) if lat is not None else None,   # ~1km de precisión, no la casa exacta
-            "lon": round(lon, 2) if lon is not None else None,
-            "ciudad": place.get("city"),
-            "temp_c": temp,
-            "humedad": humedad,
-        })
-    return out
-
-
 def recomendacion(real_time, playa_hoy, avisos):
     """Heurística simple: no es un modelo, solo orienta. Un aviso oficial
     activo (naranja/rojo) pesa más que cualquier otra cosa. El texto que
@@ -528,28 +432,8 @@ def main():
         print(f"AVISO: fallo predicción horaria: {e}")
         horaria = []
 
-    netatmo_own = None
-    netatmo_vecinas = []
-    try:
-        nat_token = netatmo_refresh_access_token()
-        if nat_token:
-            netatmo_own = fetch_netatmo_own(nat_token)
-            propio_id = netatmo_own.get("_device_id") if netatmo_own else None
-            netatmo_vecinas = fetch_netatmo_vecinas(nat_token, excluir_id=propio_id)
-            print(f"Netatmo: estación propia {'OK' if netatmo_own else 'sin datos'}, "
-                  f"{len(netatmo_vecinas)} vecinas")
-        else:
-            print("Netatmo: sin credenciales configuradas, se omite")
-    except (urllib.error.URLError, RuntimeError, KeyError) as e:
-        print(f"AVISO: fallo Netatmo: {e}")
-
     playa_hoy_otur = forecasts_playas.get("Otur", [None])[0] if forecasts_playas.get("Otur") else None
-    real_time_para_score = dict(real_time)
-    if netatmo_own and netatmo_own.get("presion_tendencia"):
-        # Netatmo usa "up"/"down"/"stable"; normalizamos al español que usa recomendacion()
-        mapa = {"up": "subiendo", "down": "bajando", "stable": "estable"}
-        real_time_para_score["pres_tendencia"] = mapa.get(netatmo_own["presion_tendencia"], real_time["pres_tendencia"])
-    score, etiqueta = recomendacion(real_time_para_score, playa_hoy_otur, avisos)
+    score, etiqueta = recomendacion(real_time, playa_hoy_otur, avisos)
 
     lugares_out = []
     for p in PLAYAS:
@@ -561,9 +445,6 @@ def main():
         entry["tipo"] = "parroquia"
         lugares_out.append(entry)
 
-    if netatmo_own:
-        netatmo_own.pop("_device_id", None)
-
     output = {
         "real_time": real_time,
         "recomendacion": {"score": score, "etiqueta": etiqueta},
@@ -571,8 +452,6 @@ def main():
         "forecast_horaria": horaria,
         "avisos": avisos,
         "maritima": maritima,
-        "netatmo_own": netatmo_own,
-        "netatmo_vecinas": netatmo_vecinas,
         "lugares": lugares_out,
         "generated_at": datetime.now(timezone.utc).isoformat(),
     }
