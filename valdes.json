@@ -13,208 +13,8 @@
     "score": 60,
     "etiqueta": "Aceptable, pero el cielo estará nuboso"
   },
-  "forecast_municipio": [
-    {
-      "fecha": "2026-07-26T00:00:00",
-      "cielo": "Nuboso",
-      "viento_dir": "C",
-      "viento_kmh": 0,
-      "t_max": 24,
-      "t_min": 16,
-      "prob_precipitacion": null
-    },
-    {
-      "fecha": "2026-07-27T00:00:00",
-      "cielo": "Intervalos nubosos con lluvia escasa",
-      "viento_dir": "NE",
-      "viento_kmh": 25,
-      "t_max": 25,
-      "t_min": 18,
-      "prob_precipitacion": 75
-    },
-    {
-      "fecha": "2026-07-28T00:00:00",
-      "cielo": "Poco nuboso",
-      "viento_dir": "NE",
-      "viento_kmh": 10,
-      "t_max": 28,
-      "t_min": 17,
-      "prob_precipitacion": null
-    },
-    {
-      "fecha": "2026-07-29T00:00:00",
-      "cielo": "Poco nuboso",
-      "viento_dir": "N",
-      "viento_kmh": 10,
-      "t_max": 23,
-      "t_min": 16,
-      "prob_precipitacion": null
-    }
-  ],
-  "forecast_horaria": [
-    {
-      "fecha_hora": "2026-07-26T11:00",
-      "temp": "20",
-      "sens_termica": "20",
-      "cielo": "Cubierto",
-      "prob_precipitacion": "0",
-      "viento_dir": "O",
-      "viento_kmh": "10"
-    },
-    {
-      "fecha_hora": "2026-07-26T12:00",
-      "temp": "21",
-      "sens_termica": "21",
-      "cielo": "Muy nuboso",
-      "prob_precipitacion": "0",
-      "viento_dir": "NO",
-      "viento_kmh": "9"
-    },
-    {
-      "fecha_hora": "2026-07-26T13:00",
-      "temp": "22",
-      "sens_termica": "22",
-      "cielo": "Poco nuboso",
-      "prob_precipitacion": "0",
-      "viento_dir": "NO",
-      "viento_kmh": "10"
-    },
-    {
-      "fecha_hora": "2026-07-26T14:00",
-      "temp": "23",
-      "sens_termica": "23",
-      "cielo": "Poco nuboso",
-      "prob_precipitacion": "0",
-      "viento_dir": "NO",
-      "viento_kmh": "13"
-    },
-    {
-      "fecha_hora": "2026-07-26T15:00",
-      "temp": "23",
-      "sens_termica": "23",
-      "cielo": "Poco nuboso",
-      "prob_precipitacion": "0",
-      "viento_dir": "NO",
-      "viento_kmh": "15"
-    },
-    {
-      "fecha_hora": "2026-07-26T16:00",
-      "temp": "23",
-      "sens_termica": "23",
-      "cielo": "Despejado",
-      "prob_precipitacion": "0",
-      "viento_dir": "NO",
-      "viento_kmh": "13"
-    },
-    {
-      "fecha_hora": "2026-07-26T17:00",
-      "temp": "23",
-      "sens_termica": "23",
-      "cielo": "Despejado",
-      "prob_precipitacion": "0",
-      "viento_dir": "NO",
-      "viento_kmh": "13"
-    },
-    {
-      "fecha_hora": "2026-07-26T18:00",
-      "temp": "22",
-      "sens_termica": "22",
-      "cielo": "Despejado",
-      "prob_precipitacion": "0",
-      "viento_dir": "NO",
-      "viento_kmh": "13"
-    },
-    {
-      "fecha_hora": "2026-07-26T19:00",
-      "temp": "22",
-      "sens_termica": "22",
-      "cielo": "Despejado",
-      "prob_precipitacion": "0",
-      "viento_dir": "NO",
-      "viento_kmh": "12"
-    },
-    {
-      "fecha_hora": "2026-07-26T20:00",
-      "temp": "21",
-      "sens_termica": "21",
-      "cielo": "Despejado",
-      "prob_precipitacion": "0",
-      "viento_dir": "NO",
-      "viento_kmh": "11"
-    },
-    {
-      "fecha_hora": "2026-07-26T21:00",
-      "temp": "20",
-      "sens_termica": "20",
-      "cielo": "Muy nuboso",
-      "prob_precipitacion": "0",
-      "viento_dir": "NO",
-      "viento_kmh": "9"
-    },
-    {
-      "fecha_hora": "2026-07-26T22:00",
-      "temp": "20",
-      "sens_termica": "20",
-      "cielo": "Muy nuboso",
-      "prob_precipitacion": "0",
-      "viento_dir": "O",
-      "viento_kmh": "5"
-    },
-    {
-      "fecha_hora": "2026-07-26T23:00",
-      "temp": "19",
-      "sens_termica": "19",
-      "cielo": "Muy nuboso",
-      "prob_precipitacion": "0",
-      "viento_dir": "S",
-      "viento_kmh": "5"
-    },
-    {
-      "fecha_hora": "2026-07-27T00:00",
-      "temp": "19",
-      "sens_termica": "19",
-      "cielo": "Cubierto",
-      "prob_precipitacion": "0",
-      "viento_dir": "SO",
-      "viento_kmh": "2"
-    },
-    {
-      "fecha_hora": "2026-07-27T01:00",
-      "temp": "19",
-      "sens_termica": "19",
-      "cielo": "Cubierto",
-      "prob_precipitacion": "0",
-      "viento_dir": "S",
-      "viento_kmh": "5"
-    },
-    {
-      "fecha_hora": "2026-07-27T02:00",
-      "temp": "19",
-      "sens_termica": "19",
-      "cielo": "Cubierto",
-      "prob_precipitacion": "45",
-      "viento_dir": "S",
-      "viento_kmh": "3"
-    },
-    {
-      "fecha_hora": "2026-07-27T03:00",
-      "temp": "19",
-      "sens_termica": "19",
-      "cielo": "Cubierto",
-      "prob_precipitacion": "45",
-      "viento_dir": "SE",
-      "viento_kmh": "2"
-    },
-    {
-      "fecha_hora": "2026-07-27T04:00",
-      "temp": "19",
-      "sens_termica": "19",
-      "cielo": "Cubierto",
-      "prob_precipitacion": "45",
-      "viento_dir": "E",
-      "viento_kmh": "2"
-    }
-  ],
+  "forecast_municipio": null,
+  "forecast_horaria": [],
   "avisos": [],
   "maritima": {
     "texto": "Oeste de Peñas: Componente W 3 o 4, ocasionalmente 5. Marejadilla o marejada. \r\n Este de Peñas: Componente W 4 o 5 amainando a 3 o 4 desde la tarde. Principalmente marejada. \r\n Ambas zonas: Mar de fondo del N o NW en torno a 1 m. Aguaceros ocasionales hasta la mañana.",
@@ -238,21 +38,21 @@
   },
   "netatmo_own": {
     "interior": {
-      "temp_c": 23.4,
-      "co2": 550,
+      "temp_c": 23.3,
+      "co2": 528,
       "humedad": 61
     },
     "presion_hpa": 1019.4,
     "presion_tendencia": "stable",
     "exterior": {
-      "temp_c": 22.2,
+      "temp_c": 22.8,
       "humedad": 74,
       "tendencia": "up"
     },
     "viento": {
-      "kmh": 3,
-      "dir": 135,
-      "racha_kmh": 5
+      "kmh": 4,
+      "dir": 29,
+      "racha_kmh": 8
     },
     "lluvia": {
       "mm_1h": 0,
@@ -264,50 +64,43 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 19,
-      "humedad": 79
+      "temp_c": 19.4,
+      "humedad": 77
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
-      "temp_c": 26.4,
-      "humedad": 58
-    },
-    {
-      "lat": 43.56,
-      "lon": -6.27,
-      "ciudad": "Cudillero",
-      "temp_c": 20,
-      "humedad": 64
+      "temp_c": 26.3,
+      "humedad": 57
     },
     {
       "lat": 43.57,
       "lon": -6.21,
       "ciudad": "Cudillero",
-      "temp_c": 21,
+      "temp_c": 21.4,
       "humedad": 74
     },
     {
       "lat": 43.57,
       "lon": -6.2,
       "ciudad": "Cudillero",
-      "temp_c": 21.5,
+      "temp_c": 21.7,
       "humedad": 72
     },
     {
       "lat": 43.1,
       "lon": -6.26,
       "ciudad": "Somiedo",
-      "temp_c": 15.8,
-      "humedad": 74
+      "temp_c": 16.2,
+      "humedad": 72
     },
     {
       "lat": 43.18,
       "lon": -6.55,
       "ciudad": "Cangas del Narcea",
-      "temp_c": 17.4,
-      "humedad": 75
+      "temp_c": 17.8,
+      "humedad": 74
     },
     {
       "lat": 43.33,
@@ -320,22 +113,22 @@
       "lat": 43.4,
       "lon": -6.54,
       "ciudad": "Tineo",
-      "temp_c": 20.1,
-      "humedad": 69
+      "temp_c": 20.5,
+      "humedad": 68
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 19.9,
-      "humedad": 70
+      "temp_c": 20.2,
+      "humedad": 69
     },
     {
       "lat": 43.42,
       "lon": -6.45,
       "ciudad": "Tineo",
-      "temp_c": 18,
-      "humedad": 80
+      "temp_c": 18.3,
+      "humedad": 78
     },
     {
       "lat": 43.54,
@@ -348,35 +141,35 @@
       "lat": 43.54,
       "lon": -7.17,
       "ciudad": "A Cruz",
-      "temp_c": 22.5,
+      "temp_c": 22.8,
       "humedad": 67
     },
     {
       "lat": 43.54,
       "lon": -7.02,
       "ciudad": "Castropol",
-      "temp_c": 20.5,
-      "humedad": 81
+      "temp_c": 21,
+      "humedad": 80
     },
     {
       "lat": 43.54,
       "lon": -7.02,
       "ciudad": "As Figueiras",
-      "temp_c": 23.1,
-      "humedad": 82
+      "temp_c": 23.4,
+      "humedad": 81
     },
     {
       "lat": 43.62,
       "lon": -7.31,
       "ciudad": "Foz",
-      "temp_c": 24.3,
+      "temp_c": 24.2,
       "humedad": 76
     },
     {
       "lat": 43.42,
       "lon": -7.27,
       "ciudad": "Lourenzá",
-      "temp_c": 17.9,
+      "temp_c": 18.3,
       "humedad": 90
     }
   ],
@@ -560,5 +353,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-07-26T09:16:28.743411+00:00"
+  "generated_at": "2026-07-26T09:23:46.216574+00:00"
 }
