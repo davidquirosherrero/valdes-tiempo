@@ -412,7 +412,6 @@ function render(DATA){
 
     const cells = [];
     if(n.exterior) cells.push(['Exterior', `${n.exterior.temp_c}°C <small>· ${n.exterior.humedad}% hum.</small>`]);
-    cells.push(['Interior', `${n.interior.temp_c}°C <small>· CO₂ ${n.interior.co2}ppm</small>`]);
     cells.push(['Presión', `${n.presion_hpa}hPa <small>· ${n.presion_tendencia}</small>`]);
     if(n.viento) cells.push(['Viento', `${n.viento.kmh}km/h ${compass(n.viento.dir)} <small>ráf. ${n.viento.racha_kmh}</small>`]);
     if(n.lluvia) cells.push(['Lluvia', `${n.lluvia.mm_1h}mm/h <small>· ${n.lluvia.mm_24h}mm/24h</small>`]);
