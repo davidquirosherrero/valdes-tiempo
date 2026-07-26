@@ -641,13 +641,13 @@ def main():
         real_time_para_score["pres_tendencia"] = mapa.get(netatmo_own["presion_tendencia"], real_time["pres_tendencia"])
     score, etiqueta = recomendacion(real_time_para_score, playa_hoy_otur, avisos)
 
-    # "Qué se acerca": usamos el viento de la estación local si existe
-    # (más representativo de Luarca), si no el de Cabo Busto.
+    # "Qué se acerca": usamos el viento de Cabo Busto (AEMET), no el de la
+    # estación local. Para estimar el desplazamiento de un frente a escala
+    # de decenas de km interesa el viento sinóptico, no una lectura
+    # hiperlocal que puede estar resguardada por árboles o edificios y
+    # marcar calma aunque el viento regional sea fuerte.
     wind_dir_efectivo = real_time["wind_dir"]
     wind_kmh_efectivo = real_time["wind_kmh"]
-    if netatmo_own and netatmo_own.get("viento"):
-        wind_dir_efectivo = netatmo_own["viento"]["dir"]
-        wind_kmh_efectivo = netatmo_own["viento"]["kmh"]
     try:
         que_se_acerca = estimar_que_se_acerca(estaciones_aemet, wind_dir_efectivo, wind_kmh_efectivo)
         print(f"Qué se acerca: {que_se_acerca}")
