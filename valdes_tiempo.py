@@ -255,19 +255,19 @@ def fetch_maritima():
     return None
 
 
-def fetch_hourly_forecast(horas=12):
+def fetch_hourly_forecast(horas=18):
     """Predicción municipal por horas -- las próximas `horas` horas desde
-    ahora, con cielo, temperatura, viento y probabilidad de lluvia."""
+    ahora, con cielo, temperatura, sensación térmica, viento y
+    probabilidad de lluvia."""
     data = _aemet_fetch(AEMET_MUNICIPIO_HORARIA_URL.format(id_municipio=MUNICIPIO_VALDES))
     dias = data[0]["prediccion"]["dia"]
 
-    # Índice de viento: solo nos quedamos con las entradas que traen
-    # direccion+velocidad (las que solo traen 'value' son la racha, aparte)
     salida = []
     for dia in dias:
         fecha_base = dia["fecha"][:10]
         cielo_por_hora = {c["periodo"]: c.get("descripcion") for c in dia.get("estadoCielo", [])}
         precip_por_hora = {p["periodo"]: p.get("value") for p in dia.get("probPrecipitacion", [])}
+        sens_por_hora = {s["periodo"]: s.get("value") for s in dia.get("sensTermica", [])}
         viento_por_hora = {}
         for v in dia.get("vientoAndRachaMax", []):
             if "direccion" in v:
@@ -280,6 +280,7 @@ def fetch_hourly_forecast(horas=12):
             salida.append({
                 "fecha_hora": f"{fecha_base}T{hora}:00",
                 "temp": t.get("value"),
+                "sens_termica": sens_por_hora.get(hora),
                 "cielo": cielo_por_hora.get(hora),
                 "prob_precipitacion": precip_por_hora.get(hora),
                 "viento_dir": viento_por_hora.get(hora, {}).get("dir"),
