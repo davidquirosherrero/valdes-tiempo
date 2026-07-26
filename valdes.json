@@ -1,56 +1,19 @@
 {
   "real_time": {
-    "ts": "2026-07-25T23:00:00+0000",
-    "temp_c": 18.6,
-    "wind_kmh": 15.8,
-    "wind_dir": 252.0,
-    "gust_kmh": 23.8,
-    "pres_hpa": 1013.2,
+    "ts": "2026-07-26T03:00:00+0000",
+    "temp_c": 18.2,
+    "wind_kmh": 14.4,
+    "wind_dir": 245.0,
+    "gust_kmh": 20.9,
+    "pres_hpa": 1012.6,
     "pres_tendencia": "estable",
-    "humedad": 80.0
+    "humedad": 75.0
   },
   "recomendacion": {
     "score": 60,
     "etiqueta": "Aceptable, revisa el viento"
   },
-  "forecast_municipio": [
-    {
-      "fecha": "2026-07-25T00:00:00",
-      "cielo": "Intervalos nubosos con lluvia escasa",
-      "viento_dir": "SO",
-      "viento_kmh": 10,
-      "t_max": 22,
-      "t_min": 16,
-      "prob_precipitacion": 80
-    },
-    {
-      "fecha": "2026-07-26T00:00:00",
-      "cielo": "Nuboso",
-      "viento_dir": "NO",
-      "viento_kmh": 10,
-      "t_max": 24,
-      "t_min": 16,
-      "prob_precipitacion": 5
-    },
-    {
-      "fecha": "2026-07-27T00:00:00",
-      "cielo": "Intervalos nubosos",
-      "viento_dir": "NE",
-      "viento_kmh": 25,
-      "t_max": 25,
-      "t_min": 18,
-      "prob_precipitacion": 10
-    },
-    {
-      "fecha": "2026-07-28T00:00:00",
-      "cielo": "Poco nuboso",
-      "viento_dir": "NE",
-      "viento_kmh": 10,
-      "t_max": 28,
-      "t_min": 16,
-      "prob_precipitacion": null
-    }
-  ],
+  "forecast_municipio": null,
   "forecast_horaria": [
     {
       "fecha_hora": "2026-07-25T21:00",
@@ -354,5 +317,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-07-26T00:13:07.416679+00:00"
+  "generated_at": "2026-07-26T03:57:01.919142+00:00"
 }
