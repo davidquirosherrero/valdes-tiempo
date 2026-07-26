@@ -305,10 +305,9 @@ def fetch_avisos():
 
 
 def fetch_maritima():
-    """Boletín marítimo costero de AEMET, zona 'Aguas costeras de Asturias'
-    (distingue 'Oeste de Peñas' -- que es donde está Valdés -- de 'Este de
-    Peñas'). Se devuelve ya segmentado por zona para pintarlo como tarjetas,
-    no como un bloque de texto."""
+    """Boletín marítimo costero de AEMET. Nos quedamos solo con lo que
+    aplica a Valdés: el segmento 'Oeste de Peñas' y el de 'Ambas zonas'
+    (aplica a las dos). Se descarta 'Este de Peñas', que no nos afecta."""
     data = _aemet_fetch(AEMET_MARITIMA_URL.format(costa=COSTA_CANTABRICO))
     d0 = data[0]
     for zona in d0["prediccion"]["zona"]:
@@ -322,7 +321,10 @@ def fetch_maritima():
                     continue
                 if ":" in parte:
                     zona_nombre, resto = parte.split(":", 1)
-                    segmentos.append({"zona": zona_nombre.strip(), "texto": resto.strip()})
+                    zona_nombre = zona_nombre.strip()
+                    if zona_nombre == "Este de Peñas":
+                        continue  # no aplica a Valdés
+                    segmentos.append({"zona": zona_nombre, "texto": resto.strip()})
                 else:
                     segmentos.append({"zona": None, "texto": parte})
             return {
