@@ -1,13 +1,13 @@
 {
   "real_time": {
-    "ts": "2026-07-26T20:00:00+0000",
-    "temp_c": 20.1,
-    "wind_kmh": 13.3,
-    "wind_dir": 259.0,
-    "gust_kmh": 17.3,
-    "pres_hpa": 1013.7,
+    "ts": "2026-07-26T21:00:00+0000",
+    "temp_c": 20.2,
+    "wind_kmh": 10.8,
+    "wind_dir": 255.0,
+    "gust_kmh": 15.5,
+    "pres_hpa": 1014.1,
     "pres_tendencia": "estable",
-    "humedad": 86.0
+    "humedad": 85.0
   },
   "recomendacion": {
     "score": 60,
@@ -22,56 +22,10 @@
     "prec_mm": 0,
     "temp_c": 22.8,
     "cielo_despejado": true,
-    "eta_horas": 3.3
+    "eta_horas": 4.1
   },
-  "forecast_municipio": [
-    {
-      "fecha": "2026-07-26T00:00:00",
-      "cielo": "Nuboso",
-      "viento_dir": "C",
-      "viento_kmh": 0,
-      "t_max": 24,
-      "t_min": 16,
-      "prob_precipitacion": null
-    },
-    {
-      "fecha": "2026-07-27T00:00:00",
-      "cielo": "Intervalos nubosos con lluvia escasa",
-      "viento_dir": "NE",
-      "viento_kmh": 25,
-      "t_max": 25,
-      "t_min": 18,
-      "prob_precipitacion": 90
-    },
-    {
-      "fecha": "2026-07-28T00:00:00",
-      "cielo": "Despejado",
-      "viento_dir": "N",
-      "viento_kmh": 10,
-      "t_max": 28,
-      "t_min": 17,
-      "prob_precipitacion": null
-    },
-    {
-      "fecha": "2026-07-29T00:00:00",
-      "cielo": "Poco nuboso",
-      "viento_dir": "N",
-      "viento_kmh": 10,
-      "t_max": 23,
-      "t_min": 16,
-      "prob_precipitacion": null
-    }
-  ],
+  "forecast_municipio": null,
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-07-26T23:00",
-      "temp": "19",
-      "sens_termica": "19",
-      "cielo": "Cubierto",
-      "prob_precipitacion": "0",
-      "viento_dir": "S",
-      "viento_kmh": "5"
-    },
     {
       "fecha_hora": "2026-07-27T00:00",
       "temp": "19",
@@ -226,7 +180,7 @@
       "viento_kmh": "27"
     }
   ],
-  "horaria_es_respaldo": false,
+  "horaria_es_respaldo": true,
   "avisos": [],
   "maritima": {
     "texto": "Oeste de Peñas: W o NW 3 o 4 tendiendo a Variable 1 a 3 a partir de la noche y arreciando a E o NE 3 o 4 al avanzar la madrugada. Marejadilla o marejada disminuyendo temporalmente a rizada o marejadilla durante la noche y madrugada. \r\n Este de Peñas: W o NW 3 o 4 tendiendo a Variable 1 a 3 al avanzar la madrugada pero arreciando a E o NE 3 o 4 a partir de la mañana. Marejadilla o marejada disminuyendo a rizada o marejadilla al avanzar la madrugada. \r\n Ambas zonas: A partir del mediodía, E o NE 4 o 5 y marejada. Mar de fondo del N o NW de 1 a 2 m.",
@@ -245,17 +199,17 @@
     "vigencia_fin": "2026-07-27T20:00:00"
   },
   "netatmo_own": {
-    "presion_hpa": 1019.9,
+    "presion_hpa": 1020,
     "presion_tendencia": "stable",
     "exterior": {
-      "temp_c": 20.2,
-      "humedad": 92,
+      "temp_c": 20.3,
+      "humedad": 90,
       "tendencia": "stable"
     },
     "viento": {
       "kmh": 1,
-      "dir": 135,
-      "racha_kmh": 4
+      "dir": 90,
+      "racha_kmh": 5
     },
     "lluvia": {
       "mm_1h": 0,
@@ -267,36 +221,36 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 21.1,
-      "humedad": 79
+      "temp_c": 20.9,
+      "humedad": 80
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
-      "temp_c": 21.2,
-      "humedad": 81
+      "temp_c": 20.9,
+      "humedad": 82
     },
     {
       "lat": 43.56,
       "lon": -6.27,
       "ciudad": "Cudillero",
-      "temp_c": 22.5,
+      "temp_c": 22.2,
       "humedad": 65
     },
     {
       "lat": 43.33,
       "lon": -6.42,
       "ciudad": "Tineo",
-      "temp_c": 16.7,
-      "humedad": 87
+      "temp_c": 15.4,
+      "humedad": 89
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 21.8,
-      "humedad": 71
+      "temp_c": 21,
+      "humedad": 72
     }
   ],
   "lugares": [
@@ -479,5 +433,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-07-26T21:11:33.809568+00:00"
+  "generated_at": "2026-07-26T22:12:55.800435+00:00"
 }
