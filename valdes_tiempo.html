@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>El Tiempo en Luarca — a tiempo real</title>
-<meta name="description" content="El tiempo en Luarca ahora mismo: estación propia, predicción horaria y de playa, boletín marítimo y avisos oficiales. Actualizado cada hora.">
+<meta name="description" content="El tiempo en Luarca ahora mismo: dato local, predicción horaria y de playa, boletín marítimo y avisos oficiales. Actualizado cada hora.">
 <meta name="theme-color" content="#0b1d33">
 <meta property="og:title" content="El Tiempo en Luarca — a tiempo real">
-<meta property="og:description" content="Estación propia, predicción horaria y de playa, boletín marítimo y avisos oficiales para Luarca, actualizado cada hora.">
+<meta property="og:description" content="Dato local, predicción horaria y de playa, boletín marítimo y avisos oficiales para Luarca, actualizado cada hora.">
 <meta property="og:type" content="website">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
 
@@ -78,6 +78,31 @@
   .aviso-amarillo{ background:rgba(232,169,76,0.12); border-left:3px solid var(--buoy-yellow); }
   .aviso-naranja{ background:rgba(230,126,34,0.14); border-left:3px solid #e67e22; }
   .aviso-rojo{ background:rgba(198,90,78,0.16); border-left:3px solid var(--coral-low); }
+  .local-grid{
+    display:grid; grid-template-columns:1fr 1fr; gap:10px;
+  }
+  .local-cell{
+    background:rgba(238,241,230,0.04); border:1px solid rgba(238,241,230,0.1);
+    border-radius:6px; padding:12px;
+  }
+  .local-cell .k{ font-size:9.5px; text-transform:uppercase; letter-spacing:0.06em; color:var(--seafoam); }
+  .local-cell .v{ font-size:19px; font-weight:700; margin-top:4px; }
+  .local-cell .v small{ font-size:11px; font-weight:400; color:rgba(238,241,230,0.55); }
+  .vecinas-details{ margin-top:14px; }
+  .vecinas-details summary{
+    cursor:pointer; font-size:11.5px; color:var(--seafoam); list-style:none;
+    padding:8px 0; border-top:1px solid rgba(238,241,230,0.1);
+  }
+  .vecinas-details summary::-webkit-details-marker{ display:none; }
+  .vecinas-details summary::before{ content:'▸ '; }
+  .vecinas-details[open] summary::before{ content:'▾ '; }
+  .vecinas-list{ padding-top:6px; }
+  .vecina-row{
+    display:flex; justify-content:space-between; padding:7px 0;
+    border-bottom:1px solid rgba(238,241,230,0.06); font-size:12px;
+  }
+  .vecina-row span:first-child{ color:rgba(238,241,230,0.6); }
+  .vecina-row span:last-child{ font-weight:600; }
   .maritima-card{
     padding:12px 14px; border-radius:6px; margin-bottom:8px;
     background:rgba(238,241,230,0.04); border-left:3px solid rgba(95,168,160,0.4);
@@ -93,7 +118,7 @@
 <header>
   <p class="eyebrow">🌤️ EL TIEMPO EN LUARCA</p>
   <h1>¿Qué tiempo hace en Luarca?</h1>
-  <p class="tagline">Estación propia, predicción horaria y de playa, boletín marítimo y avisos oficiales — todo en un sitio, actualizado cada hora.</p>
+  <p class="tagline">Dato local, predicción horaria y de playa, boletín marítimo y avisos oficiales — todo en un sitio, actualizado cada hora.</p>
 </header>
 
 <div id="err"></div>
@@ -119,6 +144,12 @@
     <div id="maritimaBox"></div>
   </section>
 
+  <section id="localSection" class="acc-coral" style="display:none;">
+    <div class="section-title">🏠 Estación de Luarca</div>
+    <div class="section-sub" id="localSub"></div>
+    <div id="localGrid" class="local-grid"></div>
+  </section>
+
   <section class="acc-amber">
     <div class="section-title">🏖️ Playa de Luarca (4 días)</div>
     <div class="section-sub">Ficha oficial de AEMET para la playa. Otur es casi idéntica por lo cerca que está.</div>
@@ -127,17 +158,18 @@
 
   <section>
     <div class="note">
-      <b>Cómo se calcula:</b> el tiempo real y la tendencia de presión vienen de la estación AEMET de
-      Cabo Busto, la más cercana a Luarca. La predicción de playa es la ficha oficial de Luarca en
-      AEMET. La predicción horaria y el boletín marítimo son los que AEMET publica para todo
-      Valdés/la costa asturiana — es lo más fino que dan a esta escala. La recomendación de arriba es
-      una heurística simple (presión + cielo + viento + avisos oficiales), no un modelo
-      meteorológico — para decisiones importantes, consulta la predicción oficial de AEMET.
+      <b>Cómo se calcula:</b> el tiempo real y la tendencia de presión vienen de una estación
+      meteorológica en Luarca (o de Cabo Busto/AEMET si no responde). La predicción de playa es la
+      ficha oficial de Luarca en AEMET. La predicción horaria y el boletín marítimo son los que AEMET
+      publica para todo Valdés/la costa asturiana — es lo más fino que dan a esta escala. La
+      recomendación de arriba es una heurística simple (presión + cielo + viento + avisos oficiales),
+      no un modelo meteorológico — para decisiones importantes, consulta la predicción oficial de
+      AEMET.
     </div>
   </section>
 </main>
 
-<footer>El Tiempo en Luarca · Dato: AEMET OpenData · actualización automática cada hora</footer>
+<footer>El Tiempo en Luarca · Dato: AEMET OpenData + estación meteorológica local · actualización automática cada hora</footer>
 
 <script>
 function compass(deg){
@@ -200,17 +232,25 @@ function render(DATA){
   // --- Hero ---
   const r = DATA.recomendacion;
   const rt = DATA.real_time;
+  const local = DATA.netatmo_own;
   const color = scoreColor(r.score);
-  const trendArrow = rt.pres_tendencia === 'subiendo' ? '↑' : rt.pres_tendencia === 'bajando' ? '↓' : '→';
+
+  const fuente = local ? 'estación local' : 'Cabo Busto, AEMET';
+  const tempMostrar = local && local.exterior ? local.exterior.temp_c : rt.temp_c;
+  const vientoMostrar = local && local.viento ? local.viento.kmh : rt.wind_kmh;
+  const vientoDirMostrar = local && local.viento ? local.viento.dir : rt.wind_dir;
+  const presionMostrar = local ? local.presion_hpa : rt.pres_hpa;
+  const tendenciaMostrar = local ? ({up:'subiendo', down:'bajando', stable:'estable'}[local.presion_tendencia] || local.presion_tendencia) : rt.pres_tendencia;
+  const trendArrow = tendenciaMostrar === 'subiendo' ? '↑' : tendenciaMostrar === 'bajando' ? '↓' : '→';
 
   document.getElementById('hero').innerHTML = `
-    <div class="hero-label">Ahora mismo en Luarca · Cabo Busto, AEMET</div>
+    <div class="hero-label">Ahora mismo en Luarca · ${fuente}</div>
     <div class="hero-row">
       <div>
         <div class="hero-etiqueta" style="color:${color}">${r.etiqueta}</div>
         <div class="hero-sub">
-          🌡️ ${rt.temp_c}°C &nbsp; 💨 ${rt.wind_kmh}km/h ${compass(rt.wind_dir)} &nbsp;
-          📟 ${rt.pres_hpa}hPa ${trendArrow} ${rt.pres_tendencia}
+          🌡️ ${tempMostrar}°C &nbsp; 💨 ${vientoMostrar}km/h ${compass(vientoDirMostrar)} &nbsp;
+          📟 ${presionMostrar}hPa ${trendArrow} ${tendenciaMostrar}
         </div>
       </div>
       <div class="hero-score" style="color:${color}">${r.score}</div>
@@ -357,6 +397,55 @@ function render(DATA){
     maritimaBox.innerHTML = html;
   } else {
     maritimaBox.innerHTML = '<div class="note">Sin dato marítimo disponible ahora mismo.</div>';
+  }
+
+  // --- Estación local ---
+  if(DATA.netatmo_own){
+    document.getElementById('localSection').style.display = 'block';
+    const n = DATA.netatmo_own;
+    const vecinas = DATA.netatmo_vecinas || [];
+    const vecinasTemp = vecinas.map(v => v.temp_c).filter(t => t !== null);
+    const mediaVecinas = vecinasTemp.length ? (vecinasTemp.reduce((a,b)=>a+b,0)/vecinasTemp.length).toFixed(1) : null;
+    document.getElementById('localSub').textContent =
+      `Estación meteorológica en Luarca` +
+      (mediaVecinas ? ` · media de la zona ahora: ${mediaVecinas}°C` : '');
+
+    const cells = [];
+    if(n.exterior) cells.push(['Exterior', `${n.exterior.temp_c}°C <small>· ${n.exterior.humedad}% hum.</small>`]);
+    cells.push(['Interior', `${n.interior.temp_c}°C <small>· CO₂ ${n.interior.co2}ppm</small>`]);
+    cells.push(['Presión', `${n.presion_hpa}hPa <small>· ${n.presion_tendencia}</small>`]);
+    if(n.viento) cells.push(['Viento', `${n.viento.kmh}km/h ${compass(n.viento.dir)} <small>ráf. ${n.viento.racha_kmh}</small>`]);
+    if(n.lluvia) cells.push(['Lluvia', `${n.lluvia.mm_1h}mm/h <small>· ${n.lluvia.mm_24h}mm/24h</small>`]);
+
+    const grid = document.getElementById('localGrid');
+    cells.forEach(([k,v]) => {
+      const div = document.createElement('div');
+      div.className = 'local-cell';
+      div.innerHTML = `<div class="k">${k}</div><div class="v">${v}</div>`;
+      grid.appendChild(div);
+    });
+
+    if(vecinas.length){
+      const details = document.createElement('details');
+      details.className = 'vecinas-details';
+      const summary = document.createElement('summary');
+      summary.textContent = `Ver estaciones cercanas (${vecinas.length})`;
+      details.appendChild(summary);
+      const list = document.createElement('div');
+      list.className = 'vecinas-list';
+      vecinas
+        .filter(v => v.temp_c !== null)
+        .sort((a,b) => (a.ciudad||'').localeCompare(b.ciudad||''))
+        .forEach(v => {
+          const row = document.createElement('div');
+          row.className = 'vecina-row';
+          row.innerHTML = `<span>${v.ciudad || 'Zona desconocida'}</span>
+            <span>${v.temp_c}°C${v.humedad !== null ? ` · ${v.humedad}% hum.` : ''}</span>`;
+          list.appendChild(row);
+        });
+      details.appendChild(list);
+      document.getElementById('localSection').appendChild(details);
+    }
   }
 
   // --- Predicción de Luarca (única playa, sin tabs) ---
