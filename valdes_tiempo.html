@@ -441,11 +441,7 @@ function render(DATA){
     document.getElementById('localSection').style.display = 'block';
     const n = DATA.netatmo_own;
     const vecinas = DATA.netatmo_vecinas || [];
-    const vecinasTemp = vecinas.map(v => v.temp_c).filter(t => t !== null);
-    const mediaVecinas = vecinasTemp.length ? (vecinasTemp.reduce((a,b)=>a+b,0)/vecinasTemp.length).toFixed(1) : null;
-    document.getElementById('localSub').textContent =
-      `Estación meteorológica en Luarca` +
-      (mediaVecinas ? ` · media de la zona ahora: ${mediaVecinas}°C` : '');
+    document.getElementById('localSub').textContent = `Estación meteorológica en Luarca`;
 
     const cells = [];
     if(n.exterior) cells.push(['Exterior', `${n.exterior.temp_c}°C <small>· ${n.exterior.humedad}% hum.</small>`]);
@@ -465,7 +461,7 @@ function render(DATA){
       const details = document.createElement('details');
       details.className = 'vecinas-details';
       const summary = document.createElement('summary');
-      summary.textContent = `Ver estaciones cercanas (${vecinas.length})`;
+      summary.textContent = `Ver estaciones de la región (${vecinas.length})`;
       details.appendChild(summary);
       const list = document.createElement('div');
       list.className = 'vecinas-list';
