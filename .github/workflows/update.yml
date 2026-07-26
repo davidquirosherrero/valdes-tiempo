@@ -21,6 +21,9 @@ jobs:
       - name: Ejecutar script
         env:
           AEMET_API_KEY: ${{ secrets.AEMET_API_KEY }}
+          NETATMO_CLIENT_ID: ${{ secrets.NETATMO_CLIENT_ID }}
+          NETATMO_CLIENT_SECRET: ${{ secrets.NETATMO_CLIENT_SECRET }}
+          NETATMO_REFRESH_TOKEN: ${{ secrets.NETATMO_REFRESH_TOKEN }}
         run: python3 valdes_tiempo.py
 
       - name: Publicar valdes.json si ha cambiado
