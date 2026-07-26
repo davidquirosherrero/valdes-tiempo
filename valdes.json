@@ -26,6 +26,7 @@
   },
   "forecast_municipio": null,
   "forecast_horaria": [],
+  "horaria_es_respaldo": false,
   "avisos": [],
   "maritima": {
     "texto": "Oeste de Peñas: W o NW 3 o 4 tendiendo a Variable 1 a 3 a partir de la noche y arreciando a E o NE 3 o 4 al avanzar la madrugada. Marejadilla o marejada disminuyendo temporalmente a rizada o marejadilla durante la noche y madrugada. \r\n Este de Peñas: W o NW 3 o 4 tendiendo a Variable 1 a 3 al avanzar la madrugada pero arreciando a E o NE 3 o 4 a partir de la mañana. Marejadilla o marejada disminuyendo a rizada o marejadilla al avanzar la madrugada. \r\n Ambas zonas: A partir del mediodía, E o NE 4 o 5 y marejada. Mar de fondo del N o NW de 1 a 2 m.",
@@ -48,7 +49,7 @@
     "vigencia_fin": "2026-07-27T20:00:00"
   },
   "netatmo_own": {
-    "presion_hpa": 1019.6,
+    "presion_hpa": 1019.7,
     "presion_tendencia": "stable",
     "exterior": {
       "temp_c": 20.2,
@@ -57,8 +58,8 @@
     },
     "viento": {
       "kmh": 1,
-      "dir": 55,
-      "racha_kmh": 4
+      "dir": 126,
+      "racha_kmh": 5
     },
     "lluvia": {
       "mm_1h": 0,
@@ -282,5 +283,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-07-26T20:32:54.739987+00:00"
+  "generated_at": "2026-07-26T20:36:59.605336+00:00"
 }
