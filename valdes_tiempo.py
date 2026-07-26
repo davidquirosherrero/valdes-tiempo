@@ -357,7 +357,9 @@ def netatmo_refresh_access_token():
 
 def fetch_netatmo_own(access_token):
     """Datos de tu propia estación: interior, exterior, viento, lluvia,
-    presión con la tendencia que ya calcula el propio Netatmo."""
+    presión con la tendencia que ya calcula el propio Netatmo. No se
+    incluye el nombre que le hayas puesto a la estación (p.ej. "Casa"),
+    ni su ubicación exacta -- solo las lecturas."""
     url = f"https://api.netatmo.com/api/getstationsdata?access_token={access_token}"
     data = _get_json(url)
     devices = data.get("body", {}).get("devices", [])
@@ -366,7 +368,7 @@ def fetch_netatmo_own(access_token):
     main = devices[0]
     dd = main.get("dashboard_data", {})
     out = {
-        "nombre": main.get("station_name"),
+        "_device_id": main.get("_id"),  # solo para excluirla de "vecinas"; se quita antes de guardar el JSON
         "interior": {"temp_c": dd.get("Temperature"), "co2": dd.get("CO2"), "humedad": dd.get("Humidity")},
         "presion_hpa": dd.get("Pressure"),
         "presion_tendencia": dd.get("pressure_trend"),
@@ -411,9 +413,11 @@ def fetch_netatmo_vecinas(access_token, excluir_id=None):
                 idx = tipos.index("humidity")
                 humedad = ultimo[idx] if idx < len(ultimo) else None
         place = est.get("place", {})
+        lat = place.get("location", [None, None])[1]
+        lon = place.get("location", [None, None])[0]
         out.append({
-            "lat": place.get("location", [None, None])[1],
-            "lon": place.get("location", [None, None])[0],
+            "lat": round(lat, 2) if lat is not None else None,   # ~1km de precisión, no la casa exacta
+            "lon": round(lon, 2) if lon is not None else None,
             "ciudad": place.get("city"),
             "temp_c": temp,
             "humedad": humedad,
@@ -530,7 +534,8 @@ def main():
         nat_token = netatmo_refresh_access_token()
         if nat_token:
             netatmo_own = fetch_netatmo_own(nat_token)
-            netatmo_vecinas = fetch_netatmo_vecinas(nat_token)
+            propio_id = netatmo_own.get("_device_id") if netatmo_own else None
+            netatmo_vecinas = fetch_netatmo_vecinas(nat_token, excluir_id=propio_id)
             print(f"Netatmo: estación propia {'OK' if netatmo_own else 'sin datos'}, "
                   f"{len(netatmo_vecinas)} vecinas")
         else:
@@ -555,6 +560,9 @@ def main():
         entry = dict(p)
         entry["tipo"] = "parroquia"
         lugares_out.append(entry)
+
+    if netatmo_own:
+        netatmo_own.pop("_device_id", None)
 
     output = {
         "real_time": real_time,
