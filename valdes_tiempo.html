@@ -78,31 +78,6 @@
   .aviso-amarillo{ background:rgba(232,169,76,0.12); border-left:3px solid var(--buoy-yellow); }
   .aviso-naranja{ background:rgba(230,126,34,0.14); border-left:3px solid #e67e22; }
   .aviso-rojo{ background:rgba(198,90,78,0.16); border-left:3px solid var(--coral-low); }
-  .netatmo-grid{
-    display:grid; grid-template-columns:1fr 1fr; gap:10px;
-  }
-  .netatmo-cell{
-    background:rgba(238,241,230,0.04); border:1px solid rgba(238,241,230,0.1);
-    border-radius:6px; padding:12px;
-  }
-  .netatmo-cell .k{ font-size:9.5px; text-transform:uppercase; letter-spacing:0.06em; color:var(--seafoam); }
-  .netatmo-cell .v{ font-size:19px; font-weight:700; margin-top:4px; }
-  .netatmo-cell .v small{ font-size:11px; font-weight:400; color:rgba(238,241,230,0.55); }
-  .vecinas-details{ margin-top:14px; }
-  .vecinas-details summary{
-    cursor:pointer; font-size:11.5px; color:var(--seafoam); list-style:none;
-    padding:8px 0; border-top:1px solid rgba(238,241,230,0.1);
-  }
-  .vecinas-details summary::-webkit-details-marker{ display:none; }
-  .vecinas-details summary::before{ content:'▸ '; }
-  .vecinas-details[open] summary::before{ content:'▾ '; }
-  .vecinas-list{ padding-top:6px; }
-  .vecina-row{
-    display:flex; justify-content:space-between; padding:7px 0;
-    border-bottom:1px solid rgba(238,241,230,0.06); font-size:12px;
-  }
-  .vecina-row span:first-child{ color:rgba(238,241,230,0.6); }
-  .vecina-row span:last-child{ font-weight:600; }
   .maritima-card{
     padding:12px 14px; border-radius:6px; margin-bottom:8px;
     background:rgba(238,241,230,0.04); border-left:3px solid rgba(95,168,160,0.4);
@@ -134,7 +109,6 @@
     <div class="hora-chart-box"><canvas id="horaChart"></canvas></div>
     <div class="playa-tabs" id="horaTabs">
       <button class="playa-tab active" data-metric="temp">Temperatura</button>
-      <button class="playa-tab" data-metric="sens_termica">Sensación térmica</button>
       <button class="playa-tab" data-metric="prob_precipitacion">Prob. lluvia</button>
     </div>
   </section>
@@ -145,12 +119,6 @@
     <div id="maritimaBox"></div>
   </section>
 
-  <section id="netatmoSection" class="acc-coral" style="display:none;">
-    <div class="section-title">🏠 Estación de Luarca (Netatmo)</div>
-    <div class="section-sub" id="netatmoSub"></div>
-    <div id="netatmoGrid" class="netatmo-grid"></div>
-  </section>
-
   <section class="acc-amber">
     <div class="section-title">🏖️ Playa de Luarca (4 días)</div>
     <div class="section-sub">Ficha oficial de AEMET para la playa. Otur es casi idéntica por lo cerca que está.</div>
@@ -159,18 +127,17 @@
 
   <section>
     <div class="note">
-      <b>Cómo se calcula:</b> el tiempo real y la tendencia de presión vienen de tu estación Netatmo
-      en Luarca (o de Cabo Busto/AEMET si Netatmo no responde). La predicción de playa es la ficha
-      oficial de Luarca en AEMET. La predicción horaria y el boletín marítimo son los que AEMET
-      publica para todo Valdés/la costa asturiana — es lo más fino que dan a esta escala. La
-      recomendación de arriba es una heurística simple (presión + cielo + viento + avisos oficiales),
-      no un modelo meteorológico — para decisiones importantes, consulta la predicción oficial de
-      AEMET.
+      <b>Cómo se calcula:</b> el tiempo real y la tendencia de presión vienen de la estación AEMET de
+      Cabo Busto, la más cercana a Luarca. La predicción de playa es la ficha oficial de Luarca en
+      AEMET. La predicción horaria y el boletín marítimo son los que AEMET publica para todo
+      Valdés/la costa asturiana — es lo más fino que dan a esta escala. La recomendación de arriba es
+      una heurística simple (presión + cielo + viento + avisos oficiales), no un modelo
+      meteorológico — para decisiones importantes, consulta la predicción oficial de AEMET.
     </div>
   </section>
 </main>
 
-<footer>El Tiempo en Luarca · Dato: AEMET OpenData + Netatmo · actualización automática cada hora</footer>
+<footer>El Tiempo en Luarca · Dato: AEMET OpenData · actualización automática cada hora</footer>
 
 <script>
 function compass(deg){
@@ -233,26 +200,17 @@ function render(DATA){
   // --- Hero ---
   const r = DATA.recomendacion;
   const rt = DATA.real_time;
-  const nat = DATA.netatmo_own;
   const color = scoreColor(r.score);
-
-  // Preferimos tu estación Netatmo (está en Luarca) sobre Cabo Busto (AEMET, más lejos)
-  const fuente = nat ? 'tu estación' : 'Cabo Busto, AEMET';
-  const tempMostrar = nat && nat.exterior ? nat.exterior.temp_c : rt.temp_c;
-  const vientoMostrar = nat && nat.viento ? nat.viento.kmh : rt.wind_kmh;
-  const vientoDirMostrar = nat && nat.viento ? nat.viento.dir : rt.wind_dir;
-  const presionMostrar = nat ? nat.presion_hpa : rt.pres_hpa;
-  const tendenciaMostrar = nat ? ({up:'subiendo', down:'bajando', stable:'estable'}[nat.presion_tendencia] || nat.presion_tendencia) : rt.pres_tendencia;
-  const trendArrow = tendenciaMostrar === 'subiendo' ? '↑' : tendenciaMostrar === 'bajando' ? '↓' : '→';
+  const trendArrow = rt.pres_tendencia === 'subiendo' ? '↑' : rt.pres_tendencia === 'bajando' ? '↓' : '→';
 
   document.getElementById('hero').innerHTML = `
-    <div class="hero-label">Ahora mismo en Luarca · ${fuente}</div>
+    <div class="hero-label">Ahora mismo en Luarca · Cabo Busto, AEMET</div>
     <div class="hero-row">
       <div>
         <div class="hero-etiqueta" style="color:${color}">${r.etiqueta}</div>
         <div class="hero-sub">
-          🌡️ ${tempMostrar}°C &nbsp; 💨 ${vientoMostrar}km/h ${compass(vientoDirMostrar)} &nbsp;
-          📟 ${presionMostrar}hPa ${trendArrow} ${tendenciaMostrar}
+          🌡️ ${rt.temp_c}°C &nbsp; 💨 ${rt.wind_kmh}km/h ${compass(rt.wind_dir)} &nbsp;
+          📟 ${rt.pres_hpa}hPa ${trendArrow} ${rt.pres_tendencia}
         </div>
       </div>
       <div class="hero-score" style="color:${color}">${r.score}</div>
@@ -399,56 +357,6 @@ function render(DATA){
     maritimaBox.innerHTML = html;
   } else {
     maritimaBox.innerHTML = '<div class="note">Sin dato marítimo disponible ahora mismo.</div>';
-  }
-
-  // --- Netatmo: tu estación ---
-  if(DATA.netatmo_own){
-    document.getElementById('netatmoSection').style.display = 'block';
-    const n = DATA.netatmo_own;
-    const vecinas = DATA.netatmo_vecinas || [];
-    const vecinasTemp = vecinas.map(v => v.temp_c).filter(t => t !== null);
-    const mediaVecinas = vecinasTemp.length ? (vecinasTemp.reduce((a,b)=>a+b,0)/vecinasTemp.length).toFixed(1) : null;
-    document.getElementById('netatmoSub').textContent =
-      `Estación meteorológica en Luarca` +
-      (mediaVecinas ? ` · media de la zona ahora: ${mediaVecinas}°C` : '');
-
-    const cells = [];
-    if(n.exterior) cells.push(['Exterior', `${n.exterior.temp_c}°C <small>· ${n.exterior.humedad}% hum.</small>`]);
-    cells.push(['Interior', `${n.interior.temp_c}°C <small>· CO₂ ${n.interior.co2}ppm</small>`]);
-    cells.push(['Presión', `${n.presion_hpa}hPa <small>· ${n.presion_tendencia}</small>`]);
-    if(n.viento) cells.push(['Viento', `${n.viento.kmh}km/h ${compass(n.viento.dir)} <small>ráf. ${n.viento.racha_kmh}</small>`]);
-    if(n.lluvia) cells.push(['Lluvia', `${n.lluvia.mm_1h}mm/h <small>· ${n.lluvia.mm_24h}mm/24h</small>`]);
-
-    const grid = document.getElementById('netatmoGrid');
-    cells.forEach(([k,v]) => {
-      const div = document.createElement('div');
-      div.className = 'netatmo-cell';
-      div.innerHTML = `<div class="k">${k}</div><div class="v">${v}</div>`;
-      grid.appendChild(div);
-    });
-
-    // --- Estaciones cercanas (desplegable, ubicación genérica por localidad) ---
-    if(vecinas.length){
-      const details = document.createElement('details');
-      details.className = 'vecinas-details';
-      const summary = document.createElement('summary');
-      summary.textContent = `Ver estaciones cercanas (${vecinas.length})`;
-      details.appendChild(summary);
-      const list = document.createElement('div');
-      list.className = 'vecinas-list';
-      vecinas
-        .filter(v => v.temp_c !== null)
-        .sort((a,b) => (a.ciudad||'').localeCompare(b.ciudad||''))
-        .forEach(v => {
-          const row = document.createElement('div');
-          row.className = 'vecina-row';
-          row.innerHTML = `<span>${v.ciudad || 'Zona desconocida'}</span>
-            <span>${v.temp_c}°C${v.humedad !== null ? ` · ${v.humedad}% hum.` : ''}</span>`;
-          list.appendChild(row);
-        });
-      details.appendChild(list);
-      document.getElementById('netatmoSection').appendChild(details);
-    }
   }
 
   // --- Predicción de Luarca (única playa, sin tabs) ---
