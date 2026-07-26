@@ -40,6 +40,7 @@ import urllib.request
 import urllib.error
 import xml.etree.ElementTree as ET
 from datetime import datetime, timezone
+from zoneinfo import ZoneInfo
 
 AEMET_API_KEY = os.environ.get("AEMET_API_KEY", "")
 
@@ -286,8 +287,13 @@ def fetch_hourly_forecast(horas=18):
                 "viento_dir": viento_por_hora.get(hora, {}).get("dir"),
                 "viento_kmh": viento_por_hora.get(hora, {}).get("vel"),
             })
-        if len(salida) >= horas:
+        if len(salida) >= horas + 24:  # margen: filtramos después, no cortamos aún
             break
+
+    # AEMET puede devolver horas ya pasadas (p.ej. si la última emisión fue
+    # anoche). Filtramos a partir de la hora actual en horario local español.
+    ahora_local = datetime.now(ZoneInfo("Europe/Madrid")).strftime("%Y-%m-%dT%H:00")
+    salida = [h for h in salida if h["fecha_hora"] >= ahora_local]
     return salida[:horas]
 
 
