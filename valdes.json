@@ -1,13 +1,13 @@
 {
   "real_time": {
-    "ts": "2026-07-25T22:00:00+0000",
-    "temp_c": 18.9,
-    "wind_kmh": 17.6,
-    "wind_dir": 282.0,
-    "gust_kmh": 23.4,
+    "ts": "2026-07-25T23:00:00+0000",
+    "temp_c": 18.6,
+    "wind_kmh": 15.8,
+    "wind_dir": 252.0,
+    "gust_kmh": 23.8,
     "pres_hpa": 1013.2,
     "pres_tendencia": "estable",
-    "humedad": 86.0
+    "humedad": 80.0
   },
   "recomendacion": {
     "score": 60,
@@ -178,17 +178,26 @@
           "cielo": "nuboso",
           "viento": "flojo",
           "oleaje": "débil",
-          "t_max": 23,
+          "t_max": 24,
           "t_agua": 22,
           "uv_max": 8
         },
         {
           "fecha": "20260727",
-          "cielo": "despejado",
+          "cielo": "nuboso",
           "viento": "flojo",
           "oleaje": "débil",
-          "t_max": 24,
+          "t_max": 25,
           "t_agua": 21,
+          "uv_max": 8
+        },
+        {
+          "fecha": "20260728",
+          "cielo": "despejado",
+          "viento": "flojo",
+          "oleaje": "fuerte",
+          "t_max": 28,
+          "t_agua": 22,
           "uv_max": 8
         }
       ]
@@ -214,17 +223,26 @@
           "cielo": "nuboso",
           "viento": "flojo",
           "oleaje": "débil",
-          "t_max": 23,
-          "t_agua": 22,
+          "t_max": 24,
+          "t_agua": 21,
           "uv_max": 8
         },
         {
           "fecha": "20260727",
-          "cielo": "despejado",
+          "cielo": "nuboso",
           "viento": "flojo",
           "oleaje": "débil",
           "t_max": 25,
           "t_agua": 22,
+          "uv_max": 8
+        },
+        {
+          "fecha": "20260728",
+          "cielo": "despejado",
+          "viento": "flojo",
+          "oleaje": "débil",
+          "t_max": 28,
+          "t_agua": 21,
           "uv_max": 8
         }
       ]
@@ -336,5 +354,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-07-25T23:11:44.189993+00:00"
+  "generated_at": "2026-07-26T00:13:07.416679+00:00"
 }
