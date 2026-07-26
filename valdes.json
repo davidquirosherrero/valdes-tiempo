@@ -13,7 +13,17 @@
     "score": 60,
     "etiqueta": "Aceptable, pero el cielo estará nuboso"
   },
-  "que_se_acerca": null,
+  "que_se_acerca": {
+    "sector": "W",
+    "disponible": true,
+    "nombre": "Ribadeo",
+    "dist_km": 44,
+    "lloviendo": false,
+    "prec_mm": 0,
+    "temp_c": 22.8,
+    "cielo_despejado": true,
+    "eta_horas": 3.3
+  },
   "forecast_municipio": null,
   "forecast_horaria": [],
   "avisos": [],
@@ -81,8 +91,8 @@
       "lat": 43.33,
       "lon": -6.42,
       "ciudad": "Tineo",
-      "temp_c": 17.8,
-      "humedad": 84
+      "temp_c": 17.5,
+      "humedad": 85
     },
     {
       "lat": 43.4,
@@ -272,5 +282,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-07-26T20:30:06.328660+00:00"
+  "generated_at": "2026-07-26T20:32:54.739987+00:00"
 }
