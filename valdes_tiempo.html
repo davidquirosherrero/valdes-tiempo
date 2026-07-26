@@ -290,6 +290,25 @@ function render(DATA){
   function renderHoraChart(metric){
     const horas = DATA.forecast_horaria || [];
     const ctx = document.getElementById('horaChart');
+
+    if(horas.length === 0){
+      if(horaChartInstance){ horaChartInstance.destroy(); horaChartInstance = null; }
+      ctx.style.display = 'none';
+      let msg = document.getElementById('horaChartEmpty');
+      if(!msg){
+        msg = document.createElement('div');
+        msg.id = 'horaChartEmpty';
+        msg.className = 'note';
+        msg.style.margin = '0';
+        ctx.parentNode.appendChild(msg);
+      }
+      msg.innerHTML = 'Sin datos horarios en esta actualización (AEMET no ha respondido). Se recupera solo en la próxima ejecución, dentro de una hora.';
+      return;
+    }
+    ctx.style.display = 'block';
+    const existingMsg = document.getElementById('horaChartEmpty');
+    if(existingMsg) existingMsg.remove();
+
     const labels = horas.map(h => h.fecha_hora.split('T')[1].slice(0,5).replace(':00','') + 'h');
     const emojis = horas.map(h => cieloEmoji(h.cielo));
     const valores = horas.map(h => h[metric] !== null && h[metric] !== undefined ? Number(h[metric]) : null);
