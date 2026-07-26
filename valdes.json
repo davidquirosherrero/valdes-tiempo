@@ -1,29 +1,19 @@
 {
   "real_time": {
-    "ts": "2026-07-26T17:00:00+0000",
-    "temp_c": 22.2,
-    "wind_kmh": 11.5,
-    "wind_dir": 280.0,
-    "gust_kmh": 17.3,
-    "pres_hpa": 1013.4,
+    "ts": "2026-07-26T19:00:00+0000",
+    "temp_c": 21.6,
+    "wind_kmh": 14.0,
+    "wind_dir": 272.0,
+    "gust_kmh": 16.6,
+    "pres_hpa": 1013.7,
     "pres_tendencia": "estable",
-    "humedad": 77.0
+    "humedad": 79.0
   },
   "recomendacion": {
     "score": 60,
     "etiqueta": "Aceptable, pero el cielo estará nuboso"
   },
-  "que_se_acerca": {
-    "sector": "NE",
-    "disponible": true,
-    "nombre": "Cabo Peñas",
-    "dist_km": 57,
-    "lloviendo": false,
-    "prec_mm": 0,
-    "temp_c": 20.9,
-    "cielo_despejado": true,
-    "eta_horas": 19.0
-  },
+  "que_se_acerca": null,
   "forecast_municipio": [
     {
       "fecha": "2026-07-26T00:00:00",
@@ -45,7 +35,7 @@
     },
     {
       "fecha": "2026-07-28T00:00:00",
-      "cielo": "Poco nuboso",
+      "cielo": "Despejado",
       "viento_dir": "NE",
       "viento_kmh": 10,
       "t_max": 28,
@@ -62,170 +52,7 @@
       "prob_precipitacion": null
     }
   ],
-  "forecast_horaria": [
-    {
-      "fecha_hora": "2026-07-26T20:00",
-      "temp": "21",
-      "sens_termica": "21",
-      "cielo": "Despejado",
-      "prob_precipitacion": "0",
-      "viento_dir": "NO",
-      "viento_kmh": "11"
-    },
-    {
-      "fecha_hora": "2026-07-26T21:00",
-      "temp": "20",
-      "sens_termica": "20",
-      "cielo": "Muy nuboso",
-      "prob_precipitacion": "0",
-      "viento_dir": "NO",
-      "viento_kmh": "9"
-    },
-    {
-      "fecha_hora": "2026-07-26T22:00",
-      "temp": "20",
-      "sens_termica": "20",
-      "cielo": "Muy nuboso",
-      "prob_precipitacion": "0",
-      "viento_dir": "O",
-      "viento_kmh": "5"
-    },
-    {
-      "fecha_hora": "2026-07-26T23:00",
-      "temp": "19",
-      "sens_termica": "19",
-      "cielo": "Muy nuboso",
-      "prob_precipitacion": "0",
-      "viento_dir": "S",
-      "viento_kmh": "5"
-    },
-    {
-      "fecha_hora": "2026-07-27T00:00",
-      "temp": "19",
-      "sens_termica": "19",
-      "cielo": "Cubierto",
-      "prob_precipitacion": "0",
-      "viento_dir": "SO",
-      "viento_kmh": "2"
-    },
-    {
-      "fecha_hora": "2026-07-27T01:00",
-      "temp": "19",
-      "sens_termica": "19",
-      "cielo": "Cubierto",
-      "prob_precipitacion": "0",
-      "viento_dir": "S",
-      "viento_kmh": "5"
-    },
-    {
-      "fecha_hora": "2026-07-27T02:00",
-      "temp": "19",
-      "sens_termica": "19",
-      "cielo": "Cubierto",
-      "prob_precipitacion": "45",
-      "viento_dir": "S",
-      "viento_kmh": "3"
-    },
-    {
-      "fecha_hora": "2026-07-27T03:00",
-      "temp": "19",
-      "sens_termica": "19",
-      "cielo": "Cubierto",
-      "prob_precipitacion": "45",
-      "viento_dir": "SE",
-      "viento_kmh": "2"
-    },
-    {
-      "fecha_hora": "2026-07-27T04:00",
-      "temp": "19",
-      "sens_termica": "19",
-      "cielo": "Cubierto",
-      "prob_precipitacion": "45",
-      "viento_dir": "E",
-      "viento_kmh": "2"
-    },
-    {
-      "fecha_hora": "2026-07-27T05:00",
-      "temp": "20",
-      "sens_termica": "20",
-      "cielo": "Cubierto",
-      "prob_precipitacion": "45",
-      "viento_dir": "S",
-      "viento_kmh": "1"
-    },
-    {
-      "fecha_hora": "2026-07-27T06:00",
-      "temp": "20",
-      "sens_termica": "20",
-      "cielo": "Cubierto",
-      "prob_precipitacion": "45",
-      "viento_dir": "S",
-      "viento_kmh": "3"
-    },
-    {
-      "fecha_hora": "2026-07-27T07:00",
-      "temp": "20",
-      "sens_termica": "20",
-      "cielo": "Muy nuboso",
-      "prob_precipitacion": "45",
-      "viento_dir": "S",
-      "viento_kmh": "2"
-    },
-    {
-      "fecha_hora": "2026-07-27T08:00",
-      "temp": "20",
-      "sens_termica": "20",
-      "cielo": "Muy nuboso",
-      "prob_precipitacion": "0",
-      "viento_dir": "S",
-      "viento_kmh": "3"
-    },
-    {
-      "fecha_hora": "2026-07-27T09:00",
-      "temp": "20",
-      "sens_termica": "20",
-      "cielo": "Muy nuboso",
-      "prob_precipitacion": "0",
-      "viento_dir": "SE",
-      "viento_kmh": "2"
-    },
-    {
-      "fecha_hora": "2026-07-27T10:00",
-      "temp": "21",
-      "sens_termica": "21",
-      "cielo": "Muy nuboso",
-      "prob_precipitacion": "0",
-      "viento_dir": "NE",
-      "viento_kmh": "8"
-    },
-    {
-      "fecha_hora": "2026-07-27T11:00",
-      "temp": "22",
-      "sens_termica": "22",
-      "cielo": "Poco nuboso",
-      "prob_precipitacion": "0",
-      "viento_dir": "NE",
-      "viento_kmh": "15"
-    },
-    {
-      "fecha_hora": "2026-07-27T12:00",
-      "temp": "22",
-      "sens_termica": "22",
-      "cielo": "Despejado",
-      "prob_precipitacion": "0",
-      "viento_dir": "NE",
-      "viento_kmh": "20"
-    },
-    {
-      "fecha_hora": "2026-07-27T13:00",
-      "temp": "23",
-      "sens_termica": "23",
-      "cielo": "Despejado",
-      "prob_precipitacion": "0",
-      "viento_dir": "NE",
-      "viento_kmh": "23"
-    }
-  ],
+  "forecast_horaria": [],
   "avisos": [],
   "maritima": {
     "texto": "Oeste de Peñas: W o NW 3 o 4 tendiendo a Variable 1 a 3 a partir de la noche y arreciando a E o NE 3 o 4 al avanzar la madrugada. Marejadilla o marejada disminuyendo temporalmente a rizada o marejadilla durante la noche y madrugada. \r\n Este de Peñas: W o NW 3 o 4 tendiendo a Variable 1 a 3 al avanzar la madrugada pero arreciando a E o NE 3 o 4 a partir de la mañana. Marejadilla o marejada disminuyendo a rizada o marejadilla al avanzar la madrugada. \r\n Ambas zonas: A partir del mediodía, E o NE 4 o 5 y marejada. Mar de fondo del N o NW de 1 a 2 m.",
@@ -251,14 +78,14 @@
     "presion_hpa": 1019.5,
     "presion_tendencia": "stable",
     "exterior": {
-      "temp_c": 23.9,
-      "humedad": 81,
+      "temp_c": 21.2,
+      "humedad": 86,
       "tendencia": "down"
     },
     "viento": {
-      "kmh": 3,
-      "dir": 40,
-      "racha_kmh": 7
+      "kmh": 1,
+      "dir": 51,
+      "racha_kmh": 5
     },
     "lluvia": {
       "mm_1h": 0,
@@ -270,71 +97,71 @@
       "lat": 43.62,
       "lon": -7.31,
       "ciudad": "Foz",
-      "temp_c": 22.8,
-      "humedad": 79
+      "temp_c": 22.1,
+      "humedad": 80
     },
     {
       "lat": 43.54,
       "lon": -7.17,
       "ciudad": "A Cruz",
-      "temp_c": 26.9,
-      "humedad": 65
+      "temp_c": 27.1,
+      "humedad": 66
     },
     {
       "lat": 43.54,
       "lon": -7.17,
       "ciudad": "A Cruz",
-      "temp_c": 24.5,
-      "humedad": 72
+      "temp_c": 23.3,
+      "humedad": 78
     },
     {
       "lat": 43.54,
       "lon": -7.02,
       "ciudad": "Castropol",
-      "temp_c": 23.5,
-      "humedad": 80
+      "temp_c": 22.1,
+      "humedad": 87
     },
     {
       "lat": 43.54,
       "lon": -7.02,
       "ciudad": "As Figueiras",
-      "temp_c": 22.2,
-      "humedad": 85
+      "temp_c": 21.7,
+      "humedad": 87
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
-      "temp_c": 22.4,
-      "humedad": 77
+      "temp_c": 21.4,
+      "humedad": 81
     },
     {
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 22.8,
-      "humedad": 74
+      "temp_c": 22.2,
+      "humedad": 76
     },
     {
       "lat": 43.56,
       "lon": -6.27,
       "ciudad": "Cudillero",
-      "temp_c": 24.4,
+      "temp_c": 23.8,
       "humedad": 62
     },
     {
       "lat": 43.57,
       "lon": -6.21,
       "ciudad": "Cudillero",
-      "temp_c": 23.4,
-      "humedad": 75
+      "temp_c": 22.5,
+      "humedad": 78
     },
     {
       "lat": 43.53,
       "lon": -6.07,
       "ciudad": "Soto del Barco",
-      "temp_c": 29.9,
-      "humedad": 56
+      "temp_c": 26.2,
+      "humedad": 63
     },
     {
       "lat": 43.53,
@@ -347,1569 +174,1555 @@
       "lat": 43.55,
       "lon": -6.09,
       "ciudad": "Muros de Nalón",
-      "temp_c": 23.4,
-      "humedad": 75
+      "temp_c": 22.2,
+      "humedad": 80
+    },
+    {
+      "lat": 43.56,
+      "lon": -5.97,
+      "ciudad": "Castrillón",
+      "temp_c": 29.9,
+      "humedad": 52
     },
     {
       "lat": 43.56,
       "lon": -5.98,
       "ciudad": "Castrillón",
-      "temp_c": 25.1,
-      "humedad": 69
+      "temp_c": 24.5,
+      "humedad": 72
     },
     {
-      "lat": 43.57,
-      "lon": -5.96,
-      "ciudad": "Salinas",
-      "temp_c": 22.8,
-      "humedad": 75
-    },
-    {
-      "lat": 43.55,
-      "lon": -5.92,
-      "ciudad": "Avilés",
-      "temp_c": 23.1,
-      "humedad": 75
+      "lat": 43.56,
+      "lon": -5.97,
+      "ciudad": "Castrillón",
+      "temp_c": 28.6,
+      "humedad": 62
     },
     {
       "lat": 43.5,
       "lon": -5.71,
       "ciudad": "Gijón/Xixón",
-      "temp_c": 24.4,
-      "humedad": 69
+      "temp_c": 21.1,
+      "humedad": 80
     },
     {
       "lat": 43.5,
       "lon": -5.66,
       "ciudad": "Gijón/Xixón",
-      "temp_c": 24.1,
-      "humedad": 72
+      "temp_c": 22.2,
+      "humedad": 79
     },
     {
       "lat": 43.51,
       "lon": -5.66,
       "ciudad": "Gijón",
-      "temp_c": 24.9,
-      "humedad": 64
+      "temp_c": 23.6,
+      "humedad": 68
     },
     {
       "lat": 43.54,
       "lon": -5.46,
       "ciudad": "Villaviciosa",
-      "temp_c": 25.1,
-      "humedad": 71
+      "temp_c": 22.2,
+      "humedad": 80
     },
     {
       "lat": 43.48,
       "lon": -5.44,
       "ciudad": "Villaviciosa",
-      "temp_c": 24.5,
-      "humedad": 60
+      "temp_c": 22.5,
+      "humedad": 69
     },
     {
       "lat": 43.55,
       "lon": -5.41,
       "ciudad": "Villaviciosa",
-      "temp_c": 24.4,
-      "humedad": 72
+      "temp_c": 23.9,
+      "humedad": 76
     },
     {
       "lat": 43.68,
       "lon": -7.78,
       "ciudad": "Ortigueira",
-      "temp_c": 25,
-      "humedad": 72
+      "temp_c": 23.5,
+      "humedad": 76
     },
     {
       "lat": 43.77,
       "lon": -7.67,
       "ciudad": "O Porto de Bares",
-      "temp_c": 22.8,
-      "humedad": 65
+      "temp_c": 20.8,
+      "humedad": 71
     },
     {
       "lat": 43.63,
       "lon": -7.63,
       "ciudad": "Viveiro",
-      "temp_c": 23,
-      "humedad": 71
+      "temp_c": 21.6,
+      "humedad": 76
     },
     {
       "lat": 43.67,
       "lon": -7.41,
       "ciudad": "Cervo",
-      "temp_c": 23.4,
-      "humedad": 75
+      "temp_c": 22.3,
+      "humedad": 80
     },
     {
       "lat": 43.66,
       "lon": -7.36,
       "ciudad": "Burela",
-      "temp_c": 23.6,
-      "humedad": 72
+      "temp_c": 22.2,
+      "humedad": 77
     },
     {
       "lat": 43.67,
       "lon": -7.35,
       "ciudad": null,
-      "temp_c": 25.1,
-      "humedad": 64
+      "temp_c": 23.8,
+      "humedad": 66
     },
     {
       "lat": 41.66,
       "lon": -7.57,
       "ciudad": "Vidago",
-      "temp_c": 30.1,
-      "humedad": 46
+      "temp_c": 29,
+      "humedad": 50
     },
     {
       "lat": 41.67,
       "lon": -7.57,
       "ciudad": "Vilela do Tâmega",
-      "temp_c": 30.2,
-      "humedad": 44
+      "temp_c": 30.8,
+      "humedad": 45
     },
     {
       "lat": 41.62,
       "lon": -7.27,
       "ciudad": "Possacos",
-      "temp_c": 30.3,
-      "humedad": 44
+      "temp_c": 29.1,
+      "humedad": 48
     },
     {
       "lat": 41.67,
       "lon": -6.82,
       "ciudad": "Bragança",
-      "temp_c": 31.8,
-      "humedad": 32
+      "temp_c": 28.6,
+      "humedad": 38
     },
     {
       "lat": 41.65,
       "lon": -6.81,
       "ciudad": "Bragança",
-      "temp_c": 29.4,
-      "humedad": 34
+      "temp_c": 28.4,
+      "humedad": 36
     },
     {
       "lat": 41.71,
       "lon": -5.81,
       "ciudad": "Perilla de Castro",
-      "temp_c": 30.8,
-      "humedad": 32
+      "temp_c": 29.6,
+      "humedad": 33
     },
     {
       "lat": 41.9,
       "lon": -7.44,
       "ciudad": "Verín",
-      "temp_c": 28.9,
-      "humedad": 47
+      "temp_c": 28.5,
+      "humedad": 48
     },
     {
       "lat": 41.8,
       "lon": -6.78,
       "ciudad": "Bragança",
-      "temp_c": 28,
-      "humedad": 32
+      "temp_c": 28.6,
+      "humedad": 36
     },
     {
       "lat": 41.81,
       "lon": -6.75,
       "ciudad": "Bragança",
-      "temp_c": 31.6,
-      "humedad": 31
+      "temp_c": 29.8,
+      "humedad": 37
     },
     {
       "lat": 41.82,
       "lon": -6.75,
       "ciudad": "Bragança",
-      "temp_c": 29.8,
-      "humedad": 29
+      "temp_c": 29,
+      "humedad": 35
     },
     {
       "lat": 41.9,
       "lon": -5.36,
       "ciudad": "Villamayor de Campos",
-      "temp_c": 28.9,
-      "humedad": 31
+      "temp_c": 26.9,
+      "humedad": 34
     },
     {
       "lat": 41.9,
       "lon": -5.36,
       "ciudad": "Villamayor de Campos",
-      "temp_c": 25.7,
-      "humedad": 43
+      "temp_c": 24.6,
+      "humedad": 51
     },
     {
       "lat": 42.06,
       "lon": -7.73,
       "ciudad": "Xinzo de Limia",
-      "temp_c": 26.6,
-      "humedad": 52
+      "temp_c": 26,
+      "humedad": 53
     },
     {
       "lat": 41.95,
       "lon": -7.43,
       "ciudad": "Verín",
-      "temp_c": 30.7,
-      "humedad": 54
+      "temp_c": 29.4,
+      "humedad": 53
     },
     {
       "lat": 42.03,
       "lon": -6.47,
       "ciudad": "Asturianos",
-      "temp_c": 23.2,
+      "temp_c": 23.1,
       "humedad": 70
     },
     {
       "lat": 41.99,
       "lon": -6.03,
       "ciudad": "Camarzana de Tera",
-      "temp_c": 27.6,
-      "humedad": 41
+      "temp_c": 26,
+      "humedad": 47
     },
     {
       "lat": 42.03,
       "lon": -6.05,
       "ciudad": "Camarzana de Tera",
-      "temp_c": 28.4,
-      "humedad": 35
+      "temp_c": 26.3,
+      "humedad": 38
     },
     {
       "lat": 41.99,
       "lon": -5.97,
       "ciudad": "Santa Croya de Tera",
-      "temp_c": 28.4,
-      "humedad": 46
+      "temp_c": 25.3,
+      "humedad": 58
     },
     {
       "lat": 41.94,
       "lon": -5.89,
       "ciudad": "Morales de Valverde",
-      "temp_c": 25.6,
-      "humedad": 43
+      "temp_c": 24.7,
+      "humedad": 46
     },
     {
       "lat": 42.09,
       "lon": -7.4,
       "ciudad": "Laza",
-      "temp_c": 25.6,
-      "humedad": 54
+      "temp_c": 23.3,
+      "humedad": 59
     },
     {
       "lat": 42.09,
       "lon": -6.65,
       "ciudad": "Galende",
-      "temp_c": 26.9,
-      "humedad": 49
+      "temp_c": 22.7,
+      "humedad": 62
     },
     {
       "lat": 42.08,
       "lon": -6.64,
       "ciudad": "Cobreros",
-      "temp_c": 25.4,
-      "humedad": 42
+      "temp_c": 22,
+      "humedad": 59
     },
     {
       "lat": 42.12,
       "lon": -5.96,
       "ciudad": "Villageriz",
-      "temp_c": 29.1,
-      "humedad": 32
+      "temp_c": 26.7,
+      "humedad": 35
     },
     {
       "lat": 42.18,
       "lon": -5.67,
       "ciudad": "La Antigua",
-      "temp_c": 28.6,
-      "humedad": 34
+      "temp_c": 26.3,
+      "humedad": 37
     },
     {
       "lat": 42.14,
       "lon": -5.4,
       "ciudad": "Gordoncillo",
-      "temp_c": 27.6,
-      "humedad": 28
+      "temp_c": 26.2,
+      "humedad": 31
     },
     {
       "lat": 42.34,
       "lon": -7.87,
       "ciudad": "Ourense",
-      "temp_c": 31.3,
-      "humedad": 55
+      "temp_c": 29.9,
+      "humedad": 57
     },
     {
       "lat": 42.34,
       "lon": -7.87,
       "ciudad": "Ourense",
-      "temp_c": 35.9,
-      "humedad": 42
+      "temp_c": 31.4,
+      "humedad": 48
     },
     {
       "lat": 42.34,
       "lon": -7.87,
       "ciudad": "Ourense",
-      "temp_c": 36.4,
-      "humedad": 41
+      "temp_c": 32.8,
+      "humedad": 43
     },
     {
       "lat": 42.3,
       "lon": -7.38,
       "ciudad": "Chandrexa de Queixa",
-      "temp_c": 31.7,
-      "humedad": 46
+      "temp_c": 26.3,
+      "humedad": 56
     },
     {
       "lat": 42.37,
       "lon": -7.36,
       "ciudad": "Sas de Penelas",
-      "temp_c": 24.4,
-      "humedad": 62
+      "temp_c": 23.2,
+      "humedad": 66
     },
     {
       "lat": 42.39,
       "lon": -7.21,
       "ciudad": "Quiroga",
-      "temp_c": 29.7,
-      "humedad": 57
+      "temp_c": 28.1,
+      "humedad": 60
     },
     {
       "lat": 42.38,
       "lon": -5.94,
       "ciudad": "Santa María de la Isla",
-      "temp_c": 26.6,
-      "humedad": 46
+      "temp_c": 25.5,
+      "humedad": 52
     },
     {
       "lat": 42.35,
       "lon": -5.74,
       "ciudad": "Santa María del Páramo",
-      "temp_c": 25.7,
-      "humedad": 48
+      "temp_c": 23.9,
+      "humedad": 57
     },
     {
       "lat": 42.38,
       "lon": -5.71,
       "ciudad": "Bercianos del Páramo",
-      "temp_c": 25.7,
-      "humedad": 52
+      "temp_c": 24.3,
+      "humedad": 60
     },
     {
       "lat": 42.38,
       "lon": -5.7,
       "ciudad": "Bercianos del Páramo",
-      "temp_c": 27,
-      "humedad": 44
+      "temp_c": 25.6,
+      "humedad": 48
     },
     {
       "lat": 42.29,
       "lon": -5.52,
       "ciudad": "Valencia de Don Juan",
-      "temp_c": 27.4,
+      "temp_c": 26.4,
       "humedad": 45
     },
     {
       "lat": 42.52,
       "lon": -7.52,
       "ciudad": "Monforte de Lemos",
-      "temp_c": 28.2,
-      "humedad": 48
+      "temp_c": 26.6,
+      "humedad": 52
     },
     {
       "lat": 42.52,
       "lon": -7.51,
       "ciudad": "Monforte de Lemos",
-      "temp_c": 27.9,
-      "humedad": 55
+      "temp_c": 26.7,
+      "humedad": 57
     },
     {
       "lat": 42.52,
       "lon": -7.42,
       "ciudad": "Monforte de Lemos",
-      "temp_c": 26.7,
-      "humedad": 57
+      "temp_c": 25.2,
+      "humedad": 62
     },
     {
       "lat": 42.42,
       "lon": -6.99,
       "ciudad": "O Barco de Valdeorras",
-      "temp_c": 29.8,
-      "humedad": 54
+      "temp_c": 28.3,
+      "humedad": 56
     },
     {
       "lat": 42.45,
       "lon": -6.95,
       "ciudad": "Rubiá",
-      "temp_c": 28.8,
-      "humedad": 48
+      "temp_c": 25.8,
+      "humedad": 55
     },
     {
       "lat": 42.54,
       "lon": -6.66,
       "ciudad": "Ponferrada",
-      "temp_c": 31.8,
-      "humedad": 42
+      "temp_c": 26.5,
+      "humedad": 54
     },
     {
       "lat": 42.5,
       "lon": -6.46,
       "ciudad": "Molinaseca",
-      "temp_c": 25.4,
-      "humedad": 53
+      "temp_c": 23.2,
+      "humedad": 59
     },
     {
       "lat": 42.54,
       "lon": -6.6,
       "ciudad": "Ponferrada",
-      "temp_c": 28.3,
-      "humedad": 50
+      "temp_c": 27,
+      "humedad": 53
     },
     {
       "lat": 42.4,
       "lon": -6.15,
       "ciudad": "Val de San Lorenzo",
-      "temp_c": 28.9,
-      "humedad": 29
+      "temp_c": 26.6,
+      "humedad": 33
     },
     {
       "lat": 42.44,
       "lon": -5.9,
       "ciudad": "Villarejo De ÓRbigo",
-      "temp_c": 29.4,
-      "humedad": 32
+      "temp_c": 25.5,
+      "humedad": 40
     },
     {
       "lat": 42.5,
       "lon": -5.9,
       "ciudad": "Benavides",
-      "temp_c": 27.9,
-      "humedad": 41
+      "temp_c": 23.4,
+      "humedad": 56
     },
     {
       "lat": 42.52,
       "lon": -5.7,
       "ciudad": "Chozas de Abajo",
-      "temp_c": 25.5,
-      "humedad": 43
-    },
-    {
-      "lat": 42.42,
-      "lon": -5.62,
-      "ciudad": "Valdevimbre",
-      "temp_c": 29.1,
-      "humedad": 42
+      "temp_c": 24.7,
+      "humedad": 47
     },
     {
       "lat": 42.49,
       "lon": -5.59,
       "ciudad": "Chozas de Abajo",
-      "temp_c": 29,
-      "humedad": 32
+      "temp_c": 26.6,
+      "humedad": 37
     },
     {
       "lat": 42.51,
       "lon": -5.54,
       "ciudad": "Vega de Infanzones",
-      "temp_c": 25.7,
-      "humedad": 43
+      "temp_c": 24.7,
+      "humedad": 47
     },
     {
       "lat": 42.44,
       "lon": -5.53,
       "ciudad": "Campo de Villavidel",
-      "temp_c": 34.7,
-      "humedad": 32
+      "temp_c": 27.3,
+      "humedad": 51
     },
     {
       "lat": 42.5,
       "lon": -5.42,
       "ciudad": "Mansilla de las Mulas",
-      "temp_c": 29.6,
-      "humedad": 36
+      "temp_c": 28.4,
+      "humedad": 39
     },
     {
       "lat": 42.55,
       "lon": -7.41,
       "ciudad": "A Pobra do Brollón",
-      "temp_c": 31.1,
+      "temp_c": 26.4,
+      "humedad": 53
+    },
+    {
+      "lat": 42.6,
+      "lon": -6.72,
+      "ciudad": "Cacabelos",
+      "temp_c": 26.7,
       "humedad": 43
     },
     {
       "lat": 42.6,
       "lon": -6.72,
       "ciudad": "Cacabelos",
-      "temp_c": 27.9,
-      "humedad": 41
-    },
-    {
-      "lat": 42.6,
-      "lon": -6.72,
-      "ciudad": "Cacabelos",
-      "temp_c": 27.8,
-      "humedad": 43
+      "temp_c": 27.3,
+      "humedad": 44
     },
     {
       "lat": 42.65,
       "lon": -6.69,
       "ciudad": "San Miguel De Arganza",
-      "temp_c": 27.1,
-      "humedad": 45
+      "temp_c": 24.6,
+      "humedad": 52
     },
     {
       "lat": 42.55,
       "lon": -6.61,
       "ciudad": "Ponferrada",
-      "temp_c": 26.8,
-      "humedad": 53
+      "temp_c": 26.3,
+      "humedad": 55
     },
     {
       "lat": 42.55,
       "lon": -6.6,
       "ciudad": "Ponferrada",
-      "temp_c": 29,
-      "humedad": 42
+      "temp_c": 27.9,
+      "humedad": 45
     },
     {
       "lat": 42.56,
       "lon": -6.59,
       "ciudad": "Ponferrada",
-      "temp_c": 31.6,
-      "humedad": 44
+      "temp_c": 28.7,
+      "humedad": 46
     },
     {
       "lat": 42.61,
       "lon": -6.37,
       "ciudad": "Torre del Bierzo",
-      "temp_c": 27.6,
-      "humedad": 41
+      "temp_c": 27,
+      "humedad": 43
     },
     {
       "lat": 42.66,
       "lon": -6.05,
       "ciudad": "Quintana del Castillo",
-      "temp_c": 26.5,
-      "humedad": 44
+      "temp_c": 23.8,
+      "humedad": 49
     },
     {
       "lat": 42.66,
       "lon": -5.85,
       "ciudad": "Villaviciosa de la Ribera",
-      "temp_c": 27.7,
-      "humedad": 46
+      "temp_c": 26,
+      "humedad": 50
     },
     {
       "lat": 42.57,
       "lon": -5.68,
       "ciudad": "Valverde de la Virgen",
-      "temp_c": 26.1,
-      "humedad": 45
+      "temp_c": 24.8,
+      "humedad": 52
     },
     {
       "lat": 42.57,
       "lon": -5.66,
       "ciudad": "Valverde de la Virgen",
-      "temp_c": 25.9,
-      "humedad": 44
+      "temp_c": 24.2,
+      "humedad": 51
     },
     {
       "lat": 42.58,
       "lon": -5.64,
       "ciudad": "Valverde de la Virgen",
-      "temp_c": 25.7,
-      "humedad": 37
+      "temp_c": 24.7,
+      "humedad": 44
     },
     {
       "lat": 42.62,
       "lon": -5.55,
       "ciudad": "Villaquilambre",
-      "temp_c": 28.5,
-      "humedad": 32
+      "temp_c": 25.1,
+      "humedad": 43
     },
     {
       "lat": 42.61,
       "lon": -5.55,
       "ciudad": "Villaquilambre",
-      "temp_c": 28.9,
-      "humedad": 34
+      "temp_c": 26.5,
+      "humedad": 43
     },
     {
       "lat": 42.61,
       "lon": -5.54,
       "ciudad": "Villaquilambre",
-      "temp_c": 29.1,
-      "humedad": 34
+      "temp_c": 27.7,
+      "humedad": 41
     },
     {
       "lat": 42.78,
       "lon": -7.42,
       "ciudad": "Sarria",
-      "temp_c": 29.7,
-      "humedad": 49
+      "temp_c": 27.5,
+      "humedad": 54
     },
     {
       "lat": 42.73,
       "lon": -6.03,
       "ciudad": "Valdesamario",
-      "temp_c": 20.7,
-      "humedad": 54
+      "temp_c": 20.2,
+      "humedad": 56
     },
     {
       "lat": 42.79,
       "lon": -6.04,
       "ciudad": "Riello",
-      "temp_c": 23.8,
+      "temp_c": 22.6,
       "humedad": 57
     },
     {
       "lat": 42.77,
       "lon": -5.91,
       "ciudad": "Soto y Amío",
-      "temp_c": 27.2,
-      "humedad": 42
+      "temp_c": 24.6,
+      "humedad": 46
     },
     {
       "lat": 42.84,
       "lon": -5.86,
       "ciudad": "Los Barrios de Luna",
-      "temp_c": 24.3,
-      "humedad": 50
+      "temp_c": 22.6,
+      "humedad": 49
     },
     {
       "lat": 42.79,
       "lon": -5.77,
       "ciudad": "Carrocera",
-      "temp_c": 24.8,
-      "humedad": 43
+      "temp_c": 23,
+      "humedad": 44
     },
     {
       "lat": 42.8,
       "lon": -5.63,
       "ciudad": "La Robla",
-      "temp_c": 26.5,
-      "humedad": 43
+      "temp_c": 24.2,
+      "humedad": 48
     },
     {
       "lat": 42.73,
       "lon": -5.61,
       "ciudad": "Garrafe de Torío",
-      "temp_c": 24.3,
-      "humedad": 49
+      "temp_c": 22.2,
+      "humedad": 52
     },
     {
       "lat": 42.79,
       "lon": -5.5,
       "ciudad": "Garrafe de Torío",
-      "temp_c": 30.9,
-      "humedad": 40
+      "temp_c": 27.6,
+      "humedad": 44
     },
     {
       "lat": 43.01,
       "lon": -7.85,
       "ciudad": "Xiá",
-      "temp_c": 24.5,
-      "humedad": 69
+      "temp_c": 22.6,
+      "humedad": 74
     },
     {
       "lat": 43.01,
-      "lon": -7.57,
-      "ciudad": "Lugo",
-      "temp_c": 27.6,
-      "humedad": 57
-    },
-    {
-      "lat": 42.97,
-      "lon": -7.55,
-      "ciudad": "Lugo",
-      "temp_c": 28.2,
-      "humedad": 58
-    },
-    {
-      "lat": 42.99,
-      "lon": -7.56,
-      "ciudad": "Lugo",
-      "temp_c": 32.3,
-      "humedad": 37
-    },
-    {
-      "lat": 42.96,
-      "lon": -7.01,
-      "ciudad": "Navia de Suarna",
-      "temp_c": 32,
-      "humedad": 45
-    },
-    {
-      "lat": 42.94,
-      "lon": -5.66,
-      "ciudad": "Villamanín",
-      "temp_c": 21.6,
-      "humedad": 62
-    },
-    {
-      "lat": 43.01,
-      "lon": -5.44,
-      "ciudad": "Valdelugueros",
-      "temp_c": 19,
-      "humedad": 67
-    },
-    {
-      "lat": 43.13,
-      "lon": -7.67,
-      "ciudad": "Outeiro de Rei",
-      "temp_c": 27.7,
-      "humedad": 56
-    },
-    {
-      "lat": 43.02,
       "lon": -7.57,
       "ciudad": "Lugo",
       "temp_c": 25.7,
       "humedad": 63
     },
     {
-      "lat": 43.01,
+      "lat": 42.97,
+      "lon": -7.55,
+      "ciudad": "Lugo",
+      "temp_c": 23.3,
+      "humedad": 71
+    },
+    {
+      "lat": 42.99,
       "lon": -7.56,
       "ciudad": "Lugo",
-      "temp_c": 26.8,
-      "humedad": 56
+      "temp_c": 27,
+      "humedad": 47
+    },
+    {
+      "lat": 42.96,
+      "lon": -7.01,
+      "ciudad": "Navia de Suarna",
+      "temp_c": 27.1,
+      "humedad": 58
+    },
+    {
+      "lat": 42.94,
+      "lon": -5.66,
+      "ciudad": "Villamanín",
+      "temp_c": 20.1,
+      "humedad": 65
+    },
+    {
+      "lat": 43.01,
+      "lon": -5.44,
+      "ciudad": "Valdelugueros",
+      "temp_c": 17.4,
+      "humedad": 73
     },
     {
       "lat": 43.13,
-      "lon": -7.59,
-      "ciudad": "",
-      "temp_c": 27.1,
-      "humedad": 52
+      "lon": -7.67,
+      "ciudad": "Outeiro de Rei",
+      "temp_c": 23.8,
+      "humedad": 66
+    },
+    {
+      "lat": 43.01,
+      "lon": -7.57,
+      "ciudad": "Lugo",
+      "temp_c": 24.9,
+      "humedad": 65
+    },
+    {
+      "lat": 43.02,
+      "lon": -7.57,
+      "ciudad": "Lugo",
+      "temp_c": 24.7,
+      "humedad": 67
+    },
+    {
+      "lat": 43.01,
+      "lon": -7.56,
+      "ciudad": "Lugo",
+      "temp_c": 24.7,
+      "humedad": 65
     },
     {
       "lat": 43.02,
       "lon": -6.91,
       "ciudad": "Ibias",
-      "temp_c": 22,
-      "humedad": 62
+      "temp_c": 21.3,
+      "humedad": 65
     },
     {
       "lat": 43.04,
       "lon": -6.25,
       "ciudad": "Somiedo",
-      "temp_c": 21.2,
-      "humedad": 59
+      "temp_c": 21.5,
+      "humedad": 61
     },
     {
       "lat": 43.1,
       "lon": -6.26,
       "ciudad": "Somiedo",
-      "temp_c": 21.6,
-      "humedad": 67
+      "temp_c": 20,
+      "humedad": 72
     },
     {
       "lat": 43.1,
       "lon": -5.79,
       "ciudad": "Lena",
-      "temp_c": 22.8,
-      "humedad": 68
+      "temp_c": 20.3,
+      "humedad": 75
     },
     {
       "lat": 43.06,
       "lon": -5.37,
       "ciudad": "Puebla de Lillo",
-      "temp_c": 19.9,
-      "humedad": 61
+      "temp_c": 16.7,
+      "humedad": 72
     },
     {
       "lat": 43.06,
       "lon": -5.37,
       "ciudad": "Puebla de Lillo",
-      "temp_c": 18.9,
-      "humedad": 65
+      "temp_c": 17.4,
+      "humedad": 71
     },
     {
       "lat": 43.18,
       "lon": -6.55,
       "ciudad": "Cangas del Narcea",
-      "temp_c": 24.9,
-      "humedad": 58
+      "temp_c": 21.7,
+      "humedad": 69
     },
     {
       "lat": 43.32,
       "lon": -6.01,
       "ciudad": "Oviedo",
-      "temp_c": 23.3,
-      "humedad": 68
+      "temp_c": 21.6,
+      "humedad": 73
     },
     {
       "lat": 43.31,
       "lon": -5.99,
       "ciudad": "",
-      "temp_c": 24.3,
-      "humedad": 68
+      "temp_c": 22.8,
+      "humedad": 74
     },
     {
       "lat": 43.31,
       "lon": -5.86,
       "ciudad": "Ribera de Arriba",
-      "temp_c": 24.6,
-      "humedad": 63
+      "temp_c": 22.5,
+      "humedad": 70
     },
     {
       "lat": 43.32,
       "lon": -5.8,
       "ciudad": "Oviedo",
-      "temp_c": 23,
-      "humedad": 70
+      "temp_c": 22.7,
+      "humedad": 73
     },
     {
       "lat": 43.25,
       "lon": -5.78,
       "ciudad": "Mieres",
-      "temp_c": 32.8,
-      "humedad": 37
+      "temp_c": 27.8,
+      "humedad": 47
     },
     {
       "lat": 43.21,
       "lon": -5.76,
       "ciudad": "Mieres",
-      "temp_c": 25,
-      "humedad": 56
+      "temp_c": 23.6,
+      "humedad": 62
     },
     {
       "lat": 43.17,
       "lon": -5.74,
       "ciudad": "Aller",
-      "temp_c": 26.4,
-      "humedad": 54
+      "temp_c": 22.8,
+      "humedad": 64
     },
     {
       "lat": 43.21,
       "lon": -5.68,
       "ciudad": "Mieres",
-      "temp_c": 24.1,
-      "humedad": 62
+      "temp_c": 22.3,
+      "humedad": 69
     },
     {
       "lat": 43.45,
       "lon": -7.86,
       "ciudad": "As Pontes de García Rodríguez",
-      "temp_c": 26.2,
-      "humedad": 65
+      "temp_c": 22.4,
+      "humedad": 72
     },
     {
       "lat": 43.46,
       "lon": -7.85,
       "ciudad": "As Pontes de García Rodríguez",
-      "temp_c": 22.3,
-      "humedad": 75
+      "temp_c": 20.3,
+      "humedad": 80
     },
     {
       "lat": 43.42,
       "lon": -7.27,
       "ciudad": "Lourenzá",
-      "temp_c": 22.7,
-      "humedad": 78
+      "temp_c": 21.6,
+      "humedad": 82
     },
     {
       "lat": 43.4,
       "lon": -6.54,
       "ciudad": "Tineo",
-      "temp_c": 23.2,
-      "humedad": 69
+      "temp_c": 22.1,
+      "humedad": 73
     },
     {
       "lat": 43.33,
       "lon": -6.42,
       "ciudad": "Tineo",
-      "temp_c": 21.8,
-      "humedad": 75
+      "temp_c": 19.4,
+      "humedad": 81
     },
     {
       "lat": 43.42,
       "lon": -6.45,
       "ciudad": "Tineo",
-      "temp_c": 27.5,
-      "humedad": 61
+      "temp_c": 21.9,
+      "humedad": 73
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 25.4,
-      "humedad": 61
+      "temp_c": 23.3,
+      "humedad": 67
     },
     {
       "lat": 43.33,
       "lon": -5.92,
       "ciudad": "Oviedo",
-      "temp_c": 28.7,
-      "humedad": 49
+      "temp_c": 25.8,
+      "humedad": 57
     },
     {
       "lat": 43.36,
       "lon": -5.89,
       "ciudad": "Oviedo",
-      "temp_c": 24.3,
-      "humedad": 61
+      "temp_c": 22.7,
+      "humedad": 65
     },
     {
       "lat": 43.36,
       "lon": -5.87,
       "ciudad": "Oviedo",
-      "temp_c": 23.6,
+      "temp_c": 22.4,
+      "humedad": 73
+    },
+    {
+      "lat": 43.32,
+      "lon": -5.72,
+      "ciudad": "Llangréu / Langreo",
+      "temp_c": 23.5,
       "humedad": 69
     },
     {
       "lat": 43.32,
       "lon": -5.72,
       "ciudad": "Llangréu / Langreo",
-      "temp_c": 25.9,
-      "humedad": 62
-    },
-    {
-      "lat": 43.32,
-      "lon": -5.72,
-      "ciudad": "Llangréu / Langreo",
-      "temp_c": 23.1,
-      "humedad": 72
+      "temp_c": 21.8,
+      "humedad": 77
     },
     {
       "lat": 43.38,
       "lon": -5.74,
       "ciudad": "Siero",
-      "temp_c": 24.6,
-      "humedad": 66
+      "temp_c": 22.7,
+      "humedad": 73
     },
     {
       "lat": 43.48,
       "lon": -8.24,
       "ciudad": "Ferrol",
-      "temp_c": 22.7,
-      "humedad": 69
+      "temp_c": 21.3,
+      "humedad": 75
     },
     {
       "lat": 43.49,
       "lon": -8.24,
       "ciudad": "Ferrol",
-      "temp_c": 23.8,
-      "humedad": 74
+      "temp_c": 22.7,
+      "humedad": 79
     },
     {
       "lat": 43.49,
       "lon": -8.21,
       "ciudad": "Ferrol",
-      "temp_c": 26.8,
-      "humedad": 65
+      "temp_c": 24.8,
+      "humedad": 72
     },
     {
       "lat": 43.54,
       "lon": -7.92,
       "ciudad": "As Somozas",
-      "temp_c": 21.7,
-      "humedad": 79
+      "temp_c": 19.4,
+      "humedad": 85
     },
     {
       "lat": 41.65,
       "lon": -8.78,
       "ciudad": "Viana do Castelo",
-      "temp_c": 26.9,
-      "humedad": 58
+      "temp_c": 25.4,
+      "humedad": 63
     },
     {
       "lat": 41.66,
       "lon": -8.43,
       "ciudad": "Gême",
-      "temp_c": 30.3,
-      "humedad": 50
+      "temp_c": 28.9,
+      "humedad": 52
     },
     {
       "lat": 41.69,
       "lon": -8.36,
       "ciudad": "Terras de Bouro",
-      "temp_c": 32.5,
-      "humedad": 40
+      "temp_c": 32,
+      "humedad": 41
     },
     {
       "lat": 41.7,
       "lon": -8.17,
       "ciudad": "Terras de Bouro",
-      "temp_c": 30.8,
-      "humedad": 48
+      "temp_c": 28.8,
+      "humedad": 54
     },
     {
       "lat": 41.68,
       "lon": -8.14,
       "ciudad": "Vieira do Minho",
-      "temp_c": 29.1,
-      "humedad": 56
+      "temp_c": 27.6,
+      "humedad": 59
     },
     {
       "lat": 41.81,
       "lon": -8.82,
       "ciudad": "Caminha",
-      "temp_c": 26.2,
-      "humedad": 64
+      "temp_c": 24,
+      "humedad": 69
     },
     {
       "lat": 41.8,
       "lon": -8.81,
       "ciudad": "Viana do Castelo",
-      "temp_c": 25.9,
-      "humedad": 63
+      "temp_c": 24.5,
+      "humedad": 68
     },
     {
       "lat": 41.84,
       "lon": -8.86,
       "ciudad": "Caminha",
-      "temp_c": 28.3,
+      "temp_c": 26.5,
       "humedad": 65
     },
     {
       "lat": 41.89,
       "lon": -8.55,
       "ciudad": "Castanheira",
-      "temp_c": 23,
-      "humedad": 81
+      "temp_c": 21.7,
+      "humedad": 86
     },
     {
       "lat": 41.82,
       "lon": -8.39,
       "ciudad": "Arcos de Valdevez",
-      "temp_c": 34.6,
-      "humedad": 47
+      "temp_c": 29,
+      "humedad": 57
     },
     {
       "lat": 41.94,
       "lon": -8.89,
       "ciudad": "Portecelo",
-      "temp_c": 28.5,
-      "humedad": 54
+      "temp_c": 26,
+      "humedad": 58
     },
     {
       "lat": 41.95,
       "lon": -8.88,
       "ciudad": "O Rosal",
-      "temp_c": 23.1,
-      "humedad": 77
+      "temp_c": 25.3,
+      "humedad": 72
     },
     {
       "lat": 41.95,
       "lon": -8.84,
       "ciudad": "O Rosal",
-      "temp_c": 29.9,
-      "humedad": 55
+      "temp_c": 27.1,
+      "humedad": 60
     },
     {
       "lat": 41.99,
       "lon": -8.67,
       "ciudad": "Valença",
-      "temp_c": 27.5,
-      "humedad": 66
+      "temp_c": 25.5,
+      "humedad": 71
     },
     {
       "lat": 42.01,
       "lon": -8.7,
       "ciudad": "O Bouzón",
-      "temp_c": 29.8,
-      "humedad": 59
+      "temp_c": 28.5,
+      "humedad": 60
     },
     {
       "lat": 42.05,
       "lon": -8.65,
       "ciudad": "Tui",
-      "temp_c": 28.3,
-      "humedad": 64
+      "temp_c": 27.3,
+      "humedad": 68
     },
     {
       "lat": 42.08,
       "lon": -8.47,
       "ciudad": "Monção",
-      "temp_c": 28.6,
-      "humedad": 55
+      "temp_c": 28.4,
+      "humedad": 56
     },
     {
       "lat": 42.08,
       "lon": -8.48,
       "ciudad": "Monção",
-      "temp_c": 29.2,
-      "humedad": 57
+      "temp_c": 27.9,
+      "humedad": 61
     },
     {
       "lat": 41.94,
       "lon": -8.13,
       "ciudad": "Entrimo",
-      "temp_c": 27.8,
-      "humedad": 48
+      "temp_c": 26.7,
+      "humedad": 51
     },
     {
       "lat": 41.97,
       "lon": -7.96,
       "ciudad": "Muíños",
-      "temp_c": 27.8,
-      "humedad": 43
+      "temp_c": 24.8,
+      "humedad": 50
     },
     {
       "lat": 42.09,
       "lon": -8.8,
       "ciudad": "Gondomar",
-      "temp_c": 22.4,
-      "humedad": 83
+      "temp_c": 21.7,
+      "humedad": 86
+    },
+    {
+      "lat": 42.12,
+      "lon": -8.86,
+      "ciudad": "Baiona",
+      "temp_c": 27.7,
+      "humedad": 66
     },
     {
       "lat": 42.11,
       "lon": -8.84,
-      "ciudad": "Baiona",
-      "temp_c": 29.4,
-      "humedad": 54
-    },
-    {
-      "lat": 42.14,
-      "lon": -8.82,
-      "ciudad": "Nigrán",
-      "temp_c": 26.5,
-      "humedad": 68
+      "ciudad": "Baíña",
+      "temp_c": 22.8,
+      "humedad": 80
     },
     {
       "lat": 42.17,
       "lon": -8.72,
       "ciudad": "Vigo",
-      "temp_c": 27.2,
-      "humedad": 67
+      "temp_c": 24.6,
+      "humedad": 74
     },
     {
       "lat": 42.14,
       "lon": -8.62,
       "ciudad": "O Porriño",
-      "temp_c": 27.8,
-      "humedad": 61
+      "temp_c": 26.4,
+      "humedad": 65
     },
     {
       "lat": 42.17,
       "lon": -8.63,
       "ciudad": "Mos",
-      "temp_c": 26.8,
-      "humedad": 59
+      "temp_c": 26.3,
+      "humedad": 62
     },
     {
       "lat": 42.16,
       "lon": -8.42,
       "ciudad": "As Neves",
-      "temp_c": 33,
-      "humedad": 48
+      "temp_c": 30,
+      "humedad": 56
     },
     {
       "lat": 42.17,
       "lon": -8.41,
       "ciudad": "Salvaterra de Miño",
-      "temp_c": 27.9,
-      "humedad": 52
+      "temp_c": 26.1,
+      "humedad": 59
     },
     {
       "lat": 42.2,
       "lon": -8.39,
       "ciudad": "Mondariz",
-      "temp_c": 27.1,
-      "humedad": 55
+      "temp_c": 26.5,
+      "humedad": 58
     },
     {
       "lat": 42.22,
       "lon": -8.03,
       "ciudad": "Cartelle",
-      "temp_c": 30.4,
-      "humedad": 52
+      "temp_c": 27.6,
+      "humedad": 58
     },
     {
       "lat": 42.27,
       "lon": -8.8,
       "ciudad": "Cangas",
-      "temp_c": 25.1,
-      "humedad": 74
+      "temp_c": 24.9,
+      "humedad": 75
     },
     {
       "lat": 42.26,
       "lon": -8.78,
       "ciudad": null,
-      "temp_c": 26.6,
-      "humedad": 68
+      "temp_c": 26,
+      "humedad": 70
     },
     {
       "lat": 42.26,
       "lon": -8.76,
       "ciudad": "Cangas",
-      "temp_c": 26.9,
-      "humedad": 68
+      "temp_c": 25.6,
+      "humedad": 73
     },
     {
       "lat": 42.24,
       "lon": -8.72,
       "ciudad": "Vigo",
-      "temp_c": 25.3,
-      "humedad": 68
+      "temp_c": 25,
+      "humedad": 70
     },
     {
       "lat": 42.24,
       "lon": -8.71,
       "ciudad": "Vigo",
-      "temp_c": 25.1,
-      "humedad": 65
+      "temp_c": 25,
+      "humedad": 66
     },
     {
       "lat": 42.28,
       "lon": -8.71,
       "ciudad": "Moaña",
-      "temp_c": 29.7,
-      "humedad": 65
+      "temp_c": 25.5,
+      "humedad": 74
     },
     {
       "lat": 42.36,
       "lon": -8.46,
       "ciudad": "Ponte Caldelas",
-      "temp_c": 27.7,
-      "humedad": 62
+      "temp_c": 25.4,
+      "humedad": 68
     },
     {
       "lat": 42.39,
       "lon": -8.83,
       "ciudad": "Sanxenxo",
-      "temp_c": 34,
-      "humedad": 53
+      "temp_c": 35.8,
+      "humedad": 45
     },
     {
       "lat": 42.39,
       "lon": -8.83,
       "ciudad": "Portonovo",
-      "temp_c": 27.1,
-      "humedad": 68
+      "temp_c": 27.3,
+      "humedad": 63
     },
     {
       "lat": 42.4,
       "lon": -8.81,
       "ciudad": "Sanxenxo",
-      "temp_c": 28.2,
-      "humedad": 65
+      "temp_c": 27,
+      "humedad": 64
     },
     {
       "lat": 42.39,
       "lon": -8.7,
       "ciudad": "Marín",
-      "temp_c": 29.3,
+      "temp_c": 27.9,
       "humedad": 64
     },
     {
       "lat": 42.43,
       "lon": -8.65,
       "ciudad": "Pontevedra",
-      "temp_c": 27.7,
-      "humedad": 58
+      "temp_c": 26.6,
+      "humedad": 61
     },
     {
       "lat": 42.43,
       "lon": -8.64,
       "ciudad": "Pontevedra",
-      "temp_c": 27.8,
-      "humedad": 60
+      "temp_c": 26.6,
+      "humedad": 63
     },
     {
       "lat": 42.47,
       "lon": -8.27,
       "ciudad": "Surribas",
-      "temp_c": 26.6,
-      "humedad": 50
+      "temp_c": 25.5,
+      "humedad": 53
     },
     {
       "lat": 42.44,
       "lon": -8.11,
       "ciudad": "Fondo da Vila",
-      "temp_c": 26.7,
-      "humedad": 62
+      "temp_c": 24.8,
+      "humedad": 68
     },
     {
       "lat": 42.43,
       "lon": -8.07,
       "ciudad": "Arcos",
-      "temp_c": 26.6,
-      "humedad": 61
+      "temp_c": 24.7,
+      "humedad": 67
     },
     {
       "lat": 42.59,
       "lon": -8.95,
       "ciudad": "A Pobra do Caramiñal",
-      "temp_c": 27.7,
-      "humedad": 60
+      "temp_c": 26.2,
+      "humedad": 63
     },
     {
       "lat": 42.65,
       "lon": -8.88,
       "ciudad": "Boiro",
-      "temp_c": 28.3,
-      "humedad": 61
+      "temp_c": 26.7,
+      "humedad": 65
     },
     {
       "lat": 42.56,
       "lon": -8.87,
       "ciudad": "A Illa de Arousa",
-      "temp_c": 28.2,
-      "humedad": 62
+      "temp_c": 26.8,
+      "humedad": 64
     },
     {
       "lat": 42.56,
       "lon": -8.83,
       "ciudad": "Vilanova de Arousa",
-      "temp_c": 29.1,
-      "humedad": 49
+      "temp_c": 27,
+      "humedad": 54
     },
     {
       "lat": 42.69,
       "lon": -8.49,
       "ciudad": "A Estrada",
-      "temp_c": 25.8,
-      "humedad": 66
+      "temp_c": 23.6,
+      "humedad": 72
     },
     {
       "lat": 42.7,
       "lon": -8.49,
       "ciudad": "",
-      "temp_c": 24.2,
-      "humedad": 68
+      "temp_c": 23.2,
+      "humedad": 72
     },
     {
       "lat": 42.72,
       "lon": -9.01,
       "ciudad": "Porto do Son",
-      "temp_c": 30.2,
-      "humedad": 59
+      "temp_c": 26.8,
+      "humedad": 65
     },
     {
       "lat": 42.73,
       "lon": -8.97,
       "ciudad": "O Porto do Son",
-      "temp_c": 28.6,
-      "humedad": 60
+      "temp_c": 27.3,
+      "humedad": 62
     },
     {
       "lat": 42.73,
       "lon": -8.95,
       "ciudad": "O Porto do Son",
-      "temp_c": 27.4,
-      "humedad": 58
-    },
-    {
-      "lat": 42.73,
-      "lon": -8.92,
-      "ciudad": null,
       "temp_c": 25.5,
-      "humedad": 68
+      "humedad": 63
     },
     {
       "lat": 42.73,
       "lon": -8.66,
       "ciudad": "Padrón",
-      "temp_c": 26.8,
-      "humedad": 65
+      "temp_c": 25.3,
+      "humedad": 69
     },
     {
       "lat": 42.82,
       "lon": -8.66,
       "ciudad": "Romarís",
-      "temp_c": 26.1,
+      "temp_c": 25.9,
       "humedad": 67
     },
     {
       "lat": 42.84,
       "lon": -8.62,
       "ciudad": "",
-      "temp_c": 27.6,
-      "humedad": 63
+      "temp_c": 25.2,
+      "humedad": 67
     },
     {
       "lat": 42.77,
       "lon": -8.4,
       "ciudad": "A Carballeira",
-      "temp_c": 26.7,
-      "humedad": 61
+      "temp_c": 25.8,
+      "humedad": 63
     },
     {
       "lat": 42.81,
       "lon": -8.38,
       "ciudad": "Villalapaz",
-      "temp_c": 24.8,
-      "humedad": 67
+      "temp_c": 22.9,
+      "humedad": 71
     },
     {
       "lat": 42.74,
       "lon": -8.33,
       "ciudad": "Silleda",
-      "temp_c": 25.7,
-      "humedad": 67
+      "temp_c": 23.4,
+      "humedad": 73
     },
     {
       "lat": 42.94,
       "lon": -9.19,
       "ciudad": "O Vilar",
-      "temp_c": 26.2,
-      "humedad": 64
+      "temp_c": 25.1,
+      "humedad": 67
     },
     {
       "lat": 42.96,
       "lon": -9.19,
       "ciudad": "Cee",
-      "temp_c": 26.6,
-      "humedad": 72
+      "temp_c": 23.3,
+      "humedad": 82
     },
     {
       "lat": 42.89,
       "lon": -9.14,
       "ciudad": "O Pindo",
-      "temp_c": 25.9,
-      "humedad": 64
+      "temp_c": 24.2,
+      "humedad": 70
     },
     {
       "lat": 42.92,
       "lon": -8.87,
       "ciudad": "Negreira",
-      "temp_c": 23.9,
-      "humedad": 67
+      "temp_c": 22.6,
+      "humedad": 70
     },
     {
       "lat": 42.92,
       "lon": -8.75,
       "ciudad": "Negreira",
-      "temp_c": 24,
-      "humedad": 70
+      "temp_c": 22.4,
+      "humedad": 74
     },
     {
       "lat": 42.91,
       "lon": -8.74,
       "ciudad": "Negreira",
-      "temp_c": 28.3,
-      "humedad": 57
-    },
-    {
-      "lat": 42.88,
-      "lon": -8.65,
-      "ciudad": "Ames",
-      "temp_c": 32.2,
-      "humedad": 44
+      "temp_c": 22.9,
+      "humedad": 68
     },
     {
       "lat": 42.89,
       "lon": -8.65,
       "ciudad": "Augapesada",
-      "temp_c": 26.6,
-      "humedad": 67
+      "temp_c": 25.2,
+      "humedad": 69
     },
     {
       "lat": 42.88,
       "lon": -8.62,
       "ciudad": "Santiago de Compostela",
-      "temp_c": 26.4,
-      "humedad": 65
+      "temp_c": 24.6,
+      "humedad": 68
+    },
+    {
+      "lat": 42.86,
+      "lon": -8.59,
+      "ciudad": "Santiago de Compostela",
+      "temp_c": 24.6,
+      "humedad": 72
     },
     {
       "lat": 42.97,
       "lon": -8.44,
       "ciudad": "O Barreiro",
-      "temp_c": 23.7,
-      "humedad": 70
+      "temp_c": 22.4,
+      "humedad": 74
     },
     {
       "lat": 43.1,
       "lon": -8.61,
       "ciudad": "A Costa do Muíño",
-      "temp_c": 21.9,
-      "humedad": 72
+      "temp_c": 18.3,
+      "humedad": 85
     },
     {
       "lat": 43.14,
       "lon": -8.02,
       "ciudad": "A Brixaría",
-      "temp_c": 23,
-      "humedad": 75
+      "temp_c": 18.8,
+      "humedad": 87
     },
     {
       "lat": 43.21,
       "lon": -8.58,
       "ciudad": "A Laracha",
-      "temp_c": 20.6,
-      "humedad": 80
+      "temp_c": 18.6,
+      "humedad": 81
     },
     {
       "lat": 43.31,
       "lon": -8.5,
       "ciudad": "A Cachopa",
-      "temp_c": 25.4,
-      "humedad": 67
+      "temp_c": 22.3,
+      "humedad": 73
     },
     {
       "lat": 43.28,
       "lon": -8.35,
       "ciudad": "Cambre",
-      "temp_c": 22.8,
-      "humedad": 77
+      "temp_c": 21.6,
+      "humedad": 82
     },
     {
       "lat": 43.32,
       "lon": -8.39,
       "ciudad": "",
-      "temp_c": 22.4,
-      "humedad": 82
+      "temp_c": 22.1,
+      "humedad": 84
     },
     {
       "lat": 43.24,
       "lon": -8.16,
       "ciudad": "Coirós de Arriba",
-      "temp_c": 21.9,
-      "humedad": 76
+      "temp_c": 20.6,
+      "humedad": 81
     },
     {
       "lat": 43.28,
       "lon": -8.25,
       "ciudad": "A Aldea",
-      "temp_c": 23.4,
-      "humedad": 71
+      "temp_c": 22.5,
+      "humedad": 76
     },
     {
       "lat": 43.32,
       "lon": -8.22,
       "ciudad": "A Pedrosa",
-      "temp_c": 22.8,
-      "humedad": 78
+      "temp_c": 21.9,
+      "humedad": 81
     },
     {
       "lat": 43.33,
       "lon": -8.48,
       "ciudad": null,
-      "temp_c": 23.5,
-      "humedad": 75
-    },
-    {
-      "lat": 43.34,
-      "lon": -8.45,
-      "ciudad": "Meicende",
-      "temp_c": 25.7,
-      "humedad": 64
+      "temp_c": 22.1,
+      "humedad": 79
     },
     {
       "lat": 43.33,
       "lon": -8.39,
       "ciudad": "A Coruña",
-      "temp_c": 23.2,
-      "humedad": 69
+      "temp_c": 21.5,
+      "humedad": 75
+    },
+    {
+      "lat": 43.33,
+      "lon": -8.38,
+      "ciudad": "Culleredo",
+      "temp_c": 21.4,
+      "humedad": 80
     },
     {
       "lat": 43.33,
       "lon": -8.29,
       "ciudad": "Sada",
-      "temp_c": 25,
-      "humedad": 65
+      "temp_c": 24,
+      "humedad": 68
     },
     {
       "lat": 43.36,
       "lon": -8.29,
       "ciudad": "Sada",
-      "temp_c": 25.1,
-      "humedad": 65
+      "temp_c": 23.9,
+      "humedad": 69
     },
     {
       "lat": 43.36,
       "lon": -8.28,
       "ciudad": "Sada",
-      "temp_c": 24.7,
-      "humedad": 68
+      "temp_c": 23.1,
+      "humedad": 74
     }
   ],
   "lugares": [
@@ -2092,5 +1905,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-07-26T18:25:50.375106+00:00"
+  "generated_at": "2026-07-26T19:36:58.770117+00:00"
 }
