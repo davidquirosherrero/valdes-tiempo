@@ -344,6 +344,20 @@ function render(DATA){
     const existingMsg = document.getElementById('horaChartEmpty');
     if(existingMsg) existingMsg.remove();
 
+    let respaldoMsg = document.getElementById('horaChartRespaldo');
+    if(DATA.horaria_es_respaldo){
+      if(!respaldoMsg){
+        respaldoMsg = document.createElement('div');
+        respaldoMsg.id = 'horaChartRespaldo';
+        respaldoMsg.className = 'note';
+        respaldoMsg.style.marginBottom = '12px';
+        respaldoMsg.innerHTML = '⏱️ AEMET no ha respondido en esta actualización — se muestra la última predicción horaria disponible.';
+        ctx.parentNode.insertBefore(respaldoMsg, ctx);
+      }
+    } else if(respaldoMsg){
+      respaldoMsg.remove();
+    }
+
     const labels = horas.map(h => h.fecha_hora.split('T')[1].slice(0,5).replace(':00','') + 'h');
     const emojis = horas.map(h => cieloEmoji(h.cielo));
     const valores = horas.map(h => h[metric] !== null && h[metric] !== undefined ? Number(h[metric]) : null);
