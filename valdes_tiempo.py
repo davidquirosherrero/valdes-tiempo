@@ -276,6 +276,25 @@ def fetch_maritima():
     return None
 
 
+def _precip_para_hora(bloques, hora_str):
+    """probPrecipitacion viene en bloques de 6h (p.ej. '0208' = 02h-08h),
+    no por hora exacta. Buscamos a qué bloque pertenece la hora dada,
+    incluido el que cruza medianoche ('2002' = 20h-02h)."""
+    h = int(hora_str)
+    for periodo, valor in bloques.items():
+        try:
+            inicio, fin = int(periodo[:2]), int(periodo[2:])
+        except ValueError:
+            continue
+        if inicio < fin:
+            if inicio <= h < fin:
+                return valor
+        else:  # bloque que cruza medianoche
+            if h >= inicio or h < fin:
+                return valor
+    return None
+
+
 def fetch_hourly_forecast(horas=18):
     """Predicción municipal por horas -- las próximas `horas` horas desde
     ahora, con cielo, temperatura, sensación térmica, viento y
@@ -287,7 +306,7 @@ def fetch_hourly_forecast(horas=18):
     for dia in dias:
         fecha_base = dia["fecha"][:10]
         cielo_por_hora = {c["periodo"]: c.get("descripcion") for c in dia.get("estadoCielo", [])}
-        precip_por_hora = {p["periodo"]: p.get("value") for p in dia.get("probPrecipitacion", [])}
+        precip_bloques = {p["periodo"]: p.get("value") for p in dia.get("probPrecipitacion", [])}
         sens_por_hora = {s["periodo"]: s.get("value") for s in dia.get("sensTermica", [])}
         viento_por_hora = {}
         for v in dia.get("vientoAndRachaMax", []):
@@ -303,7 +322,7 @@ def fetch_hourly_forecast(horas=18):
                 "temp": t.get("value"),
                 "sens_termica": sens_por_hora.get(hora),
                 "cielo": cielo_por_hora.get(hora),
-                "prob_precipitacion": precip_por_hora.get(hora),
+                "prob_precipitacion": _precip_para_hora(precip_bloques, hora),
                 "viento_dir": viento_por_hora.get(hora, {}).get("dir"),
                 "viento_kmh": viento_por_hora.get(hora, {}).get("vel"),
             })
