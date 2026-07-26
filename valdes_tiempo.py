@@ -35,6 +35,7 @@ DECISIONES TOMADAS, A REVISAR:
 import json
 import os
 import io
+import math
 import tarfile
 import urllib.request
 import urllib.error
@@ -45,14 +46,15 @@ from zoneinfo import ZoneInfo
 
 AEMET_API_KEY = os.environ.get("AEMET_API_KEY", "")
 
+LUARCA_COORD = (43.543, -6.539)
+
 NETATMO_CLIENT_ID = os.environ.get("NETATMO_CLIENT_ID", "")
 NETATMO_CLIENT_SECRET = os.environ.get("NETATMO_CLIENT_SECRET", "")
 NETATMO_REFRESH_TOKEN = os.environ.get("NETATMO_REFRESH_TOKEN", "")
-# Caja amplia: costa de Valdés + interior (Tineo, Cangas del Narcea, Somiedo)
-# + costa gallega hacia el noroeste (Ortigueira, Viveiro, Ferrol). Ninguna
-# de estas estaciones nuevas tiene pluviómetro (comprobado), así que solo
-# sirven para más contexto de temperatura/humedad, no para "qué se acerca".
-NETATMO_BBOX = {"lat_ne": 43.90, "lon_ne": -6.10, "lat_sw": 42.95, "lon_sw": -7.90}
+# Caja ajustada a Valdés + concejos limítrofes (Navia, Villayón, Tineo,
+# Salas, Cudillero) -- nada de Galicia interior, León o Portugal, que se
+# colaba con una caja demasiado ancha.
+NETATMO_BBOX = {"lat_ne": 43.65, "lon_ne": -6.10, "lat_sw": 43.30, "lon_sw": -6.95}
 
 AEMET_TODAS_URL = "https://opendata.aemet.es/opendata/api/observacion/convencional/todas"
 AEMET_PLAYA_URL = "https://opendata.aemet.es/opendata/api/prediccion/especifica/playa/{id_playa}"
@@ -445,16 +447,44 @@ def fetch_netatmo_own(access_token):
     return out
 
 
+DISTANCIA_MAX_VECINAS_KM = 35  # cubre Navia, Villayón, Tineo, Salas, Cudillero; corta antes de Castropol/Avilés
+
+
+def _distancia_km(lat1, lon1, lat2, lon2):
+    r = 6371.0
+    phi1, phi2 = math.radians(lat1), math.radians(lat2)
+    dphi = math.radians(lat2 - lat1)
+    dlambda = math.radians(lon2 - lon1)
+    a = math.sin(dphi / 2) ** 2 + math.cos(phi1) * math.cos(phi2) * math.sin(dlambda / 2) ** 2
+    return 2 * r * math.asin(math.sqrt(a))
+
+
 def fetch_netatmo_vecinas(access_token, excluir_id=None):
-    """Estaciones públicas de otros vecinos en el bounding box de Valdés."""
+    """Estaciones públicas de otros vecinos en Valdés y concejos limítrofes.
+    Netatmo no recorta estrictamente por bounding box en áreas grandes (se
+    colaban estaciones a 60-90km), así que filtramos también por distancia
+    real. Una sola estación por localidad (si hay varias, la de lectura
+    más completa) y se descartan las que no traen nombre de localidad."""
     params = dict(NETATMO_BBOX, filter="true", access_token=access_token)
     url = "https://api.netatmo.com/api/getpublicdata?" + urllib.parse.urlencode(params)
     data = _get_json(url)
     estaciones = data.get("body", [])
-    out = []
+    por_localidad = {}
     for est in estaciones:
         if excluir_id and est.get("_id") == excluir_id:
             continue
+        place = est.get("place", {})
+        ciudad = place.get("city")
+        if not ciudad:
+            continue  # sin localidad identificada, no es útil para la lista
+
+        lat = place.get("location", [None, None])[1]
+        lon = place.get("location", [None, None])[0]
+        if lat is None or lon is None:
+            continue
+        if _distancia_km(LUARCA_COORD[0], LUARCA_COORD[1], lat, lon) > DISTANCIA_MAX_VECINAS_KM:
+            continue
+
         temp = humedad = None
         for modulo in est.get("measures", {}).values():
             tipos = modulo.get("type", [])
@@ -468,17 +498,21 @@ def fetch_netatmo_vecinas(access_token, excluir_id=None):
             if "humidity" in tipos:
                 idx = tipos.index("humidity")
                 humedad = ultimo[idx] if idx < len(ultimo) else None
-        place = est.get("place", {})
-        lat = place.get("location", [None, None])[1]
-        lon = place.get("location", [None, None])[0]
-        out.append({
-            "lat": round(lat, 2) if lat is not None else None,   # ~1km de precisión, no la casa exacta
-            "lon": round(lon, 2) if lon is not None else None,
-            "ciudad": place.get("city"),
+
+        # Si ya teníamos una estación de esta localidad, nos quedamos con
+        # la que tenga más datos (temperatura Y humedad) en vez de la primera
+        existente = por_localidad.get(ciudad)
+        if existente and existente["temp_c"] is not None and existente["humedad"] is not None:
+            continue
+
+        por_localidad[ciudad] = {
+            "lat": round(lat, 2),   # ~1km de precisión, no la casa exacta
+            "lon": round(lon, 2),
+            "ciudad": ciudad,
             "temp_c": temp,
             "humedad": humedad,
-        })
-    return out
+        }
+    return list(por_localidad.values())
 
 
 def recomendacion(real_time, playa_hoy, avisos):
