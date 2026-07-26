@@ -10,7 +10,6 @@
 <meta property="og:description" content="Tiempo real y predicción para las playas y parroquias de Valdés, Asturias.">
 <meta property="og:type" content="website">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.2.0/chartjs-plugin-datalabels.min.js"></script>
 
 <style>
   :root{
@@ -85,6 +84,13 @@
   .netatmo-cell .k{ font-size:9.5px; text-transform:uppercase; letter-spacing:0.06em; color:var(--seafoam); }
   .netatmo-cell .v{ font-size:19px; font-weight:700; margin-top:4px; }
   .netatmo-cell .v small{ font-size:11px; font-weight:400; color:rgba(238,241,230,0.55); }
+  .maritima-card{
+    padding:12px 14px; border-radius:6px; margin-bottom:8px;
+    background:rgba(238,241,230,0.04); border-left:3px solid rgba(95,168,160,0.4);
+    font-size:12px; line-height:1.55;
+  }
+  .maritima-card.destacada{ border-left-color:var(--seafoam); background:rgba(95,168,160,0.08); }
+  .maritima-card .zona{ font-weight:700; color:var(--seafoam); font-size:11px; text-transform:uppercase; letter-spacing:0.04em; margin-bottom:4px; }
   footer{ padding:18px 20px 32px; font-size:10.5px; color:rgba(238,241,230,0.35); text-align:center; }
 </style>
 </head>
@@ -116,8 +122,8 @@
 
   <section>
     <div class="section-title">Boletín marítimo — Aguas costeras de Asturias</div>
-    <div class="section-sub">Oeste de Peñas es la franja que incluye Valdés.</div>
-    <div class="note" id="maritimaBox" style="border-color:var(--seafoam);background:rgba(95,168,160,0.06);"></div>
+    <div class="section-sub">Oeste de Peñas es la franja que incluye Valdés — destacada.</div>
+    <div id="maritimaBox"></div>
   </section>
 
   <section id="netatmoSection" style="display:none;">
@@ -127,26 +133,19 @@
   </section>
 
   <section>
-    <div class="section-title">Predicción — Otur / Luarca</div>
-    <div class="section-sub">Únicas playas de Valdés con ficha propia en AEMET. Cueva y Cadavedo usan la predicción municipal (más abajo).</div>
-    <div class="playa-tabs" id="playaTabs"></div>
+    <div class="section-title">Predicción — Luarca (4 días)</div>
+    <div class="section-sub">Otur tiene ficha propia casi idéntica por lo cerca que está — se omite para no duplicar. Cueva y Cadavedo no tienen ficha propia en AEMET.</div>
     <div class="day-cards" id="dayCards"></div>
   </section>
 
   <section>
-    <div class="section-title">Predicción municipal (Valdés)</div>
-    <div class="section-sub">Aplica por igual a las 9 parroquias de interior y a Cueva/Cadavedo — AEMET no da previsión más fina que por municipio.</div>
-    <div class="day-cards" id="municipioCards"></div>
-  </section>
-
-  <section>
     <div class="note">
-      <b>Cómo se calcula:</b> el tiempo real y la tendencia de presión vienen de la estación AEMET de
-      Cabo Busto. La predicción de Otur y Luarca es la ficha oficial de "playas" de AEMET (única para
-      esas 2 playas del concejo). El resto de puntos usa la predicción diaria del municipio de Valdés,
-      que es lo más fino que ofrece AEMET a esa escala. La recomendación de arriba es una heurística
-      simple (presión + cielo + viento), no un modelo meteorológico — para decisiones importantes,
-      consulta la predicción oficial de AEMET.
+      <b>Cómo se calcula:</b> el tiempo real y la tendencia de presión vienen de tu estación Netatmo
+      (o de Cabo Busto/AEMET si Netatmo no responde). La predicción de Luarca es la ficha oficial de
+      "playas" de AEMET. La predicción horaria es la del municipio de Valdés, lo más fino que ofrece
+      AEMET a esta escala. La recomendación de arriba es una heurística simple (presión + cielo +
+      viento + avisos oficiales), no un modelo meteorológico — para decisiones importantes, consulta
+      la predicción oficial de AEMET.
     </div>
   </section>
 </main>
@@ -183,8 +182,6 @@ async function loadData(){
     el.innerHTML = `<b>Error cargando valdes.json:</b> ${err.message}.`;
   }
 }
-
-let currentPlaya = 'Luarca (1ª, 2ª y 3ª playa)';
 
 function renderDayCards(forecast4d){
   const el = document.getElementById('dayCards');
@@ -270,6 +267,28 @@ function render(DATA){
 
     if(horaChartInstance) horaChartInstance.destroy();
 
+    // Plugin propio (sin librería externa) para dibujar icono + valor sobre cada punto
+    const iconLabelsPlugin = {
+      id: 'iconLabels',
+      afterDatasetsDraw(chart){
+        const ctxc = chart.ctx;
+        const meta = chart.getDatasetMeta(0);
+        meta.data.forEach((point, i) => {
+          const v = valores[i];
+          if(v === null || v === undefined || !point) return;
+          const pos = point.getProps(['x','y'], true);
+          ctxc.save();
+          ctxc.textAlign = 'center';
+          ctxc.fillStyle = 'rgba(238,241,230,0.9)';
+          ctxc.font = "11px sans-serif";
+          ctxc.fillText(emojis[i], pos.x, pos.y - 24);
+          ctxc.font = "bold 10px 'Courier New', monospace";
+          ctxc.fillText(`${v}${sufijo}`, pos.x, pos.y - 10);
+          ctxc.restore();
+        });
+      }
+    };
+
     horaChartInstance = new Chart(ctx, {
       type: 'line',
       data: {
@@ -294,23 +313,13 @@ function render(DATA){
         responsive: true,
         maintainAspectRatio: false,
         layout: { padding: { top: 34 } },
-        plugins: {
-          legend: { display: false },
-          datalabels: {
-            align: 'top',
-            anchor: 'end',
-            offset: 6,
-            color: 'rgba(238,241,230,0.9)',
-            font: { size: 10, family: "'Courier New', monospace", weight: 'bold' },
-            formatter: (value, ctx) => value === null ? '' : [emojis[ctx.dataIndex], `${value}${sufijo}`]
-          }
-        },
+        plugins: { legend: { display: false } },
         scales: {
           x: { grid: { display: false }, ticks: { color: 'rgba(238,241,230,0.5)', font: { size: 9.5 }, maxRotation: 0 } },
           y: { display: false }
         }
       },
-      plugins: [ChartDataLabels]
+      plugins: [iconLabelsPlugin]
     });
   }
 
@@ -326,9 +335,21 @@ function render(DATA){
   // --- Marítima costera ---
   const maritimaBox = document.getElementById('maritimaBox');
   if(DATA.maritima){
-    maritimaBox.innerHTML = `<b>Aviso marítimo:</b> ${DATA.maritima.avisos_texto}<br><br>${DATA.maritima.texto.replace(/\n/g, '<br>')}`;
+    const iconos = { 'Oeste de Peñas': '🧭', 'Este de Peñas': '🧭', 'Ambas zonas': '🌊' };
+    let html = `<div class="maritima-card destacada">
+      <div class="zona">⚠️ Avisos</div>${DATA.maritima.avisos_texto}
+    </div>`;
+    (DATA.maritima.segmentos || []).forEach(s => {
+      const esValdes = s.zona === 'Oeste de Peñas';
+      const icono = iconos[s.zona] || '〰️';
+      html += `<div class="maritima-card${esValdes ? ' destacada' : ''}">
+        <div class="zona">${icono} ${s.zona || ''}${esValdes ? ' · Valdés' : ''}</div>
+        ${s.texto}
+      </div>`;
+    });
+    maritimaBox.innerHTML = html;
   } else {
-    maritimaBox.innerHTML = 'Sin dato marítimo disponible ahora mismo.';
+    maritimaBox.innerHTML = '<div class="note">Sin dato marítimo disponible ahora mismo.</div>';
   }
 
   // --- Netatmo: tu estación ---
@@ -357,40 +378,9 @@ function render(DATA){
     });
   }
 
-  // --- Tabs de playa con ficha ---
-  const playasConFicha = DATA.lugares.filter(l => l.tipo === 'playa' && l.forecast_4d);
-  const tabsEl = document.getElementById('playaTabs');
-  playasConFicha.forEach(p => {
-    const btn = document.createElement('button');
-    btn.className = 'playa-tab' + (p.name === currentPlaya ? ' active' : '');
-    btn.textContent = p.name.split(' (')[0];
-    btn.addEventListener('click', () => {
-      currentPlaya = p.name;
-      document.querySelectorAll('.playa-tab').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      renderDayCards(p.forecast_4d);
-    });
-    tabsEl.appendChild(btn);
-  });
-  const inicial = playasConFicha.find(p => p.name === currentPlaya) || playasConFicha[0];
-  if(inicial) renderDayCards(inicial.forecast_4d);
-
-  // --- Predicción municipal ---
-  const munEl = document.getElementById('municipioCards');
-  (DATA.forecast_municipio || []).forEach(d => {
-    const card = document.createElement('div');
-    card.className = 'day-card';
-    card.innerHTML = `
-      <div class="d">${fechaCorta(d.fecha)}</div>
-      <div class="t">${d.t_max}° / ${d.t_min}°</div>
-      <div class="l">
-        ☁️ ${d.cielo || '—'}<br>
-        💨 ${d.viento_kmh ?? '—'}km/h ${d.viento_dir || ''}<br>
-        🌧️ ${d.prob_precipitacion ?? '—'}% lluvia
-      </div>
-    `;
-    munEl.appendChild(card);
-  });
+  // --- Predicción de Luarca (única playa, sin tabs) ---
+  const luarca = DATA.lugares.find(l => l.name.startsWith('Luarca') && l.forecast_4d);
+  renderDayCards(luarca ? luarca.forecast_4d : null);
 }
 
 loadData();
