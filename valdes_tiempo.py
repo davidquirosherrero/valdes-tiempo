@@ -423,36 +423,61 @@ def fetch_netatmo_vecinas(access_token, excluir_id=None):
 
 def recomendacion(real_time, playa_hoy, avisos):
     """Heurística simple: no es un modelo, solo orienta. Un aviso oficial
-    activo (naranja/rojo) pesa más que cualquier otra cosa."""
+    activo (naranja/rojo) pesa más que cualquier otra cosa. El texto que
+    se muestra se construye a partir de los factores que realmente han
+    influido en el score, no es un mensaje fijo por rango de puntos."""
     if any(a["nivel"] in ("naranja", "rojo") for a in avisos):
         return 15, "Aviso oficial activo — revisa AEMET antes de salir"
 
     puntos = 50
+    positivas = []
+    negativas = []
+
     if real_time["pres_tendencia"] == "subiendo":
         puntos += 20
+        positivas.append("la presión está subiendo")
     elif real_time["pres_tendencia"] == "bajando":
         puntos -= 20
+        negativas.append("la presión está bajando")
 
     if avisos:  # amarillo: penaliza pero no bloquea
         puntos -= 15
+        negativas.append("hay un aviso amarillo activo")
 
     if playa_hoy:
-        if playa_hoy["cielo"] in ("despejado", "poco nuboso"):
+        cielo = playa_hoy.get("cielo")
+        if cielo in ("despejado", "poco nuboso"):
             puntos += 15
-        elif playa_hoy["cielo"] in ("chubascos", "lluvia", "tormenta"):
+            positivas.append("el cielo está despejado")
+        elif cielo in ("chubascos", "lluvia", "tormenta"):
             puntos -= 25
-        if playa_hoy["viento"] == "flojo":
+            negativas.append("se esperan precipitaciones")
+        elif cielo:
+            negativas.append(f"el cielo estará {cielo}")
+
+        viento = playa_hoy.get("viento")
+        if viento == "flojo":
             puntos += 10
-        elif playa_hoy["viento"] == "fuerte":
+            positivas.append("el viento es flojo")
+        elif viento == "fuerte":
             puntos -= 15
+            negativas.append("el viento soplará fuerte")
+        elif viento:
+            negativas.append(f"el viento será {viento}")
 
     puntos = max(0, min(100, puntos))
     if puntos >= 65:
         etiqueta = "Buen día de playa"
+        if positivas:
+            etiqueta += f" — {positivas[0]}"
     elif puntos >= 40:
-        etiqueta = "Aceptable, revisa el viento"
+        etiqueta = "Aceptable"
+        if negativas:
+            etiqueta += f", pero {negativas[0]}"
     else:
         etiqueta = "Mejor esperar"
+        if negativas:
+            etiqueta += f" — {negativas[0]}"
     return puntos, etiqueta
 
 
