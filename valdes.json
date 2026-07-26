@@ -10,8 +10,8 @@
     "humedad": 66.0
   },
   "recomendacion": {
-    "score": 60,
-    "etiqueta": "Aceptable, pero el cielo estará nuboso"
+    "score": 80,
+    "etiqueta": "Buen día de playa — la presión está subiendo"
   },
   "forecast_municipio": [
     {
@@ -217,162 +217,25 @@
   ],
   "avisos": [],
   "maritima": {
-    "texto": "Oeste de Peñas: Componente W 3 o 4, ocasionalmente 5. Marejadilla o marejada. \r\n Este de Peñas: Componente W 4 o 5 amainando a 3 o 4 desde la tarde. Principalmente marejada. \r\n Ambas zonas: Mar de fondo del N o NW en torno a 1 m. Aguaceros ocasionales hasta la mañana.",
+    "texto": "Oeste de Peñas: W o NW 3 o 4 tendiendo a Variable 1 a 3 a partir de la noche y arreciando a E o NE 3 o 4 al avanzar la madrugada. Marejadilla o marejada disminuyendo temporalmente a rizada o marejadilla durante la noche y madrugada. \r\n Este de Peñas: W o NW 3 o 4, temporalmente 5 mar adentro durante la tarde, tendiendo a Variable 1 a 3 al avanzar la madrugada pero arreciando a E o NE 3 o 4 al final. Marejadilla o marejada disminuyendo a rizada o marejadilla al avanzar la madrugada. \r\n Ambas zonas: Mar de fondo del N o NW de 1 a 2 m.",
     "segmentos": [
       {
         "zona": "Oeste de Peñas",
-        "texto": "Componente W 3 o 4, ocasionalmente 5. Marejadilla o marejada."
+        "texto": "W o NW 3 o 4 tendiendo a Variable 1 a 3 a partir de la noche y arreciando a E o NE 3 o 4 al avanzar la madrugada. Marejadilla o marejada disminuyendo temporalmente a rizada o marejadilla durante la noche y madrugada."
       },
       {
         "zona": "Este de Peñas",
-        "texto": "Componente W 4 o 5 amainando a 3 o 4 desde la tarde. Principalmente marejada."
+        "texto": "W o NW 3 o 4, temporalmente 5 mar adentro durante la tarde, tendiendo a Variable 1 a 3 al avanzar la madrugada pero arreciando a E o NE 3 o 4 al final. Marejadilla o marejada disminuyendo a rizada o marejadilla al avanzar la madrugada."
       },
       {
         "zona": "Ambas zonas",
-        "texto": "Mar de fondo del N o NW en torno a 1 m. Aguaceros ocasionales hasta la mañana."
+        "texto": "Mar de fondo del N o NW de 1 a 2 m."
       }
     ],
-    "avisos_texto": "No hay avisos",
-    "vigencia_inicio": "2026-07-25T20:00:00",
-    "vigencia_fin": "2026-07-26T20:00:00"
+    "avisos_texto": "No hay avisos.",
+    "vigencia_inicio": "2026-07-26T12:00:00",
+    "vigencia_fin": "2026-07-27T12:00:00"
   },
-  "netatmo_own": {
-    "interior": {
-      "temp_c": 23.4,
-      "co2": 513,
-      "humedad": 61
-    },
-    "presion_hpa": 1019.4,
-    "presion_tendencia": "stable",
-    "exterior": {
-      "temp_c": 23.1,
-      "humedad": 71,
-      "tendencia": "up"
-    },
-    "viento": {
-      "kmh": 3,
-      "dir": 57,
-      "racha_kmh": 7
-    },
-    "lluvia": {
-      "mm_1h": 0,
-      "mm_24h": 0
-    }
-  },
-  "netatmo_vecinas": [
-    {
-      "lat": 43.53,
-      "lon": -6.39,
-      "ciudad": "Valdés",
-      "temp_c": 19.6,
-      "humedad": 76
-    },
-    {
-      "lat": 43.56,
-      "lon": -6.66,
-      "ciudad": "Navia",
-      "temp_c": 26.3,
-      "humedad": 57
-    },
-    {
-      "lat": 43.57,
-      "lon": -6.21,
-      "ciudad": "Cudillero",
-      "temp_c": 22,
-      "humedad": 72
-    },
-    {
-      "lat": 43.57,
-      "lon": -6.2,
-      "ciudad": "Cudillero",
-      "temp_c": 22,
-      "humedad": 72
-    },
-    {
-      "lat": 43.1,
-      "lon": -6.26,
-      "ciudad": "Somiedo",
-      "temp_c": 16.8,
-      "humedad": 69
-    },
-    {
-      "lat": 43.18,
-      "lon": -6.55,
-      "ciudad": "Cangas del Narcea",
-      "temp_c": 18.4,
-      "humedad": 73
-    },
-    {
-      "lat": 43.33,
-      "lon": -6.42,
-      "ciudad": "Tineo",
-      "temp_c": 16.7,
-      "humedad": 96
-    },
-    {
-      "lat": 43.4,
-      "lon": -6.54,
-      "ciudad": "Tineo",
-      "temp_c": 20.8,
-      "humedad": 66
-    },
-    {
-      "lat": 43.4,
-      "lon": -6.25,
-      "ciudad": "Salas",
-      "temp_c": 20.6,
-      "humedad": 68
-    },
-    {
-      "lat": 43.42,
-      "lon": -6.45,
-      "ciudad": "Tineo",
-      "temp_c": 18.6,
-      "humedad": 78
-    },
-    {
-      "lat": 43.54,
-      "lon": -7.17,
-      "ciudad": "A Cruz",
-      "temp_c": 21.8,
-      "humedad": 68
-    },
-    {
-      "lat": 43.54,
-      "lon": -7.17,
-      "ciudad": "A Cruz",
-      "temp_c": 23.2,
-      "humedad": 65
-    },
-    {
-      "lat": 43.54,
-      "lon": -7.02,
-      "ciudad": "Castropol",
-      "temp_c": 21.6,
-      "humedad": 77
-    },
-    {
-      "lat": 43.54,
-      "lon": -7.02,
-      "ciudad": "As Figueiras",
-      "temp_c": 23.7,
-      "humedad": 79
-    },
-    {
-      "lat": 43.62,
-      "lon": -7.31,
-      "ciudad": "Foz",
-      "temp_c": 24.2,
-      "humedad": 76
-    },
-    {
-      "lat": 43.42,
-      "lon": -7.27,
-      "ciudad": "Lourenzá",
-      "temp_c": 18.6,
-      "humedad": 88
-    }
-  ],
   "lugares": [
     {
       "name": "Otur",
@@ -553,5 +416,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-07-26T09:36:34.225825+00:00"
+  "generated_at": "2026-07-26T09:47:21.396286+00:00"
 }
