@@ -9,6 +9,8 @@
 <meta property="og:title" content="Valdés al Día — ¿Buen tiempo de playa?">
 <meta property="og:description" content="Tiempo real y predicción para las playas y parroquias de Valdés, Asturias.">
 <meta property="og:type" content="website">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.2.0/chartjs-plugin-datalabels.min.js"></script>
 
 <style>
   :root{
@@ -55,6 +57,8 @@
     font-family:inherit; font-size:11px; padding:6px 12px; border-radius:20px; cursor:pointer;
   }
   .playa-tab.active{ background:var(--seafoam); color:var(--navy-deep); border-color:var(--seafoam); font-weight:700; }
+  #horaTabs{ flex-wrap:wrap; }
+  .hora-chart-box{ position:relative; height:220px; margin-bottom:14px; }
 
   .note{
     padding:14px 16px; border-left:2px solid var(--buoy-yellow);
@@ -92,7 +96,12 @@
   <section>
     <div class="section-title">Próximas horas</div>
     <div class="section-sub">Predicción horaria del municipio.</div>
-    <div class="day-cards" id="horaCards"></div>
+    <div class="hora-chart-box"><canvas id="horaChart"></canvas></div>
+    <div class="playa-tabs" id="horaTabs">
+      <button class="playa-tab active" data-metric="temp">Temperatura</button>
+      <button class="playa-tab" data-metric="sens_termica">Sensación térmica</button>
+      <button class="playa-tab" data-metric="prob_precipitacion">Prob. lluvia</button>
+    </div>
   </section>
 
   <section>
@@ -220,22 +229,82 @@ function render(DATA){
     });
   }
 
-  // --- Predicción horaria ---
-  const horaEl = document.getElementById('horaCards');
-  (DATA.forecast_horaria || []).forEach(h => {
-    const card = document.createElement('div');
-    card.className = 'day-card';
-    const hora = h.fecha_hora.split('T')[1].slice(0,5);
-    card.innerHTML = `
-      <div class="d">${hora}h</div>
-      <div class="t">${h.temp}°</div>
-      <div class="l">
-        ☁️ ${h.cielo || '—'}<br>
-        💨 ${h.viento_kmh ?? '—'}km/h ${h.viento_dir || ''}<br>
-        🌧️ ${h.prob_precipitacion ?? '0'}%
-      </div>
-    `;
-    horaEl.appendChild(card);
+  // --- Predicción horaria: gráfico estilo Carrot Weather ---
+  let horaChartInstance = null;
+  function cieloEmoji(desc){
+    if(!desc) return '';
+    const d = desc.toLowerCase();
+    if(d.includes('tormenta')) return '⛈️';
+    if(d.includes('nieve')) return '❄️';
+    if(d.includes('niebla') || d.includes('bruma')) return '🌫️';
+    if(d.includes('lluvia') || d.includes('chubasco') || d.includes('aguacero')) return '🌧️';
+    if(d.includes('cubierto') || d.includes('muy nuboso')) return '☁️';
+    if(d.includes('nuboso') || d.includes('intervalos')) return '⛅';
+    if(d.includes('despejado') || d.includes('poco nuboso')) return '☀️';
+    return '🌤️';
+  }
+
+  function renderHoraChart(metric){
+    const horas = DATA.forecast_horaria || [];
+    const ctx = document.getElementById('horaChart');
+    const labels = horas.map(h => h.fecha_hora.split('T')[1].slice(0,5).replace(':00','') + 'h');
+    const emojis = horas.map(h => cieloEmoji(h.cielo));
+    const valores = horas.map(h => h[metric] !== null && h[metric] !== undefined ? Number(h[metric]) : null);
+    const sufijo = metric === 'prob_precipitacion' ? '%' : '°';
+
+    if(horaChartInstance) horaChartInstance.destroy();
+
+    horaChartInstance = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels,
+        datasets: [{
+          data: valores,
+          borderColor: '#e8a94c',
+          backgroundColor: (context) => {
+            const g = context.chart.ctx.createLinearGradient(0, 0, 0, 200);
+            g.addColorStop(0, 'rgba(232,169,76,0.35)');
+            g.addColorStop(1, 'rgba(232,169,76,0)');
+            return g;
+          },
+          fill: true,
+          tension: 0.4,
+          pointRadius: 2,
+          pointBackgroundColor: '#e8a94c',
+          borderWidth: 2,
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        layout: { padding: { top: 34 } },
+        plugins: {
+          legend: { display: false },
+          datalabels: {
+            align: 'top',
+            anchor: 'end',
+            offset: 6,
+            color: 'rgba(238,241,230,0.9)',
+            font: { size: 10, family: "'Courier New', monospace", weight: 'bold' },
+            formatter: (value, ctx) => value === null ? '' : [emojis[ctx.dataIndex], `${value}${sufijo}`]
+          }
+        },
+        scales: {
+          x: { grid: { display: false }, ticks: { color: 'rgba(238,241,230,0.5)', font: { size: 9.5 }, maxRotation: 0 } },
+          y: { display: false }
+        }
+      },
+      plugins: [ChartDataLabels]
+    });
+  }
+
+  renderHoraChart('temp');
+  document.querySelectorAll('#horaTabs .playa-tab').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('#horaTabs .playa-tab').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      renderHoraChart(btn.dataset.metric);
+    });
   });
 
   // --- Marítima costera ---
