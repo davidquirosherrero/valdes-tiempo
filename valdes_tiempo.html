@@ -103,6 +103,14 @@
   }
   .vecina-row span:first-child{ color:rgba(238,241,230,0.6); }
   .vecina-row span:last-child{ font-weight:600; }
+  .acerca-card{
+    padding:16px; border-radius:8px; display:flex; align-items:center; gap:14px;
+  }
+  .acerca-card.mal{ background:rgba(198,90,78,0.1); border:1px solid rgba(198,90,78,0.3); }
+  .acerca-card.bien{ background:rgba(95,168,160,0.08); border:1px solid rgba(95,168,160,0.3); }
+  .acerca-icono{ font-size:32px; }
+  .acerca-texto{ font-size:13px; line-height:1.6; }
+  .acerca-texto b{ color:var(--chart-cream); }
   .maritima-card{
     padding:12px 14px; border-radius:6px; margin-bottom:8px;
     background:rgba(238,241,230,0.04); border-left:3px solid rgba(95,168,160,0.4);
@@ -127,6 +135,11 @@
   <div class="hero" id="hero"></div>
 
   <div id="avisosBox"></div>
+
+  <section id="acercaSection" class="acc-seafoam" style="display:none;">
+    <div class="section-title">🌬️ ¿Qué se acerca?</div>
+    <div id="acercaBox"></div>
+  </section>
 
   <section class="acc-amber">
     <div class="section-title">⏱️ Próximas horas en Luarca</div>
@@ -268,6 +281,30 @@ function render(DATA){
         – ${new Date(a.expires).toLocaleString('es-ES', {day:'2-digit', month:'2-digit', hour:'2-digit', minute:'2-digit'})}`;
       avisosBox.appendChild(div);
     });
+  }
+
+  // --- Qué se acerca (viento + estación en esa dirección) ---
+  const acerca = DATA.que_se_acerca;
+  if(acerca && acerca.disponible){
+    document.getElementById('acercaSection').style.display = 'block';
+    const box = document.getElementById('acercaBox');
+    const nombreDir = {NE:'noreste', E:'este', SE:'sureste', S:'sur', SW:'suroeste', W:'oeste', NW:'noroeste', N:'norte'}[acerca.sector] || acerca.sector;
+    const horas = acerca.eta_horas < 1 ? 'menos de 1 hora' : `unas ${Math.round(acerca.eta_horas)} horas`;
+    if(acerca.lloviendo){
+      box.innerHTML = `<div class="acerca-card mal">
+        <div class="acerca-icono">🌧️</div>
+        <div class="acerca-texto">El viento sopla del <b>${nombreDir}</b>, y ahora mismo está lloviendo en
+        <b>${acerca.nombre}</b> (a ${acerca.dist_km} km, ${acerca.prec_mm} mm en la última hora).
+        A este ritmo de viento, podría llegar a Luarca en <b>${horas}</b>.</div>
+      </div>`;
+    } else {
+      box.innerHTML = `<div class="acerca-card bien">
+        <div class="acerca-icono">🌤️</div>
+        <div class="acerca-texto">El viento sopla del <b>${nombreDir}</b>. En <b>${acerca.nombre}</b>
+        (a ${acerca.dist_km} km, por donde viene) ahora no llueve — sin indicios de que empeore por ahí
+        en las próximas horas.</div>
+      </div>`;
+    }
   }
 
   // --- Predicción horaria: gráfico estilo Carrot Weather ---
