@@ -48,8 +48,11 @@ AEMET_API_KEY = os.environ.get("AEMET_API_KEY", "")
 NETATMO_CLIENT_ID = os.environ.get("NETATMO_CLIENT_ID", "")
 NETATMO_CLIENT_SECRET = os.environ.get("NETATMO_CLIENT_SECRET", "")
 NETATMO_REFRESH_TOKEN = os.environ.get("NETATMO_REFRESH_TOKEN", "")
-# Bounding box alrededor de Valdés para estaciones públicas vecinas
-NETATMO_BBOX = {"lat_ne": 43.65, "lon_ne": -6.30, "lat_sw": 43.40, "lon_sw": -6.95}
+# Caja amplia: costa de Valdés + interior (Tineo, Cangas del Narcea, Somiedo)
+# + costa gallega hacia el noroeste (Ortigueira, Viveiro, Ferrol). Ninguna
+# de estas estaciones nuevas tiene pluviómetro (comprobado), así que solo
+# sirven para más contexto de temperatura/humedad, no para "qué se acerca".
+NETATMO_BBOX = {"lat_ne": 43.90, "lon_ne": -6.10, "lat_sw": 42.95, "lon_sw": -7.90}
 
 AEMET_TODAS_URL = "https://opendata.aemet.es/opendata/api/observacion/convencional/todas"
 AEMET_PLAYA_URL = "https://opendata.aemet.es/opendata/api/prediccion/especifica/playa/{id_playa}"
