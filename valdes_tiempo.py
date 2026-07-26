@@ -115,9 +115,8 @@ def _aemet_fetch(endpoint_url):
     return _get_json(meta["datos"], decode="latin-1")
 
 
-def fetch_real_time():
+def fetch_real_time(estaciones):
     """Tiempo real + tendencia de presión de Cabo Busto."""
-    estaciones = _aemet_fetch(AEMET_TODAS_URL)
     lecturas = [e for e in estaciones if e.get("idema") == IDEMA_CABO_BUSTO and "pres" in e]
     if not lecturas:
         raise RuntimeError("Sin lecturas de Cabo Busto con presión.")
@@ -143,6 +142,61 @@ def fetch_real_time():
         "pres_hpa": actual.get("pres"),
         "pres_tendencia": tendencia,
         "humedad": actual.get("hr"),
+    }
+
+
+# ---------------------------------------------------------------------
+# "QUÉ SE ACERCA": estaciones de referencia en la dirección de donde
+# sopla el viento (rumbo y distancia reales calculados desde Luarca).
+# Solo cubrimos los sectores donde hay una estación AEMET razonablemente
+# cercana; el resto (mar abierto al N, zonas sin estación al S/SE/NW)
+# se queda sin estimar en vez de inventar un dato.
+# ---------------------------------------------------------------------
+SENTINELAS = {
+    "NE": {"idema": "1210X", "nombre": "Cabo Peñas", "dist_km": 57},
+    "E":  {"idema": "1212E", "nombre": "Avilés", "dist_km": 40},
+    "W":  {"idema": "1342X", "nombre": "Ribadeo", "dist_km": 44},
+    "SW": {"idema": "1505",  "nombre": "Lugo", "dist_km": 89},
+}
+
+
+def _sector_desde_grados(deg):
+    sectores = ["N", "NE", "E", "SE", "S", "SW", "W", "NW"]
+    return sectores[round(deg / 45) % 8]
+
+
+def estimar_que_se_acerca(estaciones, wind_dir, wind_kmh):
+    """A partir de la dirección del viento (de dónde viene), busca la
+    estación centinela en esa dirección y compara: si allí llueve ahora
+    y el viento sopla hacia Luarca a esta velocidad, estima cuánto
+    tardaría en llegar (distancia / velocidad)."""
+    if wind_dir is None or wind_kmh is None or wind_kmh < 3:
+        return None  # viento demasiado flojo o sin dato para estimar procedencia
+
+    sector = _sector_desde_grados(wind_dir)
+    info = SENTINELAS.get(sector)
+    if not info:
+        return {"sector": sector, "disponible": False}
+
+    lecturas = [e for e in estaciones if e.get("idema") == info["idema"]]
+    if not lecturas:
+        return {"sector": sector, "disponible": False}
+    lecturas.sort(key=lambda e: e["fint"])
+    actual = lecturas[-1]
+
+    prec_mm = actual.get("prec") or 0
+    eta_horas = round(info["dist_km"] / wind_kmh, 1)
+
+    return {
+        "sector": sector,
+        "disponible": True,
+        "nombre": info["nombre"],
+        "dist_km": info["dist_km"],
+        "lloviendo": prec_mm > 0.1,
+        "prec_mm": prec_mm,
+        "temp_c": actual.get("ta"),
+        "cielo_despejado": prec_mm == 0 and (actual.get("hr") or 100) < 80,
+        "eta_horas": eta_horas,
     }
 
 
@@ -485,7 +539,8 @@ def recomendacion(real_time, playa_hoy, avisos):
 
 
 def main():
-    real_time = fetch_real_time()
+    estaciones_aemet = _aemet_fetch(AEMET_TODAS_URL)
+    real_time = fetch_real_time(estaciones_aemet)
     print(f"Cabo Busto — {real_time['ts']} | {real_time['temp_c']}°C | "
           f"viento {real_time['wind_kmh']}km/h | presión {real_time['pres_hpa']}hPa "
           f"({real_time['pres_tendencia']})")
@@ -549,6 +604,20 @@ def main():
         real_time_para_score["pres_tendencia"] = mapa.get(netatmo_own["presion_tendencia"], real_time["pres_tendencia"])
     score, etiqueta = recomendacion(real_time_para_score, playa_hoy_otur, avisos)
 
+    # "Qué se acerca": usamos el viento de la estación local si existe
+    # (más representativo de Luarca), si no el de Cabo Busto.
+    wind_dir_efectivo = real_time["wind_dir"]
+    wind_kmh_efectivo = real_time["wind_kmh"]
+    if netatmo_own and netatmo_own.get("viento"):
+        wind_dir_efectivo = netatmo_own["viento"]["dir"]
+        wind_kmh_efectivo = netatmo_own["viento"]["kmh"]
+    try:
+        que_se_acerca = estimar_que_se_acerca(estaciones_aemet, wind_dir_efectivo, wind_kmh_efectivo)
+        print(f"Qué se acerca: {que_se_acerca}")
+    except (KeyError, TypeError) as e:
+        print(f"AVISO: fallo estimando qué se acerca: {e}")
+        que_se_acerca = None
+
     lugares_out = []
     for p in PLAYAS:
         entry = dict(p)
@@ -565,6 +634,7 @@ def main():
     output = {
         "real_time": real_time,
         "recomendacion": {"score": score, "etiqueta": etiqueta},
+        "que_se_acerca": que_se_acerca,
         "forecast_municipio": forecast_municipio,
         "forecast_horaria": horaria,
         "avisos": avisos,
