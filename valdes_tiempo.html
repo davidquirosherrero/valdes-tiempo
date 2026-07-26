@@ -153,7 +153,7 @@
 
   <section class="acc-seafoam">
     <div class="section-title">🌊 Boletín marítimo de la costa</div>
-    <div class="section-sub">Oeste de Peñas es la franja frente a Luarca — destacada.</div>
+    <div class="section-sub">Estado del mar frente a Luarca.</div>
     <div id="maritimaBox"></div>
   </section>
 
@@ -433,17 +433,11 @@ function render(DATA){
   // --- Marítima costera ---
   const maritimaBox = document.getElementById('maritimaBox');
   if(DATA.maritima){
-    const iconos = { 'Oeste de Peñas': '🧭', 'Este de Peñas': '🧭', 'Ambas zonas': '🌊' };
     let html = `<div class="maritima-card destacada">
       <div class="zona">⚠️ Avisos</div>${DATA.maritima.avisos_texto}
     </div>`;
     (DATA.maritima.segmentos || []).forEach(s => {
-      const esValdes = s.zona === 'Oeste de Peñas';
-      const icono = iconos[s.zona] || '〰️';
-      html += `<div class="maritima-card${esValdes ? ' destacada' : ''}">
-        <div class="zona">${icono} ${s.zona || ''}${esValdes ? ' · Valdés' : ''}</div>
-        ${s.texto}
-      </div>`;
+      html += `<div class="maritima-card">${s.texto}</div>`;
     });
     maritimaBox.innerHTML = html;
   } else {
