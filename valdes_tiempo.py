@@ -575,7 +575,19 @@ def recomendacion(real_time, playa_hoy, avisos):
     return puntos, etiqueta
 
 
+def cargar_json_anterior():
+    """Lee el valdes.json que ya existe en el repo (el de la ejecución
+    anterior) para usarlo como respaldo si alguna llamada falla hoy."""
+    try:
+        with open("valdes.json", encoding="utf-8") as f:
+            return json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        return None
+
+
 def main():
+    anterior = cargar_json_anterior()
+
     estaciones_aemet = _aemet_fetch(AEMET_TODAS_URL)
     real_time = fetch_real_time(estaciones_aemet)
     print(f"Cabo Busto — {real_time['ts']} | {real_time['temp_c']}°C | "
@@ -612,12 +624,20 @@ def main():
         print(f"AVISO: fallo marítima costera: {e}")
         maritima = None
 
+    horaria_es_respaldo = False
     try:
         horaria = fetch_hourly_forecast()
         print(f"Predicción horaria: {len(horaria)} horas")
     except (urllib.error.URLError, RuntimeError, KeyError) as e:
         print(f"AVISO: fallo predicción horaria: {e}")
         horaria = []
+        if anterior and anterior.get("forecast_horaria"):
+            ahora_local = datetime.now(ZoneInfo("Europe/Madrid")).strftime("%Y-%m-%dT%H:00")
+            horaria_respaldo = [h for h in anterior["forecast_horaria"] if h["fecha_hora"] >= ahora_local]
+            if horaria_respaldo:
+                horaria = horaria_respaldo
+                horaria_es_respaldo = True
+                print(f"Usando respaldo de la ejecución anterior: {len(horaria)} horas útiles")
 
     netatmo_own = None
     netatmo_vecinas = []
@@ -674,6 +694,7 @@ def main():
         "que_se_acerca": que_se_acerca,
         "forecast_municipio": forecast_municipio,
         "forecast_horaria": horaria,
+        "horaria_es_respaldo": horaria_es_respaldo,
         "avisos": avisos,
         "maritima": maritima,
         "netatmo_own": netatmo_own,
