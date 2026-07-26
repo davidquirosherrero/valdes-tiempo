@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Valdés al Día — ¿Buen tiempo de playa?</title>
-<meta name="description" content="Tiempo real y predicción a 4 días para las playas y parroquias de Valdés (Asturias): viento, presión, oleaje y cielo.">
+<title>El Tiempo en Luarca — a tiempo real</title>
+<meta name="description" content="El tiempo en Luarca ahora mismo: estación propia, predicción horaria y de playa, boletín marítimo y avisos oficiales. Actualizado cada hora.">
 <meta name="theme-color" content="#0b1d33">
-<meta property="og:title" content="Valdés al Día — ¿Buen tiempo de playa?">
-<meta property="og:description" content="Tiempo real y predicción para las playas y parroquias de Valdés, Asturias.">
+<meta property="og:title" content="El Tiempo en Luarca — a tiempo real">
+<meta property="og:description" content="Estación propia, predicción horaria y de playa, boletín marítimo y avisos oficiales para Luarca, actualizado cada hora.">
 <meta property="og:type" content="website">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
 
@@ -97,9 +97,9 @@
 <body>
 
 <header>
-  <p class="eyebrow">🌤️ VALDÉS AL DÍA</p>
-  <h1>¿Buen tiempo para la playa?</h1>
-  <p class="tagline">Tiempo real + predicción a 4 días, 15 parroquias y 4 playas de Valdés.</p>
+  <p class="eyebrow">🌤️ EL TIEMPO EN LUARCA</p>
+  <h1>¿Qué tiempo hace en Luarca?</h1>
+  <p class="tagline">Estación propia, predicción horaria y de playa, boletín marítimo y avisos oficiales — todo en un sitio, actualizado cada hora.</p>
 </header>
 
 <div id="err"></div>
@@ -110,8 +110,8 @@
   <div id="avisosBox"></div>
 
   <section>
-    <div class="section-title">Próximas horas</div>
-    <div class="section-sub">Predicción horaria del municipio.</div>
+    <div class="section-title">Próximas horas en Luarca</div>
+    <div class="section-sub">Predicción hora a hora de AEMET para Valdés (misma predicción para todo el municipio).</div>
     <div class="hora-chart-box"><canvas id="horaChart"></canvas></div>
     <div class="playa-tabs" id="horaTabs">
       <button class="playa-tab active" data-metric="temp">Temperatura</button>
@@ -121,36 +121,37 @@
   </section>
 
   <section>
-    <div class="section-title">Boletín marítimo — Aguas costeras de Asturias</div>
-    <div class="section-sub">Oeste de Peñas es la franja que incluye Valdés — destacada.</div>
+    <div class="section-title">Boletín marítimo de la costa</div>
+    <div class="section-sub">Oeste de Peñas es la franja frente a Luarca — destacada.</div>
     <div id="maritimaBox"></div>
   </section>
 
   <section id="netatmoSection" style="display:none;">
-    <div class="section-title">Tu estación (Netatmo)</div>
+    <div class="section-title">Estación de Luarca (Netatmo)</div>
     <div class="section-sub" id="netatmoSub"></div>
     <div id="netatmoGrid" class="netatmo-grid"></div>
   </section>
 
   <section>
-    <div class="section-title">Predicción — Luarca (4 días)</div>
-    <div class="section-sub">Otur tiene ficha propia casi idéntica por lo cerca que está — se omite para no duplicar. Cueva y Cadavedo no tienen ficha propia en AEMET.</div>
+    <div class="section-title">Playa de Luarca (4 días)</div>
+    <div class="section-sub">Ficha oficial de AEMET para la playa. Otur es casi idéntica por lo cerca que está.</div>
     <div class="day-cards" id="dayCards"></div>
   </section>
 
   <section>
     <div class="note">
       <b>Cómo se calcula:</b> el tiempo real y la tendencia de presión vienen de tu estación Netatmo
-      (o de Cabo Busto/AEMET si Netatmo no responde). La predicción de Luarca es la ficha oficial de
-      "playas" de AEMET. La predicción horaria es la del municipio de Valdés, lo más fino que ofrece
-      AEMET a esta escala. La recomendación de arriba es una heurística simple (presión + cielo +
-      viento + avisos oficiales), no un modelo meteorológico — para decisiones importantes, consulta
-      la predicción oficial de AEMET.
+      en Luarca (o de Cabo Busto/AEMET si Netatmo no responde). La predicción de playa es la ficha
+      oficial de Luarca en AEMET. La predicción horaria y el boletín marítimo son los que AEMET
+      publica para todo Valdés/la costa asturiana — es lo más fino que dan a esta escala. La
+      recomendación de arriba es una heurística simple (presión + cielo + viento + avisos oficiales),
+      no un modelo meteorológico — para decisiones importantes, consulta la predicción oficial de
+      AEMET.
     </div>
   </section>
 </main>
 
-<footer>Dato: AEMET OpenData · actualización automática por GitHub Actions</footer>
+<footer>El Tiempo en Luarca · Dato: AEMET OpenData + Netatmo · actualización automática cada hora</footer>
 
 <script>
 function compass(deg){
@@ -213,16 +214,26 @@ function render(DATA){
   // --- Hero ---
   const r = DATA.recomendacion;
   const rt = DATA.real_time;
+  const nat = DATA.netatmo_own;
   const color = scoreColor(r.score);
-  const trendArrow = rt.pres_tendencia === 'subiendo' ? '↑' : rt.pres_tendencia === 'bajando' ? '↓' : '→';
+
+  // Preferimos tu estación Netatmo (está en Luarca) sobre Cabo Busto (AEMET, más lejos)
+  const fuente = nat ? 'tu estación' : 'Cabo Busto, AEMET';
+  const tempMostrar = nat && nat.exterior ? nat.exterior.temp_c : rt.temp_c;
+  const vientoMostrar = nat && nat.viento ? nat.viento.kmh : rt.wind_kmh;
+  const vientoDirMostrar = nat && nat.viento ? nat.viento.dir : rt.wind_dir;
+  const presionMostrar = nat ? nat.presion_hpa : rt.pres_hpa;
+  const tendenciaMostrar = nat ? ({up:'subiendo', down:'bajando', stable:'estable'}[nat.presion_tendencia] || nat.presion_tendencia) : rt.pres_tendencia;
+  const trendArrow = tendenciaMostrar === 'subiendo' ? '↑' : tendenciaMostrar === 'bajando' ? '↓' : '→';
+
   document.getElementById('hero').innerHTML = `
-    <div class="hero-label">Ahora mismo (Cabo Busto)</div>
+    <div class="hero-label">Ahora mismo en Luarca · ${fuente}</div>
     <div class="hero-row">
       <div>
         <div class="hero-etiqueta" style="color:${color}">${r.etiqueta}</div>
         <div class="hero-sub">
-          🌡️ ${rt.temp_c}°C &nbsp; 💨 ${rt.wind_kmh}km/h ${compass(rt.wind_dir)} &nbsp;
-          📟 ${rt.pres_hpa}hPa ${trendArrow} ${rt.pres_tendencia}
+          🌡️ ${tempMostrar}°C &nbsp; 💨 ${vientoMostrar}km/h ${compass(vientoDirMostrar)} &nbsp;
+          📟 ${presionMostrar}hPa ${trendArrow} ${tendenciaMostrar}
         </div>
       </div>
       <div class="hero-score" style="color:${color}">${r.score}</div>
