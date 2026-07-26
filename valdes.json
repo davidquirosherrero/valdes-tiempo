@@ -236,10 +236,6 @@
         "texto": "W o NW 3 o 4 tendiendo a Variable 1 a 3 a partir de la noche y arreciando a E o NE 3 o 4 al avanzar la madrugada. Marejadilla o marejada disminuyendo temporalmente a rizada o marejadilla durante la noche y madrugada."
       },
       {
-        "zona": "Este de Peñas",
-        "texto": "W o NW 3 o 4 tendiendo a Variable 1 a 3 al avanzar la madrugada pero arreciando a E o NE 3 o 4 a partir de la mañana. Marejadilla o marejada disminuyendo a rizada o marejadilla al avanzar la madrugada."
-      },
-      {
         "zona": "Ambas zonas",
         "texto": "A partir del mediodía, E o NE 4 o 5 y marejada. Mar de fondo del N o NW de 1 a 2 m."
       }
@@ -266,7 +262,43 @@
       "mm_24h": 0
     }
   },
-  "netatmo_vecinas": [],
+  "netatmo_vecinas": [
+    {
+      "lat": 43.53,
+      "lon": -6.39,
+      "ciudad": "Valdés",
+      "temp_c": 21.3,
+      "humedad": 78
+    },
+    {
+      "lat": 43.56,
+      "lon": -6.66,
+      "ciudad": "Navia",
+      "temp_c": 21.1,
+      "humedad": 81
+    },
+    {
+      "lat": 43.56,
+      "lon": -6.27,
+      "ciudad": "Cudillero",
+      "temp_c": 22.7,
+      "humedad": 65
+    },
+    {
+      "lat": 43.33,
+      "lon": -6.42,
+      "ciudad": "Tineo",
+      "temp_c": 17.2,
+      "humedad": 85
+    },
+    {
+      "lat": 43.4,
+      "lon": -6.25,
+      "ciudad": "Salas",
+      "temp_c": 22.2,
+      "humedad": 70
+    }
+  ],
   "lugares": [
     {
       "name": "Otur",
@@ -447,5 +479,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-07-26T20:40:08.201609+00:00"
+  "generated_at": "2026-07-26T20:45:21.203088+00:00"
 }
