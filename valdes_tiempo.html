@@ -88,6 +88,21 @@
   .netatmo-cell .k{ font-size:9.5px; text-transform:uppercase; letter-spacing:0.06em; color:var(--seafoam); }
   .netatmo-cell .v{ font-size:19px; font-weight:700; margin-top:4px; }
   .netatmo-cell .v small{ font-size:11px; font-weight:400; color:rgba(238,241,230,0.55); }
+  .vecinas-details{ margin-top:14px; }
+  .vecinas-details summary{
+    cursor:pointer; font-size:11.5px; color:var(--seafoam); list-style:none;
+    padding:8px 0; border-top:1px solid rgba(238,241,230,0.1);
+  }
+  .vecinas-details summary::-webkit-details-marker{ display:none; }
+  .vecinas-details summary::before{ content:'▸ '; }
+  .vecinas-details[open] summary::before{ content:'▾ '; }
+  .vecinas-list{ padding-top:6px; }
+  .vecina-row{
+    display:flex; justify-content:space-between; padding:7px 0;
+    border-bottom:1px solid rgba(238,241,230,0.06); font-size:12px;
+  }
+  .vecina-row span:first-child{ color:rgba(238,241,230,0.6); }
+  .vecina-row span:last-child{ font-weight:600; }
   .maritima-card{
     padding:12px 14px; border-radius:6px; margin-bottom:8px;
     background:rgba(238,241,230,0.04); border-left:3px solid rgba(95,168,160,0.4);
@@ -371,11 +386,12 @@ function render(DATA){
   if(DATA.netatmo_own){
     document.getElementById('netatmoSection').style.display = 'block';
     const n = DATA.netatmo_own;
-    const vecinasTemp = (DATA.netatmo_vecinas || []).map(v => v.temp_c).filter(t => t !== null);
+    const vecinas = DATA.netatmo_vecinas || [];
+    const vecinasTemp = vecinas.map(v => v.temp_c).filter(t => t !== null);
     const mediaVecinas = vecinasTemp.length ? (vecinasTemp.reduce((a,b)=>a+b,0)/vecinasTemp.length).toFixed(1) : null;
     document.getElementById('netatmoSub').textContent =
-      `${n.nombre} · ${(DATA.netatmo_vecinas||[]).length} estaciones vecinas visibles` +
-      (mediaVecinas ? ` (media zona: ${mediaVecinas}°C)` : '');
+      `Estación meteorológica en Luarca` +
+      (mediaVecinas ? ` · media de la zona ahora: ${mediaVecinas}°C` : '');
 
     const cells = [];
     if(n.exterior) cells.push(['Exterior', `${n.exterior.temp_c}°C <small>· ${n.exterior.humedad}% hum.</small>`]);
@@ -391,6 +407,29 @@ function render(DATA){
       div.innerHTML = `<div class="k">${k}</div><div class="v">${v}</div>`;
       grid.appendChild(div);
     });
+
+    // --- Estaciones cercanas (desplegable, ubicación genérica por localidad) ---
+    if(vecinas.length){
+      const details = document.createElement('details');
+      details.className = 'vecinas-details';
+      const summary = document.createElement('summary');
+      summary.textContent = `Ver estaciones cercanas (${vecinas.length})`;
+      details.appendChild(summary);
+      const list = document.createElement('div');
+      list.className = 'vecinas-list';
+      vecinas
+        .filter(v => v.temp_c !== null)
+        .sort((a,b) => (a.ciudad||'').localeCompare(b.ciudad||''))
+        .forEach(v => {
+          const row = document.createElement('div');
+          row.className = 'vecina-row';
+          row.innerHTML = `<span>${v.ciudad || 'Zona desconocida'}</span>
+            <span>${v.temp_c}°C${v.humedad !== null ? ` · ${v.humedad}% hum.` : ''}</span>`;
+          list.appendChild(row);
+        });
+      details.appendChild(list);
+      document.getElementById('netatmoSection').appendChild(details);
+    }
   }
 
   // --- Predicción de Luarca (única playa, sin tabs) ---
