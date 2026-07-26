@@ -356,10 +356,10 @@ def netatmo_refresh_access_token():
 
 
 def fetch_netatmo_own(access_token):
-    """Datos de tu propia estación: interior, exterior, viento, lluvia,
-    presión con la tendencia que ya calcula el propio Netatmo. No se
-    incluye el nombre que le hayas puesto a la estación (p.ej. "Casa"),
-    ni su ubicación exacta -- solo las lecturas."""
+    """Datos meteorológicos exteriores de la estación local: temperatura,
+    viento, lluvia, presión con la tendencia que ya calcula el propio
+    servicio. No se incluye el dato interior (temperatura/CO2 de dentro
+    de casa) -- no aporta al tiempo en Luarca y es información privada."""
     url = f"https://api.netatmo.com/api/getstationsdata?access_token={access_token}"
     data = _get_json(url)
     devices = data.get("body", {}).get("devices", [])
@@ -369,7 +369,6 @@ def fetch_netatmo_own(access_token):
     dd = main.get("dashboard_data", {})
     out = {
         "_device_id": main.get("_id"),  # solo para excluirla de "vecinas"; se quita antes de guardar el JSON
-        "interior": {"temp_c": dd.get("Temperature"), "co2": dd.get("CO2"), "humedad": dd.get("Humidity")},
         "presion_hpa": dd.get("Pressure"),
         "presion_tendencia": dd.get("pressure_trend"),
         "exterior": None,
