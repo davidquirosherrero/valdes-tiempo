@@ -41,12 +41,12 @@
       "viento_kmh": 25,
       "t_max": 25,
       "t_min": 18,
-      "prob_precipitacion": 75
+      "prob_precipitacion": 90
     },
     {
       "fecha": "2026-07-28T00:00:00",
       "cielo": "Despejado",
-      "viento_dir": "NE",
+      "viento_dir": "N",
       "viento_kmh": 10,
       "t_max": 28,
       "t_min": 17,
@@ -64,22 +64,13 @@
   ],
   "forecast_horaria": [
     {
-      "fecha_hora": "2026-07-26T22:00",
-      "temp": "20",
-      "sens_termica": "20",
-      "cielo": "Muy nuboso",
-      "prob_precipitacion": "0",
-      "viento_dir": "O",
-      "viento_kmh": "4"
-    },
-    {
       "fecha_hora": "2026-07-26T23:00",
       "temp": "19",
       "sens_termica": "19",
-      "cielo": "Muy nuboso",
+      "cielo": "Cubierto",
       "prob_precipitacion": "0",
       "viento_dir": "S",
-      "viento_kmh": "4"
+      "viento_kmh": "5"
     },
     {
       "fecha_hora": "2026-07-27T00:00",
@@ -88,7 +79,7 @@
       "cielo": "Cubierto",
       "prob_precipitacion": "0",
       "viento_dir": "S",
-      "viento_kmh": "4"
+      "viento_kmh": "5"
     },
     {
       "fecha_hora": "2026-07-27T01:00",
@@ -103,26 +94,26 @@
       "fecha_hora": "2026-07-27T02:00",
       "temp": "18",
       "sens_termica": "18",
-      "cielo": "Cubierto",
-      "prob_precipitacion": "45",
+      "cielo": "Cubierto con lluvia escasa",
+      "prob_precipitacion": "65",
       "viento_dir": "S",
-      "viento_kmh": "4"
+      "viento_kmh": "3"
     },
     {
       "fecha_hora": "2026-07-27T03:00",
       "temp": "19",
       "sens_termica": "19",
-      "cielo": "Cubierto",
-      "prob_precipitacion": "45",
-      "viento_dir": "C",
-      "viento_kmh": "0"
+      "cielo": "Cubierto con lluvia escasa",
+      "prob_precipitacion": "65",
+      "viento_dir": "E",
+      "viento_kmh": "2"
     },
     {
       "fecha_hora": "2026-07-27T04:00",
       "temp": "19",
       "sens_termica": "19",
-      "cielo": "Cubierto",
-      "prob_precipitacion": "45",
+      "cielo": "Cubierto con lluvia escasa",
+      "prob_precipitacion": "65",
       "viento_dir": "E",
       "viento_kmh": "2"
     },
@@ -130,9 +121,9 @@
       "fecha_hora": "2026-07-27T05:00",
       "temp": "19",
       "sens_termica": "19",
-      "cielo": "Cubierto",
-      "prob_precipitacion": "45",
-      "viento_dir": "S",
+      "cielo": "Cubierto con lluvia escasa",
+      "prob_precipitacion": "65",
+      "viento_dir": "NE",
       "viento_kmh": "1"
     },
     {
@@ -140,8 +131,8 @@
       "temp": "19",
       "sens_termica": "19",
       "cielo": "Cubierto",
-      "prob_precipitacion": "45",
-      "viento_dir": "E",
+      "prob_precipitacion": "65",
+      "viento_dir": "NE",
       "viento_kmh": "2"
     },
     {
@@ -149,9 +140,9 @@
       "temp": "19",
       "sens_termica": "19",
       "cielo": "Cubierto",
-      "prob_precipitacion": "45",
-      "viento_dir": "SE",
-      "viento_kmh": "3"
+      "prob_precipitacion": "65",
+      "viento_dir": "E",
+      "viento_kmh": "4"
     },
     {
       "fecha_hora": "2026-07-27T08:00",
@@ -160,7 +151,7 @@
       "cielo": "Cubierto",
       "prob_precipitacion": "0",
       "viento_dir": "E",
-      "viento_kmh": "2"
+      "viento_kmh": "7"
     },
     {
       "fecha_hora": "2026-07-27T09:00",
@@ -169,7 +160,7 @@
       "cielo": "Muy nuboso",
       "prob_precipitacion": "0",
       "viento_dir": "E",
-      "viento_kmh": "5"
+      "viento_kmh": "7"
     },
     {
       "fecha_hora": "2026-07-27T10:00",
@@ -178,16 +169,16 @@
       "cielo": "Muy nuboso",
       "prob_precipitacion": "0",
       "viento_dir": "E",
-      "viento_kmh": "11"
+      "viento_kmh": "13"
     },
     {
       "fecha_hora": "2026-07-27T11:00",
       "temp": "22",
       "sens_termica": "22",
-      "cielo": "Poco nuboso",
+      "cielo": "Nuboso",
       "prob_precipitacion": "0",
-      "viento_dir": "E",
-      "viento_kmh": "16"
+      "viento_dir": "NE",
+      "viento_kmh": "17"
     },
     {
       "fecha_hora": "2026-07-27T12:00",
@@ -205,7 +196,7 @@
       "cielo": "Despejado",
       "prob_precipitacion": "0",
       "viento_dir": "NE",
-      "viento_kmh": "24"
+      "viento_kmh": "26"
     },
     {
       "fecha_hora": "2026-07-27T14:00",
@@ -214,7 +205,7 @@
       "cielo": "Despejado",
       "prob_precipitacion": "0",
       "viento_dir": "NE",
-      "viento_kmh": "25"
+      "viento_kmh": "26"
     },
     {
       "fecha_hora": "2026-07-27T15:00",
@@ -223,7 +214,16 @@
       "cielo": "Despejado",
       "prob_precipitacion": "0",
       "viento_dir": "NE",
-      "viento_kmh": "26"
+      "viento_kmh": "27"
+    },
+    {
+      "fecha_hora": "2026-07-27T16:00",
+      "temp": "24",
+      "sens_termica": "24",
+      "cielo": "Despejado",
+      "prob_precipitacion": "0",
+      "viento_dir": "NE",
+      "viento_kmh": "27"
     }
   ],
   "horaria_es_respaldo": false,
@@ -245,17 +245,17 @@
     "vigencia_fin": "2026-07-27T20:00:00"
   },
   "netatmo_own": {
-    "presion_hpa": 1019.7,
+    "presion_hpa": 1019.9,
     "presion_tendencia": "stable",
     "exterior": {
       "temp_c": 20.2,
       "humedad": 92,
-      "tendencia": "down"
+      "tendencia": "stable"
     },
     "viento": {
       "kmh": 1,
-      "dir": 126,
-      "racha_kmh": 5
+      "dir": 135,
+      "racha_kmh": 4
     },
     "lluvia": {
       "mm_1h": 0,
@@ -267,36 +267,36 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 21.3,
-      "humedad": 78
+      "temp_c": 21.1,
+      "humedad": 79
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
-      "temp_c": 21.1,
+      "temp_c": 21.2,
       "humedad": 81
     },
     {
       "lat": 43.56,
       "lon": -6.27,
       "ciudad": "Cudillero",
-      "temp_c": 22.7,
+      "temp_c": 22.5,
       "humedad": 65
     },
     {
       "lat": 43.33,
       "lon": -6.42,
       "ciudad": "Tineo",
-      "temp_c": 17.2,
-      "humedad": 85
+      "temp_c": 16.7,
+      "humedad": 87
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 22.2,
-      "humedad": 70
+      "temp_c": 21.8,
+      "humedad": 71
     }
   ],
   "lugares": [
@@ -479,5 +479,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-07-26T20:45:21.203088+00:00"
+  "generated_at": "2026-07-26T21:11:33.809568+00:00"
 }
