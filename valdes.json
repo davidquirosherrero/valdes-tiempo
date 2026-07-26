@@ -53,15 +53,6 @@
   ],
   "forecast_horaria": [
     {
-      "fecha_hora": "2026-07-26T11:00",
-      "temp": "20",
-      "sens_termica": "20",
-      "cielo": "Cubierto",
-      "prob_precipitacion": "0",
-      "viento_dir": "O",
-      "viento_kmh": "10"
-    },
-    {
       "fecha_hora": "2026-07-26T12:00",
       "temp": "21",
       "sens_termica": "21",
@@ -213,6 +204,15 @@
       "prob_precipitacion": "45",
       "viento_dir": "E",
       "viento_kmh": "2"
+    },
+    {
+      "fecha_hora": "2026-07-27T05:00",
+      "temp": "20",
+      "sens_termica": "20",
+      "cielo": "Cubierto",
+      "prob_precipitacion": "45",
+      "viento_dir": "S",
+      "viento_kmh": "1"
     }
   ],
   "avisos": [],
@@ -237,22 +237,17 @@
     "vigencia_fin": "2026-07-27T12:00:00"
   },
   "netatmo_own": {
-    "interior": {
-      "temp_c": 23.3,
-      "co2": 499,
-      "humedad": 61
-    },
-    "presion_hpa": 1019.4,
+    "presion_hpa": 1019.3,
     "presion_tendencia": "stable",
     "exterior": {
-      "temp_c": 24.2,
-      "humedad": 73,
+      "temp_c": 24.4,
+      "humedad": 72,
       "tendencia": "up"
     },
     "viento": {
-      "kmh": 4,
-      "dir": 30,
-      "racha_kmh": 12
+      "kmh": 5,
+      "dir": 38,
+      "racha_kmh": 7
     },
     "lluvia": {
       "mm_1h": 0,
@@ -264,8 +259,8 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 20.4,
-      "humedad": 73
+      "temp_c": 20.8,
+      "humedad": 72
     },
     {
       "lat": 43.56,
@@ -278,29 +273,29 @@
       "lat": 43.57,
       "lon": -6.21,
       "ciudad": "Cudillero",
-      "temp_c": 22.5,
-      "humedad": 69
+      "temp_c": 22.8,
+      "humedad": 70
     },
     {
       "lat": 43.57,
       "lon": -6.2,
       "ciudad": "Cudillero",
-      "temp_c": 22.6,
-      "humedad": 71
+      "temp_c": 22.8,
+      "humedad": 70
     },
     {
       "lat": 43.1,
       "lon": -6.26,
       "ciudad": "Somiedo",
-      "temp_c": 17.4,
-      "humedad": 66
+      "temp_c": 17.7,
+      "humedad": 64
     },
     {
       "lat": 43.18,
       "lon": -6.55,
       "ciudad": "Cangas del Narcea",
-      "temp_c": 19.4,
-      "humedad": 68
+      "temp_c": 20,
+      "humedad": 65
     },
     {
       "lat": 43.33,
@@ -313,15 +308,15 @@
       "lat": 43.4,
       "lon": -6.54,
       "ciudad": "Tineo",
-      "temp_c": 21.5,
-      "humedad": 64
+      "temp_c": 21.6,
+      "humedad": 63
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 21.7,
-      "humedad": 64
+      "temp_c": 21.9,
+      "humedad": 63
     },
     {
       "lat": 43.42,
@@ -334,29 +329,29 @@
       "lat": 43.54,
       "lon": -7.17,
       "ciudad": "A Cruz",
-      "temp_c": 22.1,
-      "humedad": 68
+      "temp_c": 22.3,
+      "humedad": 67
     },
     {
       "lat": 43.54,
       "lon": -7.17,
       "ciudad": "A Cruz",
-      "temp_c": 23.8,
-      "humedad": 62
+      "temp_c": 24,
+      "humedad": 61
     },
     {
       "lat": 43.54,
       "lon": -7.02,
       "ciudad": "Castropol",
-      "temp_c": 22.5,
-      "humedad": 74
+      "temp_c": 23,
+      "humedad": 73
     },
     {
       "lat": 43.54,
       "lon": -7.02,
       "ciudad": "As Figueiras",
-      "temp_c": 24.3,
-      "humedad": 78
+      "temp_c": 24.5,
+      "humedad": 77
     },
     {
       "lat": 43.62,
@@ -369,7 +364,7 @@
       "lat": 43.42,
       "lon": -7.27,
       "ciudad": "Lourenzá",
-      "temp_c": 18.9,
+      "temp_c": 19.1,
       "humedad": 86
     }
   ],
@@ -553,5 +548,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-07-26T09:57:34.646468+00:00"
+  "generated_at": "2026-07-26T10:04:19.368503+00:00"
 }
