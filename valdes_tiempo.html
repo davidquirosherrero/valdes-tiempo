@@ -75,6 +75,16 @@
   .aviso-amarillo{ background:rgba(232,169,76,0.12); border-left:3px solid var(--buoy-yellow); }
   .aviso-naranja{ background:rgba(230,126,34,0.14); border-left:3px solid #e67e22; }
   .aviso-rojo{ background:rgba(198,90,78,0.16); border-left:3px solid var(--coral-low); }
+  .netatmo-grid{
+    display:grid; grid-template-columns:1fr 1fr; gap:10px;
+  }
+  .netatmo-cell{
+    background:rgba(238,241,230,0.04); border:1px solid rgba(238,241,230,0.1);
+    border-radius:6px; padding:12px;
+  }
+  .netatmo-cell .k{ font-size:9.5px; text-transform:uppercase; letter-spacing:0.06em; color:var(--seafoam); }
+  .netatmo-cell .v{ font-size:19px; font-weight:700; margin-top:4px; }
+  .netatmo-cell .v small{ font-size:11px; font-weight:400; color:rgba(238,241,230,0.55); }
   footer{ padding:18px 20px 32px; font-size:10.5px; color:rgba(238,241,230,0.35); text-align:center; }
 </style>
 </head>
@@ -108,6 +118,12 @@
     <div class="section-title">Boletín marítimo — Aguas costeras de Asturias</div>
     <div class="section-sub">Oeste de Peñas es la franja que incluye Valdés.</div>
     <div class="note" id="maritimaBox" style="border-color:var(--seafoam);background:rgba(95,168,160,0.06);"></div>
+  </section>
+
+  <section id="netatmoSection" style="display:none;">
+    <div class="section-title">Tu estación (Netatmo)</div>
+    <div class="section-sub" id="netatmoSub"></div>
+    <div id="netatmoGrid" class="netatmo-grid"></div>
   </section>
 
   <section>
@@ -313,6 +329,32 @@ function render(DATA){
     maritimaBox.innerHTML = `<b>Aviso marítimo:</b> ${DATA.maritima.avisos_texto}<br><br>${DATA.maritima.texto.replace(/\n/g, '<br>')}`;
   } else {
     maritimaBox.innerHTML = 'Sin dato marítimo disponible ahora mismo.';
+  }
+
+  // --- Netatmo: tu estación ---
+  if(DATA.netatmo_own){
+    document.getElementById('netatmoSection').style.display = 'block';
+    const n = DATA.netatmo_own;
+    const vecinasTemp = (DATA.netatmo_vecinas || []).map(v => v.temp_c).filter(t => t !== null);
+    const mediaVecinas = vecinasTemp.length ? (vecinasTemp.reduce((a,b)=>a+b,0)/vecinasTemp.length).toFixed(1) : null;
+    document.getElementById('netatmoSub').textContent =
+      `${n.nombre} · ${(DATA.netatmo_vecinas||[]).length} estaciones vecinas visibles` +
+      (mediaVecinas ? ` (media zona: ${mediaVecinas}°C)` : '');
+
+    const cells = [];
+    if(n.exterior) cells.push(['Exterior', `${n.exterior.temp_c}°C <small>· ${n.exterior.humedad}% hum.</small>`]);
+    cells.push(['Interior', `${n.interior.temp_c}°C <small>· CO₂ ${n.interior.co2}ppm</small>`]);
+    cells.push(['Presión', `${n.presion_hpa}hPa <small>· ${n.presion_tendencia}</small>`]);
+    if(n.viento) cells.push(['Viento', `${n.viento.kmh}km/h ${compass(n.viento.dir)} <small>ráf. ${n.viento.racha_kmh}</small>`]);
+    if(n.lluvia) cells.push(['Lluvia', `${n.lluvia.mm_1h}mm/h <small>· ${n.lluvia.mm_24h}mm/24h</small>`]);
+
+    const grid = document.getElementById('netatmoGrid');
+    cells.forEach(([k,v]) => {
+      const div = document.createElement('div');
+      div.className = 'netatmo-cell';
+      div.innerHTML = `<div class="k">${k}</div><div class="v">${v}</div>`;
+      grid.appendChild(div);
+    });
   }
 
   // --- Tabs de playa con ficha ---
