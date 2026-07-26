@@ -10,8 +10,8 @@
     "humedad": 66.0
   },
   "recomendacion": {
-    "score": 80,
-    "etiqueta": "Buen día de playa — la presión está subiendo"
+    "score": 60,
+    "etiqueta": "Aceptable, pero el cielo estará nuboso"
   },
   "forecast_municipio": [
     {
@@ -236,6 +236,143 @@
     "vigencia_inicio": "2026-07-26T12:00:00",
     "vigencia_fin": "2026-07-27T12:00:00"
   },
+  "netatmo_own": {
+    "interior": {
+      "temp_c": 23.3,
+      "co2": 499,
+      "humedad": 61
+    },
+    "presion_hpa": 1019.4,
+    "presion_tendencia": "stable",
+    "exterior": {
+      "temp_c": 24.2,
+      "humedad": 73,
+      "tendencia": "up"
+    },
+    "viento": {
+      "kmh": 4,
+      "dir": 30,
+      "racha_kmh": 12
+    },
+    "lluvia": {
+      "mm_1h": 0,
+      "mm_24h": 0
+    }
+  },
+  "netatmo_vecinas": [
+    {
+      "lat": 43.53,
+      "lon": -6.39,
+      "ciudad": "Valdés",
+      "temp_c": 20.4,
+      "humedad": 73
+    },
+    {
+      "lat": 43.56,
+      "lon": -6.66,
+      "ciudad": "Navia",
+      "temp_c": 26.2,
+      "humedad": 57
+    },
+    {
+      "lat": 43.57,
+      "lon": -6.21,
+      "ciudad": "Cudillero",
+      "temp_c": 22.5,
+      "humedad": 69
+    },
+    {
+      "lat": 43.57,
+      "lon": -6.2,
+      "ciudad": "Cudillero",
+      "temp_c": 22.6,
+      "humedad": 71
+    },
+    {
+      "lat": 43.1,
+      "lon": -6.26,
+      "ciudad": "Somiedo",
+      "temp_c": 17.4,
+      "humedad": 66
+    },
+    {
+      "lat": 43.18,
+      "lon": -6.55,
+      "ciudad": "Cangas del Narcea",
+      "temp_c": 19.4,
+      "humedad": 68
+    },
+    {
+      "lat": 43.33,
+      "lon": -6.42,
+      "ciudad": "Tineo",
+      "temp_c": 17.9,
+      "humedad": 91
+    },
+    {
+      "lat": 43.4,
+      "lon": -6.54,
+      "ciudad": "Tineo",
+      "temp_c": 21.5,
+      "humedad": 64
+    },
+    {
+      "lat": 43.4,
+      "lon": -6.25,
+      "ciudad": "Salas",
+      "temp_c": 21.7,
+      "humedad": 64
+    },
+    {
+      "lat": 43.42,
+      "lon": -6.45,
+      "ciudad": "Tineo",
+      "temp_c": 19.5,
+      "humedad": 74
+    },
+    {
+      "lat": 43.54,
+      "lon": -7.17,
+      "ciudad": "A Cruz",
+      "temp_c": 22.1,
+      "humedad": 68
+    },
+    {
+      "lat": 43.54,
+      "lon": -7.17,
+      "ciudad": "A Cruz",
+      "temp_c": 23.8,
+      "humedad": 62
+    },
+    {
+      "lat": 43.54,
+      "lon": -7.02,
+      "ciudad": "Castropol",
+      "temp_c": 22.5,
+      "humedad": 74
+    },
+    {
+      "lat": 43.54,
+      "lon": -7.02,
+      "ciudad": "As Figueiras",
+      "temp_c": 24.3,
+      "humedad": 78
+    },
+    {
+      "lat": 43.62,
+      "lon": -7.31,
+      "ciudad": "Foz",
+      "temp_c": 25.1,
+      "humedad": 75
+    },
+    {
+      "lat": 43.42,
+      "lon": -7.27,
+      "ciudad": "Lourenzá",
+      "temp_c": 18.9,
+      "humedad": 86
+    }
+  ],
   "lugares": [
     {
       "name": "Otur",
@@ -416,5 +553,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-07-26T09:47:21.396286+00:00"
+  "generated_at": "2026-07-26T09:57:34.646468+00:00"
 }
