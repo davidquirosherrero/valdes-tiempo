@@ -137,7 +137,7 @@
   }
   .playa-tab.active{ background:var(--seafoam); color:var(--navy-deep); border-color:var(--seafoam); font-weight:700; }
   #horaTabs{ flex-wrap:wrap; }
-  .hora-chart-box{ position:relative; height:220px; margin-bottom:14px; overflow:hidden; }
+  .hora-chart-box{ position:relative; height:250px; margin-bottom:14px; overflow:hidden; }
   .hora-chart-box canvas{ width:100% !important; height:100% !important; display:block; }
 
   .note{
@@ -491,7 +491,7 @@ function render(DATA){
       options: {
         responsive: true,
         maintainAspectRatio: false,
-        layout: { padding: { top: 34 } },
+        layout: { padding: { top: 34, bottom: 16 } },
         plugins: { legend: { display: false } },
         scales: {
           x: { grid: { display: false }, ticks: { color: 'rgba(238,241,230,0.5)', font: { size: 9.5 }, maxRotation: 0 } },
