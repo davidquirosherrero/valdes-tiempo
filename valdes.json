@@ -1,17 +1,17 @@
 {
   "real_time": {
-    "ts": "2026-07-27T03:00:00+0000",
-    "temp_c": 19.2,
+    "ts": "2026-07-27T05:00:00+0000",
+    "temp_c": 18.6,
     "wind_kmh": 10.4,
-    "wind_dir": 156.0,
-    "gust_kmh": 16.6,
-    "pres_hpa": 1013.5,
+    "wind_dir": 140.0,
+    "gust_kmh": 15.5,
+    "pres_hpa": 1013.6,
     "pres_tendencia": "estable",
-    "humedad": 83.0
+    "humedad": 84.0
   },
   "recomendacion": {
-    "score": 60,
-    "etiqueta": "Aceptable, pero el cielo estará nuboso"
+    "score": 50,
+    "etiqueta": "Aceptable, pero el cielo estará muy nuboso"
   },
   "que_se_acerca": {
     "sector": "SE",
@@ -19,24 +19,6 @@
   },
   "forecast_municipio": null,
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-07-27T06:00",
-      "temp": "19",
-      "sens_termica": "19",
-      "cielo": "Cubierto",
-      "prob_precipitacion": "65",
-      "viento_dir": "NE",
-      "viento_kmh": "2"
-    },
-    {
-      "fecha_hora": "2026-07-27T07:00",
-      "temp": "19",
-      "sens_termica": "19",
-      "cielo": "Cubierto",
-      "prob_precipitacion": "65",
-      "viento_dir": "E",
-      "viento_kmh": "4"
-    },
     {
       "fecha_hora": "2026-07-27T08:00",
       "temp": "19",
@@ -165,17 +147,17 @@
     "vigencia_fin": "2026-07-27T20:00:00"
   },
   "netatmo_own": {
-    "presion_hpa": 1019.2,
+    "presion_hpa": 1019.7,
     "presion_tendencia": "stable",
     "exterior": {
-      "temp_c": 19.1,
-      "humedad": 95,
+      "temp_c": 18.6,
+      "humedad": 98,
       "tendencia": "stable"
     },
     "viento": {
-      "kmh": 1,
-      "dir": 90,
-      "racha_kmh": 4
+      "kmh": 3,
+      "dir": 71,
+      "racha_kmh": 7
     },
     "lluvia": {
       "mm_1h": 0,
@@ -187,36 +169,36 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 19.3,
-      "humedad": 82
+      "temp_c": 18.8,
+      "humedad": 83
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
-      "temp_c": 19.3,
-      "humedad": 88
+      "temp_c": 19,
+      "humedad": 89
     },
     {
       "lat": 43.56,
       "lon": -6.27,
       "ciudad": "Cudillero",
-      "temp_c": 21.3,
-      "humedad": 69
+      "temp_c": 21,
+      "humedad": 71
     },
     {
       "lat": 43.33,
       "lon": -6.42,
       "ciudad": "Tineo",
-      "temp_c": 14.8,
-      "humedad": 97
+      "temp_c": 15,
+      "humedad": 98
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
       "temp_c": 18.4,
-      "humedad": 81
+      "humedad": 82
     }
   ],
   "lugares": [
@@ -227,15 +209,6 @@
       "tipo": "playa",
       "ficha_aemet": "Otur",
       "forecast_4d": [
-        {
-          "fecha": "20260726",
-          "cielo": "nuboso",
-          "viento": "flojo",
-          "oleaje": "débil",
-          "t_max": 24,
-          "t_agua": 22,
-          "uv_max": 8
-        },
         {
           "fecha": "20260727",
           "cielo": "muy nuboso",
@@ -272,15 +245,6 @@
       "tipo": "playa",
       "ficha_aemet": "Luarca",
       "forecast_4d": [
-        {
-          "fecha": "20260726",
-          "cielo": "nuboso",
-          "viento": "flojo",
-          "oleaje": "débil",
-          "t_max": 24,
-          "t_agua": 21,
-          "uv_max": 8
-        },
         {
           "fecha": "20260727",
           "cielo": "muy nuboso",
@@ -417,5 +381,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-07-27T04:04:01.390569+00:00"
+  "generated_at": "2026-07-27T06:21:02.247652+00:00"
 }
