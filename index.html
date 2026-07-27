@@ -105,6 +105,13 @@
   .eyebrow{ display:flex; justify-content:space-between; align-items:center; font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:var(--seafoam); margin:0 0 8px; font-weight:700; }
   .brand-credit{ font-size:11px; letter-spacing:0.04em; text-transform:none; font-weight:400; color:var(--text-muted); text-decoration:none; }
   .brand-credit:hover{ color:var(--seafoam); }
+  .refresh-row{ margin-top:16px; display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
+  .refresh-btn{
+    background:none; border:1px solid rgba(95,168,160,0.5); color:var(--seafoam);
+    font-family:inherit; font-size:13px; font-weight:700; padding:9px 18px; border-radius:20px; cursor:pointer;
+  }
+  .refresh-btn:disabled{ opacity:0.45; cursor:not-allowed; }
+  .refresh-msg{ font-size:12.5px; color:var(--text-muted); }
   h1{ margin:0; font-family:Georgia, 'Times New Roman', serif; font-weight:400; font-size:27px; line-height:1.25; color:var(--text-primary); }
   .tagline{ font-size:14px; color:var(--text-secondary); margin-top:6px; line-height:1.55; }
   main{ max-width:720px; margin:0 auto; }
@@ -245,6 +252,10 @@
   <h1>¿Qué tiempo hace en Luarca?</h1>
   <p class="tagline">Dato local, predicción horaria y de playa, boletín marítimo y avisos oficiales — todo en un sitio, actualizado cada hora.</p>
   <p class="tagline">Consulta el tiempo en Luarca (Valdés, Asturias) en tiempo real: temperatura, viento, presión y lluvia de una estación meteorológica local, la predicción hora a hora de AEMET para hoy y mañana, el pronóstico a 4 días de la playa de Luarca, y el estado del mar en la costa. Todo actualizado automáticamente cada hora, sin necesidad de apps ni registro.</p>
+  <div class="refresh-row">
+    <button id="refreshBtn" class="refresh-btn">🔄 Actualizar ahora</button>
+    <span id="refreshMsg" class="refresh-msg"></span>
+  </div>
 </header>
 
 <div id="err"></div>
@@ -685,6 +696,25 @@ function render(DATA){
   if(luarca) pintarActualizado('playaActualizado', luarca.forecast_4d_elaborado);
   pintarActualizado('horaActualizado', DATA.horaria_elaborado);
 }
+
+document.getElementById('refreshBtn').addEventListener('click', async () => {
+  const btn = document.getElementById('refreshBtn');
+  const msg = document.getElementById('refreshMsg');
+  btn.disabled = true;
+  msg.textContent = 'Disparando actualización…';
+  try {
+    const res = await fetch('https://valdes-refresh.tiny-snowflake-bc8d.workers.dev/', { method: 'POST' });
+    const data = await res.json();
+    if (res.ok && data.ok) {
+      msg.textContent = 'Hecho — tarda 1-2 minutos en verse aquí. Vuelve a cargar la página entonces.';
+    } else {
+      msg.textContent = data.error || 'No se pudo actualizar, inténtalo en un rato.';
+    }
+  } catch (e) {
+    msg.textContent = 'Error de conexión al intentar actualizar.';
+  }
+  setTimeout(() => { btn.disabled = false; }, 30000);
+});
 
 loadData();
 </script>
