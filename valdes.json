@@ -11,7 +11,7 @@
   },
   "recomendacion": {
     "score": 50,
-    "etiqueta": "Aceptable, pero la presión está bajando"
+    "etiqueta": "Presión bajando"
   },
   "que_se_acerca": {
     "sector": "NE",
@@ -268,8 +268,8 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 22,
-      "humedad": 75
+      "temp_c": 21.9,
+      "humedad": 76
     },
     {
       "lat": 43.56,
@@ -484,5 +484,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-07-27T20:12:16.167700+00:00"
+  "generated_at": "2026-07-27T20:13:23.745282+00:00"
 }
