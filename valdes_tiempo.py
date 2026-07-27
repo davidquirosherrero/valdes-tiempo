@@ -517,11 +517,13 @@ def fetch_netatmo_vecinas(access_token, excluir_id=None):
     return list(por_localidad.values())
 
 
-def recomendacion(real_time, playa_hoy, avisos):
+def recomendacion(real_time, hora_actual, avisos):
     """Heurística simple: no es un modelo, solo orienta. Un aviso oficial
-    activo (naranja/rojo) pesa más que cualquier otra cosa. El texto que
-    se muestra se construye a partir de los factores que realmente han
-    influido en el score, no es un mensaje fijo por rango de puntos."""
+    activo (naranja/rojo) pesa más que cualquier otra cosa. Usa la HORA
+    ACTUAL del pronóstico horario (no el pronóstico diario completo de la
+    playa, que AEMET solo revisa 1-2 veces al día y por eso apenas cambia
+    el mensaje aunque pasen las horas). El texto se construye a partir de
+    los factores que realmente han influido en el score."""
     if any(a["nivel"] in ("naranja", "rojo") for a in avisos):
         return 15, "Aviso oficial activo — revisa AEMET antes de salir"
 
@@ -540,26 +542,28 @@ def recomendacion(real_time, playa_hoy, avisos):
         puntos -= 15
         negativas.append("hay un aviso amarillo activo")
 
-    if playa_hoy:
-        cielo = playa_hoy.get("cielo")
-        if cielo in ("despejado", "poco nuboso"):
+    if hora_actual:
+        cielo = (hora_actual.get("cielo") or "").lower()
+        if any(p in cielo for p in ("tormenta", "lluvia", "chubasco", "aguacero")):
+            puntos -= 25
+            negativas.append("hay precipitación en las próximas horas")
+        elif any(p in cielo for p in ("despejado", "poco nuboso")):
             puntos += 15
             positivas.append("el cielo está despejado")
-        elif cielo in ("chubascos", "lluvia", "tormenta"):
-            puntos -= 25
-            negativas.append("se esperan precipitaciones")
+        elif any(p in cielo for p in ("cubierto", "muy nuboso")):
+            puntos -= 10
+            negativas.append("el cielo estará muy nuboso")
         elif cielo:
             negativas.append(f"el cielo estará {cielo}")
 
-        viento = playa_hoy.get("viento")
-        if viento == "flojo":
-            puntos += 10
-            positivas.append("el viento es flojo")
-        elif viento == "fuerte":
-            puntos -= 15
-            negativas.append("el viento soplará fuerte")
-        elif viento:
-            negativas.append(f"el viento será {viento}")
+        viento_kmh = hora_actual.get("viento_kmh")
+        if viento_kmh is not None:
+            if viento_kmh < 15:
+                puntos += 10
+                positivas.append("el viento es flojo")
+            elif viento_kmh > 40:
+                puntos -= 15
+                negativas.append("el viento soplará fuerte")
 
     puntos = max(0, min(100, puntos))
     if puntos >= 65:
@@ -656,12 +660,12 @@ def main():
     except (urllib.error.URLError, RuntimeError, KeyError) as e:
         print(f"AVISO: fallo estación local: {e}")
 
-    playa_hoy_otur = forecasts_playas.get("Otur", [None])[0] if forecasts_playas.get("Otur") else None
+    hora_actual = horaria[0] if horaria else None
     real_time_para_score = dict(real_time)
     if netatmo_own and netatmo_own.get("presion_tendencia"):
         mapa = {"up": "subiendo", "down": "bajando", "stable": "estable"}
         real_time_para_score["pres_tendencia"] = mapa.get(netatmo_own["presion_tendencia"], real_time["pres_tendencia"])
-    score, etiqueta = recomendacion(real_time_para_score, playa_hoy_otur, avisos)
+    score, etiqueta = recomendacion(real_time_para_score, hora_actual, avisos)
 
     # "Qué se acerca": usamos el viento de Cabo Busto (AEMET), no el de la
     # estación local. Para estimar el desplazamiento de un frente a escala
