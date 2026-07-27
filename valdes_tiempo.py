@@ -10,7 +10,7 @@ FUENTES
    de surf; aquí además usamos el histórico de ~12 lecturas que ya
    trae la llamada para calcular si la presión sube o baja.
 
-2) Predicción de playas (4 días): AEMET OpenData,
+2) Predicción de playas (3 días: hoy + 2): AEMET OpenData,
    /api/prediccion/especifica/playa/{id}. Solo Otur (3303402) y
    Luarca (3303407) tienen ficha propia -- Cueva y Cadavedo no están
    en el catálogo oficial de playas de AEMET (demasiado pequeñas).
