@@ -558,6 +558,7 @@ def recomendacion(real_time, hora_actual, avisos):
 
         viento_kmh = hora_actual.get("viento_kmh")
         if viento_kmh is not None:
+            viento_kmh = float(viento_kmh)
             if viento_kmh < 15:
                 puntos += 10
                 positivas.append("el viento es flojo")
