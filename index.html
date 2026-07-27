@@ -201,6 +201,17 @@
   }
   .maritima-card.destacada{ border-left-color:var(--seafoam); background:rgba(95,168,160,0.1); }
   .maritima-card .zona{ font-weight:700; color:var(--seafoam); font-size:12.5px; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:6px; }
+  .actualizado{ display:inline-block; font-size:11.5px; color:var(--text-muted); font-style:italic; }
+  .maritima-badges{ display:flex; gap:8px; flex-wrap:wrap; margin-bottom:8px; }
+  .badge{
+    display:inline-flex; align-items:center; gap:5px; padding:5px 11px; border-radius:20px;
+    font-size:13px; font-weight:700; border:1px solid rgba(238,241,230,0.2);
+    background:rgba(238,241,230,0.06);
+  }
+  .badge.sev-buena{ border-color:rgba(95,168,160,0.5); color:var(--seafoam); background:rgba(95,168,160,0.1); }
+  .badge.sev-media{ border-color:rgba(232,169,76,0.5); color:var(--buoy-yellow); background:rgba(232,169,76,0.1); }
+  .badge.sev-mala{ border-color:rgba(198,90,78,0.5); color:var(--coral-low); background:rgba(198,90,78,0.12); }
+  .maritima-texto-detalle{ font-size:12.5px; color:var(--text-muted); line-height:1.6; }
   footer{ padding:20px 20px 34px; font-size:12.5px; color:var(--text-muted); text-align:center; line-height:1.7; }
 </style>
 </head>
@@ -230,7 +241,7 @@
 
   <section class="acc-amber">
     <h2 class="section-title">⏱️ Próximas horas en Luarca</h2>
-    <div class="section-sub">Predicción hora a hora de AEMET para Valdés (misma predicción para todo el municipio).</div>
+    <div class="section-sub">Predicción hora a hora de AEMET para Valdés (misma predicción para todo el municipio). <span class="actualizado" id="horaActualizado"></span></div>
     <div class="hora-chart-box"><canvas id="horaChart"></canvas></div>
     <div class="playa-tabs" id="horaTabs">
       <button class="playa-tab active" data-metric="temp">Temperatura</button>
@@ -240,7 +251,7 @@
 
   <section class="acc-seafoam">
     <h2 class="section-title">🌊 Boletín marítimo de la costa</h2>
-    <div class="section-sub">Estado del mar frente a Luarca.</div>
+    <div class="section-sub">Estado del mar frente a Luarca. <span class="actualizado" id="maritimaActualizado"></span></div>
     <div id="maritimaBox"></div>
   </section>
 
@@ -252,7 +263,7 @@
 
   <section class="acc-amber">
     <h2 class="section-title">🏖️ Playa de Luarca (hoy + 2 días)</h2>
-    <div class="section-sub">Ficha oficial de AEMET para la playa. Otur es casi idéntica por lo cerca que está.</div>
+    <div class="section-sub">Ficha oficial de AEMET para la playa. Otur es casi idéntica por lo cerca que está. <span class="actualizado" id="playaActualizado"></span></div>
     <div class="day-cards" id="dayCards"></div>
   </section>
 
@@ -279,6 +290,29 @@ function compass(deg){
   if(deg === null || deg === undefined) return "";
   const dirs = ["N","NNE","NE","ENE","E","ESE","SE","SSE","S","SSW","SW","WSW","W","WNW","NW","NNW"];
   return dirs[Math.round(deg / 22.5) % 16];
+}
+
+function horaCorta(fecha){
+  if(!fecha) return null;
+  // Puede venir como ISO ('2026-07-27T07:13:09', sin Z -> hora local española)
+  // o como timestamp unix en segundos (estación local / Netatmo)
+  const d = typeof fecha === 'number' ? new Date(fecha * 1000) : new Date(fecha.includes('Z') || fecha.includes('+') ? fecha : fecha + '+02:00');
+  if(isNaN(d.getTime())) return null;
+  return d.toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit' });
+}
+
+function pintarActualizado(id, fecha){
+  const el = document.getElementById(id);
+  if(!el) return;
+  const hora = horaCorta(fecha);
+  el.textContent = hora ? `· actualizado ${hora}` : '';
+}
+
+function severidadMar(estado){
+  if(!estado) return '';
+  if(['calma','rizada'].includes(estado)) return 'sev-buena';
+  if(estado === 'marejadilla') return 'sev-media';
+  return 'sev-mala'; // marejada, fuerte marejada, gruesa, muy gruesa, arbolada, montañosa, enorme
 }
 
 function scoreColor(s){
@@ -345,9 +379,10 @@ function render(DATA){
   const presionMostrar = local ? local.presion_hpa : rt.pres_hpa;
   const tendenciaMostrar = local ? ({up:'subiendo', down:'bajando', stable:'estable'}[local.presion_tendencia] || local.presion_tendencia) : rt.pres_tendencia;
   const trendArrow = tendenciaMostrar === 'subiendo' ? '↑' : tendenciaMostrar === 'bajando' ? '↓' : '→';
+  const horaFuente = horaCorta(local ? local.ts : rt.ts);
 
   document.getElementById('hero').innerHTML = `
-    <div class="hero-label">Ahora mismo en Luarca · ${fuente}</div>
+    <div class="hero-label">Ahora mismo en Luarca · ${fuente}${horaFuente ? ' · ' + horaFuente : ''}</div>
     <div class="hero-etiqueta" style="color:${color}">${r.etiqueta}</div>
     <div class="hero-sub">
       🌡️ ${tempMostrar}°C &nbsp; 💨 ${vientoMostrar}km/h ${compass(vientoDirMostrar)} &nbsp;
@@ -522,11 +557,19 @@ function render(DATA){
   // --- Marítima costera ---
   const maritimaBox = document.getElementById('maritimaBox');
   if(DATA.maritima){
+    pintarActualizado('maritimaActualizado', DATA.maritima.vigencia_inicio);
     let html = `<div class="maritima-card destacada">
       <div class="zona">⚠️ Avisos</div>${DATA.maritima.avisos_texto}
     </div>`;
     (DATA.maritima.segmentos || []).forEach(s => {
-      html += `<div class="maritima-card">${s.texto}</div>`;
+      const badges = [];
+      if(s.direccion) badges.push(`<span class="badge">🧭 ${s.direccion}${s.fuerza ? ' · fuerza ' + s.fuerza.replace('o',' a ') : ''}</span>`);
+      if(s.estado_mar) badges.push(`<span class="badge ${severidadMar(s.estado_mar)}">🌊 ${s.estado_mar}</span>`);
+      html += `<div class="maritima-card">
+        ${s.zona ? `<div class="zona">${s.zona}</div>` : ''}
+        ${badges.length ? `<div class="maritima-badges">${badges.join('')}</div>` : ''}
+        <div class="maritima-texto-detalle">${s.texto}</div>
+      </div>`;
     });
     maritimaBox.innerHTML = html;
   } else {
@@ -538,7 +581,9 @@ function render(DATA){
     document.getElementById('localSection').style.display = 'block';
     const n = DATA.netatmo_own;
     const vecinas = DATA.netatmo_vecinas || [];
-    document.getElementById('localSub').textContent = `Estación meteorológica en Luarca`;
+    const horaLocal = horaCorta(n.ts);
+    document.getElementById('localSub').textContent =
+      `Estación meteorológica en Luarca` + (horaLocal ? ` · actualizado ${horaLocal}` : '');
 
     const cells = [];
     if(n.exterior) cells.push(['Exterior', `${n.exterior.temp_c}°C <small>· ${n.exterior.humedad}% hum.</small>`]);
@@ -580,6 +625,8 @@ function render(DATA){
   // --- Predicción de Luarca (única playa, sin tabs) ---
   const luarca = DATA.lugares.find(l => l.name.startsWith('Luarca') && l.forecast_4d);
   renderDayCards(luarca ? luarca.forecast_4d : null);
+  if(luarca) pintarActualizado('playaActualizado', luarca.forecast_4d_elaborado);
+  pintarActualizado('horaActualizado', DATA.horaria_elaborado);
 }
 
 loadData();
