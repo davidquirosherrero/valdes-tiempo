@@ -594,11 +594,20 @@ def cargar_json_anterior():
 def main():
     anterior = cargar_json_anterior()
 
-    estaciones_aemet = _aemet_fetch(AEMET_TODAS_URL)
-    real_time = fetch_real_time(estaciones_aemet)
-    print(f"Cabo Busto — {real_time['ts']} | {real_time['temp_c']}°C | "
-          f"viento {real_time['wind_kmh']}km/h | presión {real_time['pres_hpa']}hPa "
-          f"({real_time['pres_tendencia']})")
+    try:
+        estaciones_aemet = _aemet_fetch(AEMET_TODAS_URL)
+        real_time = fetch_real_time(estaciones_aemet)
+        print(f"Cabo Busto — {real_time['ts']} | {real_time['temp_c']}°C | "
+              f"viento {real_time['wind_kmh']}km/h | presión {real_time['pres_hpa']}hPa "
+              f"({real_time['pres_tendencia']})")
+    except (urllib.error.URLError, RuntimeError, KeyError) as e:
+        print(f"AVISO: fallo tiempo real (Cabo Busto): {e}")
+        estaciones_aemet = []
+        if anterior and anterior.get("real_time"):
+            real_time = anterior["real_time"]
+            print("Usando tiempo real de la ejecución anterior como respaldo")
+        else:
+            raise  # sin dato nuevo ni respaldo, no hay nada con sentido que escribir
 
     forecasts_playas = {}
     for nombre, id_playa in PLAYAS_CON_FICHA.items():
