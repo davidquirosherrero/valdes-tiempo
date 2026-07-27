@@ -3,12 +3,88 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>El Tiempo en Luarca — a tiempo real</title>
-<meta name="description" content="El tiempo en Luarca ahora mismo: dato local, predicción horaria y de playa, boletín marítimo y avisos oficiales. Actualizado cada hora.">
+<title>El Tiempo en Luarca — Predicción en Vivo y por Horas | Actualizado cada hora</title>
+<meta name="description" content="El tiempo en Luarca ahora mismo y por horas: temperatura, viento, lluvia y estado del mar en la costa de Valdés (Asturias). Datos oficiales de AEMET actualizados cada hora.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://tiempo-luarca.33setecientos.com/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%A4%EF%B8%8F%3C/text%3E%3C/svg%3E">
 <meta name="theme-color" content="#0b1d33">
-<meta property="og:title" content="El Tiempo en Luarca — a tiempo real">
-<meta property="og:description" content="Dato local, predicción horaria y de playa, boletín marítimo y avisos oficiales para Luarca, actualizado cada hora.">
+
+<meta property="og:title" content="El Tiempo en Luarca — Predicción en Vivo y por Horas">
+<meta property="og:description" content="El tiempo en Luarca ahora mismo y por horas: temperatura, viento, lluvia y estado del mar en la costa de Valdés (Asturias). Actualizado cada hora.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://tiempo-luarca.33setecientos.com/">
+<meta property="og:site_name" content="El Tiempo en Luarca">
+<meta property="og:locale" content="es_ES">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="El Tiempo en Luarca — Predicción en Vivo y por Horas">
+<meta name="twitter:description" content="El tiempo en Luarca ahora mismo y por horas: temperatura, viento, lluvia y estado del mar. Actualizado cada hora con datos de AEMET.">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "El Tiempo en Luarca — Predicción en Vivo y por Horas",
+  "url": "https://tiempo-luarca.33setecientos.com/",
+  "description": "El tiempo en Luarca ahora mismo y por horas: temperatura, viento, lluvia y estado del mar en la costa de Valdés (Asturias), actualizado cada hora con datos oficiales de AEMET.",
+  "inLanguage": "es-ES",
+  "about": {
+    "@type": "Place",
+    "name": "Luarca",
+    "containedInPlace": {
+      "@type": "AdministrativeArea",
+      "name": "Valdés, Asturias, España"
+    }
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "El Tiempo en Luarca",
+    "url": "https://tiempo-luarca.33setecientos.com/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué tiempo hace ahora mismo en Luarca?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Esta página muestra la temperatura, el viento y la presión en tiempo real en Luarca, con datos de una estación meteorológica local actualizados cada hora."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Va a llover en Luarca en las próximas horas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La sección de predicción horaria muestra la probabilidad de lluvia hora a hora para Luarca y el resto de Valdés, con datos oficiales de AEMET. La sección '¿Qué se acerca?' además estima cuándo podría llegar la lluvia según la dirección del viento."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo está el mar en Luarca hoy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El boletín marítimo de la costa de Luarca (Asturias) se actualiza cada hora con el estado del viento y el oleaje, según el parte oficial de AEMET para esa franja de costa."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué tiempo va a hacer en la playa de Luarca?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La predicción de playa de Luarca muestra el cielo, viento, oleaje, temperatura del agua e índice UV para los próximos 4 días, según la ficha oficial de playas de AEMET."
+      }
+    }
+  ]
+}
+</script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
 
 <style>
@@ -41,7 +117,7 @@
   section.acc-amber{ border-top:2px solid rgba(232,169,76,0.5); }
   section.acc-seafoam{ border-top:2px solid rgba(95,168,160,0.5); }
   section.acc-coral{ border-top:2px solid rgba(198,90,78,0.45); }
-  .section-title{ font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:var(--chart-cream); margin-bottom:6px; font-weight:700; display:flex; align-items:center; gap:7px; }
+  .section-title{ margin:0 0 6px; font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:var(--chart-cream); font-weight:700; display:flex; align-items:center; gap:7px; }
   .section-sub{ font-size:11px; color:rgba(238,241,230,0.5); margin-bottom:14px; line-height:1.5; }
 
 
@@ -128,6 +204,7 @@
   <p class="eyebrow">🌤️ EL TIEMPO EN LUARCA</p>
   <h1>¿Qué tiempo hace en Luarca?</h1>
   <p class="tagline">Dato local, predicción horaria y de playa, boletín marítimo y avisos oficiales — todo en un sitio, actualizado cada hora.</p>
+  <p class="tagline">Consulta el tiempo en Luarca (Valdés, Asturias) en tiempo real: temperatura, viento, presión y lluvia de una estación meteorológica local, la predicción hora a hora de AEMET para hoy y mañana, el pronóstico a 4 días de la playa de Luarca, y el estado del mar en la costa. Todo actualizado automáticamente cada hora, sin necesidad de apps ni registro.</p>
 </header>
 
 <div id="err"></div>
@@ -138,12 +215,12 @@
   <div id="avisosBox"></div>
 
   <section id="acercaSection" class="acc-seafoam" style="display:none;">
-    <div class="section-title">🌬️ ¿Qué se acerca?</div>
+    <h2 class="section-title">🌬️ ¿Qué se acerca?</h2>
     <div id="acercaBox"></div>
   </section>
 
   <section class="acc-amber">
-    <div class="section-title">⏱️ Próximas horas en Luarca</div>
+    <h2 class="section-title">⏱️ Próximas horas en Luarca</h2>
     <div class="section-sub">Predicción hora a hora de AEMET para Valdés (misma predicción para todo el municipio).</div>
     <div class="hora-chart-box"><canvas id="horaChart"></canvas></div>
     <div class="playa-tabs" id="horaTabs">
@@ -153,19 +230,19 @@
   </section>
 
   <section class="acc-seafoam">
-    <div class="section-title">🌊 Boletín marítimo de la costa</div>
+    <h2 class="section-title">🌊 Boletín marítimo de la costa</h2>
     <div class="section-sub">Estado del mar frente a Luarca.</div>
     <div id="maritimaBox"></div>
   </section>
 
   <section id="localSection" class="acc-coral" style="display:none;">
-    <div class="section-title">🏠 Estación de Luarca</div>
+    <h2 class="section-title">🏠 Estación de Luarca</h2>
     <div class="section-sub" id="localSub"></div>
     <div id="localGrid" class="local-grid"></div>
   </section>
 
   <section class="acc-amber">
-    <div class="section-title">🏖️ Playa de Luarca (4 días)</div>
+    <h2 class="section-title">🏖️ Playa de Luarca (4 días)</h2>
     <div class="section-sub">Ficha oficial de AEMET para la playa. Otur es casi idéntica por lo cerca que está.</div>
     <div class="day-cards" id="dayCards"></div>
   </section>
@@ -183,7 +260,10 @@
   </section>
 </main>
 
-<footer>El Tiempo en Luarca · Dato: AEMET OpenData + estación meteorológica local · actualización automática cada hora</footer>
+<footer>
+  El Tiempo en Luarca · Dato: AEMET OpenData + estación meteorológica local · actualización automática cada hora
+  <br>Un proyecto de <a href="https://33setecientos.com" style="color:inherit;">33setecientos.com</a>, marketing digital en Luarca y Valdés
+</footer>
 
 <script>
 function compass(deg){
