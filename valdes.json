@@ -24,7 +24,44 @@
     "cielo_despejado": true,
     "eta_horas": 1.9
   },
-  "forecast_municipio": null,
+  "forecast_municipio": [
+    {
+      "fecha": "2026-07-27T00:00:00",
+      "cielo": "Despejado",
+      "viento_dir": "C",
+      "viento_kmh": 0,
+      "t_max": 26,
+      "t_min": 18,
+      "prob_precipitacion": null
+    },
+    {
+      "fecha": "2026-07-28T00:00:00",
+      "cielo": "Despejado",
+      "viento_dir": "N",
+      "viento_kmh": 5,
+      "t_max": 28,
+      "t_min": 16,
+      "prob_precipitacion": null
+    },
+    {
+      "fecha": "2026-07-29T00:00:00",
+      "cielo": "Nuboso",
+      "viento_dir": "N",
+      "viento_kmh": 10,
+      "t_max": 23,
+      "t_min": 16,
+      "prob_precipitacion": null
+    },
+    {
+      "fecha": "2026-07-30T00:00:00",
+      "cielo": "Muy nuboso con lluvia escasa",
+      "viento_dir": "N",
+      "viento_kmh": 10,
+      "t_max": 23,
+      "t_min": 18,
+      "prob_precipitacion": 100
+    }
+  ],
   "forecast_horaria": [
     {
       "fecha_hora": "2026-07-27T15:00",
@@ -190,7 +227,7 @@
     }
   ],
   "horaria_elaborado": "2026-07-27T12:57:09",
-  "horaria_es_respaldo": false,
+  "horaria_es_respaldo": true,
   "avisos": [],
   "maritima": {
     "texto": "Oeste de Peñas: E o NE 4 o 5, localmente 6 mar adentro, amainando E 3 o 4 cerca de la costa, de madrugada. Marejada, disminuyendo localmente a marejadilla cerca de la costa. \r\n Este de Peñas: Componente E 4 o 5, amainando a 3 o 4 al final. Marejadilla o marejada.\r\n Ambas zonas: mar de fondo del N o NW de 1 a 2 m. Regular o localmente mala por bruma o niebla a partir de la madrugada.",
@@ -238,7 +275,7 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 23.9,
+      "temp_c": 24,
       "humedad": 75
     },
     {
@@ -266,8 +303,8 @@
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 24.5,
-      "humedad": 73
+      "temp_c": 25.2,
+      "humedad": 71
     }
   ],
   "lugares": [
@@ -454,5 +491,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-07-27T13:16:03.596784+00:00"
+  "generated_at": "2026-07-27T13:18:50.796207+00:00"
 }
