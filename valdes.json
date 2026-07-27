@@ -1,13 +1,13 @@
 {
   "real_time": {
-    "ts": "2026-07-27T13:00:00+0000",
-    "temp_c": 21.3,
-    "wind_kmh": 28.1,
-    "wind_dir": 46.0,
-    "gust_kmh": 46.1,
-    "pres_hpa": 1012.3,
+    "ts": "2026-07-27T16:00:00+0000",
+    "temp_c": 20.9,
+    "wind_kmh": 30.6,
+    "wind_dir": 48.0,
+    "gust_kmh": 48.6,
+    "pres_hpa": 1011.2,
     "pres_tendencia": "bajando",
-    "humedad": 78.0
+    "humedad": 80.0
   },
   "recomendacion": {
     "score": 45,
@@ -20,67 +20,12 @@
     "dist_km": 57,
     "lloviendo": false,
     "prec_mm": 0,
-    "temp_c": 22.8,
+    "temp_c": 22.0,
     "cielo_despejado": true,
-    "eta_horas": 2.0
+    "eta_horas": 1.9
   },
-  "forecast_municipio": [
-    {
-      "fecha": "2026-07-27T00:00:00",
-      "cielo": "Despejado",
-      "viento_dir": "C",
-      "viento_kmh": 0,
-      "t_max": 26,
-      "t_min": 18,
-      "prob_precipitacion": null
-    },
-    {
-      "fecha": "2026-07-28T00:00:00",
-      "cielo": "Despejado",
-      "viento_dir": "N",
-      "viento_kmh": 5,
-      "t_max": 28,
-      "t_min": 16,
-      "prob_precipitacion": null
-    },
-    {
-      "fecha": "2026-07-29T00:00:00",
-      "cielo": "Nuboso",
-      "viento_dir": "N",
-      "viento_kmh": 10,
-      "t_max": 23,
-      "t_min": 16,
-      "prob_precipitacion": null
-    },
-    {
-      "fecha": "2026-07-30T00:00:00",
-      "cielo": "Muy nuboso con lluvia escasa",
-      "viento_dir": "N",
-      "viento_kmh": 10,
-      "t_max": 23,
-      "t_min": 18,
-      "prob_precipitacion": 100
-    }
-  ],
+  "forecast_municipio": null,
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-07-27T17:00",
-      "temp": "25",
-      "sens_termica": "25",
-      "cielo": "Despejado",
-      "prob_precipitacion": "0",
-      "viento_dir": "E",
-      "viento_kmh": "27"
-    },
-    {
-      "fecha_hora": "2026-07-27T18:00",
-      "temp": "24",
-      "sens_termica": "24",
-      "cielo": "Despejado",
-      "prob_precipitacion": "0",
-      "viento_dir": "E",
-      "viento_kmh": "25"
-    },
     {
       "fecha_hora": "2026-07-27T19:00",
       "temp": "24",
@@ -227,14 +172,14 @@
     }
   ],
   "horaria_elaborado": "2026-07-27T13:27:10",
-  "horaria_es_respaldo": false,
+  "horaria_es_respaldo": true,
   "avisos": [],
   "maritima": {
-    "texto": "Oeste de Peñas: E o NE 4 o 5, localmente 6 mar adentro, amainando E 3 o 4 cerca de la costa, de madrugada. Marejada, disminuyendo localmente a marejadilla cerca de la costa. \r\n Este de Peñas: Componente E 4 o 5, amainando a 3 o 4 al final. Marejadilla o marejada.\r\n Ambas zonas: mar de fondo del N o NW de 1 a 2 m. Regular o localmente mala por bruma o niebla a partir de la madrugada.",
+    "texto": "Oeste de Peñas: E o NE 4 o 5, localmente 6 mar adentro, amainando a E 3 o 4 cerca de la costa de madrugada, y a Variable 1 a 3 a partir de la mediodía. Marejada, disminuyendo a marejadilla.\r\n Este de Peñas: Componente E 4 o 5, amainando a 3 o 4 en torno a mediodía. Marejadilla o marejada.\r\n Ambas zonas: mar de fondo del N o NW de 1 a 2 m. Regular o localmente mala por bruma o niebla a partir de la madrugada.",
     "segmentos": [
       {
         "zona": "Oeste de Peñas",
-        "texto": "E o NE 4 o 5, localmente 6 mar adentro, amainando E 3 o 4 cerca de la costa, de madrugada. Marejada, disminuyendo localmente a marejadilla cerca de la costa.",
+        "texto": "E o NE 4 o 5, localmente 6 mar adentro, amainando a E 3 o 4 cerca de la costa de madrugada, y a Variable 1 a 3 a partir de la mediodía. Marejada, disminuyendo a marejadilla.",
         "direccion": "E",
         "fuerza": "4o5",
         "estado_mar": "marejadilla"
@@ -248,21 +193,21 @@
       }
     ],
     "avisos_texto": "No hay avisos.",
-    "vigencia_inicio": "2026-07-27T12:00:00",
-    "vigencia_fin": "2026-07-28T12:00:00"
+    "vigencia_inicio": "2026-07-27T20:00:00",
+    "vigencia_fin": "2026-07-28T20:00:00"
   },
   "netatmo_own": {
-    "ts": 1785164715,
-    "presion_hpa": 1017.4,
+    "ts": 1785171974,
+    "presion_hpa": 1016.7,
     "presion_tendencia": "down",
     "exterior": {
-      "temp_c": 24.6,
-      "humedad": 78,
-      "tendencia": "down"
+      "temp_c": 24.3,
+      "humedad": 80,
+      "tendencia": "stable"
     },
     "viento": {
-      "kmh": 11,
-      "dir": 75,
+      "kmh": 9,
+      "dir": 73,
       "racha_kmh": 19
     },
     "lluvia": {
@@ -270,43 +215,7 @@
       "mm_24h": 0
     }
   },
-  "netatmo_vecinas": [
-    {
-      "lat": 43.53,
-      "lon": -6.39,
-      "ciudad": "Valdés",
-      "temp_c": 24.2,
-      "humedad": 73
-    },
-    {
-      "lat": 43.56,
-      "lon": -6.66,
-      "ciudad": "Navia",
-      "temp_c": 22,
-      "humedad": 76
-    },
-    {
-      "lat": 43.56,
-      "lon": -6.27,
-      "ciudad": "Cudillero",
-      "temp_c": 23.8,
-      "humedad": 64
-    },
-    {
-      "lat": 43.33,
-      "lon": -6.42,
-      "ciudad": "Tineo",
-      "temp_c": 24.4,
-      "humedad": 77
-    },
-    {
-      "lat": 43.4,
-      "lon": -6.25,
-      "ciudad": "Salas",
-      "temp_c": 27.8,
-      "humedad": 63
-    }
-  ],
+  "netatmo_vecinas": [],
   "lugares": [
     {
       "name": "Otur",
@@ -491,5 +400,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-07-27T15:12:37.393988+00:00"
+  "generated_at": "2026-07-27T17:10:49.749889+00:00"
 }
