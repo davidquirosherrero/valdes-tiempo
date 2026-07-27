@@ -24,44 +24,7 @@
     "cielo_despejado": true,
     "eta_horas": 1.9
   },
-  "forecast_municipio": [
-    {
-      "fecha": "2026-07-27T00:00:00",
-      "cielo": "Despejado",
-      "viento_dir": "C",
-      "viento_kmh": 0,
-      "t_max": 26,
-      "t_min": 18,
-      "prob_precipitacion": null
-    },
-    {
-      "fecha": "2026-07-28T00:00:00",
-      "cielo": "Despejado",
-      "viento_dir": "N",
-      "viento_kmh": 5,
-      "t_max": 28,
-      "t_min": 16,
-      "prob_precipitacion": null
-    },
-    {
-      "fecha": "2026-07-29T00:00:00",
-      "cielo": "Nuboso",
-      "viento_dir": "N",
-      "viento_kmh": 10,
-      "t_max": 23,
-      "t_min": 16,
-      "prob_precipitacion": null
-    },
-    {
-      "fecha": "2026-07-30T00:00:00",
-      "cielo": "Muy nuboso con lluvia escasa",
-      "viento_dir": "N",
-      "viento_kmh": 10,
-      "t_max": 23,
-      "t_min": 18,
-      "prob_precipitacion": 100
-    }
-  ],
+  "forecast_municipio": null,
   "forecast_horaria": [
     {
       "fecha_hora": "2026-07-27T15:00",
@@ -226,7 +189,7 @@
       "viento_kmh": "4"
     }
   ],
-  "horaria_elaborado": "2026-07-27T12:47:10",
+  "horaria_elaborado": "2026-07-27T12:57:09",
   "horaria_es_respaldo": false,
   "avisos": [],
   "maritima": {
@@ -252,18 +215,18 @@
     "vigencia_fin": "2026-07-28T12:00:00"
   },
   "netatmo_own": {
-    "ts": 1785156850,
-    "presion_hpa": 1018.1,
+    "ts": 1785158060,
+    "presion_hpa": 1018,
     "presion_tendencia": "stable",
     "exterior": {
-      "temp_c": 24.7,
-      "humedad": 79,
-      "tendencia": "up"
+      "temp_c": 24.6,
+      "humedad": 80,
+      "tendencia": "stable"
     },
     "viento": {
       "kmh": 12,
-      "dir": 79,
-      "racha_kmh": 25
+      "dir": 83,
+      "racha_kmh": 24
     },
     "lluvia": {
       "mm_1h": 0,
@@ -275,36 +238,36 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 23.8,
+      "temp_c": 23.9,
       "humedad": 75
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
-      "temp_c": 22.4,
-      "humedad": 76
+      "temp_c": 22.5,
+      "humedad": 75
     },
     {
       "lat": 43.56,
       "lon": -6.27,
       "ciudad": "Cudillero",
       "temp_c": 23.2,
-      "humedad": 66
+      "humedad": 65
     },
     {
       "lat": 43.33,
       "lon": -6.42,
       "ciudad": "Tineo",
-      "temp_c": 22.8,
+      "temp_c": 23,
       "humedad": 83
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 23.9,
-      "humedad": 74
+      "temp_c": 24.5,
+      "humedad": 73
     }
   ],
   "lugares": [
@@ -491,5 +454,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-07-27T13:03:15.889396+00:00"
+  "generated_at": "2026-07-27T13:16:03.596784+00:00"
 }
