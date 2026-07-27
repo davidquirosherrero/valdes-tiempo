@@ -1,12 +1,12 @@
 {
   "real_time": {
-    "ts": "2026-07-27T19:00:00+0000",
-    "temp_c": 20.3,
-    "wind_kmh": 31.0,
-    "wind_dir": 51.0,
-    "gust_kmh": 46.4,
-    "pres_hpa": 1010.2,
-    "pres_tendencia": "bajando",
+    "ts": "2026-07-27T20:00:00+0000",
+    "temp_c": 20.0,
+    "wind_kmh": 28.8,
+    "wind_dir": 52.0,
+    "gust_kmh": 47.5,
+    "pres_hpa": 1009.9,
+    "pres_tendencia": "estable",
     "humedad": 84.0
   },
   "recomendacion": {
@@ -20,9 +20,9 @@
     "dist_km": 57,
     "lloviendo": false,
     "prec_mm": 0,
-    "temp_c": 20.3,
+    "temp_c": 20.0,
     "cielo_despejado": false,
-    "eta_horas": 1.8
+    "eta_horas": 2.0
   },
   "forecast_municipio": [
     {
@@ -245,18 +245,18 @@
     "vigencia_fin": "2026-07-28T20:00:00"
   },
   "netatmo_own": {
-    "ts": 1785182864,
-    "presion_hpa": 1015.8,
+    "ts": 1785184680,
+    "presion_hpa": 1016,
     "presion_tendencia": "down",
     "exterior": {
-      "temp_c": 20.3,
-      "humedad": 89,
+      "temp_c": 19.9,
+      "humedad": 91,
       "tendencia": "down"
     },
     "viento": {
-      "kmh": 7,
-      "dir": 76,
-      "racha_kmh": 12
+      "kmh": 4,
+      "dir": 74,
+      "racha_kmh": 9
     },
     "lluvia": {
       "mm_1h": 0,
@@ -268,36 +268,36 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 21.9,
+      "temp_c": 21.6,
       "humedad": 76
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
-      "temp_c": 20,
-      "humedad": 82
+      "temp_c": 19.9,
+      "humedad": 83
     },
     {
       "lat": 43.56,
       "lon": -6.27,
       "ciudad": "Cudillero",
-      "temp_c": 24.7,
-      "humedad": 58
+      "temp_c": 23.9,
+      "humedad": 60
     },
     {
       "lat": 43.33,
       "lon": -6.42,
       "ciudad": "Tineo",
-      "temp_c": 19.2,
-      "humedad": 86
+      "temp_c": 18.5,
+      "humedad": 88
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 21.8,
-      "humedad": 73
+      "temp_c": 21.3,
+      "humedad": 75
     }
   ],
   "lugares": [
@@ -484,5 +484,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-07-27T20:13:23.745282+00:00"
+  "generated_at": "2026-07-27T20:42:40.971590+00:00"
 }
