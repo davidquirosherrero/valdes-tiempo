@@ -1,16 +1,16 @@
 {
   "real_time": {
-    "ts": "2026-07-27T18:00:00+0000",
-    "temp_c": 20.6,
-    "wind_kmh": 31.3,
-    "wind_dir": 48.0,
-    "gust_kmh": 52.6,
-    "pres_hpa": 1010.4,
+    "ts": "2026-07-27T19:00:00+0000",
+    "temp_c": 20.3,
+    "wind_kmh": 31.0,
+    "wind_dir": 51.0,
+    "gust_kmh": 46.4,
+    "pres_hpa": 1010.2,
     "pres_tendencia": "bajando",
-    "humedad": 81.0
+    "humedad": 84.0
   },
   "recomendacion": {
-    "score": 45,
+    "score": 50,
     "etiqueta": "Aceptable, pero la presión está bajando"
   },
   "que_se_acerca": {
@@ -20,30 +20,12 @@
     "dist_km": 57,
     "lloviendo": false,
     "prec_mm": 0,
-    "temp_c": 20.8,
+    "temp_c": 20.3,
     "cielo_despejado": false,
     "eta_horas": 1.8
   },
   "forecast_municipio": null,
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-07-27T20:00",
-      "temp": "23",
-      "sens_termica": "23",
-      "cielo": "Despejado",
-      "prob_precipitacion": "0",
-      "viento_dir": "E",
-      "viento_kmh": "25"
-    },
-    {
-      "fecha_hora": "2026-07-27T21:00",
-      "temp": "22",
-      "sens_termica": "22",
-      "cielo": "Despejado",
-      "prob_precipitacion": "0",
-      "viento_dir": "E",
-      "viento_kmh": "25"
-    },
     {
       "fecha_hora": "2026-07-27T22:00",
       "temp": "21",
@@ -190,7 +172,7 @@
     }
   ],
   "horaria_elaborado": "2026-07-27T16:59:08",
-  "horaria_es_respaldo": false,
+  "horaria_es_respaldo": true,
   "avisos": [],
   "maritima": {
     "texto": "Oeste de Peñas: E o NE 4 o 5, localmente 6 mar adentro, amainando a E 3 o 4 cerca de la costa de madrugada, y a Variable 1 a 3 a partir de la mediodía. Marejada, disminuyendo a marejadilla.\r\n Este de Peñas: Componente E 4 o 5, amainando a 3 o 4 en torno a mediodía. Marejadilla o marejada.\r\n Ambas zonas: mar de fondo del N o NW de 1 a 2 m. Regular o localmente mala por bruma o niebla a partir de la madrugada.",
@@ -201,13 +183,6 @@
         "direccion": "E",
         "fuerza": "4o5",
         "estado_mar": "marejadilla"
-      },
-      {
-        "zona": "Ambas zonas",
-        "texto": "mar de fondo del N o NW de 1 a 2 m. Regular o localmente mala por bruma o niebla a partir de la madrugada.",
-        "direccion": "N",
-        "fuerza": "1",
-        "estado_mar": null
       }
     ],
     "avisos_texto": "No hay avisos.",
@@ -215,18 +190,18 @@
     "vigencia_fin": "2026-07-28T20:00:00"
   },
   "netatmo_own": {
-    "ts": 1785177418,
-    "presion_hpa": 1016.3,
+    "ts": 1785182259,
+    "presion_hpa": 1015.8,
     "presion_tendencia": "down",
     "exterior": {
-      "temp_c": 23.6,
-      "humedad": 80,
+      "temp_c": 20.6,
+      "humedad": 88,
       "tendencia": "down"
     },
     "viento": {
       "kmh": 7,
-      "dir": 78,
-      "racha_kmh": 19
+      "dir": 77,
+      "racha_kmh": 11
     },
     "lluvia": {
       "mm_1h": 0,
@@ -238,36 +213,36 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 23.3,
-      "humedad": 73
+      "temp_c": 22.1,
+      "humedad": 75
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
-      "temp_c": 21,
-      "humedad": 79
+      "temp_c": 20.2,
+      "humedad": 82
     },
     {
       "lat": 43.56,
       "lon": -6.27,
       "ciudad": "Cudillero",
-      "temp_c": 26.5,
-      "humedad": 55
+      "temp_c": 25,
+      "humedad": 57
     },
     {
       "lat": 43.33,
       "lon": -6.42,
       "ciudad": "Tineo",
-      "temp_c": 21.4,
-      "humedad": 82
+      "temp_c": 19.5,
+      "humedad": 86
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 24,
-      "humedad": 68
+      "temp_c": 22,
+      "humedad": 73
     }
   ],
   "lugares": [
@@ -454,5 +429,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-07-27T18:47:10.602413+00:00"
+  "generated_at": "2026-07-27T20:00:49.638824+00:00"
 }
