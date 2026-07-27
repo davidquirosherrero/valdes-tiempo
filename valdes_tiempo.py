@@ -562,39 +562,44 @@ def recomendacion(real_time, hora_actual, avisos, oleaje_hoy=None):
     playa, que AEMET solo revisa 1-2 veces al día y por eso apenas cambia
     el mensaje aunque pasen las horas) para cielo y viento, y el oleaje
     de la ficha de playa de hoy (esto sí cambia poco en un mismo día,
-    así que no hace falta que sea horario). El texto se construye a
-    partir de los factores que realmente han influido en el score."""
+    así que no hace falta que sea horario).
+
+    El titular nombra directamente la condición dominante (p.ej. "Viento
+    fuerte de NE") en vez de envolverla en un genérico "mejor esperar" o
+    "aceptable, pero..." -- así se entiende de un vistazo qué está pasando,
+    no solo si es "bueno" o "malo". Las condiciones compiten por prioridad
+    (número más bajo = se muestra antes si hay varias a la vez)."""
     if any(a["nivel"] in ("naranja", "rojo") for a in avisos):
         return 15, "Aviso oficial activo — revisa AEMET antes de salir"
 
     puntos = 50
     positivas = []
-    negativas = []
+    negativas = []  # lista de (prioridad, texto ya listo para titular)
 
     if real_time["pres_tendencia"] == "subiendo":
         puntos += 20
         positivas.append("la presión está subiendo")
     elif real_time["pres_tendencia"] == "bajando":
         puntos -= 20
-        negativas.append("la presión está bajando")
+        negativas.append((50, "Presión bajando"))
 
     if avisos:  # amarillo: penaliza pero no bloquea
         puntos -= 15
-        negativas.append("hay un aviso amarillo activo")
+        negativas.append((40, "Aviso amarillo activo"))
 
     if hora_actual:
         cielo = (hora_actual.get("cielo") or "").lower()
         if any(p in cielo for p in ("tormenta", "lluvia", "chubasco", "aguacero")):
             puntos -= 25
-            negativas.append("hay precipitación en las próximas horas")
+            negativas.append((10, "Lluvia en las próximas horas"))
         elif any(p in cielo for p in ("despejado", "poco nuboso")):
             puntos += 15
             positivas.append("el cielo está despejado")
         elif any(p in cielo for p in ("cubierto", "muy nuboso")):
             puntos -= 10
-            negativas.append("el cielo estará muy nuboso")
+            negativas.append((45, "Cielo muy nuboso"))
         elif cielo:
-            negativas.append(f"el cielo estará {cielo}")
+            negativas.append((46, f"Cielo {cielo}"))
 
         viento_kmh = hora_actual.get("viento_kmh")
         viento_dir = hora_actual.get("viento_dir")
@@ -605,31 +610,29 @@ def recomendacion(real_time, hora_actual, avisos, oleaje_hoy=None):
                 positivas.append("el viento es flojo")
             elif viento_kmh > 30:
                 puntos -= 15
-                dir_txt = f" del {viento_dir}" if viento_dir else ""
-                negativas.append(f"el viento soplará fuerte{dir_txt}")
+                dir_txt = f" de {viento_dir}" if viento_dir else ""
+                negativas.append((20, f"Viento fuerte{dir_txt}"))
 
     if oleaje_hoy:
-        oleaje_hoy = oleaje_hoy.lower()
-        if oleaje_hoy == "fuerte":
+        oleaje_hoy_l = oleaje_hoy.lower()
+        if oleaje_hoy_l == "fuerte":
             puntos -= 20
-            negativas.append("hay bastante oleaje en la playa")
-        elif oleaje_hoy == "débil":
+            negativas.append((25, "Bastante oleaje en la playa"))
+        elif oleaje_hoy_l == "débil":
             puntos += 5
             positivas.append("el mar está tranquilo")
 
     puntos = max(0, min(100, puntos))
+
     if puntos >= 65:
         etiqueta = "Buen día de playa"
         if positivas:
             etiqueta += f" — {positivas[0]}"
-    elif puntos >= 40:
-        etiqueta = "Aceptable"
-        if negativas:
-            etiqueta += f", pero {negativas[0]}"
+    elif negativas:
+        negativas.sort(key=lambda x: x[0])
+        etiqueta = negativas[0][1]
     else:
-        etiqueta = "Mejor esperar"
-        if negativas:
-            etiqueta += f" — {negativas[0]}"
+        etiqueta = "Tiempo tranquilo, sin nada que destacar"
     return puntos, etiqueta
 
 
