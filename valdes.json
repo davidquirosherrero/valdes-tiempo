@@ -64,15 +64,6 @@
   ],
   "forecast_horaria": [
     {
-      "fecha_hora": "2026-07-27T14:00",
-      "temp": "25",
-      "sens_termica": "25",
-      "cielo": "Despejado",
-      "prob_precipitacion": "0",
-      "viento_dir": "NE",
-      "viento_kmh": "27"
-    },
-    {
       "fecha_hora": "2026-07-27T15:00",
       "temp": "25",
       "sens_termica": "25",
@@ -224,6 +215,15 @@
       "prob_precipitacion": "0",
       "viento_dir": "S",
       "viento_kmh": "5"
+    },
+    {
+      "fecha_hora": "2026-07-28T08:00",
+      "temp": "18",
+      "sens_termica": "18",
+      "cielo": "Despejado",
+      "prob_precipitacion": "0",
+      "viento_dir": "SO",
+      "viento_kmh": "4"
     }
   ],
   "horaria_elaborado": "2026-07-27T12:47:10",
@@ -276,35 +276,35 @@
       "lon": -6.39,
       "ciudad": "Valdés",
       "temp_c": 23.8,
-      "humedad": 76
+      "humedad": 75
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
       "temp_c": 22.4,
-      "humedad": 75
+      "humedad": 76
     },
     {
       "lat": 43.56,
       "lon": -6.27,
       "ciudad": "Cudillero",
-      "temp_c": 23.1,
+      "temp_c": 23.2,
       "humedad": 66
     },
     {
       "lat": 43.33,
       "lon": -6.42,
       "ciudad": "Tineo",
-      "temp_c": 22.6,
-      "humedad": 84
+      "temp_c": 22.8,
+      "humedad": 83
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 23.5,
-      "humedad": 75
+      "temp_c": 23.9,
+      "humedad": 74
     }
   ],
   "lugares": [
@@ -491,5 +491,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-07-27T12:55:33.499567+00:00"
+  "generated_at": "2026-07-27T13:03:15.889396+00:00"
 }
