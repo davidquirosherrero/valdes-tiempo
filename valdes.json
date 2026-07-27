@@ -24,7 +24,44 @@
     "cielo_despejado": false,
     "eta_horas": 2.2
   },
-  "forecast_municipio": null,
+  "forecast_municipio": [
+    {
+      "fecha": "2026-07-27T00:00:00",
+      "cielo": "Despejado",
+      "viento_dir": "C",
+      "viento_kmh": 0,
+      "t_max": 26,
+      "t_min": 18,
+      "prob_precipitacion": null
+    },
+    {
+      "fecha": "2026-07-28T00:00:00",
+      "cielo": "Despejado",
+      "viento_dir": "N",
+      "viento_kmh": 5,
+      "t_max": 28,
+      "t_min": 16,
+      "prob_precipitacion": null
+    },
+    {
+      "fecha": "2026-07-29T00:00:00",
+      "cielo": "Nuboso",
+      "viento_dir": "N",
+      "viento_kmh": 10,
+      "t_max": 23,
+      "t_min": 16,
+      "prob_precipitacion": null
+    },
+    {
+      "fecha": "2026-07-30T00:00:00",
+      "cielo": "Muy nuboso con lluvia escasa",
+      "viento_dir": "N",
+      "viento_kmh": 10,
+      "t_max": 23,
+      "t_min": 18,
+      "prob_precipitacion": 100
+    }
+  ],
   "forecast_horaria": [
     {
       "fecha_hora": "2026-07-27T13:00",
@@ -33,7 +70,7 @@
       "cielo": "Despejado",
       "prob_precipitacion": "0",
       "viento_dir": "NE",
-      "viento_kmh": "27"
+      "viento_kmh": "26"
     },
     {
       "fecha_hora": "2026-07-27T14:00",
@@ -50,8 +87,8 @@
       "sens_termica": "25",
       "cielo": "Despejado",
       "prob_precipitacion": "0",
-      "viento_dir": "NE",
-      "viento_kmh": "27"
+      "viento_dir": "E",
+      "viento_kmh": "28"
     },
     {
       "fecha_hora": "2026-07-27T16:00",
@@ -59,7 +96,7 @@
       "sens_termica": "25",
       "cielo": "Despejado",
       "prob_precipitacion": "0",
-      "viento_dir": "NE",
+      "viento_dir": "E",
       "viento_kmh": "27"
     },
     {
@@ -78,7 +115,7 @@
       "cielo": "Despejado",
       "prob_precipitacion": "0",
       "viento_dir": "E",
-      "viento_kmh": "26"
+      "viento_kmh": "25"
     },
     {
       "fecha_hora": "2026-07-27T19:00",
@@ -87,7 +124,7 @@
       "cielo": "Despejado",
       "prob_precipitacion": "0",
       "viento_dir": "E",
-      "viento_kmh": "25"
+      "viento_kmh": "24"
     },
     {
       "fecha_hora": "2026-07-27T20:00",
@@ -123,7 +160,7 @@
       "cielo": "Despejado",
       "prob_precipitacion": "0",
       "viento_dir": "E",
-      "viento_kmh": "15"
+      "viento_kmh": "16"
     },
     {
       "fecha_hora": "2026-07-28T00:00",
@@ -132,7 +169,7 @@
       "cielo": "Despejado",
       "prob_precipitacion": "0",
       "viento_dir": "E",
-      "viento_kmh": "9"
+      "viento_kmh": "8"
     },
     {
       "fecha_hora": "2026-07-28T01:00",
@@ -149,22 +186,65 @@
       "sens_termica": "19",
       "cielo": "Despejado",
       "prob_precipitacion": "0",
-      "viento_dir": "SE",
+      "viento_dir": "E",
       "viento_kmh": "4"
+    },
+    {
+      "fecha_hora": "2026-07-28T03:00",
+      "temp": "19",
+      "sens_termica": "19",
+      "cielo": "Despejado",
+      "prob_precipitacion": "0",
+      "viento_dir": "S",
+      "viento_kmh": "2"
+    },
+    {
+      "fecha_hora": "2026-07-28T04:00",
+      "temp": "18",
+      "sens_termica": "18",
+      "cielo": "Despejado",
+      "prob_precipitacion": "0",
+      "viento_dir": "SO",
+      "viento_kmh": "5"
+    },
+    {
+      "fecha_hora": "2026-07-28T05:00",
+      "temp": "18",
+      "sens_termica": "18",
+      "cielo": "Despejado",
+      "prob_precipitacion": "0",
+      "viento_dir": "SO",
+      "viento_kmh": "6"
+    },
+    {
+      "fecha_hora": "2026-07-28T06:00",
+      "temp": "18",
+      "sens_termica": "18",
+      "cielo": "Despejado",
+      "prob_precipitacion": "0",
+      "viento_dir": "O",
+      "viento_kmh": "7"
     }
   ],
-  "horaria_es_respaldo": true,
+  "horaria_elaborado": "2026-07-27T08:59:09",
+  "horaria_es_respaldo": false,
   "avisos": [],
   "maritima": {
     "texto": "Oeste de Peñas: E o NE 4 o 5, localmente 6 mar adentro, amainando E 3 o 4 cerca de la costa, de madrugada. Marejada, disminuyendo localmente a marejadilla cerca de la costa. \r\n Este de Peñas: Componente E 4 o 5, amainando a 3 o 4 al final. Marejadilla o marejada.\r\n Ambas zonas: mar de fondo del N o NW de 1 a 2 m. Regular o localmente mala por bruma o niebla a partir de la madrugada.",
     "segmentos": [
       {
         "zona": "Oeste de Peñas",
-        "texto": "E o NE 4 o 5, localmente 6 mar adentro, amainando E 3 o 4 cerca de la costa, de madrugada. Marejada, disminuyendo localmente a marejadilla cerca de la costa."
+        "texto": "E o NE 4 o 5, localmente 6 mar adentro, amainando E 3 o 4 cerca de la costa, de madrugada. Marejada, disminuyendo localmente a marejadilla cerca de la costa.",
+        "direccion": "E",
+        "fuerza": "4o5",
+        "estado_mar": "marejadilla"
       },
       {
         "zona": "Ambas zonas",
-        "texto": "mar de fondo del N o NW de 1 a 2 m. Regular o localmente mala por bruma o niebla a partir de la madrugada."
+        "texto": "mar de fondo del N o NW de 1 a 2 m. Regular o localmente mala por bruma o niebla a partir de la madrugada.",
+        "direccion": "N",
+        "fuerza": "1",
+        "estado_mar": null
       }
     ],
     "avisos_texto": "No hay avisos.",
@@ -172,6 +252,7 @@
     "vigencia_fin": "2026-07-28T12:00:00"
   },
   "netatmo_own": {
+    "ts": 1785152010,
     "presion_hpa": 1018.9,
     "presion_tendencia": "stable",
     "exterior": {
@@ -194,7 +275,7 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 23.5,
+      "temp_c": 23.6,
       "humedad": 77
     },
     {
@@ -202,21 +283,21 @@
       "lon": -6.66,
       "ciudad": "Navia",
       "temp_c": 22.4,
-      "humedad": 76
+      "humedad": 75
     },
     {
       "lat": 43.56,
       "lon": -6.27,
       "ciudad": "Cudillero",
-      "temp_c": 22.2,
+      "temp_c": 22.3,
       "humedad": 69
     },
     {
       "lat": 43.33,
       "lon": -6.42,
       "ciudad": "Tineo",
-      "temp_c": 20.5,
-      "humedad": 92
+      "temp_c": 20.8,
+      "humedad": 90
     },
     {
       "lat": 43.4,
@@ -261,7 +342,8 @@
           "t_agua": 22,
           "uv_max": 8
         }
-      ]
+      ],
+      "forecast_4d_elaborado": "2026-07-27T09:00:20"
     },
     {
       "name": "Luarca (1ª, 2ª y 3ª playa)",
@@ -297,7 +379,8 @@
           "t_agua": 22,
           "uv_max": 8
         }
-      ]
+      ],
+      "forecast_4d_elaborado": "2026-07-27T09:00:20"
     },
     {
       "name": "Cueva",
@@ -305,7 +388,8 @@
       "lon": -6.4722,
       "tipo": "playa",
       "ficha_aemet": null,
-      "forecast_4d": null
+      "forecast_4d": null,
+      "forecast_4d_elaborado": null
     },
     {
       "name": "Cadavedo (La Ribeirona)",
@@ -313,7 +397,8 @@
       "lon": -6.3715,
       "tipo": "playa",
       "ficha_aemet": null,
-      "forecast_4d": null
+      "forecast_4d": null,
+      "forecast_4d_elaborado": null
     },
     {
       "name": "Luarca",
@@ -406,5 +491,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-07-27T11:37:48.477906+00:00"
+  "generated_at": "2026-07-27T11:42:28.954388+00:00"
 }
