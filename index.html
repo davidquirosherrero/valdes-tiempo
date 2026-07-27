@@ -98,7 +98,9 @@
   *{box-sizing:border-box;}
   body{ margin:0; background:var(--navy-deep); color:var(--text-primary); font-family:'Courier New', ui-monospace, monospace; font-size:15px; line-height:1.5; }
   header{ padding:26px 20px 18px; border-bottom:1px solid rgba(238,241,230,0.18); }
-  .eyebrow{ font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:var(--seafoam); margin:0 0 8px; font-weight:700; }
+  .eyebrow{ display:flex; justify-content:space-between; align-items:center; font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:var(--seafoam); margin:0 0 8px; font-weight:700; }
+  .brand-credit{ font-size:11px; letter-spacing:0.04em; text-transform:none; font-weight:400; color:var(--text-muted); text-decoration:none; }
+  .brand-credit:hover{ color:var(--seafoam); }
   h1{ margin:0; font-family:Georgia, 'Times New Roman', serif; font-weight:400; font-size:27px; line-height:1.25; color:var(--text-primary); }
   .tagline{ font-size:14px; color:var(--text-secondary); margin-top:6px; line-height:1.55; }
   main{ max-width:720px; margin:0 auto; }
@@ -204,7 +206,10 @@
 <body>
 
 <header>
-  <p class="eyebrow">🌤️ EL TIEMPO EN LUARCA</p>
+  <p class="eyebrow">
+    <span>🌤️ EL TIEMPO EN LUARCA</span>
+    <a class="brand-credit" href="https://33setecientos.com" target="_blank" rel="noopener">by 33setecientos.com</a>
+  </p>
   <h1>¿Qué tiempo hace en Luarca?</h1>
   <p class="tagline">Dato local, predicción horaria y de playa, boletín marítimo y avisos oficiales — todo en un sitio, actualizado cada hora.</p>
   <p class="tagline">Consulta el tiempo en Luarca (Valdés, Asturias) en tiempo real: temperatura, viento, presión y lluvia de una estación meteorológica local, la predicción hora a hora de AEMET para hoy y mañana, el pronóstico a 4 días de la playa de Luarca, y el estado del mar en la costa. Todo actualizado automáticamente cada hora, sin necesidad de apps ni registro.</p>
