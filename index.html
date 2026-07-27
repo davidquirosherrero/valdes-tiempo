@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El Tiempo en Luarca — a tiempo real</title>
+<meta name="description" content="El tiempo en Luarca ahora mismo: dato local, predicción horaria y de playa, boletín marítimo y avisos oficiales. Actualizado cada hora.">
+<meta name="theme-color" content="#0b1d33">
+<meta property="og:title" content="El Tiempo en Luarca — a tiempo real">
+<meta property="og:description" content="Dato local, predicción horaria y de playa, boletín marítimo y avisos oficiales para Luarca, actualizado cada hora.">
+<meta property="og:type" content="website">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+
+<style>
+  :root{
+    --navy-deep:#0b1d33; --navy:#122b4a; --chart-cream:#eef1e6;
+    --buoy-yellow:#e8a94c; --seafoam:#5fa8a0; --coral-low:#c65a4e;
+  }
+  *{box-sizing:border-box;}
+  body{ margin:0; background:var(--navy-deep); color:var(--chart-cream); font-family:'Courier New', ui-monospace, monospace; }
+  header{ padding:22px 20px 14px; border-bottom:1px solid rgba(238,241,230,0.15); }
+  .eyebrow{ font-size:10.5px; letter-spacing:0.16em; text-transform:uppercase; color:var(--seafoam); margin:0 0 6px; }
+  h1{ margin:0; font-family:Georgia, 'Times New Roman', serif; font-weight:400; font-size:22px; line-height:1.2; }
+  .tagline{ font-size:12.5px; color:rgba(238,241,230,0.6); margin-top:4px; }
+  main{ max-width:720px; margin:0 auto; }
+
+  .hero{
+    margin:18px 20px; padding:18px; border-radius:8px;
+    background:linear-gradient(135deg, rgba(95,168,160,0.14), rgba(95,168,160,0.02));
+    border:1px solid rgba(95,168,160,0.3);
+  }
+  .hero-label{ font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:var(--seafoam); margin-bottom:8px; }
+  .hero-row{ display:flex; justify-content:space-between; align-items:flex-end; gap:12px; }
+  .hero-etiqueta{ font-family:Georgia, serif; font-size:20px; }
+  .hero-score{ font-size:34px; font-weight:700; line-height:1; }
+  .hero-sub{ font-size:11.5px; color:rgba(238,241,230,0.65); margin-top:8px; line-height:1.6; }
+
+  section{ padding:20px 20px 22px; position:relative; }
+  section:nth-of-type(2n){ background:rgba(238,241,230,0.015); }
+  section + section{ border-top:1px solid rgba(238,241,230,0.1); }
+  section.acc-amber{ border-top:2px solid rgba(232,169,76,0.5); }
+  section.acc-seafoam{ border-top:2px solid rgba(95,168,160,0.5); }
+  section.acc-coral{ border-top:2px solid rgba(198,90,78,0.45); }
+  .section-title{ font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:var(--chart-cream); margin-bottom:6px; font-weight:700; display:flex; align-items:center; gap:7px; }
+  .section-sub{ font-size:11px; color:rgba(238,241,230,0.5); margin-bottom:14px; line-height:1.5; }
+
+
+  .day-cards{ display:flex; gap:10px; overflow-x:auto; padding-bottom:6px; }
+  .day-card{
+    min-width:130px; background:rgba(238,241,230,0.04); border:1px solid rgba(238,241,230,0.1);
+    border-radius:6px; padding:12px; flex-shrink:0;
+  }
+  .day-card .d{ font-size:10px; color:var(--seafoam); text-transform:uppercase; letter-spacing:0.05em; }
+  .day-card .t{ font-size:20px; font-weight:700; margin-top:6px; }
+  .day-card .l{ font-size:10.5px; color:rgba(238,241,230,0.6); margin-top:6px; line-height:1.5; }
+
+  .playa-tabs{ display:flex; gap:8px; margin-bottom:14px; }
+  .playa-tab{
+    background:none; border:1px solid rgba(238,241,230,0.25); color:rgba(238,241,230,0.7);
+    font-family:inherit; font-size:11px; padding:6px 12px; border-radius:20px; cursor:pointer;
+  }
+  .playa-tab.active{ background:var(--seafoam); color:var(--navy-deep); border-color:var(--seafoam); font-weight:700; }
+  #horaTabs{ flex-wrap:wrap; }
+  .hora-chart-box{ position:relative; height:220px; margin-bottom:14px; overflow:hidden; }
+  .hora-chart-box canvas{ width:100% !important; height:100% !important; display:block; }
+
+  .note{
+    padding:14px 16px; border-left:2px solid var(--buoy-yellow);
+    background:rgba(232,169,76,0.06); font-size:11.5px; line-height:1.55; color:rgba(238,241,230,0.8);
+  }
+  #err{
+    margin:20px; padding:14px 16px; border-left:2px solid var(--coral-low);
+    background:rgba(198,90,78,0.08); font-size:12px; line-height:1.5; display:none;
+  }
+  .aviso-card{
+    margin:0 20px 18px; padding:14px 16px; border-radius:6px;
+    font-size:12px; line-height:1.6;
+  }
+  .aviso-amarillo{ background:rgba(232,169,76,0.12); border-left:3px solid var(--buoy-yellow); }
+  .aviso-naranja{ background:rgba(230,126,34,0.14); border-left:3px solid #e67e22; }
+  .aviso-rojo{ background:rgba(198,90,78,0.16); border-left:3px solid var(--coral-low); }
+  .local-grid{
+    display:grid; grid-template-columns:1fr 1fr; gap:10px;
+  }
+  .local-cell{
+    background:rgba(238,241,230,0.04); border:1px solid rgba(238,241,230,0.1);
+    border-radius:6px; padding:12px;
+  }
+  .local-cell .k{ font-size:9.5px; text-transform:uppercase; letter-spacing:0.06em; color:var(--seafoam); }
+  .local-cell .v{ font-size:19px; font-weight:700; margin-top:4px; }
+  .local-cell .v small{ font-size:11px; font-weight:400; color:rgba(238,241,230,0.55); }
+  .vecinas-details{ margin-top:14px; }
+  .vecinas-details summary{
+    cursor:pointer; font-size:11.5px; color:var(--seafoam); list-style:none;
+    padding:8px 0; border-top:1px solid rgba(238,241,230,0.1);
+  }
+  .vecinas-details summary::-webkit-details-marker{ display:none; }
+  .vecinas-details summary::before{ content:'▸ '; }
+  .vecinas-details[open] summary::before{ content:'▾ '; }
+  .vecinas-list{ padding-top:6px; }
+  .vecina-row{
+    display:flex; justify-content:space-between; padding:7px 0;
+    border-bottom:1px solid rgba(238,241,230,0.06); font-size:12px;
+  }
+  .vecina-row span:first-child{ color:rgba(238,241,230,0.6); }
+  .vecina-row span:last-child{ font-weight:600; }
+  .acerca-card{
+    padding:16px; border-radius:8px; display:flex; align-items:center; gap:14px;
+  }
+  .acerca-card.mal{ background:rgba(198,90,78,0.1); border:1px solid rgba(198,90,78,0.3); }
+  .acerca-card.bien{ background:rgba(95,168,160,0.08); border:1px solid rgba(95,168,160,0.3); }
+  .acerca-icono{ font-size:32px; }
+  .acerca-texto{ font-size:13px; line-height:1.6; }
+  .acerca-texto b{ color:var(--chart-cream); }
+  .maritima-card{
+    padding:12px 14px; border-radius:6px; margin-bottom:8px;
+    background:rgba(238,241,230,0.04); border-left:3px solid rgba(95,168,160,0.4);
+    font-size:12px; line-height:1.55;
+  }
+  .maritima-card.destacada{ border-left-color:var(--seafoam); background:rgba(95,168,160,0.08); }
+  .maritima-card .zona{ font-weight:700; color:var(--seafoam); font-size:11px; text-transform:uppercase; letter-spacing:0.04em; margin-bottom:4px; }
+  footer{ padding:18px 20px 32px; font-size:10.5px; color:rgba(238,241,230,0.35); text-align:center; }
+</style>
+</head>
+<body>
+
+<header>
+  <p class="eyebrow">🌤️ EL TIEMPO EN LUARCA</p>
+  <h1>¿Qué tiempo hace en Luarca?</h1>
+  <p class="tagline">Dato local, predicción horaria y de playa, boletín marítimo y avisos oficiales — todo en un sitio, actualizado cada hora.</p>
+</header>
+
+<div id="err"></div>
+
+<main id="app" style="display:none;">
+  <div class="hero" id="hero"></div>
+
+  <div id="avisosBox"></div>
+
+  <section id="acercaSection" class="acc-seafoam" style="display:none;">
+    <div class="section-title">🌬️ ¿Qué se acerca?</div>
+    <div id="acercaBox"></div>
+  </section>
+
+  <section class="acc-amber">
+    <div class="section-title">⏱️ Próximas horas en Luarca</div>
+    <div class="section-sub">Predicción hora a hora de AEMET para Valdés (misma predicción para todo el municipio).</div>
+    <div class="hora-chart-box"><canvas id="horaChart"></canvas></div>
+    <div class="playa-tabs" id="horaTabs">
+      <button class="playa-tab active" data-metric="temp">Temperatura</button>
+      <button class="playa-tab" data-metric="prob_precipitacion">Prob. lluvia</button>
+    </div>
+  </section>
+
+  <section class="acc-seafoam">
+    <div class="section-title">🌊 Boletín marítimo de la costa</div>
+    <div class="section-sub">Estado del mar frente a Luarca.</div>
+    <div id="maritimaBox"></div>
+  </section>
+
+  <section id="localSection" class="acc-coral" style="display:none;">
+    <div class="section-title">🏠 Estación de Luarca</div>
+    <div class="section-sub" id="localSub"></div>
+    <div id="localGrid" class="local-grid"></div>
+  </section>
+
+  <section class="acc-amber">
+    <div class="section-title">🏖️ Playa de Luarca (4 días)</div>
+    <div class="section-sub">Ficha oficial de AEMET para la playa. Otur es casi idéntica por lo cerca que está.</div>
+    <div class="day-cards" id="dayCards"></div>
+  </section>
+
+  <section>
+    <div class="note">
+      <b>Cómo se calcula:</b> el tiempo real y la tendencia de presión vienen de una estación
+      meteorológica en Luarca (o de Cabo Busto/AEMET si no responde). La predicción de playa es la
+      ficha oficial de Luarca en AEMET. La predicción horaria y el boletín marítimo son los que AEMET
+      publica para todo Valdés/la costa asturiana — es lo más fino que dan a esta escala. La
+      recomendación de arriba es una heurística simple (presión + cielo + viento + avisos oficiales),
+      no un modelo meteorológico — para decisiones importantes, consulta la predicción oficial de
+      AEMET.
+    </div>
+  </section>
+</main>
+
+<footer>El Tiempo en Luarca · Dato: AEMET OpenData + estación meteorológica local · actualización automática cada hora</footer>
+
+<script>
+function compass(deg){
+  if(deg === null || deg === undefined) return "";
+  const dirs = ["N","NNE","NE","ENE","E","ESE","SE","SSE","S","SSW","SW","WSW","W","WNW","NW","NNW"];
+  return dirs[Math.round(deg / 22.5) % 16];
+}
+
+function scoreColor(s){
+  if(s >= 65) return "#5fa8a0";
+  if(s >= 40) return "#e8a94c";
+  return "#c65a4e";
+}
+
+function fechaCorta(iso){
+  const f = new Date(iso);
+  return f.toLocaleDateString('es-ES', {weekday:'short', day:'2-digit', month:'2-digit'});
+}
+
+async function loadData(){
+  try{
+    const res = await fetch('valdes.json', { cache: 'no-store' });
+    if(!res.ok) throw new Error('HTTP ' + res.status);
+    const DATA = await res.json();
+    render(DATA);
+  }catch(err){
+    const el = document.getElementById('err');
+    el.style.display = 'block';
+    el.innerHTML = `<b>Error cargando valdes.json:</b> ${err.message}.`;
+  }
+}
+
+function renderDayCards(forecast4d){
+  const el = document.getElementById('dayCards');
+  el.innerHTML = '';
+  if(!forecast4d){ el.innerHTML = '<div class="note">Sin datos para esta playa ahora mismo.</div>'; return; }
+  forecast4d.forEach(d => {
+    const card = document.createElement('div');
+    card.className = 'day-card';
+    const fecha = d.fecha.length === 8
+      ? `${d.fecha.slice(6,8)}/${d.fecha.slice(4,6)}`
+      : d.fecha;
+    card.innerHTML = `
+      <div class="d">${fecha}</div>
+      <div class="t">${d.t_max}°</div>
+      <div class="l">
+        ☁️ ${d.cielo}<br>
+        💨 ${d.viento}<br>
+        🌊 ${d.oleaje}<br>
+        💧 agua ${d.t_agua}° · UV ${d.uv_max}
+      </div>
+    `;
+    el.appendChild(card);
+  });
+}
+
+function render(DATA){
+  document.getElementById('app').style.display = 'block';
+
+  // --- Hero ---
+  const r = DATA.recomendacion;
+  const rt = DATA.real_time;
+  const local = DATA.netatmo_own;
+  const color = scoreColor(r.score);
+
+  const fuente = local ? 'estación local' : 'Cabo Busto, AEMET';
+  const tempMostrar = local && local.exterior ? local.exterior.temp_c : rt.temp_c;
+  const vientoMostrar = local && local.viento ? local.viento.kmh : rt.wind_kmh;
+  const vientoDirMostrar = local && local.viento ? local.viento.dir : rt.wind_dir;
+  const presionMostrar = local ? local.presion_hpa : rt.pres_hpa;
+  const tendenciaMostrar = local ? ({up:'subiendo', down:'bajando', stable:'estable'}[local.presion_tendencia] || local.presion_tendencia) : rt.pres_tendencia;
+  const trendArrow = tendenciaMostrar === 'subiendo' ? '↑' : tendenciaMostrar === 'bajando' ? '↓' : '→';
+
+  document.getElementById('hero').innerHTML = `
+    <div class="hero-label">Ahora mismo en Luarca · ${fuente}</div>
+    <div class="hero-row">
+      <div>
+        <div class="hero-etiqueta" style="color:${color}">${r.etiqueta}</div>
+        <div class="hero-sub">
+          🌡️ ${tempMostrar}°C &nbsp; 💨 ${vientoMostrar}km/h ${compass(vientoDirMostrar)} &nbsp;
+          📟 ${presionMostrar}hPa ${trendArrow} ${tendenciaMostrar}
+        </div>
+      </div>
+      <div class="hero-score" style="color:${color}">${r.score}</div>
+    </div>
+  `;
+
+  // --- Avisos oficiales ---
+  const avisosBox = document.getElementById('avisosBox');
+  if(DATA.avisos && DATA.avisos.length > 0){
+    DATA.avisos.forEach(a => {
+      const div = document.createElement('div');
+      div.className = `aviso-card aviso-${a.nivel}`;
+      div.innerHTML = `⚠️ <b>${a.evento}</b> (nivel ${a.nivel})<br>
+        Vigente ${new Date(a.onset).toLocaleString('es-ES', {day:'2-digit', month:'2-digit', hour:'2-digit', minute:'2-digit'})}
+        – ${new Date(a.expires).toLocaleString('es-ES', {day:'2-digit', month:'2-digit', hour:'2-digit', minute:'2-digit'})}`;
+      avisosBox.appendChild(div);
+    });
+  }
+
+  // --- Qué se acerca (viento + estación en esa dirección) ---
+  const acerca = DATA.que_se_acerca;
+  if(acerca && acerca.disponible){
+    document.getElementById('acercaSection').style.display = 'block';
+    const box = document.getElementById('acercaBox');
+    const nombreDir = {NE:'noreste', E:'este', SE:'sureste', S:'sur', SW:'suroeste', W:'oeste', NW:'noroeste', N:'norte'}[acerca.sector] || acerca.sector;
+    const horas = acerca.eta_horas < 1 ? 'menos de 1 hora' : `unas ${Math.round(acerca.eta_horas)} horas`;
+    if(acerca.lloviendo){
+      box.innerHTML = `<div class="acerca-card mal">
+        <div class="acerca-icono">🌧️</div>
+        <div class="acerca-texto">El viento sopla del <b>${nombreDir}</b>, y ahora mismo está lloviendo en
+        <b>${acerca.nombre}</b> (a ${acerca.dist_km} km, ${acerca.prec_mm} mm en la última hora).
+        A este ritmo de viento, podría llegar a Luarca en <b>${horas}</b>.</div>
+      </div>`;
+    } else {
+      box.innerHTML = `<div class="acerca-card bien">
+        <div class="acerca-icono">🌤️</div>
+        <div class="acerca-texto">El viento sopla del <b>${nombreDir}</b>. En <b>${acerca.nombre}</b>
+        (a ${acerca.dist_km} km, por donde viene) ahora no llueve — sin indicios de que empeore por ahí
+        en las próximas horas.</div>
+      </div>`;
+    }
+  }
+
+  // --- Predicción horaria: gráfico estilo Carrot Weather ---
+  let horaChartInstance = null;
+  function cieloEmoji(desc){
+    if(!desc) return '';
+    const d = desc.toLowerCase();
+    if(d.includes('tormenta')) return '⛈️';
+    if(d.includes('nieve')) return '❄️';
+    if(d.includes('niebla') || d.includes('bruma')) return '🌫️';
+    if(d.includes('lluvia') || d.includes('chubasco') || d.includes('aguacero')) return '🌧️';
+    if(d.includes('cubierto') || d.includes('muy nuboso')) return '☁️';
+    if(d.includes('nuboso') || d.includes('intervalos')) return '⛅';
+    if(d.includes('despejado') || d.includes('poco nuboso')) return '☀️';
+    return '🌤️';
+  }
+
+  function renderHoraChart(metric){
+    const horas = DATA.forecast_horaria || [];
+    const ctx = document.getElementById('horaChart');
+
+    if(horas.length === 0){
+      if(horaChartInstance){ horaChartInstance.destroy(); horaChartInstance = null; }
+      ctx.style.display = 'none';
+      let msg = document.getElementById('horaChartEmpty');
+      if(!msg){
+        msg = document.createElement('div');
+        msg.id = 'horaChartEmpty';
+        msg.className = 'note';
+        msg.style.margin = '0';
+        ctx.parentNode.appendChild(msg);
+      }
+      msg.innerHTML = 'Sin datos horarios en esta actualización (AEMET no ha respondido). Se recupera solo en la próxima ejecución, dentro de una hora.';
+      return;
+    }
+    ctx.style.display = 'block';
+    const existingMsg = document.getElementById('horaChartEmpty');
+    if(existingMsg) existingMsg.remove();
+
+    let respaldoMsg = document.getElementById('horaChartRespaldo');
+    if(DATA.horaria_es_respaldo){
+      if(!respaldoMsg){
+        respaldoMsg = document.createElement('div');
+        respaldoMsg.id = 'horaChartRespaldo';
+        respaldoMsg.className = 'note';
+        respaldoMsg.style.marginBottom = '12px';
+        respaldoMsg.innerHTML = '⏱️ AEMET no ha respondido en esta actualización — se muestra la última predicción horaria disponible.';
+        ctx.parentNode.insertBefore(respaldoMsg, ctx);
+      }
+    } else if(respaldoMsg){
+      respaldoMsg.remove();
+    }
+
+    const labels = horas.map(h => h.fecha_hora.split('T')[1].slice(0,5).replace(':00','') + 'h');
+    const emojis = horas.map(h => cieloEmoji(h.cielo));
+    const valores = horas.map(h => h[metric] !== null && h[metric] !== undefined ? Number(h[metric]) : null);
+    const sufijo = metric === 'prob_precipitacion' ? '%' : '°';
+
+    if(horaChartInstance) horaChartInstance.destroy();
+
+    // Plugin propio (sin librería externa) para dibujar icono + valor sobre cada punto
+    const iconLabelsPlugin = {
+      id: 'iconLabels',
+      afterDatasetsDraw(chart){
+        const ctxc = chart.ctx;
+        const meta = chart.getDatasetMeta(0);
+        meta.data.forEach((point, i) => {
+          const v = valores[i];
+          if(v === null || v === undefined || !point) return;
+          const pos = point.getProps(['x','y'], true);
+          ctxc.save();
+          ctxc.textAlign = 'center';
+          ctxc.fillStyle = 'rgba(238,241,230,0.9)';
+          ctxc.font = "11px sans-serif";
+          ctxc.fillText(emojis[i], pos.x, pos.y - 24);
+          ctxc.font = "bold 10px 'Courier New', monospace";
+          ctxc.fillText(`${v}${sufijo}`, pos.x, pos.y - 10);
+          ctxc.restore();
+        });
+      }
+    };
+
+    horaChartInstance = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels,
+        datasets: [{
+          data: valores,
+          borderColor: '#e8a94c',
+          backgroundColor: (context) => {
+            const g = context.chart.ctx.createLinearGradient(0, 0, 0, 200);
+            g.addColorStop(0, 'rgba(232,169,76,0.35)');
+            g.addColorStop(1, 'rgba(232,169,76,0)');
+            return g;
+          },
+          fill: true,
+          tension: 0.4,
+          pointRadius: 2,
+          pointBackgroundColor: '#e8a94c',
+          borderWidth: 2,
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        layout: { padding: { top: 34 } },
+        plugins: { legend: { display: false } },
+        scales: {
+          x: { grid: { display: false }, ticks: { color: 'rgba(238,241,230,0.5)', font: { size: 9.5 }, maxRotation: 0 } },
+          y: { display: false }
+        }
+      },
+      plugins: [iconLabelsPlugin]
+    });
+  }
+
+  renderHoraChart('temp');
+  document.querySelectorAll('#horaTabs .playa-tab').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('#horaTabs .playa-tab').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      renderHoraChart(btn.dataset.metric);
+    });
+  });
+
+  // --- Marítima costera ---
+  const maritimaBox = document.getElementById('maritimaBox');
+  if(DATA.maritima){
+    let html = `<div class="maritima-card destacada">
+      <div class="zona">⚠️ Avisos</div>${DATA.maritima.avisos_texto}
+    </div>`;
+    (DATA.maritima.segmentos || []).forEach(s => {
+      html += `<div class="maritima-card">${s.texto}</div>`;
+    });
+    maritimaBox.innerHTML = html;
+  } else {
+    maritimaBox.innerHTML = '<div class="note">Sin dato marítimo disponible ahora mismo.</div>';
+  }
+
+  // --- Estación local ---
+  if(DATA.netatmo_own){
+    document.getElementById('localSection').style.display = 'block';
+    const n = DATA.netatmo_own;
+    const vecinas = DATA.netatmo_vecinas || [];
+    document.getElementById('localSub').textContent = `Estación meteorológica en Luarca`;
+
+    const cells = [];
+    if(n.exterior) cells.push(['Exterior', `${n.exterior.temp_c}°C <small>· ${n.exterior.humedad}% hum.</small>`]);
+    cells.push(['Presión', `${n.presion_hpa}hPa <small>· ${n.presion_tendencia}</small>`]);
+    if(n.viento) cells.push(['Viento', `${n.viento.kmh}km/h ${compass(n.viento.dir)} <small>ráf. ${n.viento.racha_kmh}</small>`]);
+    if(n.lluvia) cells.push(['Lluvia', `${n.lluvia.mm_1h}mm/h <small>· ${n.lluvia.mm_24h}mm/24h</small>`]);
+
+    const grid = document.getElementById('localGrid');
+    cells.forEach(([k,v]) => {
+      const div = document.createElement('div');
+      div.className = 'local-cell';
+      div.innerHTML = `<div class="k">${k}</div><div class="v">${v}</div>`;
+      grid.appendChild(div);
+    });
+
+    if(vecinas.length){
+      const details = document.createElement('details');
+      details.className = 'vecinas-details';
+      const summary = document.createElement('summary');
+      summary.textContent = `Ver estaciones cercanas (${vecinas.length})`;
+      details.appendChild(summary);
+      const list = document.createElement('div');
+      list.className = 'vecinas-list';
+      vecinas
+        .filter(v => v.temp_c !== null)
+        .sort((a,b) => (a.ciudad||'').localeCompare(b.ciudad||''))
+        .forEach(v => {
+          const row = document.createElement('div');
+          row.className = 'vecina-row';
+          row.innerHTML = `<span>${v.ciudad || 'Zona desconocida'}</span>
+            <span>${v.temp_c}°C${v.humedad !== null ? ` · ${v.humedad}% hum.` : ''}</span>`;
+          list.appendChild(row);
+        });
+      details.appendChild(list);
+      document.getElementById('localSection').appendChild(details);
+    }
+  }
+
+  // --- Predicción de Luarca (única playa, sin tabs) ---
+  const luarca = DATA.lugares.find(l => l.name.startsWith('Luarca') && l.forecast_4d);
+  renderDayCards(luarca ? luarca.forecast_4d : null);
+}
+
+loadData();
+</script>
+</body>
+</html>
