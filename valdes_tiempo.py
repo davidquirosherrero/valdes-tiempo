@@ -581,7 +581,7 @@ def recomendacion(real_time, hora_actual, avisos, oleaje_hoy=None):
         positivas.append("la presión está subiendo")
     elif real_time["pres_tendencia"] == "bajando":
         puntos -= 20
-        negativas.append((50, "Presión bajando"))
+        negativas.append((50, "El tiempo tiende a empeorar"))
 
     if avisos:  # amarillo: penaliza pero no bloquea
         puntos -= 15
