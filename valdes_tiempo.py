@@ -340,8 +340,8 @@ def _parsear_maritima(texto):
 
 def fetch_maritima():
     """Boletín marítimo costero de AEMET. Nos quedamos solo con lo que
-    aplica a Valdés: el segmento 'Oeste de Peñas' y el de 'Ambas zonas'
-    (aplica a las dos). Se descarta 'Este de Peñas', que no nos afecta."""
+    aplica de verdad a Valdés: el segmento 'Oeste de Peñas'. Se descartan
+    'Este de Peñas' (no aplica) y 'Ambas zonas' (a petición: era ruido)."""
     data = _aemet_fetch(AEMET_MARITIMA_URL.format(costa=COSTA_CANTABRICO))
     d0 = data[0]
     for zona in d0["prediccion"]["zona"]:
@@ -356,8 +356,8 @@ def fetch_maritima():
                 if ":" in parte:
                     zona_nombre, resto = parte.split(":", 1)
                     zona_nombre = zona_nombre.strip()
-                    if zona_nombre == "Este de Peñas":
-                        continue  # no aplica a Valdés
+                    if zona_nombre in ("Este de Peñas", "Ambas zonas"):
+                        continue
                     resto = resto.strip()
                     segmento = {"zona": zona_nombre, "texto": resto}
                     segmento.update(_parsear_maritima(resto))
@@ -555,13 +555,15 @@ def fetch_netatmo_vecinas(access_token, excluir_id=None):
     return list(por_localidad.values())
 
 
-def recomendacion(real_time, hora_actual, avisos):
+def recomendacion(real_time, hora_actual, avisos, oleaje_hoy=None):
     """Heurística simple: no es un modelo, solo orienta. Un aviso oficial
     activo (naranja/rojo) pesa más que cualquier otra cosa. Usa la HORA
     ACTUAL del pronóstico horario (no el pronóstico diario completo de la
     playa, que AEMET solo revisa 1-2 veces al día y por eso apenas cambia
-    el mensaje aunque pasen las horas). El texto se construye a partir de
-    los factores que realmente han influido en el score."""
+    el mensaje aunque pasen las horas) para cielo y viento, y el oleaje
+    de la ficha de playa de hoy (esto sí cambia poco en un mismo día,
+    así que no hace falta que sea horario). El texto se construye a
+    partir de los factores que realmente han influido en el score."""
     if any(a["nivel"] in ("naranja", "rojo") for a in avisos):
         return 15, "Aviso oficial activo — revisa AEMET antes de salir"
 
@@ -595,14 +597,25 @@ def recomendacion(real_time, hora_actual, avisos):
             negativas.append(f"el cielo estará {cielo}")
 
         viento_kmh = hora_actual.get("viento_kmh")
+        viento_dir = hora_actual.get("viento_dir")
         if viento_kmh is not None:
             viento_kmh = float(viento_kmh)
             if viento_kmh < 15:
                 puntos += 10
                 positivas.append("el viento es flojo")
-            elif viento_kmh > 40:
+            elif viento_kmh > 30:
                 puntos -= 15
-                negativas.append("el viento soplará fuerte")
+                dir_txt = f" del {viento_dir}" if viento_dir else ""
+                negativas.append(f"el viento soplará fuerte{dir_txt}")
+
+    if oleaje_hoy:
+        oleaje_hoy = oleaje_hoy.lower()
+        if oleaje_hoy == "fuerte":
+            puntos -= 20
+            negativas.append("hay bastante oleaje en la playa")
+        elif oleaje_hoy == "débil":
+            puntos += 5
+            positivas.append("el mar está tranquilo")
 
     puntos = max(0, min(100, puntos))
     if puntos >= 65:
@@ -713,11 +726,14 @@ def main():
         print(f"AVISO: fallo estación local: {e}")
 
     hora_actual = horaria[0] if horaria else None
+    oleaje_hoy = None
+    if forecasts_playas.get("Otur"):
+        oleaje_hoy = forecasts_playas["Otur"][0].get("oleaje")
     real_time_para_score = dict(real_time)
     if netatmo_own and netatmo_own.get("presion_tendencia"):
         mapa = {"up": "subiendo", "down": "bajando", "stable": "estable"}
         real_time_para_score["pres_tendencia"] = mapa.get(netatmo_own["presion_tendencia"], real_time["pres_tendencia"])
-    score, etiqueta = recomendacion(real_time_para_score, hora_actual, avisos)
+    score, etiqueta = recomendacion(real_time_para_score, hora_actual, avisos, oleaje_hoy)
 
     # "Qué se acerca": usamos el viento de Cabo Busto (AEMET), no el de la
     # estación local. Para estimar el desplazamiento de un frente a escala
