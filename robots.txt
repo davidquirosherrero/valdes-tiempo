@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tiempo-luarca.33setecientos.com/sitemap.xml
