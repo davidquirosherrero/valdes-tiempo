@@ -1,17 +1,17 @@
 {
   "real_time": {
-    "ts": "2026-07-27T12:00:00+0000",
-    "temp_c": 20.6,
-    "wind_kmh": 29.5,
-    "wind_dir": 50.0,
-    "gust_kmh": 44.3,
-    "pres_hpa": 1012.7,
+    "ts": "2026-07-27T13:00:00+0000",
+    "temp_c": 21.3,
+    "wind_kmh": 28.1,
+    "wind_dir": 46.0,
+    "gust_kmh": 46.1,
+    "pres_hpa": 1012.3,
     "pres_tendencia": "bajando",
-    "humedad": 82.0
+    "humedad": 78.0
   },
   "recomendacion": {
-    "score": 65,
-    "etiqueta": "Buen día de playa — el cielo está despejado"
+    "score": 45,
+    "etiqueta": "Aceptable, pero la presión está bajando"
   },
   "que_se_acerca": {
     "sector": "NE",
@@ -20,9 +20,9 @@
     "dist_km": 57,
     "lloviendo": false,
     "prec_mm": 0,
-    "temp_c": 22.9,
+    "temp_c": 22.8,
     "cielo_despejado": true,
-    "eta_horas": 1.9
+    "eta_horas": 2.0
   },
   "forecast_municipio": [
     {
@@ -63,24 +63,6 @@
     }
   ],
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-07-27T15:00",
-      "temp": "25",
-      "sens_termica": "25",
-      "cielo": "Despejado",
-      "prob_precipitacion": "0",
-      "viento_dir": "E",
-      "viento_kmh": "28"
-    },
-    {
-      "fecha_hora": "2026-07-27T16:00",
-      "temp": "25",
-      "sens_termica": "25",
-      "cielo": "Despejado",
-      "prob_precipitacion": "0",
-      "viento_dir": "E",
-      "viento_kmh": "27"
-    },
     {
       "fecha_hora": "2026-07-27T17:00",
       "temp": "25",
@@ -224,10 +206,28 @@
       "prob_precipitacion": "0",
       "viento_dir": "SO",
       "viento_kmh": "4"
+    },
+    {
+      "fecha_hora": "2026-07-28T09:00",
+      "temp": "20",
+      "sens_termica": "20",
+      "cielo": "Despejado",
+      "prob_precipitacion": "0",
+      "viento_dir": "O",
+      "viento_kmh": "2"
+    },
+    {
+      "fecha_hora": "2026-07-28T10:00",
+      "temp": "22",
+      "sens_termica": "22",
+      "cielo": "Despejado",
+      "prob_precipitacion": "0",
+      "viento_dir": "N",
+      "viento_kmh": "3"
     }
   ],
-  "horaria_elaborado": "2026-07-27T12:57:09",
-  "horaria_es_respaldo": true,
+  "horaria_elaborado": "2026-07-27T13:27:10",
+  "horaria_es_respaldo": false,
   "avisos": [],
   "maritima": {
     "texto": "Oeste de Peñas: E o NE 4 o 5, localmente 6 mar adentro, amainando E 3 o 4 cerca de la costa, de madrugada. Marejada, disminuyendo localmente a marejadilla cerca de la costa. \r\n Este de Peñas: Componente E 4 o 5, amainando a 3 o 4 al final. Marejadilla o marejada.\r\n Ambas zonas: mar de fondo del N o NW de 1 a 2 m. Regular o localmente mala por bruma o niebla a partir de la madrugada.",
@@ -252,18 +252,18 @@
     "vigencia_fin": "2026-07-28T12:00:00"
   },
   "netatmo_own": {
-    "ts": 1785158060,
-    "presion_hpa": 1018,
-    "presion_tendencia": "stable",
+    "ts": 1785164715,
+    "presion_hpa": 1017.4,
+    "presion_tendencia": "down",
     "exterior": {
       "temp_c": 24.6,
-      "humedad": 80,
-      "tendencia": "stable"
+      "humedad": 78,
+      "tendencia": "down"
     },
     "viento": {
-      "kmh": 12,
-      "dir": 83,
-      "racha_kmh": 24
+      "kmh": 11,
+      "dir": 75,
+      "racha_kmh": 19
     },
     "lluvia": {
       "mm_1h": 0,
@@ -275,36 +275,36 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 24,
-      "humedad": 75
+      "temp_c": 24.2,
+      "humedad": 73
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
-      "temp_c": 22.5,
-      "humedad": 75
+      "temp_c": 22,
+      "humedad": 76
     },
     {
       "lat": 43.56,
       "lon": -6.27,
       "ciudad": "Cudillero",
-      "temp_c": 23.2,
-      "humedad": 65
+      "temp_c": 23.8,
+      "humedad": 64
     },
     {
       "lat": 43.33,
       "lon": -6.42,
       "ciudad": "Tineo",
-      "temp_c": 23,
-      "humedad": 83
+      "temp_c": 24.4,
+      "humedad": 77
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 25.2,
-      "humedad": 71
+      "temp_c": 27.8,
+      "humedad": 63
     }
   ],
   "lugares": [
@@ -491,5 +491,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-07-27T13:18:50.796207+00:00"
+  "generated_at": "2026-07-27T15:12:37.393988+00:00"
 }
