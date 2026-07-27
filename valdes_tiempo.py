@@ -36,6 +36,7 @@ import json
 import os
 import io
 import math
+import re
 import tarfile
 import urllib.request
 import urllib.error
@@ -207,7 +208,8 @@ def estimar_que_se_acerca(estaciones, wind_dir, wind_kmh):
 
 def fetch_playa_forecast(id_playa):
     data = _aemet_fetch(AEMET_PLAYA_URL.format(id_playa=id_playa))
-    dias = data[0]["prediccion"]["dia"]
+    d0 = data[0]
+    dias = d0["prediccion"]["dia"]
     out = []
     for d in dias:
         out.append({
@@ -219,7 +221,7 @@ def fetch_playa_forecast(id_playa):
             "t_agua": d["tAgua"]["valor1"],
             "uv_max": d["uvMax"]["valor1"],
         })
-    return out
+    return out, d0.get("elaborado")
 
 
 def _mejor_periodo(periodos, campo_valor):
@@ -304,6 +306,38 @@ def fetch_avisos():
     return avisos
 
 
+DIRECCIONES_MARITIMAS = ['NNE', 'ENE', 'ESE', 'SSE', 'SSW', 'WSW', 'WNW', 'NNW',
+                          'NE', 'SE', 'SW', 'NW', 'N', 'E', 'S', 'W', 'Variable']
+ESTADOS_MAR = ['fuerte marejada', 'muy gruesa', 'marejadilla', 'marejada',
+               'gruesa', 'rizada', 'calma', 'arbolada', 'montañosa', 'enorme']
+
+
+def _parsear_maritima(texto):
+    """Extrae dirección, fuerza (Beaufort) y estado del mar dominantes del
+    texto libre de AEMET, para poder pintarlo como iconos/badges en vez de
+    un párrafo. El texto completo se conserva aparte para no perder matices
+    (p.ej. cambios de viento a lo largo del día)."""
+    patron_dir = r'\b(?:Componente\s+)?(' + '|'.join(DIRECCIONES_MARITIMAS) + r')\b'
+    m_dir = re.search(patron_dir, texto)
+    direccion = m_dir.group(1) if m_dir else None
+
+    fuerza = None
+    if m_dir:
+        resto = texto[m_dir.end():m_dir.end() + 15]
+        m_fuerza = re.search(r'(\d{1,2})(?:\s*o\s*(\d{1,2}))?', resto)
+        if m_fuerza:
+            fuerza = m_fuerza.group(0).replace(" ", "")
+
+    estado_mar = None
+    texto_lower = texto.lower()
+    for estado in ESTADOS_MAR:
+        if estado in texto_lower:
+            estado_mar = estado
+            break
+
+    return {"direccion": direccion, "fuerza": fuerza, "estado_mar": estado_mar}
+
+
 def fetch_maritima():
     """Boletín marítimo costero de AEMET. Nos quedamos solo con lo que
     aplica a Valdés: el segmento 'Oeste de Peñas' y el de 'Ambas zonas'
@@ -324,9 +358,12 @@ def fetch_maritima():
                     zona_nombre = zona_nombre.strip()
                     if zona_nombre == "Este de Peñas":
                         continue  # no aplica a Valdés
-                    segmentos.append({"zona": zona_nombre, "texto": resto.strip()})
+                    resto = resto.strip()
+                    segmento = {"zona": zona_nombre, "texto": resto}
+                    segmento.update(_parsear_maritima(resto))
+                    segmentos.append(segmento)
                 else:
-                    segmentos.append({"zona": None, "texto": parte})
+                    segmentos.append({"zona": None, "texto": parte, "direccion": None, "fuerza": None, "estado_mar": None})
             return {
                 "texto": texto,
                 "segmentos": segmentos,
@@ -394,7 +431,7 @@ def fetch_hourly_forecast(horas=18):
     # anoche). Filtramos a partir de la hora actual en horario local español.
     ahora_local = datetime.now(ZoneInfo("Europe/Madrid")).strftime("%Y-%m-%dT%H:00")
     salida = [h for h in salida if h["fecha_hora"] >= ahora_local]
-    return salida[:horas]
+    return salida[:horas], data[0].get("elaborado")
 
 
 def netatmo_refresh_access_token():
@@ -430,6 +467,7 @@ def fetch_netatmo_own(access_token):
     dd = main.get("dashboard_data", {})
     out = {
         "_device_id": main.get("_id"),  # solo para excluirla de "vecinas"; se quita antes de guardar el JSON
+        "ts": dd.get("time_utc"),  # unix timestamp de la última lectura
         "presion_hpa": dd.get("Pressure"),
         "presion_tendencia": dd.get("pressure_trend"),
         "exterior": None,
@@ -611,13 +649,15 @@ def main():
             raise  # sin dato nuevo ni respaldo, no hay nada con sentido que escribir
 
     forecasts_playas = {}
+    playas_elaborado = {}
     for nombre, id_playa in PLAYAS_CON_FICHA.items():
         try:
-            forecasts_playas[nombre] = fetch_playa_forecast(id_playa)
+            forecasts_playas[nombre], playas_elaborado[nombre] = fetch_playa_forecast(id_playa)
             print(f"Predicción playa {nombre}: {len(forecasts_playas[nombre])} días")
         except (urllib.error.URLError, RuntimeError, KeyError) as e:
             print(f"AVISO: fallo prediccion playa {nombre}: {e}")
             forecasts_playas[nombre] = None
+            playas_elaborado[nombre] = None
 
     try:
         forecast_municipio = fetch_municipio_forecast()
@@ -641,8 +681,9 @@ def main():
         maritima = None
 
     horaria_es_respaldo = False
+    horaria_elaborado = None
     try:
-        horaria = fetch_hourly_forecast()
+        horaria, horaria_elaborado = fetch_hourly_forecast()
         print(f"Predicción horaria: {len(horaria)} horas")
     except (urllib.error.URLError, RuntimeError, KeyError) as e:
         print(f"AVISO: fallo predicción horaria: {e}")
@@ -653,6 +694,7 @@ def main():
             if horaria_respaldo:
                 horaria = horaria_respaldo
                 horaria_es_respaldo = True
+                horaria_elaborado = anterior.get("horaria_elaborado")
                 print(f"Usando respaldo de la ejecución anterior: {len(horaria)} horas útiles")
 
     netatmo_own = None
@@ -695,6 +737,7 @@ def main():
     for p in PLAYAS:
         entry = dict(p)
         entry["forecast_4d"] = forecasts_playas.get(p["ficha_aemet"]) if p["ficha_aemet"] else None
+        entry["forecast_4d_elaborado"] = playas_elaborado.get(p["ficha_aemet"]) if p["ficha_aemet"] else None
         lugares_out.append(entry)
     for p in PARROQUIAS:
         entry = dict(p)
@@ -710,6 +753,7 @@ def main():
         "que_se_acerca": que_se_acerca,
         "forecast_municipio": forecast_municipio,
         "forecast_horaria": horaria,
+        "horaria_elaborado": horaria_elaborado,
         "horaria_es_respaldo": horaria_es_respaldo,
         "avisos": avisos,
         "maritima": maritima,
