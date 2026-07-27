@@ -212,6 +212,22 @@
   .badge.sev-media{ border-color:rgba(232,169,76,0.5); color:var(--buoy-yellow); background:rgba(232,169,76,0.1); }
   .badge.sev-mala{ border-color:rgba(198,90,78,0.5); color:var(--coral-low); background:rgba(198,90,78,0.12); }
   .maritima-texto-detalle{ font-size:12.5px; color:var(--text-muted); line-height:1.6; }
+  .glosario{ padding:20px; max-width:720px; margin:0 auto; }
+  .glosario-details summary{
+    cursor:pointer; font-size:14px; color:var(--seafoam); font-weight:700; list-style:none;
+    padding:10px 0; border-top:1px solid rgba(238,241,230,0.14); border-bottom:1px solid rgba(238,241,230,0.14);
+  }
+  .glosario-details summary::-webkit-details-marker{ display:none; }
+  .glosario-details summary::before{ content:'▸ '; }
+  .glosario-details[open] summary::before{ content:'▾ '; }
+  .glosario-body{ padding-top:16px; }
+  .glosario-tabla{ width:100%; border-collapse:collapse; margin-bottom:20px; font-size:13px; }
+  .glosario-tabla caption{ text-align:left; font-weight:700; color:var(--text-primary); margin-bottom:8px; font-size:14px; }
+  .glosario-tabla th{ text-align:left; color:var(--seafoam); font-size:11.5px; text-transform:uppercase; letter-spacing:0.04em; padding:6px 8px; border-bottom:1px solid rgba(238,241,230,0.2); }
+  .glosario-tabla td{ padding:7px 8px; border-bottom:1px solid rgba(238,241,230,0.08); color:var(--text-secondary); }
+  .glosario-tabla tr.sev-buena td:first-child{ color:var(--seafoam); font-weight:700; }
+  .glosario-tabla tr.sev-media td:first-child{ color:var(--buoy-yellow); font-weight:700; }
+  .glosario-tabla tr.sev-mala td:first-child{ color:var(--coral-low); font-weight:700; }
   footer{ padding:20px 20px 34px; font-size:12.5px; color:var(--text-muted); text-align:center; line-height:1.7; }
 </style>
 </head>
@@ -279,6 +295,45 @@
     </div>
   </section>
 </main>
+
+<div class="glosario">
+  <details class="glosario-details">
+    <summary>Glosario: ¿qué significa "fuerza 4" o "marejadilla"?</summary>
+    <div class="glosario-body">
+
+      <table class="glosario-tabla">
+        <caption>💨 Escala Beaufort (fuerza del viento)</caption>
+        <tr><th>Fuerza</th><th>Nombre</th><th>Velocidad</th><th>En el mar</th></tr>
+        <tr><td>0</td><td>Calma</td><td>&lt;1 km/h</td><td>Superficie como un espejo</td></tr>
+        <tr><td>1</td><td>Ventolina</td><td>1-5 km/h</td><td>Rizos sin espuma</td></tr>
+        <tr><td>2</td><td>Flojito</td><td>6-11 km/h</td><td>Olas pequeñas, sin romper</td></tr>
+        <tr><td>3</td><td>Flojo</td><td>12-19 km/h</td><td>Olas grandes, alguna espuma</td></tr>
+        <tr><td>4</td><td>Bonancible</td><td>20-28 km/h</td><td>Olas más largas, bastante espuma</td></tr>
+        <tr><td>5</td><td>Fresquito</td><td>29-38 km/h</td><td>Olas medianas, muy alargadas</td></tr>
+        <tr><td>6</td><td>Fresco</td><td>39-49 km/h</td><td>Olas grandes, cresta de espuma</td></tr>
+        <tr><td>7</td><td>Frescachón</td><td>50-61 km/h</td><td>Mar gruesa, espuma en rachas</td></tr>
+        <tr><td>8</td><td>Duro</td><td>62-74 km/h</td><td>Olas altas, rompientes en espuma</td></tr>
+        <tr><td>9-12</td><td>Muy duro a huracán</td><td>&gt;74 km/h</td><td>Temporal — visibilidad reducida</td></tr>
+      </table>
+
+      <table class="glosario-tabla">
+        <caption>🌊 Escala Douglas (estado del mar)</caption>
+        <tr><th>Estado</th><th>Altura de ola</th><th>Aspecto</th></tr>
+        <tr class="sev-buena"><td>Calma / rizada</td><td>0-0,1 m</td><td>Casi plano, como un espejo</td></tr>
+        <tr class="sev-media"><td>Marejadilla</td><td>0,1-0,5 m</td><td>Olas pequeñas, cortas</td></tr>
+        <tr class="sev-mala"><td>Marejada</td><td>0,5-1,25 m</td><td>Olas moderadas, alargadas</td></tr>
+        <tr class="sev-mala"><td>Fuerte marejada</td><td>1,25-2,5 m</td><td>Olas grandes, con espuma</td></tr>
+        <tr class="sev-mala"><td>Gruesa</td><td>2,5-4 m</td><td>Olas altas, rompientes</td></tr>
+        <tr class="sev-mala"><td>Muy gruesa a enorme</td><td>&gt;4 m</td><td>Mar de temporal</td></tr>
+      </table>
+
+      <div class="section-sub" style="margin:0;">
+        En el boletín marítimo de esta web, los badges 🧭 y 🌊 usan estas mismas escalas —
+        verde/ámbar/coral en el estado del mar sigue esta tabla de menos a más peligroso.
+      </div>
+    </div>
+  </details>
+</div>
 
 <footer>
   El Tiempo en Luarca · Dato: AEMET OpenData + estación meteorológica local · actualización automática cada hora
