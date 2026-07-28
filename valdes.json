@@ -1,39 +1,31 @@
 {
   "real_time": {
-    "ts": "2026-07-28T14:00:00+0000",
-    "temp_c": 24.1,
-    "wind_kmh": 2.9,
-    "wind_dir": 334.0,
-    "gust_kmh": 18.4,
-    "pres_hpa": 1007.7,
+    "ts": "2026-07-28T16:00:00+0000",
+    "temp_c": 25.4,
+    "wind_kmh": 8.3,
+    "wind_dir": 275.0,
+    "gust_kmh": 17.6,
+    "pres_hpa": 1008.0,
     "pres_tendencia": "estable",
-    "humedad": 73.0
+    "humedad": 69.0
   },
   "recomendacion": {
     "score": 55,
     "etiqueta": "Bastante oleaje en la playa"
   },
-  "que_se_acerca": null,
+  "que_se_acerca": {
+    "sector": "W",
+    "disponible": true,
+    "nombre": "Ribadeo",
+    "dist_km": 44,
+    "lloviendo": false,
+    "prec_mm": 0,
+    "temp_c": 27.3,
+    "cielo_despejado": true,
+    "eta_horas": 5.3
+  },
   "forecast_municipio": null,
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-07-28T16:00",
-      "temp": "28",
-      "sens_termica": "29",
-      "cielo": "Despejado",
-      "prob_precipitacion": "0",
-      "viento_dir": "N",
-      "viento_kmh": "6"
-    },
-    {
-      "fecha_hora": "2026-07-28T17:00",
-      "temp": "29",
-      "sens_termica": "31",
-      "cielo": "Despejado",
-      "prob_precipitacion": "0",
-      "viento_dir": "N",
-      "viento_kmh": "5"
-    },
     {
       "fecha_hora": "2026-07-28T18:00",
       "temp": "27",
@@ -168,10 +160,37 @@
       "prob_precipitacion": "0",
       "viento_dir": "N",
       "viento_kmh": "7"
+    },
+    {
+      "fecha_hora": "2026-07-29T09:00",
+      "temp": "17",
+      "sens_termica": "17",
+      "cielo": "Bruma",
+      "prob_precipitacion": "0",
+      "viento_dir": "N",
+      "viento_kmh": "7"
+    },
+    {
+      "fecha_hora": "2026-07-29T10:00",
+      "temp": "18",
+      "sens_termica": "18",
+      "cielo": "Cubierto",
+      "prob_precipitacion": "0",
+      "viento_dir": "N",
+      "viento_kmh": "7"
+    },
+    {
+      "fecha_hora": "2026-07-29T11:00",
+      "temp": "18",
+      "sens_termica": "18",
+      "cielo": "Cubierto",
+      "prob_precipitacion": "0",
+      "viento_dir": "NO",
+      "viento_kmh": "6"
     }
   ],
-  "horaria_elaborado": "2026-07-28T12:33:09",
-  "horaria_es_respaldo": true,
+  "horaria_elaborado": "2026-07-28T14:37:09",
+  "horaria_es_respaldo": false,
   "avisos": [],
   "maritima": {
     "texto": "E o NE 2 a 4 rolando a W o NW. Marejadilla o marejada disminuyendo a rizada o marejadilla. Mar de fondo del NW de 1 a 2 m, disminuyendo.",
@@ -188,62 +207,8 @@
     "vigencia_inicio": "2026-07-28T12:00:00",
     "vigencia_fin": "2026-07-29T12:00:00"
   },
-  "netatmo_own": {
-    "ts": 1785249420,
-    "presion_hpa": 1013.6,
-    "presion_tendencia": "stable",
-    "exterior": {
-      "temp_c": 31.6,
-      "humedad": 61,
-      "tendencia": "up"
-    },
-    "viento": {
-      "kmh": 1,
-      "dir": 90,
-      "racha_kmh": 8
-    },
-    "lluvia": {
-      "mm_1h": 0,
-      "mm_24h": 0
-    }
-  },
-  "netatmo_vecinas": [
-    {
-      "lat": 43.53,
-      "lon": -6.39,
-      "ciudad": "Valdés",
-      "temp_c": 28,
-      "humedad": 62
-    },
-    {
-      "lat": 43.56,
-      "lon": -6.66,
-      "ciudad": "Navia",
-      "temp_c": 27.3,
-      "humedad": 63
-    },
-    {
-      "lat": 43.56,
-      "lon": -6.27,
-      "ciudad": "Cudillero",
-      "temp_c": 26.6,
-      "humedad": 56
-    },
-    {
-      "lat": 43.33,
-      "lon": -6.42,
-      "ciudad": "Tineo",
-      "temp_c": 33.5,
-      "humedad": 43
-    },
-    {
-      "lat": 43.4,
-      "lon": -6.25,
-      "ciudad": "Salas",
-      "temp_c": 35.8,
-      "humedad": 39
-    }
-  ],
+  "netatmo_own": null,
+  "netatmo_vecinas": [],
   "lugares": [
     {
       "name": "Otur",
@@ -428,5 +393,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-07-28T14:38:59.266284+00:00"
+  "generated_at": "2026-07-28T16:50:02.813040+00:00"
 }
