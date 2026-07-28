@@ -1,58 +1,68 @@
 {
   "real_time": {
-    "ts": "2026-07-27T23:00:00+0000",
-    "temp_c": 19.4,
-    "wind_kmh": 15.1,
-    "wind_dir": 94.0,
-    "gust_kmh": 35.3,
-    "pres_hpa": 1009.9,
-    "pres_tendencia": "estable",
-    "humedad": 86.0
+    "ts": "2026-07-28T03:00:00+0000",
+    "temp_c": 18.4,
+    "wind_kmh": 13.3,
+    "wind_dir": 235.0,
+    "gust_kmh": 16.2,
+    "pres_hpa": 1008.3,
+    "pres_tendencia": "bajando",
+    "humedad": 89.0
   },
   "recomendacion": {
     "score": 60,
     "etiqueta": "El tiempo tiende a empeorar"
   },
   "que_se_acerca": {
-    "sector": "E",
+    "sector": "SW",
     "disponible": true,
-    "nombre": "Avilés",
-    "dist_km": 40,
+    "nombre": "Lugo",
+    "dist_km": 89,
     "lloviendo": false,
     "prec_mm": 0,
-    "temp_c": 19.6,
+    "temp_c": 15.6,
     "cielo_despejado": false,
-    "eta_horas": 2.6
+    "eta_horas": 6.7
   },
-  "forecast_municipio": null,
+  "forecast_municipio": [
+    {
+      "fecha": "2026-07-27T00:00:00",
+      "cielo": "Despejado",
+      "viento_dir": "C",
+      "viento_kmh": 0,
+      "t_max": 26,
+      "t_min": 18,
+      "prob_precipitacion": null
+    },
+    {
+      "fecha": "2026-07-28T00:00:00",
+      "cielo": "Despejado",
+      "viento_dir": "N",
+      "viento_kmh": 5,
+      "t_max": 28,
+      "t_min": 17,
+      "prob_precipitacion": null
+    },
+    {
+      "fecha": "2026-07-29T00:00:00",
+      "cielo": "Nuboso",
+      "viento_dir": "NE",
+      "viento_kmh": 15,
+      "t_max": 22,
+      "t_min": 16,
+      "prob_precipitacion": null
+    },
+    {
+      "fecha": "2026-07-30T00:00:00",
+      "cielo": "Cubierto con lluvia escasa",
+      "viento_dir": "N",
+      "viento_kmh": 10,
+      "t_max": 23,
+      "t_min": 18,
+      "prob_precipitacion": 95
+    }
+  ],
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-07-28T02:00",
-      "temp": "19",
-      "sens_termica": "19",
-      "cielo": "Despejado",
-      "prob_precipitacion": "0",
-      "viento_dir": "SE",
-      "viento_kmh": "3"
-    },
-    {
-      "fecha_hora": "2026-07-28T03:00",
-      "temp": "19",
-      "sens_termica": "19",
-      "cielo": "Despejado",
-      "prob_precipitacion": "0",
-      "viento_dir": "S",
-      "viento_kmh": "3"
-    },
-    {
-      "fecha_hora": "2026-07-28T04:00",
-      "temp": "19",
-      "sens_termica": "19",
-      "cielo": "Despejado",
-      "prob_precipitacion": "0",
-      "viento_dir": "S",
-      "viento_kmh": "4"
-    },
     {
       "fecha_hora": "2026-07-28T05:00",
       "temp": "18",
@@ -169,10 +179,55 @@
       "prob_precipitacion": "0",
       "viento_dir": "NO",
       "viento_kmh": "6"
+    },
+    {
+      "fecha_hora": "2026-07-28T18:00",
+      "temp": "27",
+      "sens_termica": "27",
+      "cielo": "Despejado",
+      "prob_precipitacion": "0",
+      "viento_dir": "NO",
+      "viento_kmh": "5"
+    },
+    {
+      "fecha_hora": "2026-07-28T19:00",
+      "temp": "26",
+      "sens_termica": "26",
+      "cielo": "Despejado",
+      "prob_precipitacion": "0",
+      "viento_dir": "NO",
+      "viento_kmh": "4"
+    },
+    {
+      "fecha_hora": "2026-07-28T20:00",
+      "temp": "25",
+      "sens_termica": "25",
+      "cielo": "Despejado",
+      "prob_precipitacion": "0",
+      "viento_dir": "NO",
+      "viento_kmh": "2"
+    },
+    {
+      "fecha_hora": "2026-07-28T21:00",
+      "temp": "23",
+      "sens_termica": "23",
+      "cielo": "Despejado",
+      "prob_precipitacion": "0",
+      "viento_dir": "NO",
+      "viento_kmh": "5"
+    },
+    {
+      "fecha_hora": "2026-07-28T22:00",
+      "temp": "22",
+      "sens_termica": "22",
+      "cielo": "Despejado",
+      "prob_precipitacion": "0",
+      "viento_dir": "NO",
+      "viento_kmh": "7"
     }
   ],
   "horaria_elaborado": "2026-07-27T20:57:09",
-  "horaria_es_respaldo": true,
+  "horaria_es_respaldo": false,
   "avisos": [],
   "maritima": {
     "texto": "Oeste de Peñas: E o NE 4 o 5, localmente 6 mar adentro, amainando a E 3 o 4 cerca de la costa de madrugada, y a Variable 1 a 3 a partir de la mediodía. Marejada, disminuyendo a marejadilla.\r\n Este de Peñas: Componente E 4 o 5, amainando a 3 o 4 en torno a mediodía. Marejadilla o marejada.\r\n Ambas zonas: mar de fondo del N o NW de 1 a 2 m. Regular o localmente mala por bruma o niebla a partir de la madrugada.",
@@ -190,18 +245,18 @@
     "vigencia_fin": "2026-07-28T20:00:00"
   },
   "netatmo_own": {
-    "ts": 1785197386,
-    "presion_hpa": 1015.2,
+    "ts": 1785209487,
+    "presion_hpa": 1013.8,
     "presion_tendencia": "down",
     "exterior": {
-      "temp_c": 17.2,
-      "humedad": 95,
+      "temp_c": 16.2,
+      "humedad": 98,
       "tendencia": "down"
     },
     "viento": {
       "kmh": 1,
       "dir": 90,
-      "racha_kmh": 3
+      "racha_kmh": 4
     },
     "lluvia": {
       "mm_1h": 0,
@@ -213,36 +268,36 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 19.7,
-      "humedad": 80
+      "temp_c": 18.5,
+      "humedad": 83
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
-      "temp_c": 18.3,
-      "humedad": 85
+      "temp_c": 17.3,
+      "humedad": 87
     },
     {
       "lat": 43.56,
       "lon": -6.27,
       "ciudad": "Cudillero",
-      "temp_c": 22,
-      "humedad": 66
+      "temp_c": 21.1,
+      "humedad": 68
     },
     {
       "lat": 43.33,
       "lon": -6.42,
       "ciudad": "Tineo",
-      "temp_c": 15.7,
-      "humedad": 95
+      "temp_c": 15,
+      "humedad": 97
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 19.6,
-      "humedad": 79
+      "temp_c": 19.2,
+      "humedad": 82
     }
   ],
   "lugares": [
@@ -447,5 +502,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-07-28T00:10:58.963552+00:00"
+  "generated_at": "2026-07-28T03:34:42.345905+00:00"
 }
