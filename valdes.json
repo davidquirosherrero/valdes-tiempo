@@ -1,13 +1,13 @@
 {
   "real_time": {
-    "ts": "2026-07-27T22:00:00+0000",
-    "temp_c": 19.7,
-    "wind_kmh": 24.1,
-    "wind_dir": 75.0,
-    "gust_kmh": 38.5,
-    "pres_hpa": 1010.1,
+    "ts": "2026-07-27T23:00:00+0000",
+    "temp_c": 19.4,
+    "wind_kmh": 15.1,
+    "wind_dir": 94.0,
+    "gust_kmh": 35.3,
+    "pres_hpa": 1009.9,
     "pres_tendencia": "estable",
-    "humedad": 85.0
+    "humedad": 86.0
   },
   "recomendacion": {
     "score": 60,
@@ -20,30 +20,12 @@
     "dist_km": 40,
     "lloviendo": false,
     "prec_mm": 0,
-    "temp_c": 19.3,
+    "temp_c": 19.6,
     "cielo_despejado": false,
-    "eta_horas": 1.7
+    "eta_horas": 2.6
   },
   "forecast_municipio": null,
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-07-28T00:00",
-      "temp": "19",
-      "sens_termica": "19",
-      "cielo": "Despejado",
-      "prob_precipitacion": "0",
-      "viento_dir": "E",
-      "viento_kmh": "9"
-    },
-    {
-      "fecha_hora": "2026-07-28T01:00",
-      "temp": "19",
-      "sens_termica": "19",
-      "cielo": "Despejado",
-      "prob_precipitacion": "0",
-      "viento_dir": "E",
-      "viento_kmh": "4"
-    },
     {
       "fecha_hora": "2026-07-28T02:00",
       "temp": "19",
@@ -190,7 +172,7 @@
     }
   ],
   "horaria_elaborado": "2026-07-27T20:57:09",
-  "horaria_es_respaldo": false,
+  "horaria_es_respaldo": true,
   "avisos": [],
   "maritima": {
     "texto": "Oeste de Peñas: E o NE 4 o 5, localmente 6 mar adentro, amainando a E 3 o 4 cerca de la costa de madrugada, y a Variable 1 a 3 a partir de la mediodía. Marejada, disminuyendo a marejadilla.\r\n Este de Peñas: Componente E 4 o 5, amainando a 3 o 4 en torno a mediodía. Marejadilla o marejada.\r\n Ambas zonas: mar de fondo del N o NW de 1 a 2 m. Regular o localmente mala por bruma o niebla a partir de la madrugada.",
@@ -208,18 +190,18 @@
     "vigencia_fin": "2026-07-28T20:00:00"
   },
   "netatmo_own": {
-    "ts": 1785191336,
-    "presion_hpa": 1015.7,
+    "ts": 1785197386,
+    "presion_hpa": 1015.2,
     "presion_tendencia": "down",
     "exterior": {
-      "temp_c": 19,
-      "humedad": 93,
+      "temp_c": 17.2,
+      "humedad": 95,
       "tendencia": "down"
     },
     "viento": {
-      "kmh": 3,
-      "dir": 69,
-      "racha_kmh": 5
+      "kmh": 1,
+      "dir": 90,
+      "racha_kmh": 3
     },
     "lluvia": {
       "mm_1h": 0,
@@ -231,36 +213,36 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 20.6,
-      "humedad": 79
+      "temp_c": 19.7,
+      "humedad": 80
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
-      "temp_c": 19.1,
-      "humedad": 83
+      "temp_c": 18.3,
+      "humedad": 85
     },
     {
       "lat": 43.56,
       "lon": -6.27,
       "ciudad": "Cudillero",
-      "temp_c": 22.6,
-      "humedad": 63
+      "temp_c": 22,
+      "humedad": 66
     },
     {
       "lat": 43.33,
       "lon": -6.42,
       "ciudad": "Tineo",
-      "temp_c": 16.8,
-      "humedad": 92
+      "temp_c": 15.7,
+      "humedad": 95
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 20.7,
-      "humedad": 76
+      "temp_c": 19.6,
+      "humedad": 79
     }
   ],
   "lugares": [
@@ -286,7 +268,7 @@
           "viento": "flojo",
           "oleaje": "fuerte",
           "t_max": 28,
-          "t_agua": 22,
+          "t_agua": 21,
           "uv_max": 8
         },
         {
@@ -294,12 +276,21 @@
           "cielo": "nuboso",
           "viento": "flojo",
           "oleaje": "débil",
+          "t_max": 22,
+          "t_agua": 22,
+          "uv_max": 8
+        },
+        {
+          "fecha": "20260730",
+          "cielo": "muy nuboso",
+          "viento": "flojo",
+          "oleaje": "débil",
           "t_max": 23,
           "t_agua": 22,
           "uv_max": 8
         }
       ],
-      "forecast_4d_elaborado": "2026-07-27T09:00:20"
+      "forecast_4d_elaborado": "2026-07-27T23:50:19"
     },
     {
       "name": "Luarca (1ª, 2ª y 3ª playa)",
@@ -331,12 +322,21 @@
           "cielo": "nuboso",
           "viento": "flojo",
           "oleaje": "débil",
+          "t_max": 22,
+          "t_agua": 22,
+          "uv_max": 8
+        },
+        {
+          "fecha": "20260730",
+          "cielo": "muy nuboso",
+          "viento": "flojo",
+          "oleaje": "débil",
           "t_max": 23,
           "t_agua": 22,
           "uv_max": 8
         }
       ],
-      "forecast_4d_elaborado": "2026-07-27T09:00:20"
+      "forecast_4d_elaborado": "2026-07-27T23:50:19"
     },
     {
       "name": "Cueva",
@@ -447,5 +447,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-07-27T22:29:07.518058+00:00"
+  "generated_at": "2026-07-28T00:10:58.963552+00:00"
 }
