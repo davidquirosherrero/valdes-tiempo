@@ -1,95 +1,24 @@
 {
   "real_time": {
-    "ts": "2026-07-29T06:00:00+0000",
-    "temp_c": 18.7,
-    "wind_kmh": 5.8,
-    "wind_dir": 257.0,
-    "gust_kmh": 7.6,
-    "pres_hpa": 1010.3,
+    "ts": "2026-07-29T09:00:00+0000",
+    "temp_c": 20.3,
+    "wind_kmh": 4.0,
+    "wind_dir": 315.0,
+    "gust_kmh": 10.1,
+    "pres_hpa": 1011.1,
     "pres_tendencia": "estable",
-    "humedad": 94.0
+    "humedad": 82.0
   },
   "recomendacion": {
     "score": 55,
     "etiqueta": "Cielo muy nuboso"
   },
   "que_se_acerca": {
-    "sector": "W",
-    "disponible": true,
-    "nombre": "Ribadeo",
-    "dist_km": 44,
-    "lloviendo": false,
-    "prec_mm": 0,
-    "temp_c": 19.0,
-    "cielo_despejado": false,
-    "eta_horas": 7.6
+    "sector": "NW",
+    "disponible": false
   },
-  "forecast_municipio": [
-    {
-      "fecha": "2026-07-28T00:00:00",
-      "cielo": "Bruma",
-      "viento_dir": "NO",
-      "viento_kmh": 5,
-      "t_max": 29,
-      "t_min": 16,
-      "prob_precipitacion": null
-    },
-    {
-      "fecha": "2026-07-29T00:00:00",
-      "cielo": "Poco nuboso",
-      "viento_dir": "NE",
-      "viento_kmh": 10,
-      "t_max": 22,
-      "t_min": 16,
-      "prob_precipitacion": 5
-    },
-    {
-      "fecha": "2026-07-30T00:00:00",
-      "cielo": "Cubierto con lluvia escasa",
-      "viento_dir": "N",
-      "viento_kmh": 5,
-      "t_max": 23,
-      "t_min": 17,
-      "prob_precipitacion": 100
-    },
-    {
-      "fecha": "2026-07-31T00:00:00",
-      "cielo": "Cubierto con lluvia",
-      "viento_dir": "N",
-      "viento_kmh": 10,
-      "t_max": 23,
-      "t_min": 20,
-      "prob_precipitacion": 100
-    }
-  ],
+  "forecast_municipio": null,
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-07-29T08:00",
-      "temp": "16",
-      "sens_termica": "16",
-      "cielo": "Cubierto",
-      "prob_precipitacion": "0",
-      "viento_dir": "NO",
-      "viento_kmh": "6"
-    },
-    {
-      "fecha_hora": "2026-07-29T09:00",
-      "temp": "17",
-      "sens_termica": "17",
-      "cielo": "Cubierto",
-      "prob_precipitacion": "0",
-      "viento_dir": "NO",
-      "viento_kmh": "5"
-    },
-    {
-      "fecha_hora": "2026-07-29T10:00",
-      "temp": "18",
-      "sens_termica": "18",
-      "cielo": "Cubierto",
-      "prob_precipitacion": "0",
-      "viento_dir": "N",
-      "viento_kmh": "7"
-    },
     {
       "fecha_hora": "2026-07-29T11:00",
       "temp": "19",
@@ -227,36 +156,36 @@
     }
   ],
   "horaria_elaborado": "2026-07-29T05:45:12",
-  "horaria_es_respaldo": false,
+  "horaria_es_respaldo": true,
   "avisos": [],
   "maritima": {
-    "texto": "Variable 1 a 3 arreciando a W o NW 3 o 4. Rizada o marejadilla.",
+    "texto": "W o NW 3 o 4. Marejadilla. Aguaceros dispersos al final.",
     "segmentos": [
       {
         "zona": null,
-        "texto": "Variable 1 a 3 arreciando a W o NW 3 o 4. Rizada o marejadilla.",
+        "texto": "W o NW 3 o 4. Marejadilla. Aguaceros dispersos al final.",
         "direccion": null,
         "fuerza": null,
         "estado_mar": null
       }
     ],
     "avisos_texto": "No hay avisos",
-    "vigencia_inicio": "2026-07-28T20:00:00",
-    "vigencia_fin": "2026-07-29T20:00:00"
+    "vigencia_inicio": "2026-07-29T12:00:00",
+    "vigencia_fin": "2026-07-30T12:00:00"
   },
   "netatmo_own": {
-    "ts": 1785306895,
-    "presion_hpa": 1016.3,
+    "ts": 1785318390,
+    "presion_hpa": 1016.9,
     "presion_tendencia": "stable",
     "exterior": {
-      "temp_c": 18.3,
-      "humedad": 100,
-      "tendencia": "stable"
+      "temp_c": 22.2,
+      "humedad": 89,
+      "tendencia": "up"
     },
     "viento": {
-      "kmh": 1,
-      "dir": 165,
-      "racha_kmh": 3
+      "kmh": 5,
+      "dir": 82,
+      "racha_kmh": 11
     },
     "lluvia": {
       "mm_1h": 0,
@@ -268,36 +197,36 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 19.4,
-      "humedad": 84
+      "temp_c": 20.4,
+      "humedad": 83
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
-      "temp_c": 19.4,
-      "humedad": 86
+      "temp_c": 24.5,
+      "humedad": 70
     },
     {
       "lat": 43.56,
       "lon": -6.27,
       "ciudad": "Cudillero",
-      "temp_c": 21.3,
-      "humedad": 72
+      "temp_c": 21.7,
+      "humedad": 70
     },
     {
       "lat": 43.33,
       "lon": -6.42,
       "ciudad": "Tineo",
-      "temp_c": 18.7,
-      "humedad": 84
+      "temp_c": 26,
+      "humedad": 72
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 19.6,
-      "humedad": 79
+      "temp_c": 23.9,
+      "humedad": 72
     }
   ],
   "lugares": [
@@ -336,7 +265,7 @@
           "uv_max": 7
         }
       ],
-      "forecast_4d_elaborado": "2026-07-29T05:50:18"
+      "forecast_4d_elaborado": "2026-07-29T08:50:18"
     },
     {
       "name": "Luarca (1ª, 2ª y 3ª playa)",
@@ -373,7 +302,7 @@
           "uv_max": 7
         }
       ],
-      "forecast_4d_elaborado": "2026-07-29T05:50:18"
+      "forecast_4d_elaborado": "2026-07-29T08:50:18"
     },
     {
       "name": "Cueva",
@@ -484,5 +413,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-07-29T06:44:15.931904+00:00"
+  "generated_at": "2026-07-29T09:48:50.064113+00:00"
 }
