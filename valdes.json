@@ -1,28 +1,21 @@
 {
   "real_time": {
-    "ts": "2026-07-29T11:00:00+0000",
-    "temp_c": 20.7,
-    "wind_kmh": 4.0,
-    "wind_dir": 59.0,
-    "gust_kmh": 10.8,
-    "pres_hpa": 1011.6,
+    "ts": "2026-07-29T14:00:00+0000",
+    "temp_c": 23.2,
+    "wind_kmh": 5.4,
+    "wind_dir": 307.0,
+    "gust_kmh": 13.0,
+    "pres_hpa": 1011.8,
     "pres_tendencia": "estable",
-    "humedad": 80.0
+    "humedad": 67.0
   },
   "recomendacion": {
     "score": 100,
     "etiqueta": "Buen día de playa — la presión está subiendo"
   },
   "que_se_acerca": {
-    "sector": "NE",
-    "disponible": true,
-    "nombre": "Cabo Peñas",
-    "dist_km": 57,
-    "lloviendo": false,
-    "prec_mm": 0,
-    "temp_c": 20.1,
-    "cielo_despejado": false,
-    "eta_horas": 14.2
+    "sector": "NW",
+    "disponible": false
   },
   "forecast_municipio": [
     {
@@ -63,33 +56,6 @@
     }
   ],
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-07-29T14:00",
-      "temp": "20",
-      "sens_termica": "20",
-      "cielo": "Poco nuboso",
-      "prob_precipitacion": "0",
-      "viento_dir": "N",
-      "viento_kmh": "8"
-    },
-    {
-      "fecha_hora": "2026-07-29T15:00",
-      "temp": "21",
-      "sens_termica": "21",
-      "cielo": "Nuboso",
-      "prob_precipitacion": "0",
-      "viento_dir": "N",
-      "viento_kmh": "11"
-    },
-    {
-      "fecha_hora": "2026-07-29T16:00",
-      "temp": "21",
-      "sens_termica": "21",
-      "cielo": "Poco nuboso",
-      "prob_precipitacion": "0",
-      "viento_dir": "NO",
-      "viento_kmh": "12"
-    },
     {
       "fecha_hora": "2026-07-29T17:00",
       "temp": "22",
@@ -224,9 +190,36 @@
       "prob_precipitacion": "0",
       "viento_dir": "SE",
       "viento_kmh": "2"
+    },
+    {
+      "fecha_hora": "2026-07-30T08:00",
+      "temp": "18",
+      "sens_termica": "18",
+      "cielo": "Cubierto",
+      "prob_precipitacion": "35",
+      "viento_dir": "N",
+      "viento_kmh": "1"
+    },
+    {
+      "fecha_hora": "2026-07-30T09:00",
+      "temp": "19",
+      "sens_termica": "19",
+      "cielo": "Cubierto",
+      "prob_precipitacion": "35",
+      "viento_dir": "N",
+      "viento_kmh": "3"
+    },
+    {
+      "fecha_hora": "2026-07-30T10:00",
+      "temp": "20",
+      "sens_termica": "20",
+      "cielo": "Cubierto",
+      "prob_precipitacion": "35",
+      "viento_dir": "N",
+      "viento_kmh": "4"
     }
   ],
-  "horaria_elaborado": "2026-07-29T12:01:11",
+  "horaria_elaborado": "2026-07-29T14:19:09",
   "horaria_es_respaldo": false,
   "avisos": [],
   "maritima": {
@@ -245,17 +238,17 @@
     "vigencia_fin": "2026-07-30T12:00:00"
   },
   "netatmo_own": {
-    "ts": 1785327465,
+    "ts": 1785337750,
     "presion_hpa": 1017.4,
     "presion_tendencia": "up",
     "exterior": {
-      "temp_c": 23.1,
-      "humedad": 84,
-      "tendencia": "up"
+      "temp_c": 25.2,
+      "humedad": 78,
+      "tendencia": "stable"
     },
     "viento": {
-      "kmh": 4,
-      "dir": 60,
+      "kmh": 5,
+      "dir": 39,
       "racha_kmh": 11
     },
     "lluvia": {
@@ -263,7 +256,43 @@
       "mm_24h": 0
     }
   },
-  "netatmo_vecinas": [],
+  "netatmo_vecinas": [
+    {
+      "lat": 43.53,
+      "lon": -6.39,
+      "ciudad": "Valdés",
+      "temp_c": 23.9,
+      "humedad": 72
+    },
+    {
+      "lat": 43.56,
+      "lon": -6.66,
+      "ciudad": "Navia",
+      "temp_c": 24.4,
+      "humedad": 67
+    },
+    {
+      "lat": 43.56,
+      "lon": -6.27,
+      "ciudad": "Cudillero",
+      "temp_c": 23.5,
+      "humedad": 61
+    },
+    {
+      "lat": 43.33,
+      "lon": -6.42,
+      "ciudad": "Tineo",
+      "temp_c": 24.8,
+      "humedad": 74
+    },
+    {
+      "lat": 43.4,
+      "lon": -6.25,
+      "ciudad": "Salas",
+      "temp_c": 28.3,
+      "humedad": 59
+    }
+  ],
   "lugares": [
     {
       "name": "Otur",
@@ -448,5 +477,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-07-29T12:20:33.831774+00:00"
+  "generated_at": "2026-07-29T15:19:17.385828+00:00"
 }
