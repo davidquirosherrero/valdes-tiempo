@@ -1,13 +1,13 @@
 {
   "real_time": {
-    "ts": "2026-07-28T23:00:00+0000",
-    "temp_c": 18.7,
-    "wind_kmh": 16.2,
-    "wind_dir": 271.0,
-    "gust_kmh": 24.1,
-    "pres_hpa": 1010.0,
-    "pres_tendencia": "subiendo",
-    "humedad": 99.0
+    "ts": "2026-07-29T03:00:00+0000",
+    "temp_c": 18.4,
+    "wind_kmh": 6.5,
+    "wind_dir": 261.0,
+    "gust_kmh": 14.8,
+    "pres_hpa": 1009.5,
+    "pres_tendencia": "estable",
+    "humedad": 98.0
   },
   "recomendacion": {
     "score": 60,
@@ -20,9 +20,9 @@
     "dist_km": 44,
     "lloviendo": false,
     "prec_mm": 0,
-    "temp_c": 18.9,
+    "temp_c": 18.8,
     "cielo_despejado": false,
-    "eta_horas": 2.7
+    "eta_horas": 6.8
   },
   "forecast_municipio": [
     {
@@ -63,33 +63,6 @@
     }
   ],
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-07-29T02:00",
-      "temp": "19",
-      "sens_termica": "19",
-      "cielo": "Niebla ",
-      "prob_precipitacion": "0",
-      "viento_dir": "NO",
-      "viento_kmh": "6"
-    },
-    {
-      "fecha_hora": "2026-07-29T03:00",
-      "temp": "19",
-      "sens_termica": "19",
-      "cielo": "Niebla ",
-      "prob_precipitacion": "0",
-      "viento_dir": "NO",
-      "viento_kmh": "6"
-    },
-    {
-      "fecha_hora": "2026-07-29T04:00",
-      "temp": "18",
-      "sens_termica": "18",
-      "cielo": "Niebla ",
-      "prob_precipitacion": "0",
-      "viento_dir": "NO",
-      "viento_kmh": "5"
-    },
     {
       "fecha_hora": "2026-07-29T05:00",
       "temp": "18",
@@ -224,6 +197,33 @@
       "prob_precipitacion": "0",
       "viento_dir": "NO",
       "viento_kmh": "11"
+    },
+    {
+      "fecha_hora": "2026-07-29T20:00",
+      "temp": "20",
+      "sens_termica": "20",
+      "cielo": "Despejado",
+      "prob_precipitacion": "5",
+      "viento_dir": "NO",
+      "viento_kmh": "9"
+    },
+    {
+      "fecha_hora": "2026-07-29T21:00",
+      "temp": "20",
+      "sens_termica": "20",
+      "cielo": "Poco nuboso",
+      "prob_precipitacion": "5",
+      "viento_dir": "NO",
+      "viento_kmh": "8"
+    },
+    {
+      "fecha_hora": "2026-07-29T22:00",
+      "temp": "19",
+      "sens_termica": "19",
+      "cielo": "Nubes altas",
+      "prob_precipitacion": "5",
+      "viento_dir": "NO",
+      "viento_kmh": "5"
     }
   ],
   "horaria_elaborado": "2026-07-28T21:05:10",
@@ -245,18 +245,18 @@
     "vigencia_fin": "2026-07-29T20:00:00"
   },
   "netatmo_own": {
-    "ts": 1785283301,
-    "presion_hpa": 1015.6,
+    "ts": 1785296006,
+    "presion_hpa": 1015.3,
     "presion_tendencia": "up",
     "exterior": {
-      "temp_c": 18.8,
-      "humedad": 98,
+      "temp_c": 18.2,
+      "humedad": 100,
       "tendencia": "stable"
     },
     "viento": {
       "kmh": 1,
-      "dir": 90,
-      "racha_kmh": 3
+      "dir": 180,
+      "racha_kmh": 4
     },
     "lluvia": {
       "mm_1h": 0,
@@ -268,36 +268,36 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 21.2,
-      "humedad": 80
+      "temp_c": 20.4,
+      "humedad": 82
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
-      "temp_c": 20.2,
-      "humedad": 86
+      "temp_c": 19.7,
+      "humedad": 85
     },
     {
       "lat": 43.56,
       "lon": -6.27,
       "ciudad": "Cudillero",
-      "temp_c": 22.8,
-      "humedad": 70
+      "temp_c": 21.7,
+      "humedad": 71
     },
     {
       "lat": 43.33,
       "lon": -6.42,
       "ciudad": "Tineo",
-      "temp_c": 20.6,
-      "humedad": 67
+      "temp_c": 18.3,
+      "humedad": 80
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 24.1,
-      "humedad": 60
+      "temp_c": 20.3,
+      "humedad": 73
     }
   ],
   "lugares": [
@@ -502,5 +502,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-07-29T00:08:41.134968+00:00"
+  "generated_at": "2026-07-29T03:37:50.559866+00:00"
 }
