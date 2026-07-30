@@ -1,76 +1,31 @@
 {
   "real_time": {
-    "ts": "2026-07-30T14:00:00+0000",
-    "temp_c": 20.4,
-    "wind_kmh": 2.9,
-    "wind_dir": 30.0,
-    "gust_kmh": 8.6,
-    "pres_hpa": 1012.7,
+    "ts": "2026-07-30T16:00:00+0000",
+    "temp_c": 20.7,
+    "wind_kmh": 4.7,
+    "wind_dir": 262.0,
+    "gust_kmh": 7.2,
+    "pres_hpa": 1012.5,
     "pres_tendencia": "estable",
-    "humedad": 83.0
+    "humedad": 82.0
   },
   "recomendacion": {
-    "score": 55,
-    "etiqueta": "Cielo muy nuboso"
+    "score": 40,
+    "etiqueta": "Lluvia en las próximas horas"
   },
-  "que_se_acerca": null,
-  "forecast_municipio": [
-    {
-      "fecha": "2026-07-30T00:00:00",
-      "cielo": "Cubierto con lluvia escasa",
-      "viento_dir": "C",
-      "viento_kmh": 0,
-      "t_max": 23,
-      "t_min": 17,
-      "prob_precipitacion": 100
-    },
-    {
-      "fecha": "2026-07-31T00:00:00",
-      "cielo": "Cubierto con lluvia",
-      "viento_dir": "N",
-      "viento_kmh": 10,
-      "t_max": 23,
-      "t_min": 18,
-      "prob_precipitacion": 100
-    },
-    {
-      "fecha": "2026-08-01T00:00:00",
-      "cielo": "Muy nuboso con lluvia escasa",
-      "viento_dir": "NE",
-      "viento_kmh": 20,
-      "t_max": 23,
-      "t_min": 19,
-      "prob_precipitacion": 95
-    },
-    {
-      "fecha": "2026-08-02T00:00:00",
-      "cielo": "Intervalos nubosos",
-      "viento_dir": "N",
-      "viento_kmh": 10,
-      "t_max": 25,
-      "t_min": 17,
-      "prob_precipitacion": 10
-    }
-  ],
+  "que_se_acerca": {
+    "sector": "W",
+    "disponible": true,
+    "nombre": "Ribadeo",
+    "dist_km": 44,
+    "lloviendo": false,
+    "prec_mm": 0,
+    "temp_c": 21.7,
+    "cielo_despejado": true,
+    "eta_horas": 9.4
+  },
+  "forecast_municipio": null,
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-07-30T16:00",
-      "temp": "22",
-      "sens_termica": "22",
-      "cielo": "Cubierto",
-      "prob_precipitacion": "50",
-      "viento_dir": "N",
-      "viento_kmh": "7"
-    },
-    {
-      "fecha_hora": "2026-07-30T17:00",
-      "temp": "22",
-      "sens_termica": "22",
-      "cielo": "Cubierto",
-      "prob_precipitacion": "50",
-      "viento_dir": "N",
-      "viento_kmh": "7"
-    },
     {
       "fecha_hora": "2026-07-30T18:00",
       "temp": "22",
@@ -217,7 +172,7 @@
     }
   ],
   "horaria_elaborado": "2026-07-30T13:53:09",
-  "horaria_es_respaldo": false,
+  "horaria_es_respaldo": true,
   "avisos": [],
   "maritima": {
     "texto": "Variable 1 a 3. Rizada o marejadilla. Aguaceros dispersos al final.",
@@ -235,18 +190,18 @@
     "vigencia_fin": "2026-07-31T12:00:00"
   },
   "netatmo_own": {
-    "ts": 1785421819,
-    "presion_hpa": 1018.4,
+    "ts": 1785429985,
+    "presion_hpa": 1018,
     "presion_tendencia": "stable",
     "exterior": {
-      "temp_c": 21.8,
-      "humedad": 88,
-      "tendencia": "stable"
+      "temp_c": 22.2,
+      "humedad": 87,
+      "tendencia": "up"
     },
     "viento": {
       "kmh": 4,
-      "dir": 78,
-      "racha_kmh": 7
+      "dir": 70,
+      "racha_kmh": 8
     },
     "lluvia": {
       "mm_1h": 0,
@@ -258,14 +213,14 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 21,
+      "temp_c": 21.1,
       "humedad": 81
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
-      "temp_c": 23.2,
+      "temp_c": 22.8,
       "humedad": 73
     },
     {
@@ -279,15 +234,15 @@
       "lat": 43.33,
       "lon": -6.42,
       "ciudad": "Tineo",
-      "temp_c": 19.2,
-      "humedad": 91
+      "temp_c": 18.5,
+      "humedad": 93
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 22.1,
-      "humedad": 76
+      "temp_c": 20.8,
+      "humedad": 80
     }
   ],
   "lugares": [
@@ -474,5 +429,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-07-30T14:31:13.557994+00:00"
+  "generated_at": "2026-07-30T16:49:02.832140+00:00"
 }
