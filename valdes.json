@@ -1,97 +1,24 @@
 {
   "real_time": {
-    "ts": "2026-07-31T04:00:00+0000",
-    "temp_c": 18.8,
-    "wind_kmh": 6.1,
-    "wind_dir": 149.0,
-    "gust_kmh": 7.2,
-    "pres_hpa": 1011.6,
-    "pres_tendencia": "estable",
-    "humedad": 97.0
+    "ts": "2026-07-31T07:00:00+0000",
+    "temp_c": 19.3,
+    "wind_kmh": 4.3,
+    "wind_dir": 319.0,
+    "gust_kmh": 9.0,
+    "pres_hpa": 1012.8,
+    "pres_tendencia": "subiendo",
+    "humedad": 95.0
   },
   "recomendacion": {
     "score": 40,
     "etiqueta": "Lluvia en las próximas horas"
   },
   "que_se_acerca": {
-    "sector": "SE",
+    "sector": "NW",
     "disponible": false
   },
-  "forecast_municipio": [
-    {
-      "fecha": "2026-07-30T00:00:00",
-      "cielo": "Cubierto con lluvia escasa",
-      "viento_dir": "C",
-      "viento_kmh": 0,
-      "t_max": 23,
-      "t_min": 17,
-      "prob_precipitacion": 95
-    },
-    {
-      "fecha": "2026-07-31T00:00:00",
-      "cielo": "Muy nuboso con lluvia",
-      "viento_dir": "N",
-      "viento_kmh": 5,
-      "t_max": 23,
-      "t_min": 19,
-      "prob_precipitacion": 100
-    },
-    {
-      "fecha": "2026-08-01T00:00:00",
-      "cielo": "Muy nuboso con lluvia",
-      "viento_dir": "E",
-      "viento_kmh": 10,
-      "t_max": 24,
-      "t_min": 19,
-      "prob_precipitacion": 100
-    },
-    {
-      "fecha": "2026-08-02T00:00:00",
-      "cielo": "Muy nuboso",
-      "viento_dir": "N",
-      "viento_kmh": 10,
-      "t_max": 25,
-      "t_min": 18,
-      "prob_precipitacion": 10
-    }
-  ],
+  "forecast_municipio": null,
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-07-31T06:00",
-      "temp": "20",
-      "sens_termica": "20",
-      "cielo": "Cubierto con lluvia escasa",
-      "prob_precipitacion": "100",
-      "viento_dir": "SO",
-      "viento_kmh": "3"
-    },
-    {
-      "fecha_hora": "2026-07-31T07:00",
-      "temp": "20",
-      "sens_termica": "20",
-      "cielo": "Cubierto con lluvia escasa",
-      "prob_precipitacion": "100",
-      "viento_dir": "O",
-      "viento_kmh": "3"
-    },
-    {
-      "fecha_hora": "2026-07-31T08:00",
-      "temp": "19",
-      "sens_termica": "19",
-      "cielo": "Cubierto con lluvia escasa",
-      "prob_precipitacion": "100",
-      "viento_dir": "O",
-      "viento_kmh": "4"
-    },
-    {
-      "fecha_hora": "2026-07-31T09:00",
-      "temp": "19",
-      "sens_termica": "19",
-      "cielo": "Cubierto con lluvia escasa",
-      "prob_precipitacion": "100",
-      "viento_dir": "SO",
-      "viento_kmh": "2"
-    },
     {
       "fecha_hora": "2026-07-31T10:00",
       "temp": "19",
@@ -220,7 +147,7 @@
     }
   ],
   "horaria_elaborado": "2026-07-30T20:53:09",
-  "horaria_es_respaldo": false,
+  "horaria_es_respaldo": true,
   "avisos": [],
   "maritima": {
     "texto": "Variable o E o NE 1 a 3 arreciando a NE 3 o 4 desde la tarde. Rizada o marejadilla aumentando a marejadilla o marejada. Aguaceros dispersos al final.",
@@ -238,18 +165,18 @@
     "vigencia_fin": "2026-07-31T20:00:00"
   },
   "netatmo_own": {
-    "ts": 1785472218,
-    "presion_hpa": 1017.4,
+    "ts": 1785484923,
+    "presion_hpa": 1018.7,
     "presion_tendencia": "stable",
     "exterior": {
-      "temp_c": 18.9,
+      "temp_c": 19.6,
       "humedad": 100,
-      "tendencia": "stable"
+      "tendencia": "up"
     },
     "viento": {
       "kmh": 1,
       "dir": 90,
-      "racha_kmh": 4
+      "racha_kmh": 3
     },
     "lluvia": {
       "mm_1h": 0,
@@ -261,36 +188,36 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 19.5,
-      "humedad": 87
+      "temp_c": 19.7,
+      "humedad": 89
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
-      "temp_c": 19.8,
-      "humedad": 87
+      "temp_c": 20.4,
+      "humedad": 88
     },
     {
       "lat": 43.56,
       "lon": -6.27,
       "ciudad": "Cudillero",
-      "temp_c": 21.5,
+      "temp_c": 21.8,
       "humedad": 73
     },
     {
       "lat": 43.33,
       "lon": -6.42,
       "ciudad": "Tineo",
-      "temp_c": 16.2,
+      "temp_c": 16.3,
       "humedad": 100
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 18.8,
-      "humedad": 88
+      "temp_c": 19.1,
+      "humedad": 89
     }
   ],
   "lugares": [
@@ -302,22 +229,13 @@
       "ficha_aemet": "Otur",
       "forecast_4d": [
         {
-          "fecha": "20260730",
-          "cielo": "muy nuboso",
-          "viento": "flojo",
-          "oleaje": "débil",
-          "t_max": 23,
-          "t_agua": 21,
-          "uv_max": 8
-        },
-        {
           "fecha": "20260731",
           "cielo": "muy nuboso con lluvia",
           "viento": "flojo",
           "oleaje": "débil",
           "t_max": 23,
           "t_agua": 21,
-          "uv_max": 8
+          "uv_max": 7
         },
         {
           "fecha": "20260801",
@@ -338,7 +256,7 @@
           "uv_max": 8
         }
       ],
-      "forecast_4d_elaborado": "2026-07-30T23:50:19"
+      "forecast_4d_elaborado": "2026-07-31T05:50:18"
     },
     {
       "name": "Luarca (1ª, 2ª y 3ª playa)",
@@ -348,22 +266,13 @@
       "ficha_aemet": "Luarca",
       "forecast_4d": [
         {
-          "fecha": "20260730",
-          "cielo": "muy nuboso",
-          "viento": "flojo",
-          "oleaje": "débil",
-          "t_max": 23,
-          "t_agua": 22,
-          "uv_max": 8
-        },
-        {
           "fecha": "20260731",
           "cielo": "muy nuboso con lluvia",
           "viento": "flojo",
           "oleaje": "débil",
           "t_max": 23,
           "t_agua": 22,
-          "uv_max": 8
+          "uv_max": 7
         },
         {
           "fecha": "20260801",
@@ -384,7 +293,7 @@
           "uv_max": 8
         }
       ],
-      "forecast_4d_elaborado": "2026-07-30T23:50:19"
+      "forecast_4d_elaborado": "2026-07-31T05:50:18"
     },
     {
       "name": "Cueva",
@@ -495,5 +404,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-07-31T04:38:34.214061+00:00"
+  "generated_at": "2026-07-31T08:09:56.057341+00:00"
 }
