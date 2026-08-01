@@ -1,28 +1,28 @@
 {
   "real_time": {
-    "ts": "2026-08-01T16:00:00+0000",
-    "temp_c": 20.0,
-    "wind_kmh": 23.8,
-    "wind_dir": 51.0,
-    "gust_kmh": 37.1,
-    "pres_hpa": 1008.5,
+    "ts": "2026-08-01T17:00:00+0000",
+    "temp_c": 19.7,
+    "wind_kmh": 25.2,
+    "wind_dir": 77.0,
+    "gust_kmh": 34.2,
+    "pres_hpa": 1008.2,
     "pres_tendencia": "bajando",
-    "humedad": 87.0
+    "humedad": 88.0
   },
   "recomendacion": {
     "score": 45,
     "etiqueta": "El tiempo tiende a empeorar"
   },
   "que_se_acerca": {
-    "sector": "NE",
+    "sector": "E",
     "disponible": true,
-    "nombre": "Cabo Peñas",
-    "dist_km": 57,
+    "nombre": "Avilés",
+    "dist_km": 40,
     "lloviendo": false,
     "prec_mm": 0,
-    "temp_c": 21.7,
+    "temp_c": 22.1,
     "cielo_despejado": true,
-    "eta_horas": 2.4
+    "eta_horas": 1.6
   },
   "forecast_municipio": [
     {
@@ -63,15 +63,6 @@
     }
   ],
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-08-01T19:00",
-      "temp": "23",
-      "sens_termica": "23",
-      "cielo": "Poco nuboso",
-      "prob_precipitacion": "0",
-      "viento_dir": "NE",
-      "viento_kmh": "22"
-    },
     {
       "fecha_hora": "2026-08-01T20:00",
       "temp": "22",
@@ -224,38 +215,47 @@
       "prob_precipitacion": "0",
       "viento_dir": "N",
       "viento_kmh": "9"
+    },
+    {
+      "fecha_hora": "2026-08-02T13:00",
+      "temp": "23",
+      "sens_termica": "23",
+      "cielo": "Despejado",
+      "prob_precipitacion": "0",
+      "viento_dir": "N",
+      "viento_kmh": "8"
     }
   ],
-  "horaria_elaborado": "2026-08-01T17:05:11",
+  "horaria_elaborado": "2026-08-01T17:33:14",
   "horaria_es_respaldo": false,
   "avisos": [],
   "maritima": {
-    "texto": "NE 4 o 5 amainando a E 3 o 4, y a Variable 1 a 3 al final.  Marejadilla o marejada, disminuyendo a rizada o marejadilla desde medianoche.",
+    "texto": "E 3 o 4 amainando a Variable 1 a 3. Marejadilla o marejada disminuyendo a rizada o marejadilla.",
     "segmentos": [
       {
         "zona": null,
-        "texto": "NE 4 o 5 amainando a E 3 o 4, y a Variable 1 a 3 al final.  Marejadilla o marejada, disminuyendo a rizada o marejadilla desde medianoche.",
+        "texto": "E 3 o 4 amainando a Variable 1 a 3. Marejadilla o marejada disminuyendo a rizada o marejadilla.",
         "direccion": null,
         "fuerza": null,
         "estado_mar": null
       }
     ],
     "avisos_texto": "No hay avisos",
-    "vigencia_inicio": "2026-08-01T12:00:00",
-    "vigencia_fin": "2026-08-02T12:00:00"
+    "vigencia_inicio": "2026-08-01T20:00:00",
+    "vigencia_fin": "2026-08-02T20:00:00"
   },
   "netatmo_own": {
-    "ts": 1785604170,
-    "presion_hpa": 1013.7,
+    "ts": 1785607800,
+    "presion_hpa": 1013.6,
     "presion_tendencia": "down",
     "exterior": {
-      "temp_c": 23.6,
-      "humedad": 83,
-      "tendencia": "stable"
+      "temp_c": 21.6,
+      "humedad": 89,
+      "tendencia": "down"
     },
     "viento": {
-      "kmh": 11,
-      "dir": 73,
+      "kmh": 8,
+      "dir": 72,
       "racha_kmh": 20
     },
     "lluvia": {
@@ -268,14 +268,14 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 22.4,
-      "humedad": 78
+      "temp_c": 21.9,
+      "humedad": 80
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
-      "temp_c": 22.1,
+      "temp_c": 21.8,
       "humedad": 79
     },
     {
@@ -283,21 +283,21 @@
       "lon": -6.27,
       "ciudad": "Cudillero",
       "temp_c": 23.9,
-      "humedad": 66
+      "humedad": 65
     },
     {
       "lat": 43.33,
       "lon": -6.42,
       "ciudad": "Tineo",
-      "temp_c": 21.2,
-      "humedad": 88
+      "temp_c": 20.1,
+      "humedad": 90
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 22.8,
-      "humedad": 79
+      "temp_c": 21.8,
+      "humedad": 80
     }
   ],
   "lugares": [
@@ -484,5 +484,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-08-01T17:13:49.928259+00:00"
+  "generated_at": "2026-08-01T18:12:37.608845+00:00"
 }
