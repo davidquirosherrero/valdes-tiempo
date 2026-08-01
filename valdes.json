@@ -1,28 +1,28 @@
 {
   "real_time": {
-    "ts": "2026-07-31T22:00:00+0000",
-    "temp_c": 20.1,
-    "wind_kmh": 16.6,
-    "wind_dir": 50.0,
-    "gust_kmh": 32.4,
-    "pres_hpa": 1012.5,
-    "pres_tendencia": "estable",
-    "humedad": 91.0
+    "ts": "2026-08-01T03:00:00+0000",
+    "temp_c": 18.2,
+    "wind_kmh": 19.4,
+    "wind_dir": 89.0,
+    "gust_kmh": 33.8,
+    "pres_hpa": 1011.1,
+    "pres_tendencia": "bajando",
+    "humedad": 92.0
   },
   "recomendacion": {
-    "score": 55,
-    "etiqueta": "Cielo muy nuboso"
+    "score": 40,
+    "etiqueta": "Lluvia en las próximas horas"
   },
   "que_se_acerca": {
-    "sector": "NE",
+    "sector": "E",
     "disponible": true,
-    "nombre": "Cabo Peñas",
-    "dist_km": 57,
+    "nombre": "Avilés",
+    "dist_km": 40,
     "lloviendo": false,
     "prec_mm": 0,
-    "temp_c": 20.6,
+    "temp_c": 17.9,
     "cielo_despejado": false,
-    "eta_horas": 3.4
+    "eta_horas": 2.1
   },
   "forecast_municipio": [
     {
@@ -63,42 +63,6 @@
     }
   ],
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-08-01T01:00",
-      "temp": "20",
-      "sens_termica": "20",
-      "cielo": "Cubierto",
-      "prob_precipitacion": "0",
-      "viento_dir": "E",
-      "viento_kmh": "6"
-    },
-    {
-      "fecha_hora": "2026-08-01T02:00",
-      "temp": "20",
-      "sens_termica": "20",
-      "cielo": "Cubierto",
-      "prob_precipitacion": "100",
-      "viento_dir": "SE",
-      "viento_kmh": "3"
-    },
-    {
-      "fecha_hora": "2026-08-01T03:00",
-      "temp": "20",
-      "sens_termica": "20",
-      "cielo": "Nuboso",
-      "prob_precipitacion": "100",
-      "viento_dir": "S",
-      "viento_kmh": "3"
-    },
-    {
-      "fecha_hora": "2026-08-01T04:00",
-      "temp": "20",
-      "sens_termica": "20",
-      "cielo": "Cubierto con lluvia escasa",
-      "prob_precipitacion": "100",
-      "viento_dir": "S",
-      "viento_kmh": "2"
-    },
     {
       "fecha_hora": "2026-08-01T05:00",
       "temp": "20",
@@ -224,6 +188,42 @@
       "prob_precipitacion": "0",
       "viento_dir": "NE",
       "viento_kmh": "23"
+    },
+    {
+      "fecha_hora": "2026-08-01T19:00",
+      "temp": "23",
+      "sens_termica": "23",
+      "cielo": "Poco nuboso",
+      "prob_precipitacion": "0",
+      "viento_dir": "NE",
+      "viento_kmh": "21"
+    },
+    {
+      "fecha_hora": "2026-08-01T20:00",
+      "temp": "22",
+      "sens_termica": "22",
+      "cielo": "Poco nuboso",
+      "prob_precipitacion": "0",
+      "viento_dir": "NE",
+      "viento_kmh": "20"
+    },
+    {
+      "fecha_hora": "2026-08-01T21:00",
+      "temp": "21",
+      "sens_termica": "21",
+      "cielo": "Nubes altas",
+      "prob_precipitacion": "0",
+      "viento_dir": "E",
+      "viento_kmh": "19"
+    },
+    {
+      "fecha_hora": "2026-08-01T22:00",
+      "temp": "21",
+      "sens_termica": "21",
+      "cielo": "Nubes altas",
+      "prob_precipitacion": "0",
+      "viento_dir": "E",
+      "viento_kmh": "13"
     }
   ],
   "horaria_elaborado": "2026-07-31T21:05:10",
@@ -245,22 +245,22 @@
     "vigencia_fin": "2026-08-01T20:00:00"
   },
   "netatmo_own": {
-    "ts": 1785539427,
-    "presion_hpa": 1018.1,
+    "ts": 1785555763,
+    "presion_hpa": 1016.7,
     "presion_tendencia": "stable",
     "exterior": {
-      "temp_c": 19.5,
-      "humedad": 99,
+      "temp_c": 17.8,
+      "humedad": 100,
       "tendencia": "stable"
     },
     "viento": {
-      "kmh": 4,
-      "dir": 77,
-      "racha_kmh": 9
+      "kmh": 3,
+      "dir": 48,
+      "racha_kmh": 8
     },
     "lluvia": {
-      "mm_1h": 0.404,
-      "mm_24h": 0.4
+      "mm_1h": 0,
+      "mm_24h": 2.6
     }
   },
   "netatmo_vecinas": [
@@ -268,21 +268,21 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 20.4,
+      "temp_c": 19.2,
       "humedad": 87
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
-      "temp_c": 20.4,
-      "humedad": 87
+      "temp_c": 18.2,
+      "humedad": 93
     },
     {
       "lat": 43.56,
       "lon": -6.27,
       "ciudad": "Cudillero",
-      "temp_c": 22,
+      "temp_c": 20.8,
       "humedad": 74
     },
     {
@@ -290,14 +290,14 @@
       "lon": -6.42,
       "ciudad": "Tineo",
       "temp_c": 16.4,
-      "humedad": 99
+      "humedad": 100
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 19.6,
-      "humedad": 87
+      "temp_c": 18.3,
+      "humedad": 90
     }
   ],
   "lugares": [
@@ -323,7 +323,7 @@
           "viento": "flojo",
           "oleaje": "moderado",
           "t_max": 24,
-          "t_agua": 22,
+          "t_agua": 21,
           "uv_max": 8
         },
         {
@@ -332,11 +332,20 @@
           "viento": "flojo",
           "oleaje": "moderado",
           "t_max": 24,
-          "t_agua": 23,
+          "t_agua": 22,
           "uv_max": 8
+        },
+        {
+          "fecha": "20260803",
+          "cielo": "nuboso",
+          "viento": "flojo",
+          "oleaje": "débil",
+          "t_max": 25,
+          "t_agua": 22,
+          "uv_max": 7
         }
       ],
-      "forecast_4d_elaborado": "2026-07-31T09:00:21"
+      "forecast_4d_elaborado": "2026-07-31T23:50:20"
     },
     {
       "name": "Luarca (1ª, 2ª y 3ª playa)",
@@ -360,7 +369,7 @@
           "viento": "flojo",
           "oleaje": "moderado",
           "t_max": 24,
-          "t_agua": 23,
+          "t_agua": 22,
           "uv_max": 8
         },
         {
@@ -371,9 +380,18 @@
           "t_max": 25,
           "t_agua": 22,
           "uv_max": 8
+        },
+        {
+          "fecha": "20260803",
+          "cielo": "nuboso",
+          "viento": "flojo",
+          "oleaje": "débil",
+          "t_max": 25,
+          "t_agua": 23,
+          "uv_max": 7
         }
       ],
-      "forecast_4d_elaborado": "2026-07-31T09:00:21"
+      "forecast_4d_elaborado": "2026-07-31T23:50:20"
     },
     {
       "name": "Cueva",
@@ -484,5 +502,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-07-31T23:15:20.684393+00:00"
+  "generated_at": "2026-08-01T03:48:30.508237+00:00"
 }
