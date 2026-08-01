@@ -1,28 +1,28 @@
 {
   "real_time": {
-    "ts": "2026-08-01T21:00:00+0000",
-    "temp_c": 19.3,
-    "wind_kmh": 17.6,
-    "wind_dir": 58.0,
-    "gust_kmh": 32.0,
-    "pres_hpa": 1007.9,
+    "ts": "2026-08-01T22:00:00+0000",
+    "temp_c": 18.9,
+    "wind_kmh": 14.8,
+    "wind_dir": 98.0,
+    "gust_kmh": 28.8,
+    "pres_hpa": 1007.8,
     "pres_tendencia": "estable",
-    "humedad": 89.0
+    "humedad": 90.0
   },
   "recomendacion": {
-    "score": 55,
-    "etiqueta": "El tiempo tiende a empeorar"
+    "score": 40,
+    "etiqueta": "Cielo nubes altas"
   },
   "que_se_acerca": {
-    "sector": "NE",
+    "sector": "E",
     "disponible": true,
-    "nombre": "Cabo Peñas",
-    "dist_km": 57,
+    "nombre": "Avilés",
+    "dist_km": 40,
     "lloviendo": false,
     "prec_mm": 0,
-    "temp_c": 19.8,
+    "temp_c": 19.9,
     "cielo_despejado": false,
-    "eta_horas": 3.2
+    "eta_horas": 2.7
   },
   "forecast_municipio": [
     {
@@ -63,15 +63,6 @@
     }
   ],
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-08-02T00:00",
-      "temp": "20",
-      "sens_termica": "20",
-      "cielo": "Poco nuboso",
-      "prob_precipitacion": "0",
-      "viento_dir": "E",
-      "viento_kmh": "5"
-    },
     {
       "fecha_hora": "2026-08-02T01:00",
       "temp": "19",
@@ -224,6 +215,15 @@
       "prob_precipitacion": "0",
       "viento_dir": "NO",
       "viento_kmh": "11"
+    },
+    {
+      "fecha_hora": "2026-08-02T18:00",
+      "temp": "22",
+      "sens_termica": "22",
+      "cielo": "Nubes altas",
+      "prob_precipitacion": "0",
+      "viento_dir": "N",
+      "viento_kmh": "8"
     }
   ],
   "horaria_elaborado": "2026-08-01T21:05:10",
@@ -245,61 +245,25 @@
     "vigencia_fin": "2026-08-02T20:00:00"
   },
   "netatmo_own": {
-    "ts": 1785622035,
-    "presion_hpa": 1013.3,
+    "ts": 1785625665,
+    "presion_hpa": 1012.8,
     "presion_tendencia": "down",
     "exterior": {
-      "temp_c": 19.5,
+      "temp_c": 19.8,
       "humedad": 96,
       "tendencia": "stable"
     },
     "viento": {
-      "kmh": 4,
-      "dir": 69,
-      "racha_kmh": 5
+      "kmh": 5,
+      "dir": 70,
+      "racha_kmh": 9
     },
     "lluvia": {
       "mm_1h": 0,
       "mm_24h": 0
     }
   },
-  "netatmo_vecinas": [
-    {
-      "lat": 43.53,
-      "lon": -6.39,
-      "ciudad": "Valdés",
-      "temp_c": 20.6,
-      "humedad": 83
-    },
-    {
-      "lat": 43.56,
-      "lon": -6.66,
-      "ciudad": "Navia",
-      "temp_c": 19.9,
-      "humedad": 85
-    },
-    {
-      "lat": 43.56,
-      "lon": -6.27,
-      "ciudad": "Cudillero",
-      "temp_c": 22.3,
-      "humedad": 69
-    },
-    {
-      "lat": 43.33,
-      "lon": -6.42,
-      "ciudad": "Tineo",
-      "temp_c": 17.4,
-      "humedad": 97
-    },
-    {
-      "lat": 43.4,
-      "lon": -6.25,
-      "ciudad": "Salas",
-      "temp_c": 20.3,
-      "humedad": 83
-    }
-  ],
+  "netatmo_vecinas": [],
   "lugares": [
     {
       "name": "Otur",
@@ -484,5 +448,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-08-01T22:10:24.846268+00:00"
+  "generated_at": "2026-08-01T23:10:21.066032+00:00"
 }
