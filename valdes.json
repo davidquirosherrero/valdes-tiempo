@@ -1,86 +1,24 @@
 {
   "real_time": {
-    "ts": "2026-08-02T08:00:00+0000",
-    "temp_c": 19.8,
-    "wind_kmh": 12.2,
-    "wind_dir": 269.0,
-    "gust_kmh": 14.8,
-    "pres_hpa": 1005.5,
+    "ts": "2026-08-02T11:00:00+0000",
+    "temp_c": 22.1,
+    "wind_kmh": 4.3,
+    "wind_dir": 328.0,
+    "gust_kmh": 11.9,
+    "pres_hpa": 1006.0,
     "pres_tendencia": "estable",
-    "humedad": 89.0
+    "humedad": 82.0
   },
   "recomendacion": {
-    "score": 55,
-    "etiqueta": "El tiempo tiende a empeorar"
+    "score": 75,
+    "etiqueta": "Buen día de playa — el cielo está despejado"
   },
   "que_se_acerca": {
-    "sector": "W",
-    "disponible": true,
-    "nombre": "Ribadeo",
-    "dist_km": 44,
-    "lloviendo": false,
-    "prec_mm": 0,
-    "temp_c": 19.4,
-    "cielo_despejado": false,
-    "eta_horas": 3.6
+    "sector": "NW",
+    "disponible": false
   },
-  "forecast_municipio": [
-    {
-      "fecha": "2026-08-02T00:00:00",
-      "cielo": "Nubes altas",
-      "viento_dir": "C",
-      "viento_kmh": 0,
-      "t_max": 25,
-      "t_min": 18,
-      "prob_precipitacion": null
-    },
-    {
-      "fecha": "2026-08-03T00:00:00",
-      "cielo": "Intervalos nubosos con lluvia",
-      "viento_dir": "NE",
-      "viento_kmh": 10,
-      "t_max": 25,
-      "t_min": 18,
-      "prob_precipitacion": 100
-    },
-    {
-      "fecha": "2026-08-04T00:00:00",
-      "cielo": "Muy nuboso con lluvia escasa",
-      "viento_dir": "N",
-      "viento_kmh": 10,
-      "t_max": 25,
-      "t_min": 17,
-      "prob_precipitacion": 90
-    },
-    {
-      "fecha": "2026-08-05T00:00:00",
-      "cielo": "Cubierto con lluvia",
-      "viento_dir": "NO",
-      "viento_kmh": 10,
-      "t_max": 22,
-      "t_min": 18,
-      "prob_precipitacion": 100
-    }
-  ],
+  "forecast_municipio": null,
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-08-02T11:00",
-      "temp": "21",
-      "sens_termica": "21",
-      "cielo": "Despejado",
-      "prob_precipitacion": "0",
-      "viento_dir": "N",
-      "viento_kmh": "7"
-    },
-    {
-      "fecha_hora": "2026-08-02T12:00",
-      "temp": "22",
-      "sens_termica": "22",
-      "cielo": "Despejado",
-      "prob_precipitacion": "0",
-      "viento_dir": "N",
-      "viento_kmh": "8"
-    },
     {
       "fecha_hora": "2026-08-02T13:00",
       "temp": "22",
@@ -227,7 +165,7 @@
     }
   ],
   "horaria_elaborado": "2026-08-02T08:59:09",
-  "horaria_es_respaldo": false,
+  "horaria_es_respaldo": true,
   "avisos": [],
   "maritima": {
     "texto": "Variable 1 a 3 arreciando temporalmente a W o NW 3 o 4. Rizada o marejadilla",
@@ -245,18 +183,18 @@
     "vigencia_fin": "2026-08-03T12:00:00"
   },
   "netatmo_own": {
-    "ts": 1785662155,
-    "presion_hpa": 1011.1,
-    "presion_tendencia": "down",
+    "ts": 1785670021,
+    "presion_hpa": 1011.6,
+    "presion_tendencia": "stable",
     "exterior": {
-      "temp_c": 23.5,
-      "humedad": 90,
+      "temp_c": 25.9,
+      "humedad": 81,
       "tendencia": "up"
     },
     "viento": {
-      "kmh": 3,
-      "dir": 45,
-      "racha_kmh": 7
+      "kmh": 5,
+      "dir": 53,
+      "racha_kmh": 11
     },
     "lluvia": {
       "mm_1h": 0,
@@ -268,36 +206,36 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 22.3,
-      "humedad": 84
+      "temp_c": 23.8,
+      "humedad": 78
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
-      "temp_c": 25.1,
+      "temp_c": 25.4,
       "humedad": 71
     },
     {
       "lat": 43.56,
       "lon": -6.27,
       "ciudad": "Cudillero",
-      "temp_c": 21.7,
-      "humedad": 73
+      "temp_c": 22.4,
+      "humedad": 70
     },
     {
       "lat": 43.33,
       "lon": -6.42,
       "ciudad": "Tineo",
-      "temp_c": 21.6,
-      "humedad": 96
+      "temp_c": 25.7,
+      "humedad": 81
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 23,
-      "humedad": 80
+      "temp_c": 25.9,
+      "humedad": 72
     }
   ],
   "lugares": [
@@ -484,5 +422,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-08-02T09:20:28.884570+00:00"
+  "generated_at": "2026-08-02T11:33:57.884793+00:00"
 }
