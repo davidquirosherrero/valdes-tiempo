@@ -1,28 +1,28 @@
 {
   "real_time": {
-    "ts": "2026-08-02T16:00:00+0000",
-    "temp_c": 20.3,
-    "wind_kmh": 13.7,
-    "wind_dir": 269.0,
-    "gust_kmh": 20.5,
-    "pres_hpa": 1006.2,
+    "ts": "2026-08-02T17:00:00+0000",
+    "temp_c": 20.9,
+    "wind_kmh": 5.0,
+    "wind_dir": 240.0,
+    "gust_kmh": 15.8,
+    "pres_hpa": 1005.9,
     "pres_tendencia": "estable",
-    "humedad": 89.0
+    "humedad": 82.0
   },
   "recomendacion": {
-    "score": 75,
-    "etiqueta": "Buen día de playa — el cielo está despejado"
+    "score": 60,
+    "etiqueta": "Cielo nubes altas"
   },
   "que_se_acerca": {
-    "sector": "W",
+    "sector": "SW",
     "disponible": true,
-    "nombre": "Ribadeo",
-    "dist_km": 44,
+    "nombre": "Lugo",
+    "dist_km": 89,
     "lloviendo": false,
     "prec_mm": 0,
-    "temp_c": 23.5,
+    "temp_c": 28.6,
     "cielo_despejado": true,
-    "eta_horas": 3.2
+    "eta_horas": 17.8
   },
   "forecast_municipio": [
     {
@@ -63,15 +63,6 @@
     }
   ],
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-08-02T19:00",
-      "temp": "22",
-      "sens_termica": "22",
-      "cielo": "Poco nuboso",
-      "prob_precipitacion": "0",
-      "viento_dir": "NO",
-      "viento_kmh": "11"
-    },
     {
       "fecha_hora": "2026-08-02T20:00",
       "temp": "22",
@@ -224,39 +215,48 @@
       "prob_precipitacion": "20",
       "viento_dir": "N",
       "viento_kmh": "9"
+    },
+    {
+      "fecha_hora": "2026-08-03T13:00",
+      "temp": "22",
+      "sens_termica": "22",
+      "cielo": "Intervalos nubosos",
+      "prob_precipitacion": "20",
+      "viento_dir": "N",
+      "viento_kmh": "9"
     }
   ],
   "horaria_elaborado": "2026-08-02T15:13:09",
   "horaria_es_respaldo": false,
   "avisos": [],
   "maritima": {
-    "texto": "Variable 1 a 3 arreciando temporalmente a W o NW 3 o 4. Rizada o marejadilla",
+    "texto": "W o NW 2 a 4 amainando a E o NE 2 o 3 desde la mañana. Rizada o marejadilla",
     "segmentos": [
       {
         "zona": null,
-        "texto": "Variable 1 a 3 arreciando temporalmente a W o NW 3 o 4. Rizada o marejadilla",
+        "texto": "W o NW 2 a 4 amainando a E o NE 2 o 3 desde la mañana. Rizada o marejadilla",
         "direccion": null,
         "fuerza": null,
         "estado_mar": null
       }
     ],
     "avisos_texto": "No hay avisos.",
-    "vigencia_inicio": "2026-08-02T12:00:00",
-    "vigencia_fin": "2026-08-03T12:00:00"
+    "vigencia_inicio": "2026-08-02T20:00:00",
+    "vigencia_fin": "2026-08-03T20:00:00"
   },
   "netatmo_own": {
-    "ts": 1785690593,
-    "presion_hpa": 1011.4,
+    "ts": 1785694144,
+    "presion_hpa": 1011.3,
     "presion_tendencia": "stable",
     "exterior": {
-      "temp_c": 22.3,
-      "humedad": 89,
-      "tendencia": "up"
+      "temp_c": 22.4,
+      "humedad": 88,
+      "tendencia": "stable"
     },
     "viento": {
-      "kmh": 1,
-      "dir": 90,
-      "racha_kmh": 4
+      "kmh": 4,
+      "dir": 46,
+      "racha_kmh": 7
     },
     "lluvia": {
       "mm_1h": 0,
@@ -268,36 +268,36 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 22,
-      "humedad": 79
+      "temp_c": 22.5,
+      "humedad": 80
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
-      "temp_c": 23.9,
-      "humedad": 73
+      "temp_c": 23.5,
+      "humedad": 74
     },
     {
       "lat": 43.57,
       "lon": -6.21,
       "ciudad": "Cudillero",
-      "temp_c": 23.6,
-      "humedad": 80
+      "temp_c": 23.7,
+      "humedad": 79
     },
     {
       "lat": 43.33,
       "lon": -6.42,
       "ciudad": "Tineo",
-      "temp_c": 22.3,
-      "humedad": 82
+      "temp_c": 21.7,
+      "humedad": 85
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 24.9,
-      "humedad": 71
+      "temp_c": 24.4,
+      "humedad": 72
     }
   ],
   "lugares": [
@@ -484,5 +484,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-08-02T17:14:29.350821+00:00"
+  "generated_at": "2026-08-02T18:13:08.894685+00:00"
 }
