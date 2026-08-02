@@ -1,29 +1,19 @@
 {
   "real_time": {
-    "ts": "2026-08-02T03:00:00+0000",
-    "temp_c": 19.6,
-    "wind_kmh": 9.7,
-    "wind_dir": 104.0,
-    "gust_kmh": 19.4,
-    "pres_hpa": 1005.2,
-    "pres_tendencia": "bajando",
-    "humedad": 88.0
+    "ts": "2026-08-02T06:00:00+0000",
+    "temp_c": 18.7,
+    "wind_kmh": null,
+    "wind_dir": null,
+    "gust_kmh": null,
+    "pres_hpa": 1005.3,
+    "pres_tendencia": "estable",
+    "humedad": 93.0
   },
   "recomendacion": {
-    "score": 40,
-    "etiqueta": "Cielo nubes altas"
+    "score": 55,
+    "etiqueta": "El tiempo tiende a empeorar"
   },
-  "que_se_acerca": {
-    "sector": "E",
-    "disponible": true,
-    "nombre": "Avilés",
-    "dist_km": 40,
-    "lloviendo": false,
-    "prec_mm": 0,
-    "temp_c": 19.3,
-    "cielo_despejado": false,
-    "eta_horas": 4.1
-  },
+  "que_se_acerca": null,
   "forecast_municipio": [
     {
       "fecha": "2026-08-01T00:00:00",
@@ -63,33 +53,6 @@
     }
   ],
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-08-02T05:00",
-      "temp": "18",
-      "sens_termica": "18",
-      "cielo": "Nubes altas",
-      "prob_precipitacion": "0",
-      "viento_dir": "S",
-      "viento_kmh": "6"
-    },
-    {
-      "fecha_hora": "2026-08-02T06:00",
-      "temp": "18",
-      "sens_termica": "18",
-      "cielo": "Nubes altas",
-      "prob_precipitacion": "0",
-      "viento_dir": "SO",
-      "viento_kmh": "5"
-    },
-    {
-      "fecha_hora": "2026-08-02T07:00",
-      "temp": "18",
-      "sens_termica": "18",
-      "cielo": "Poco nuboso",
-      "prob_precipitacion": "0",
-      "viento_dir": "S",
-      "viento_kmh": "6"
-    },
     {
       "fecha_hora": "2026-08-02T08:00",
       "temp": "18",
@@ -224,9 +187,36 @@
       "prob_precipitacion": "0",
       "viento_dir": "O",
       "viento_kmh": "8"
+    },
+    {
+      "fecha_hora": "2026-08-02T23:00",
+      "temp": "19",
+      "sens_termica": "19",
+      "cielo": "Nubes altas",
+      "prob_precipitacion": "0",
+      "viento_dir": "SO",
+      "viento_kmh": "5"
+    },
+    {
+      "fecha_hora": "2026-08-03T00:00",
+      "temp": "19",
+      "sens_termica": "19",
+      "cielo": "Muy nuboso",
+      "prob_precipitacion": null,
+      "viento_dir": "S",
+      "viento_kmh": "5"
+    },
+    {
+      "fecha_hora": "2026-08-03T01:00",
+      "temp": "19",
+      "sens_termica": "19",
+      "cielo": "Cubierto",
+      "prob_precipitacion": null,
+      "viento_dir": "S",
+      "viento_kmh": "5"
     }
   ],
-  "horaria_elaborado": "2026-08-01T21:05:10",
+  "horaria_elaborado": "2026-08-02T05:09:10",
   "horaria_es_respaldo": false,
   "avisos": [],
   "maritima": {
@@ -245,18 +235,18 @@
     "vigencia_fin": "2026-08-02T20:00:00"
   },
   "netatmo_own": {
-    "ts": 1785642414,
+    "ts": 1785652700,
     "presion_hpa": 1010.9,
     "presion_tendencia": "down",
     "exterior": {
-      "temp_c": 19.5,
+      "temp_c": 19.8,
       "humedad": 98,
-      "tendencia": "stable"
+      "tendencia": "up"
     },
     "viento": {
-      "kmh": 1,
-      "dir": 90,
-      "racha_kmh": 3
+      "kmh": 3,
+      "dir": 58,
+      "racha_kmh": 4
     },
     "lluvia": {
       "mm_1h": 0,
@@ -268,36 +258,36 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 20.4,
-      "humedad": 84
+      "temp_c": 20.3,
+      "humedad": 86
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
-      "temp_c": 19.6,
-      "humedad": 87
+      "temp_c": 19.9,
+      "humedad": 88
     },
     {
       "lat": 43.56,
       "lon": -6.27,
       "ciudad": "Cudillero",
-      "temp_c": 21.6,
-      "humedad": 72
+      "temp_c": 21.3,
+      "humedad": 74
     },
     {
       "lat": 43.33,
       "lon": -6.42,
       "ciudad": "Tineo",
-      "temp_c": 17.2,
+      "temp_c": 17,
       "humedad": 99
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 19.6,
-      "humedad": 87
+      "temp_c": 19.5,
+      "humedad": 88
     }
   ],
   "lugares": [
@@ -309,22 +299,13 @@
       "ficha_aemet": "Otur",
       "forecast_4d": [
         {
-          "fecha": "20260801",
-          "cielo": "muy nuboso",
-          "viento": "flojo",
-          "oleaje": "moderado",
-          "t_max": 24,
-          "t_agua": 21,
-          "uv_max": 8
-        },
-        {
           "fecha": "20260802",
           "cielo": "nuboso",
           "viento": "flojo",
           "oleaje": "moderado",
           "t_max": 24,
           "t_agua": 22,
-          "uv_max": 8
+          "uv_max": 7
         },
         {
           "fecha": "20260803",
@@ -345,7 +326,7 @@
           "uv_max": 8
         }
       ],
-      "forecast_4d_elaborado": "2026-08-01T23:50:18"
+      "forecast_4d_elaborado": "2026-08-02T05:50:18"
     },
     {
       "name": "Luarca (1ª, 2ª y 3ª playa)",
@@ -355,22 +336,13 @@
       "ficha_aemet": "Luarca",
       "forecast_4d": [
         {
-          "fecha": "20260801",
-          "cielo": "muy nuboso",
-          "viento": "flojo",
-          "oleaje": "moderado",
-          "t_max": 24,
-          "t_agua": 22,
-          "uv_max": 8
-        },
-        {
           "fecha": "20260802",
           "cielo": "nuboso",
           "viento": "flojo",
           "oleaje": "débil",
           "t_max": 25,
           "t_agua": 22,
-          "uv_max": 8
+          "uv_max": 7
         },
         {
           "fecha": "20260803",
@@ -391,7 +363,7 @@
           "uv_max": 8
         }
       ],
-      "forecast_4d_elaborado": "2026-08-01T23:50:18"
+      "forecast_4d_elaborado": "2026-08-02T05:50:18"
     },
     {
       "name": "Cueva",
@@ -502,5 +474,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-08-02T03:52:32.863997+00:00"
+  "generated_at": "2026-08-02T06:44:41.074244+00:00"
 }
