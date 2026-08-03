@@ -1,20 +1,20 @@
 {
   "real_time": {
-    "ts": "2026-08-03T20:00:00+0000",
-    "temp_c": 21.4,
-    "wind_kmh": 4.7,
-    "wind_dir": 154.0,
+    "ts": "2026-08-03T22:00:00+0000",
+    "temp_c": 21.2,
+    "wind_kmh": 9.4,
+    "wind_dir": 186.0,
     "gust_kmh": 12.2,
-    "pres_hpa": 1005.9,
-    "pres_tendencia": "estable",
-    "humedad": 82.0
+    "pres_hpa": 1006.6,
+    "pres_tendencia": "subiendo",
+    "humedad": 73.0
   },
   "recomendacion": {
-    "score": 75,
-    "etiqueta": "Buen día de playa — el cielo está despejado"
+    "score": 70,
+    "etiqueta": "Buen día de playa — la presión está subiendo"
   },
   "que_se_acerca": {
-    "sector": "SE",
+    "sector": "S",
     "disponible": false
   },
   "forecast_municipio": [
@@ -56,24 +56,6 @@
     }
   ],
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-08-03T23:00",
-      "temp": "21",
-      "sens_termica": "21",
-      "cielo": "Poco nuboso",
-      "prob_precipitacion": "10",
-      "viento_dir": "S",
-      "viento_kmh": "7"
-    },
-    {
-      "fecha_hora": "2026-08-04T00:00",
-      "temp": "20",
-      "sens_termica": "20",
-      "cielo": "Poco nuboso",
-      "prob_precipitacion": "80",
-      "viento_dir": "S",
-      "viento_kmh": "8"
-    },
     {
       "fecha_hora": "2026-08-04T01:00",
       "temp": "20",
@@ -217,6 +199,24 @@
       "prob_precipitacion": "85",
       "viento_dir": "N",
       "viento_kmh": "8"
+    },
+    {
+      "fecha_hora": "2026-08-04T17:00",
+      "temp": "23",
+      "sens_termica": "23",
+      "cielo": "Nuboso",
+      "prob_precipitacion": "85",
+      "viento_dir": "N",
+      "viento_kmh": "7"
+    },
+    {
+      "fecha_hora": "2026-08-04T18:00",
+      "temp": "22",
+      "sens_termica": "22",
+      "cielo": "Cubierto con lluvia escasa",
+      "prob_precipitacion": "85",
+      "viento_dir": "N",
+      "viento_kmh": "10"
     }
   ],
   "horaria_elaborado": "2026-08-03T20:57:10",
@@ -423,5 +423,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-08-03T21:21:32.349999+00:00"
+  "generated_at": "2026-08-03T23:18:36.084345+00:00"
 }
