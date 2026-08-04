@@ -1,58 +1,68 @@
 {
   "real_time": {
-    "ts": "2026-08-04T15:00:00+0000",
-    "temp_c": 21.3,
-    "wind_kmh": 11.5,
-    "wind_dir": 260.0,
-    "gust_kmh": 18.4,
-    "pres_hpa": 1011.1,
+    "ts": "2026-08-04T17:00:00+0000",
+    "temp_c": 21.2,
+    "wind_kmh": 4.3,
+    "wind_dir": 227.0,
+    "gust_kmh": 8.6,
+    "pres_hpa": 1011.9,
     "pres_tendencia": "subiendo",
-    "humedad": 83.0
+    "humedad": 81.0
   },
   "recomendacion": {
     "score": 75,
     "etiqueta": "Buen día de playa — la presión está subiendo"
   },
   "que_se_acerca": {
-    "sector": "W",
+    "sector": "SW",
     "disponible": true,
-    "nombre": "Ribadeo",
-    "dist_km": 44,
+    "nombre": "Lugo",
+    "dist_km": 89,
     "lloviendo": false,
     "prec_mm": 0,
-    "temp_c": 22.2,
-    "cielo_despejado": false,
-    "eta_horas": 3.8
+    "temp_c": 26.6,
+    "cielo_despejado": true,
+    "eta_horas": 20.7
   },
-  "forecast_municipio": null,
-  "forecast_horaria": [
+  "forecast_municipio": [
     {
-      "fecha_hora": "2026-08-04T17:00",
-      "temp": "22",
-      "sens_termica": "22",
-      "cielo": "Cubierto",
-      "prob_precipitacion": "95",
-      "viento_dir": "N",
-      "viento_kmh": "7"
-    },
-    {
-      "fecha_hora": "2026-08-04T18:00",
-      "temp": "22",
-      "sens_termica": "22",
+      "fecha": "2026-08-04T00:00:00",
       "cielo": "Cubierto con lluvia escasa",
-      "prob_precipitacion": "95",
-      "viento_dir": "N",
-      "viento_kmh": "7"
+      "viento_dir": "C",
+      "viento_kmh": 0,
+      "t_max": 26,
+      "t_min": 18,
+      "prob_precipitacion": 100
     },
     {
-      "fecha_hora": "2026-08-04T19:00",
-      "temp": "21",
-      "sens_termica": "21",
-      "cielo": "Cubierto",
-      "prob_precipitacion": "95",
-      "viento_dir": "NO",
-      "viento_kmh": "8"
+      "fecha": "2026-08-05T00:00:00",
+      "cielo": "Cubierto con lluvia escasa",
+      "viento_dir": "N",
+      "viento_kmh": 10,
+      "t_max": 23,
+      "t_min": 18,
+      "prob_precipitacion": 100
     },
+    {
+      "fecha": "2026-08-06T00:00:00",
+      "cielo": "Cubierto con lluvia",
+      "viento_dir": "E",
+      "viento_kmh": 20,
+      "t_max": 23,
+      "t_min": 19,
+      "prob_precipitacion": 100
+    },
+    {
+      "fecha": "2026-08-07T00:00:00",
+      "cielo": "Intervalos nubosos",
+      "viento_dir": "NE",
+      "viento_kmh": 20,
+      "t_max": 25,
+      "t_min": 18,
+      "prob_precipitacion": 25
+    }
+  ],
+  "forecast_horaria": [
     {
       "fecha_hora": "2026-08-04T20:00",
       "temp": "21",
@@ -160,10 +170,64 @@
       "prob_precipitacion": "65",
       "viento_dir": "S",
       "viento_kmh": "3"
+    },
+    {
+      "fecha_hora": "2026-08-05T08:00",
+      "temp": "18",
+      "sens_termica": "18",
+      "cielo": "Cubierto con lluvia escasa",
+      "prob_precipitacion": "60",
+      "viento_dir": "S",
+      "viento_kmh": "4"
+    },
+    {
+      "fecha_hora": "2026-08-05T09:00",
+      "temp": "19",
+      "sens_termica": "19",
+      "cielo": "Cubierto con lluvia escasa",
+      "prob_precipitacion": "60",
+      "viento_dir": "S",
+      "viento_kmh": "2"
+    },
+    {
+      "fecha_hora": "2026-08-05T10:00",
+      "temp": "19",
+      "sens_termica": "19",
+      "cielo": "Cubierto con lluvia escasa",
+      "prob_precipitacion": "60",
+      "viento_dir": "NO",
+      "viento_kmh": "4"
+    },
+    {
+      "fecha_hora": "2026-08-05T11:00",
+      "temp": "20",
+      "sens_termica": "20",
+      "cielo": "Cubierto con lluvia escasa",
+      "prob_precipitacion": "60",
+      "viento_dir": "N",
+      "viento_kmh": "8"
+    },
+    {
+      "fecha_hora": "2026-08-05T12:00",
+      "temp": "20",
+      "sens_termica": "20",
+      "cielo": "Cubierto con lluvia escasa",
+      "prob_precipitacion": "60",
+      "viento_dir": "N",
+      "viento_kmh": "8"
+    },
+    {
+      "fecha_hora": "2026-08-05T13:00",
+      "temp": "21",
+      "sens_termica": "21",
+      "cielo": "Cubierto con lluvia escasa",
+      "prob_precipitacion": "60",
+      "viento_dir": "N",
+      "viento_kmh": "7"
     }
   ],
-  "horaria_elaborado": "2026-08-04T12:01:11",
-  "horaria_es_respaldo": true,
+  "horaria_elaborado": "2026-08-04T16:05:11",
+  "horaria_es_respaldo": false,
   "avisos": [],
   "maritima": {
     "texto": "Variable 1 a 3 y localmente W 3 a 5 en extremo oeste, desde la noche tendiendo todo a W 3 o 4. Marejadilla o marejada. Áreas de regular",
@@ -181,21 +245,21 @@
     "vigencia_fin": "2026-08-05T12:00:00"
   },
   "netatmo_own": {
-    "ts": 1785857201,
-    "presion_hpa": 1017,
+    "ts": 1785866276,
+    "presion_hpa": 1017.8,
     "presion_tendencia": "up",
     "exterior": {
-      "temp_c": 21.7,
+      "temp_c": 21.1,
       "humedad": 91,
       "tendencia": "down"
     },
     "viento": {
       "kmh": 1,
-      "dir": 45,
+      "dir": 90,
       "racha_kmh": 4
     },
     "lluvia": {
-      "mm_1h": 0.202,
+      "mm_1h": 0,
       "mm_24h": 0.2
     }
   },
@@ -204,43 +268,43 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 23.6,
-      "humedad": 75
+      "temp_c": 22.5,
+      "humedad": 76
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
-      "temp_c": 26,
-      "humedad": 72
+      "temp_c": 23.6,
+      "humedad": 74
     },
     {
-      "lat": 43.57,
-      "lon": -6.21,
+      "lat": 43.56,
+      "lon": -6.27,
       "ciudad": "Cudillero",
-      "temp_c": 24.8,
-      "humedad": 74
+      "temp_c": 23,
+      "humedad": 65
     },
     {
       "lat": 43.33,
       "lon": -6.42,
       "ciudad": "Tineo",
-      "temp_c": 23.3,
-      "humedad": 77
+      "temp_c": 19.2,
+      "humedad": 87
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 26.5,
-      "humedad": 65
+      "temp_c": 23.9,
+      "humedad": 69
     },
     {
       "lat": 43.43,
       "lon": -6.76,
       "ciudad": "Boal",
-      "temp_c": 24.8,
-      "humedad": 79
+      "temp_c": 22.8,
+      "humedad": 78
     }
   ],
   "lugares": [
@@ -427,5 +491,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-08-04T15:34:59.418171+00:00"
+  "generated_at": "2026-08-04T18:02:43.890668+00:00"
 }
