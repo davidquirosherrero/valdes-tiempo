@@ -1,21 +1,28 @@
 {
   "real_time": {
-    "ts": "2026-08-05T14:00:00+0000",
-    "temp_c": 22.7,
-    "wind_kmh": 5.4,
-    "wind_dir": 296.0,
-    "gust_kmh": 10.8,
-    "pres_hpa": 1015.0,
+    "ts": "2026-08-05T17:00:00+0000",
+    "temp_c": 20.8,
+    "wind_kmh": 10.4,
+    "wind_dir": 74.0,
+    "gust_kmh": 20.5,
+    "pres_hpa": 1014.9,
     "pres_tendencia": "estable",
-    "humedad": 77.0
+    "humedad": 78.0
   },
   "recomendacion": {
     "score": 55,
     "etiqueta": "Cielo muy nuboso"
   },
   "que_se_acerca": {
-    "sector": "NW",
-    "disponible": false
+    "sector": "E",
+    "disponible": true,
+    "nombre": "Avilés",
+    "dist_km": 40,
+    "lloviendo": false,
+    "prec_mm": 0,
+    "temp_c": 21.1,
+    "cielo_despejado": true,
+    "eta_horas": 3.8
   },
   "forecast_municipio": [
     {
@@ -56,24 +63,6 @@
     }
   ],
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-08-05T17:00",
-      "temp": "21",
-      "sens_termica": "21",
-      "cielo": "Cubierto",
-      "prob_precipitacion": "90",
-      "viento_dir": "NE",
-      "viento_kmh": "10"
-    },
-    {
-      "fecha_hora": "2026-08-05T18:00",
-      "temp": "21",
-      "sens_termica": "21",
-      "cielo": "Cubierto",
-      "prob_precipitacion": "90",
-      "viento_dir": "NE",
-      "viento_kmh": "10"
-    },
     {
       "fecha_hora": "2026-08-05T19:00",
       "temp": "22",
@@ -217,39 +206,57 @@
       "prob_precipitacion": "100",
       "viento_dir": "E",
       "viento_kmh": "7"
+    },
+    {
+      "fecha_hora": "2026-08-06T11:00",
+      "temp": "21",
+      "sens_termica": "21",
+      "cielo": "Cubierto con lluvia escasa",
+      "prob_precipitacion": "100",
+      "viento_dir": "E",
+      "viento_kmh": "18"
+    },
+    {
+      "fecha_hora": "2026-08-06T12:00",
+      "temp": "21",
+      "sens_termica": "21",
+      "cielo": "Cubierto con lluvia escasa",
+      "prob_precipitacion": "100",
+      "viento_dir": "E",
+      "viento_kmh": "18"
     }
   ],
-  "horaria_elaborado": "2026-08-05T15:03:10",
+  "horaria_elaborado": "2026-08-05T16:27:09",
   "horaria_es_respaldo": false,
   "avisos": [],
   "maritima": {
-    "texto": "Variable, principalmente N o NE 2 o 3 arreciando a E o NE 3 o 4 a partir de la madrugada y a 4 o 5 al final. Rizada aumentando a marejadilla a partir de la madrugada y a marejada al final. Mar de fondo del NW en torno a 1 m. Lluvia ocasional a partir de la madrugada.",
+    "texto": "Variable, principalmente N o NE 2 o 3 arreciando a E o NE 3 o 4 a partir de la madrugada y a 4 o 5 a partir de la mañana. Rizada aumentando a marejadilla a partir de la madrugada y gradualmente a marejada a partir de la mañana. Mar de fondo del NW en torno a 1 m. Lluvia ocasional a partir de la madrugada.",
     "segmentos": [
       {
         "zona": null,
-        "texto": "Variable, principalmente N o NE 2 o 3 arreciando a E o NE 3 o 4 a partir de la madrugada y a 4 o 5 al final. Rizada aumentando a marejadilla a partir de la madrugada y a marejada al final. Mar de fondo del NW en torno a 1 m. Lluvia ocasional a partir de la madrugada.",
+        "texto": "Variable, principalmente N o NE 2 o 3 arreciando a E o NE 3 o 4 a partir de la madrugada y a 4 o 5 a partir de la mañana. Rizada aumentando a marejadilla a partir de la madrugada y gradualmente a marejada a partir de la mañana. Mar de fondo del NW en torno a 1 m. Lluvia ocasional a partir de la madrugada.",
         "direccion": null,
         "fuerza": null,
         "estado_mar": null
       }
     ],
     "avisos_texto": "No hay avisos.",
-    "vigencia_inicio": "2026-08-05T12:00:00",
-    "vigencia_fin": "2026-08-06T12:00:00"
+    "vigencia_inicio": "2026-08-05T20:00:00",
+    "vigencia_fin": "2026-08-06T20:00:00"
   },
   "netatmo_own": {
-    "ts": 1785943104,
-    "presion_hpa": 1020.6,
+    "ts": 1785952180,
+    "presion_hpa": 1020.5,
     "presion_tendencia": "stable",
     "exterior": {
-      "temp_c": 23.3,
+      "temp_c": 21.5,
       "humedad": 85,
       "tendencia": "stable"
     },
     "viento": {
-      "kmh": 5,
-      "dir": 61,
-      "racha_kmh": 11
+      "kmh": 4,
+      "dir": 71,
+      "racha_kmh": 8
     },
     "lluvia": {
       "mm_1h": 0,
@@ -261,43 +268,43 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 21.9,
-      "humedad": 79
+      "temp_c": 21.8,
+      "humedad": 77
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
-      "temp_c": 24.2,
+      "temp_c": 23,
       "humedad": 71
     },
     {
       "lat": 43.56,
       "lon": -6.27,
       "ciudad": "Cudillero",
-      "temp_c": 24,
-      "humedad": 65
+      "temp_c": 23.5,
+      "humedad": 61
     },
     {
       "lat": 43.24,
       "lon": -6.56,
       "ciudad": "Allande",
-      "temp_c": 19.5,
-      "humedad": 77
+      "temp_c": 17.4,
+      "humedad": 83
     },
     {
       "lat": 43.4,
       "lon": -6.54,
       "ciudad": "Tineo",
-      "temp_c": 22.6,
-      "humedad": 70
+      "temp_c": 21.8,
+      "humedad": 74
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 21.4,
-      "humedad": 74
+      "temp_c": 20.6,
+      "humedad": 80
     }
   ],
   "lugares": [
@@ -484,5 +491,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-08-05T15:26:25.727672+00:00"
+  "generated_at": "2026-08-05T17:53:18.194141+00:00"
 }
