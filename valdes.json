@@ -1,17 +1,17 @@
 {
   "real_time": {
-    "ts": "2026-08-05T09:00:00+0000",
-    "temp_c": 21.3,
-    "wind_kmh": 6.5,
-    "wind_dir": 305.0,
-    "gust_kmh": 8.3,
-    "pres_hpa": 1014.3,
+    "ts": "2026-08-05T11:00:00+0000",
+    "temp_c": 21.9,
+    "wind_kmh": 8.3,
+    "wind_dir": 310.0,
+    "gust_kmh": 11.2,
+    "pres_hpa": 1014.8,
     "pres_tendencia": "estable",
-    "humedad": 78.0
+    "humedad": 79.0
   },
   "recomendacion": {
-    "score": 55,
-    "etiqueta": "Cielo muy nuboso"
+    "score": 40,
+    "etiqueta": "Lluvia en las próximas horas"
   },
   "que_se_acerca": {
     "sector": "NW",
@@ -56,33 +56,6 @@
     }
   ],
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-08-05T11:00",
-      "temp": "20",
-      "sens_termica": "20",
-      "cielo": "Cubierto",
-      "prob_precipitacion": "75",
-      "viento_dir": "N",
-      "viento_kmh": "4"
-    },
-    {
-      "fecha_hora": "2026-08-05T12:00",
-      "temp": "21",
-      "sens_termica": "21",
-      "cielo": "Cubierto",
-      "prob_precipitacion": "75",
-      "viento_dir": "N",
-      "viento_kmh": "7"
-    },
-    {
-      "fecha_hora": "2026-08-05T13:00",
-      "temp": "21",
-      "sens_termica": "21",
-      "cielo": "Cubierto con lluvia escasa",
-      "prob_precipitacion": "75",
-      "viento_dir": "N",
-      "viento_kmh": "8"
-    },
     {
       "fecha_hora": "2026-08-05T14:00",
       "temp": "21",
@@ -217,9 +190,36 @@
       "prob_precipitacion": "55",
       "viento_dir": "E",
       "viento_kmh": "10"
+    },
+    {
+      "fecha_hora": "2026-08-06T05:00",
+      "temp": "20",
+      "sens_termica": "20",
+      "cielo": "Cubierto",
+      "prob_precipitacion": "55",
+      "viento_dir": "E",
+      "viento_kmh": "10"
+    },
+    {
+      "fecha_hora": "2026-08-06T06:00",
+      "temp": "20",
+      "sens_termica": "20",
+      "cielo": "Muy nuboso con lluvia escasa",
+      "prob_precipitacion": "55",
+      "viento_dir": "E",
+      "viento_kmh": "7"
+    },
+    {
+      "fecha_hora": "2026-08-06T07:00",
+      "temp": "20",
+      "sens_termica": "20",
+      "cielo": "Poco nuboso",
+      "prob_precipitacion": "55",
+      "viento_dir": "SE",
+      "viento_kmh": "3"
     }
   ],
-  "horaria_elaborado": "2026-08-05T09:05:10",
+  "horaria_elaborado": "2026-08-05T12:01:11",
   "horaria_es_respaldo": false,
   "avisos": [],
   "maritima": {
@@ -238,18 +238,18 @@
     "vigencia_fin": "2026-08-06T12:00:00"
   },
   "netatmo_own": {
-    "ts": 1785923140,
-    "presion_hpa": 1020.2,
+    "ts": 1785931608,
+    "presion_hpa": 1020.6,
     "presion_tendencia": "stable",
     "exterior": {
-      "temp_c": 22.5,
-      "humedad": 88,
+      "temp_c": 24.2,
+      "humedad": 81,
       "tendencia": "up"
     },
     "viento": {
-      "kmh": 3,
-      "dir": 38,
-      "racha_kmh": 7
+      "kmh": 4,
+      "dir": 45,
+      "racha_kmh": 8
     },
     "lluvia": {
       "mm_1h": 0,
@@ -261,43 +261,43 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 21.1,
-      "humedad": 81
+      "temp_c": 21.7,
+      "humedad": 79
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
-      "temp_c": 23.9,
-      "humedad": 73
+      "temp_c": 24.2,
+      "humedad": 70
     },
     {
       "lat": 43.56,
       "lon": -6.27,
       "ciudad": "Cudillero",
-      "temp_c": 22.2,
+      "temp_c": 23.1,
       "humedad": 68
     },
     {
       "lat": 43.33,
       "lon": -6.42,
       "ciudad": "Tineo",
-      "temp_c": 17.6,
-      "humedad": 96
+      "temp_c": 19.6,
+      "humedad": 86
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 20.8,
-      "humedad": 77
+      "temp_c": 22.7,
+      "humedad": 69
     },
     {
       "lat": 43.43,
       "lon": -6.76,
       "ciudad": "Boal",
-      "temp_c": 23.4,
-      "humedad": 72
+      "temp_c": 24.1,
+      "humedad": 70
     }
   ],
   "lugares": [
@@ -484,5 +484,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-08-05T09:48:09.995364+00:00"
+  "generated_at": "2026-08-05T12:15:33.828378+00:00"
 }
