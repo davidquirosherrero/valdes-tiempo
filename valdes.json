@@ -1,13 +1,13 @@
 {
   "real_time": {
-    "ts": "2026-08-07T07:00:00+0000",
-    "temp_c": 19.6,
-    "wind_kmh": 13.3,
-    "wind_dir": 93.0,
-    "gust_kmh": 26.6,
-    "pres_hpa": 1011.9,
+    "ts": "2026-08-07T08:00:00+0000",
+    "temp_c": 19.3,
+    "wind_kmh": 13.0,
+    "wind_dir": 78.0,
+    "gust_kmh": 25.6,
+    "pres_hpa": 1012.3,
     "pres_tendencia": "estable",
-    "humedad": 81.0
+    "humedad": 84.0
   },
   "recomendacion": {
     "score": 55,
@@ -20,30 +20,12 @@
     "dist_km": 40,
     "lloviendo": false,
     "prec_mm": 0,
-    "temp_c": 19.3,
+    "temp_c": 21.3,
     "cielo_despejado": true,
-    "eta_horas": 3.0
+    "eta_horas": 3.1
   },
   "forecast_municipio": null,
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-08-07T09:00",
-      "temp": "20",
-      "sens_termica": "20",
-      "cielo": "Poco nuboso",
-      "prob_precipitacion": "0",
-      "viento_dir": "S",
-      "viento_kmh": "5"
-    },
-    {
-      "fecha_hora": "2026-08-07T10:00",
-      "temp": "21",
-      "sens_termica": "21",
-      "cielo": "Poco nuboso",
-      "prob_precipitacion": "0",
-      "viento_dir": "E",
-      "viento_kmh": "9"
-    },
     {
       "fecha_hora": "2026-08-07T11:00",
       "temp": "22",
@@ -190,7 +172,7 @@
     }
   ],
   "horaria_elaborado": "2026-08-07T07:09:11",
-  "horaria_es_respaldo": false,
+  "horaria_es_respaldo": true,
   "avisos": [],
   "maritima": {
     "texto": "E o NE 4 o 5, amainando a 3 o 4 a partir de la mañana. Marejada, disminuyendo a marejadilla, desde el este, a partir de la mañana.",
@@ -208,18 +190,18 @@
     "vigencia_fin": "2026-08-07T20:00:00"
   },
   "netatmo_own": {
-    "ts": 1786088036,
-    "presion_hpa": 1017.7,
+    "ts": 1786093984,
+    "presion_hpa": 1018,
     "presion_tendencia": "down",
     "exterior": {
-      "temp_c": 21.2,
-      "humedad": 93,
+      "temp_c": 22.5,
+      "humedad": 87,
       "tendencia": "up"
     },
     "viento": {
-      "kmh": 4,
-      "dir": 81,
-      "racha_kmh": 11
+      "kmh": 3,
+      "dir": 51,
+      "racha_kmh": 7
     },
     "lluvia": {
       "mm_1h": 0,
@@ -231,50 +213,50 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 20.3,
+      "temp_c": 21.5,
       "humedad": 83
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
-      "temp_c": 21.8,
+      "temp_c": 22.1,
       "humedad": 79
     },
     {
       "lat": 43.56,
       "lon": -6.27,
       "ciudad": "Cudillero",
-      "temp_c": 21.2,
+      "temp_c": 22,
       "humedad": 69
     },
     {
       "lat": 43.24,
       "lon": -6.56,
       "ciudad": "Allande",
-      "temp_c": 19.3,
-      "humedad": 89
+      "temp_c": 21.6,
+      "humedad": 87
     },
     {
       "lat": 43.4,
       "lon": -6.54,
       "ciudad": "Tineo",
-      "temp_c": 21.2,
-      "humedad": 79
+      "temp_c": 23.5,
+      "humedad": 73
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 19.5,
-      "humedad": 84
+      "temp_c": 20.8,
+      "humedad": 81
     },
     {
       "lat": 43.43,
       "lon": -6.76,
       "ciudad": "Boal",
-      "temp_c": 21.4,
-      "humedad": 83
+      "temp_c": 22.3,
+      "humedad": 81
     }
   ],
   "lugares": [
@@ -299,7 +281,7 @@
           "cielo": "despejado",
           "viento": "flojo",
           "oleaje": "moderado",
-          "t_max": 25,
+          "t_max": 26,
           "t_agua": 22,
           "uv_max": 7
         },
@@ -313,7 +295,7 @@
           "uv_max": 6
         }
       ],
-      "forecast_4d_elaborado": "2026-08-07T05:50:18"
+      "forecast_4d_elaborado": "2026-08-07T09:00:19"
     },
     {
       "name": "Luarca (1ª, 2ª y 3ª playa)",
@@ -336,7 +318,7 @@
           "cielo": "despejado",
           "viento": "flojo",
           "oleaje": "débil",
-          "t_max": 25,
+          "t_max": 26,
           "t_agua": 22,
           "uv_max": 7
         },
@@ -350,7 +332,7 @@
           "uv_max": 6
         }
       ],
-      "forecast_4d_elaborado": "2026-08-07T05:50:18"
+      "forecast_4d_elaborado": "2026-08-07T09:00:19"
     },
     {
       "name": "Cueva",
@@ -461,5 +443,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-08-07T07:40:06.413253+00:00"
+  "generated_at": "2026-08-07T09:14:54.262759+00:00"
 }
