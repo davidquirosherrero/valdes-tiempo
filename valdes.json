@@ -1,28 +1,21 @@
 {
   "real_time": {
-    "ts": "2026-08-08T01:00:00+0000",
-    "temp_c": 19.3,
-    "wind_kmh": 9.0,
-    "wind_dir": 244.0,
-    "gust_kmh": 14.0,
-    "pres_hpa": 1010.4,
-    "pres_tendencia": "estable",
-    "humedad": 89.0
+    "ts": "2026-08-08T03:00:00+0000",
+    "temp_c": 17.9,
+    "wind_kmh": 9.7,
+    "wind_dir": 148.0,
+    "gust_kmh": 13.7,
+    "pres_hpa": 1009.6,
+    "pres_tendencia": "bajando",
+    "humedad": 87.0
   },
   "recomendacion": {
     "score": 75,
     "etiqueta": "Buen día de playa — el cielo está despejado"
   },
   "que_se_acerca": {
-    "sector": "SW",
-    "disponible": true,
-    "nombre": "Lugo",
-    "dist_km": 89,
-    "lloviendo": false,
-    "prec_mm": 0,
-    "temp_c": 15.8,
-    "cielo_despejado": false,
-    "eta_horas": 9.9
+    "sector": "SE",
+    "disponible": false
   },
   "forecast_municipio": [
     {
@@ -63,24 +56,6 @@
     }
   ],
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-08-08T04:00",
-      "temp": "18",
-      "sens_termica": "18",
-      "cielo": "Despejado",
-      "prob_precipitacion": "5",
-      "viento_dir": "S",
-      "viento_kmh": "5"
-    },
-    {
-      "fecha_hora": "2026-08-08T05:00",
-      "temp": "18",
-      "sens_termica": "18",
-      "cielo": "Poco nuboso",
-      "prob_precipitacion": "5",
-      "viento_dir": "S",
-      "viento_kmh": "3"
-    },
     {
       "fecha_hora": "2026-08-08T06:00",
       "temp": "17",
@@ -224,6 +199,24 @@
       "prob_precipitacion": "0",
       "viento_dir": "S",
       "viento_kmh": "4"
+    },
+    {
+      "fecha_hora": "2026-08-08T22:00",
+      "temp": "21",
+      "sens_termica": "21",
+      "cielo": "Despejado",
+      "prob_precipitacion": "0",
+      "viento_dir": "S",
+      "viento_kmh": "8"
+    },
+    {
+      "fecha_hora": "2026-08-08T23:00",
+      "temp": "20",
+      "sens_termica": "20",
+      "cielo": "Despejado",
+      "prob_precipitacion": "0",
+      "viento_dir": "SO",
+      "viento_kmh": "6"
     }
   ],
   "horaria_elaborado": "2026-08-07T20:59:09",
@@ -245,8 +238,8 @@
     "vigencia_fin": "2026-08-08T20:00:00"
   },
   "netatmo_own": {
-    "ts": 1786155466,
-    "presion_hpa": 1015.7,
+    "ts": 1786162725,
+    "presion_hpa": 1014.7,
     "presion_tendencia": "stable",
     "exterior": {
       "temp_c": 16.9,
@@ -466,5 +459,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-08-08T02:20:42.286541+00:00"
+  "generated_at": "2026-08-08T04:20:32.563196+00:00"
 }
