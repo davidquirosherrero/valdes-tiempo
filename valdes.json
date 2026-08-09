@@ -1,16 +1,16 @@
 {
   "real_time": {
-    "ts": "2026-08-09T04:00:00+0000",
-    "temp_c": 20.1,
-    "wind_kmh": 14.4,
-    "wind_dir": 247.0,
-    "gust_kmh": 21.2,
-    "pres_hpa": 1007.0,
+    "ts": "2026-08-09T05:00:00+0000",
+    "temp_c": 19.7,
+    "wind_kmh": 11.5,
+    "wind_dir": 227.0,
+    "gust_kmh": 19.4,
+    "pres_hpa": 1006.9,
     "pres_tendencia": "estable",
-    "humedad": 90.0
+    "humedad": 87.0
   },
   "recomendacion": {
-    "score": 60,
+    "score": 40,
     "etiqueta": "Aviso amarillo activo"
   },
   "que_se_acerca": {
@@ -20,21 +20,49 @@
     "dist_km": 89,
     "lloviendo": false,
     "prec_mm": 0,
-    "temp_c": 15.4,
+    "temp_c": 15.1,
     "cielo_despejado": false,
-    "eta_horas": 6.2
+    "eta_horas": 7.7
   },
-  "forecast_municipio": null,
-  "forecast_horaria": [
+  "forecast_municipio": [
     {
-      "fecha_hora": "2026-08-09T06:00",
-      "temp": "19",
-      "sens_termica": "19",
-      "cielo": "Despejado",
-      "prob_precipitacion": "10",
+      "fecha": "2026-08-08T00:00:00",
+      "cielo": "Poco nuboso",
       "viento_dir": "S",
-      "viento_kmh": "7"
+      "viento_kmh": 5,
+      "t_max": 27,
+      "t_min": 17,
+      "prob_precipitacion": 5
     },
+    {
+      "fecha": "2026-08-09T00:00:00",
+      "cielo": "Muy nuboso con lluvia escasa",
+      "viento_dir": "NO",
+      "viento_kmh": 10,
+      "t_max": 24,
+      "t_min": 18,
+      "prob_precipitacion": 100
+    },
+    {
+      "fecha": "2026-08-10T00:00:00",
+      "cielo": "Poco nuboso",
+      "viento_dir": "N",
+      "viento_kmh": 10,
+      "t_max": 26,
+      "t_min": 17,
+      "prob_precipitacion": null
+    },
+    {
+      "fecha": "2026-08-11T00:00:00",
+      "cielo": "Poco nuboso",
+      "viento_dir": "N",
+      "viento_kmh": 10,
+      "t_max": 26,
+      "t_min": 17,
+      "prob_precipitacion": null
+    }
+  ],
+  "forecast_horaria": [
     {
       "fecha_hora": "2026-08-09T07:00",
       "temp": "19",
@@ -169,10 +197,37 @@
       "prob_precipitacion": "0",
       "viento_dir": "NO",
       "viento_kmh": "6"
+    },
+    {
+      "fecha_hora": "2026-08-09T22:00",
+      "temp": "20",
+      "sens_termica": "20",
+      "cielo": "Despejado",
+      "prob_precipitacion": "0",
+      "viento_dir": "O",
+      "viento_kmh": "2"
+    },
+    {
+      "fecha_hora": "2026-08-09T23:00",
+      "temp": "20",
+      "sens_termica": "20",
+      "cielo": "Despejado",
+      "prob_precipitacion": "0",
+      "viento_dir": "S",
+      "viento_kmh": "6"
+    },
+    {
+      "fecha_hora": "2026-08-10T00:00",
+      "temp": "19",
+      "sens_termica": "19",
+      "cielo": "Poco nuboso",
+      "prob_precipitacion": null,
+      "viento_dir": "S",
+      "viento_kmh": "7"
     }
   ],
-  "horaria_elaborado": "2026-08-08T20:59:09",
-  "horaria_es_respaldo": true,
+  "horaria_elaborado": "2026-08-09T05:37:25",
+  "horaria_es_respaldo": false,
   "avisos": [
     {
       "evento": "Aviso de tormentas de nivel amarillo",
@@ -197,11 +252,11 @@
     "vigencia_fin": "2026-08-09T20:00:00"
   },
   "netatmo_own": {
-    "ts": 1786249655,
-    "presion_hpa": 1012.7,
+    "ts": 1786254493,
+    "presion_hpa": 1013,
     "presion_tendencia": "stable",
     "exterior": {
-      "temp_c": 16.7,
+      "temp_c": 17.2,
       "humedad": 100,
       "tendencia": "stable"
     },
@@ -220,14 +275,14 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 18.2,
+      "temp_c": 17.8,
       "humedad": 87
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
-      "temp_c": 19.5,
+      "temp_c": 19,
       "humedad": 87
     },
     {
@@ -235,35 +290,35 @@
       "lon": -6.27,
       "ciudad": "Cudillero",
       "temp_c": 21.1,
-      "humedad": 76
+      "humedad": 75
     },
     {
       "lat": 43.24,
       "lon": -6.56,
       "ciudad": "Allande",
-      "temp_c": 16.4,
-      "humedad": 83
+      "temp_c": 16.8,
+      "humedad": 84
     },
     {
       "lat": 43.4,
       "lon": -6.54,
       "ciudad": "Tineo",
-      "temp_c": 18.9,
+      "temp_c": 18.7,
       "humedad": 79
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 18.1,
+      "temp_c": 17.6,
       "humedad": 85
     },
     {
       "lat": 43.43,
       "lon": -6.76,
       "ciudad": "Boal",
-      "temp_c": 19.1,
-      "humedad": 84
+      "temp_c": 19.3,
+      "humedad": 85
     }
   ],
   "lugares": [
@@ -275,22 +330,13 @@
       "ficha_aemet": "Otur",
       "forecast_4d": [
         {
-          "fecha": "20260808",
-          "cielo": "despejado",
-          "viento": "flojo",
-          "oleaje": "moderado",
-          "t_max": 27,
-          "t_agua": 21,
-          "uv_max": 7
-        },
-        {
           "fecha": "20260809",
           "cielo": "chubascos",
           "viento": "flojo",
           "oleaje": "débil",
           "t_max": 24,
           "t_agua": 23,
-          "uv_max": 7
+          "uv_max": 6
         },
         {
           "fecha": "20260810",
@@ -311,7 +357,7 @@
           "uv_max": 7
         }
       ],
-      "forecast_4d_elaborado": "2026-08-09T00:00:21"
+      "forecast_4d_elaborado": "2026-08-09T05:50:18"
     },
     {
       "name": "Luarca (1ª, 2ª y 3ª playa)",
@@ -321,22 +367,13 @@
       "ficha_aemet": "Luarca",
       "forecast_4d": [
         {
-          "fecha": "20260808",
-          "cielo": "despejado",
-          "viento": "flojo",
-          "oleaje": "débil",
-          "t_max": 27,
-          "t_agua": 22,
-          "uv_max": 7
-        },
-        {
           "fecha": "20260809",
           "cielo": "chubascos",
           "viento": "flojo",
           "oleaje": "débil",
           "t_max": 24,
           "t_agua": 22,
-          "uv_max": 7
+          "uv_max": 6
         },
         {
           "fecha": "20260810",
@@ -357,7 +394,7 @@
           "uv_max": 7
         }
       ],
-      "forecast_4d_elaborado": "2026-08-09T00:00:21"
+      "forecast_4d_elaborado": "2026-08-09T05:50:18"
     },
     {
       "name": "Cueva",
@@ -468,5 +505,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-08-09T04:36:02.001449+00:00"
+  "generated_at": "2026-08-09T05:57:26.254517+00:00"
 }
