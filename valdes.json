@@ -1,21 +1,28 @@
 {
   "real_time": {
-    "ts": "2026-08-09T15:00:00+0000",
-    "temp_c": 24.1,
-    "wind_kmh": 5.4,
-    "wind_dir": 294.0,
-    "gust_kmh": 10.8,
-    "pres_hpa": 1009.9,
+    "ts": "2026-08-09T16:00:00+0000",
+    "temp_c": 22.5,
+    "wind_kmh": 3.6,
+    "wind_dir": 33.0,
+    "gust_kmh": 10.4,
+    "pres_hpa": 1009.8,
     "pres_tendencia": "estable",
-    "humedad": 72.0
+    "humedad": 77.0
   },
   "recomendacion": {
     "score": 85,
     "etiqueta": "Buen día de playa — la presión está subiendo"
   },
   "que_se_acerca": {
-    "sector": "NW",
-    "disponible": false
+    "sector": "NE",
+    "disponible": true,
+    "nombre": "Cabo Peñas",
+    "dist_km": 57,
+    "lloviendo": false,
+    "prec_mm": 0,
+    "temp_c": 22.3,
+    "cielo_despejado": false,
+    "eta_horas": 15.8
   },
   "forecast_municipio": [
     {
@@ -56,15 +63,6 @@
     }
   ],
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-08-09T17:00",
-      "temp": "23",
-      "sens_termica": "23",
-      "cielo": "Poco nuboso",
-      "prob_precipitacion": "100",
-      "viento_dir": "N",
-      "viento_kmh": "9"
-    },
     {
       "fecha_hora": "2026-08-09T18:00",
       "temp": "22",
@@ -208,10 +206,28 @@
       "prob_precipitacion": "0",
       "viento_dir": "S",
       "viento_kmh": "6"
+    },
+    {
+      "fecha_hora": "2026-08-10T10:00",
+      "temp": "21",
+      "sens_termica": "21",
+      "cielo": "Cubierto",
+      "prob_precipitacion": "0",
+      "viento_dir": "NE",
+      "viento_kmh": "3"
+    },
+    {
+      "fecha_hora": "2026-08-10T11:00",
+      "temp": "22",
+      "sens_termica": "22",
+      "cielo": "Cubierto",
+      "prob_precipitacion": "0",
+      "viento_dir": "NE",
+      "viento_kmh": "9"
     }
   ],
-  "horaria_elaborado": "2026-08-09T14:01:11",
-  "horaria_es_respaldo": true,
+  "horaria_elaborado": "2026-08-09T15:27:09",
+  "horaria_es_respaldo": false,
   "avisos": [
     {
       "evento": "Aviso de tormentas de nivel amarillo",
@@ -236,18 +252,18 @@
     "vigencia_fin": "2026-08-10T12:00:00"
   },
   "netatmo_own": {
-    "ts": 1786290187,
+    "ts": 1786293816,
     "presion_hpa": 1015.5,
     "presion_tendencia": "up",
     "exterior": {
-      "temp_c": 26.6,
-      "humedad": 74,
-      "tendencia": "stable"
+      "temp_c": 26,
+      "humedad": 76,
+      "tendencia": "down"
     },
     "viento": {
-      "kmh": 7,
-      "dir": 78,
-      "racha_kmh": 12
+      "kmh": 4,
+      "dir": 51,
+      "racha_kmh": 7
     },
     "lluvia": {
       "mm_1h": 0,
@@ -259,50 +275,50 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 25,
-      "humedad": 72
+      "temp_c": 24.2,
+      "humedad": 71
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
-      "temp_c": 23.4,
-      "humedad": 75
+      "temp_c": 23.1,
+      "humedad": 76
     },
     {
       "lat": 43.56,
       "lon": -6.27,
       "ciudad": "Cudillero",
-      "temp_c": 24.1,
-      "humedad": 65
+      "temp_c": 25.2,
+      "humedad": 62
     },
     {
       "lat": 43.24,
       "lon": -6.56,
       "ciudad": "Allande",
-      "temp_c": 21.7,
-      "humedad": 77
+      "temp_c": 23.5,
+      "humedad": 73
     },
     {
       "lat": 43.4,
       "lon": -6.54,
       "ciudad": "Tineo",
-      "temp_c": 24.3,
-      "humedad": 71
+      "temp_c": 24.9,
+      "humedad": 69
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 25,
-      "humedad": 70
+      "temp_c": 24.6,
+      "humedad": 71
     },
     {
       "lat": 43.43,
       "lon": -6.76,
       "ciudad": "Boal",
-      "temp_c": 25.2,
-      "humedad": 74
+      "temp_c": 25.7,
+      "humedad": 70
     }
   ],
   "lugares": [
@@ -489,5 +505,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-08-09T15:45:53.843775+00:00"
+  "generated_at": "2026-08-09T16:53:41.327028+00:00"
 }
