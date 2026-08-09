@@ -1,17 +1,17 @@
 {
   "real_time": {
-    "ts": "2026-08-09T07:00:00+0000",
-    "temp_c": 18.9,
-    "wind_kmh": 9.4,
-    "wind_dir": 203.0,
-    "gust_kmh": 13.7,
-    "pres_hpa": 1007.8,
-    "pres_tendencia": "estable",
-    "humedad": 90.0
+    "ts": "2026-08-09T08:00:00+0000",
+    "temp_c": 20.7,
+    "wind_kmh": 10.1,
+    "wind_dir": 243.0,
+    "gust_kmh": 12.2,
+    "pres_hpa": 1008.5,
+    "pres_tendencia": "subiendo",
+    "humedad": 84.0
   },
   "recomendacion": {
-    "score": 40,
-    "etiqueta": "Aviso amarillo activo"
+    "score": 25,
+    "etiqueta": "Lluvia en las próximas horas"
   },
   "que_se_acerca": {
     "sector": "SW",
@@ -20,21 +20,12 @@
     "dist_km": 89,
     "lloviendo": false,
     "prec_mm": 0,
-    "temp_c": 16.1,
-    "cielo_despejado": false,
-    "eta_horas": 9.5
+    "temp_c": 19.9,
+    "cielo_despejado": true,
+    "eta_horas": 8.8
   },
   "forecast_municipio": null,
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-08-09T10:00",
-      "temp": "21",
-      "sens_termica": "21",
-      "cielo": "Cubierto",
-      "prob_precipitacion": "85",
-      "viento_dir": "SO",
-      "viento_kmh": "5"
-    },
     {
       "fecha_hora": "2026-08-09T11:00",
       "temp": "21",
@@ -206,18 +197,18 @@
     "vigencia_fin": "2026-08-09T20:00:00"
   },
   "netatmo_own": {
-    "ts": 1786262358,
-    "presion_hpa": 1014.2,
+    "ts": 1786265989,
+    "presion_hpa": 1014.3,
     "presion_tendencia": "stable",
     "exterior": {
-      "temp_c": 20.9,
-      "humedad": 99,
+      "temp_c": 23.5,
+      "humedad": 90,
       "tendencia": "up"
     },
     "viento": {
       "kmh": 1,
-      "dir": 135,
-      "racha_kmh": 4
+      "dir": 90,
+      "racha_kmh": 3
     },
     "lluvia": {
       "mm_1h": 0,
@@ -229,50 +220,50 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 18.4,
-      "humedad": 87
+      "temp_c": 19.7,
+      "humedad": 89
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
-      "temp_c": 22.3,
-      "humedad": 85
+      "temp_c": 26.5,
+      "humedad": 71
     },
     {
       "lat": 43.56,
       "lon": -6.27,
       "ciudad": "Cudillero",
-      "temp_c": 21.6,
-      "humedad": 75
+      "temp_c": 21.9,
+      "humedad": 74
     },
     {
       "lat": 43.24,
       "lon": -6.56,
       "ciudad": "Allande",
-      "temp_c": 19.8,
-      "humedad": 76
+      "temp_c": 21.1,
+      "humedad": 78
     },
     {
       "lat": 43.4,
       "lon": -6.54,
       "ciudad": "Tineo",
-      "temp_c": 20.1,
-      "humedad": 77
+      "temp_c": 21.8,
+      "humedad": 76
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 18.6,
+      "temp_c": 20,
       "humedad": 88
     },
     {
       "lat": 43.43,
       "lon": -6.76,
       "ciudad": "Boal",
-      "temp_c": 20.5,
-      "humedad": 85
+      "temp_c": 21.4,
+      "humedad": 83
     }
   ],
   "lugares": [
@@ -306,12 +297,12 @@
           "cielo": "despejado",
           "viento": "flojo",
           "oleaje": "débil",
-          "t_max": 25,
+          "t_max": 26,
           "t_agua": 24,
           "uv_max": 7
         }
       ],
-      "forecast_4d_elaborado": "2026-08-09T05:50:18"
+      "forecast_4d_elaborado": "2026-08-09T08:50:19"
     },
     {
       "name": "Luarca (1ª, 2ª y 3ª playa)",
@@ -343,12 +334,12 @@
           "cielo": "despejado",
           "viento": "flojo",
           "oleaje": "débil",
-          "t_max": 25,
+          "t_max": 26,
           "t_agua": 24,
           "uv_max": 7
         }
       ],
-      "forecast_4d_elaborado": "2026-08-09T05:50:18"
+      "forecast_4d_elaborado": "2026-08-09T08:50:19"
     },
     {
       "name": "Cueva",
@@ -459,5 +450,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-08-09T08:03:49.212224+00:00"
+  "generated_at": "2026-08-09T09:01:39.792773+00:00"
 }
