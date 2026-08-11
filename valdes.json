@@ -1,30 +1,57 @@
 {
   "real_time": {
-    "ts": "2026-08-11T22:00:00+0000",
-    "temp_c": 21.7,
-    "wind_kmh": 4.0,
-    "wind_dir": 83.0,
-    "gust_kmh": 10.4,
-    "pres_hpa": 1011.3,
+    "ts": "2026-08-11T23:00:00+0000",
+    "temp_c": 21.5,
+    "wind_kmh": 1.8,
+    "wind_dir": 97.0,
+    "gust_kmh": 5.0,
+    "pres_hpa": 1011.5,
     "pres_tendencia": "estable",
-    "humedad": 89.0
+    "humedad": 90.0
   },
   "recomendacion": {
     "score": 80,
     "etiqueta": "Buen día de playa — el cielo está despejado"
   },
-  "que_se_acerca": {
-    "sector": "E",
-    "disponible": true,
-    "nombre": "Avilés",
-    "dist_km": 40,
-    "lloviendo": false,
-    "prec_mm": 0,
-    "temp_c": null,
-    "cielo_despejado": false,
-    "eta_horas": 10.0
-  },
-  "forecast_municipio": null,
+  "que_se_acerca": null,
+  "forecast_municipio": [
+    {
+      "fecha": "2026-08-11T00:00:00",
+      "cielo": "Despejado",
+      "viento_dir": "C",
+      "viento_kmh": 0,
+      "t_max": 26,
+      "t_min": 18,
+      "prob_precipitacion": null
+    },
+    {
+      "fecha": "2026-08-12T00:00:00",
+      "cielo": "Cubierto",
+      "viento_dir": "N",
+      "viento_kmh": 10,
+      "t_max": 26,
+      "t_min": 18,
+      "prob_precipitacion": null
+    },
+    {
+      "fecha": "2026-08-13T00:00:00",
+      "cielo": "Cubierto con lluvia escasa",
+      "viento_dir": "O",
+      "viento_kmh": 10,
+      "t_max": 26,
+      "t_min": 20,
+      "prob_precipitacion": 70
+    },
+    {
+      "fecha": "2026-08-14T00:00:00",
+      "cielo": "Muy nuboso con lluvia",
+      "viento_dir": "N",
+      "viento_kmh": 15,
+      "t_max": 24,
+      "t_min": 20,
+      "prob_precipitacion": 100
+    }
+  ],
   "forecast_horaria": [
     {
       "fecha_hora": "2026-08-12T01:00",
@@ -214,7 +241,7 @@
     "exterior": {
       "temp_c": 21.7,
       "humedad": 96,
-      "tendencia": "stable"
+      "tendencia": null
     },
     "viento": {
       "kmh": 1,
@@ -231,49 +258,49 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 22,
-      "humedad": 85
+      "temp_c": 21.8,
+      "humedad": 86
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
-      "temp_c": 22.4,
-      "humedad": 85
+      "temp_c": 22.2,
+      "humedad": 86
     },
     {
       "lat": 43.56,
       "lon": -6.27,
       "ciudad": "Cudillero",
-      "temp_c": 23.2,
-      "humedad": 71
+      "temp_c": 23,
+      "humedad": 72
     },
     {
       "lat": 43.24,
       "lon": -6.56,
       "ciudad": "Allande",
-      "temp_c": 19.4,
-      "humedad": 83
+      "temp_c": 19.1,
+      "humedad": 84
     },
     {
       "lat": 43.4,
       "lon": -6.54,
       "ciudad": "Tineo",
-      "temp_c": 23.3,
+      "temp_c": 23.4,
       "humedad": 79
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 22.8,
-      "humedad": 81
+      "temp_c": 22.6,
+      "humedad": 82
     },
     {
       "lat": 43.43,
       "lon": -6.76,
       "ciudad": "Boal",
-      "temp_c": 24.2,
+      "temp_c": 24.1,
       "humedad": 81
     }
   ],
@@ -305,15 +332,24 @@
         },
         {
           "fecha": "20260813",
-          "cielo": "nuboso",
+          "cielo": "muy nuboso",
           "viento": "flojo",
           "oleaje": "débil",
           "t_max": 25,
+          "t_agua": 23,
+          "uv_max": 7
+        },
+        {
+          "fecha": "20260814",
+          "cielo": "muy nuboso",
+          "viento": "flojo",
+          "oleaje": "débil",
+          "t_max": 24,
           "t_agua": 24,
           "uv_max": 7
         }
       ],
-      "forecast_4d_elaborado": "2026-08-11T09:00:21"
+      "forecast_4d_elaborado": "2026-08-11T23:50:20"
     },
     {
       "name": "Luarca (1ª, 2ª y 3ª playa)",
@@ -342,15 +378,24 @@
         },
         {
           "fecha": "20260813",
-          "cielo": "nuboso",
+          "cielo": "muy nuboso",
           "viento": "flojo",
           "oleaje": "débil",
           "t_max": 25,
-          "t_agua": 23,
+          "t_agua": 24,
+          "uv_max": 7
+        },
+        {
+          "fecha": "20260814",
+          "cielo": "muy nuboso",
+          "viento": "flojo",
+          "oleaje": "débil",
+          "t_max": 24,
+          "t_agua": 24,
           "uv_max": 7
         }
       ],
-      "forecast_4d_elaborado": "2026-08-11T09:00:21"
+      "forecast_4d_elaborado": "2026-08-11T23:50:20"
     },
     {
       "name": "Cueva",
@@ -461,5 +506,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-08-11T23:02:03.610140+00:00"
+  "generated_at": "2026-08-11T23:59:16.633113+00:00"
 }
