@@ -1,42 +1,31 @@
 {
   "real_time": {
-    "ts": "2026-08-11T07:00:00+0000",
-    "temp_c": 18.9,
-    "wind_kmh": 10.4,
-    "wind_dir": 151.0,
-    "gust_kmh": 16.6,
-    "pres_hpa": 1009.9,
+    "ts": "2026-08-11T08:00:00+0000",
+    "temp_c": 20.7,
+    "wind_kmh": 4.7,
+    "wind_dir": 59.0,
+    "gust_kmh": 12.6,
+    "pres_hpa": 1009.8,
     "pres_tendencia": "estable",
-    "humedad": 89.0
+    "humedad": 83.0
   },
   "recomendacion": {
     "score": 80,
     "etiqueta": "Buen día de playa — el cielo está despejado"
   },
   "que_se_acerca": {
-    "sector": "SE",
-    "disponible": false
+    "sector": "NE",
+    "disponible": true,
+    "nombre": "Cabo Peñas",
+    "dist_km": 57,
+    "lloviendo": false,
+    "prec_mm": 0,
+    "temp_c": 22.6,
+    "cielo_despejado": true,
+    "eta_horas": 12.1
   },
   "forecast_municipio": null,
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-08-11T09:00",
-      "temp": "20",
-      "sens_termica": "20",
-      "cielo": "Despejado",
-      "prob_precipitacion": "0",
-      "viento_dir": "S",
-      "viento_kmh": "3"
-    },
-    {
-      "fecha_hora": "2026-08-11T10:00",
-      "temp": "21",
-      "sens_termica": "21",
-      "cielo": "Despejado",
-      "prob_precipitacion": "0",
-      "viento_dir": "NE",
-      "viento_kmh": "5"
-    },
     {
       "fecha_hora": "2026-08-11T11:00",
       "temp": "22",
@@ -183,7 +172,7 @@
     }
   ],
   "horaria_elaborado": "2026-08-11T07:15:11",
-  "horaria_es_respaldo": false,
+  "horaria_es_respaldo": true,
   "avisos": [],
   "maritima": {
     "texto": "Variable 1 a 3. Rizada o marejadilla. Áreas de regular o mala por bruma o niebla a partir de la madrugada.",
@@ -201,18 +190,18 @@
     "vigencia_fin": "2026-08-11T20:00:00"
   },
   "netatmo_own": {
-    "ts": 1786433369,
-    "presion_hpa": 1015.4,
+    "ts": 1786439419,
+    "presion_hpa": 1015.7,
     "presion_tendencia": "stable",
     "exterior": {
-      "temp_c": 21.2,
-      "humedad": 100,
-      "tendencia": "up"
+      "temp_c": 22.9,
+      "humedad": 89,
+      "tendencia": "down"
     },
     "viento": {
-      "kmh": 1,
-      "dir": 90,
-      "racha_kmh": 4
+      "kmh": 4,
+      "dir": 45,
+      "racha_kmh": 8
     },
     "lluvia": {
       "mm_1h": 0,
@@ -224,50 +213,50 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 23.3,
-      "humedad": 82
+      "temp_c": 28.6,
+      "humedad": 68
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
-      "temp_c": 25.4,
-      "humedad": 76
+      "temp_c": 25.9,
+      "humedad": 70
     },
     {
       "lat": 43.56,
       "lon": -6.27,
       "ciudad": "Cudillero",
-      "temp_c": 21.8,
+      "temp_c": 22.4,
       "humedad": 71
     },
     {
       "lat": 43.24,
       "lon": -6.56,
       "ciudad": "Allande",
-      "temp_c": 18.3,
+      "temp_c": 22.5,
       "humedad": 88
     },
     {
       "lat": 43.4,
       "lon": -6.54,
       "ciudad": "Tineo",
-      "temp_c": 20.3,
-      "humedad": 78
+      "temp_c": 22.7,
+      "humedad": 77
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 19,
-      "humedad": 85
+      "temp_c": 23,
+      "humedad": 80
     },
     {
       "lat": 43.43,
       "lon": -6.76,
       "ciudad": "Boal",
-      "temp_c": 20.4,
-      "humedad": 85
+      "temp_c": 21.8,
+      "humedad": 84
     }
   ],
   "lugares": [
@@ -301,12 +290,12 @@
           "cielo": "nuboso",
           "viento": "flojo",
           "oleaje": "débil",
-          "t_max": 26,
+          "t_max": 25,
           "t_agua": 24,
           "uv_max": 7
         }
       ],
-      "forecast_4d_elaborado": "2026-08-11T05:50:18"
+      "forecast_4d_elaborado": "2026-08-11T09:00:21"
     },
     {
       "name": "Luarca (1ª, 2ª y 3ª playa)",
@@ -454,5 +443,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-08-11T07:36:04.621544+00:00"
+  "generated_at": "2026-08-11T09:12:46.011779+00:00"
 }
