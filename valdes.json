@@ -1,40 +1,24 @@
 {
   "real_time": {
-    "ts": "2026-08-12T04:00:00+0000",
-    "temp_c": 21.3,
-    "wind_kmh": 4.3,
-    "wind_dir": 101.0,
+    "ts": "2026-08-12T06:00:00+0000",
+    "temp_c": 21.1,
+    "wind_kmh": 4.0,
+    "wind_dir": 151.0,
     "gust_kmh": 6.5,
-    "pres_hpa": 1010.3,
+    "pres_hpa": 1011.2,
     "pres_tendencia": "estable",
-    "humedad": 90.0
+    "humedad": 89.0
   },
   "recomendacion": {
-    "score": 65,
-    "etiqueta": "Buen día de playa — el viento es flojo"
+    "score": 55,
+    "etiqueta": "Cielo muy nuboso"
   },
   "que_se_acerca": {
-    "sector": "E",
-    "disponible": true,
-    "nombre": "Avilés",
-    "dist_km": 40,
-    "lloviendo": false,
-    "prec_mm": 0,
-    "temp_c": 19.7,
-    "cielo_despejado": false,
-    "eta_horas": 9.3
+    "sector": "SE",
+    "disponible": false
   },
   "forecast_municipio": null,
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-08-12T07:00",
-      "temp": "18",
-      "sens_termica": "18",
-      "cielo": "Bruma",
-      "prob_precipitacion": "0",
-      "viento_dir": "S",
-      "viento_kmh": "4"
-    },
     {
       "fecha_hora": "2026-08-12T08:00",
       "temp": "18",
@@ -181,17 +165,17 @@
     "vigencia_fin": "2026-08-12T20:00:00"
   },
   "netatmo_own": {
-    "ts": 1786510494,
-    "presion_hpa": 1016.3,
+    "ts": 1786514123,
+    "presion_hpa": 1016.8,
     "presion_tendencia": "stable",
     "exterior": {
-      "temp_c": 21.2,
-      "humedad": 97,
-      "tendencia": "stable"
+      "temp_c": 21.1,
+      "humedad": 98,
+      "tendencia": null
     },
     "viento": {
-      "kmh": 1,
-      "dir": 90,
+      "kmh": 0,
+      "dir": -1,
       "racha_kmh": 3
     },
     "lluvia": {
@@ -204,14 +188,14 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 20.9,
-      "humedad": 88
+      "temp_c": 20.4,
+      "humedad": 89
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
-      "temp_c": 21.6,
+      "temp_c": 21.5,
       "humedad": 87
     },
     {
@@ -225,29 +209,29 @@
       "lat": 43.24,
       "lon": -6.56,
       "ciudad": "Allande",
-      "temp_c": 16.7,
-      "humedad": 86
+      "temp_c": 21.2,
+      "humedad": 88
     },
     {
       "lat": 43.4,
       "lon": -6.54,
       "ciudad": "Tineo",
-      "temp_c": 21.5,
+      "temp_c": 21,
       "humedad": 80
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 21.6,
+      "temp_c": 21.3,
       "humedad": 82
     },
     {
       "lat": 43.43,
       "lon": -6.76,
       "ciudad": "Boal",
-      "temp_c": 22.6,
-      "humedad": 81
+      "temp_c": 22.4,
+      "humedad": 83
     }
   ],
   "lugares": [
@@ -259,15 +243,6 @@
       "ficha_aemet": "Otur",
       "forecast_4d": [
         {
-          "fecha": "20260811",
-          "cielo": "despejado",
-          "viento": "flojo",
-          "oleaje": "débil",
-          "t_max": 26,
-          "t_agua": 23,
-          "uv_max": 7
-        },
-        {
           "fecha": "20260812",
           "cielo": "nuboso",
           "viento": "flojo",
@@ -295,7 +270,7 @@
           "uv_max": 7
         }
       ],
-      "forecast_4d_elaborado": "2026-08-11T23:50:20"
+      "forecast_4d_elaborado": "2026-08-12T05:50:18"
     },
     {
       "name": "Luarca (1ª, 2ª y 3ª playa)",
@@ -305,15 +280,6 @@
       "ficha_aemet": "Luarca",
       "forecast_4d": [
         {
-          "fecha": "20260811",
-          "cielo": "despejado",
-          "viento": "flojo",
-          "oleaje": "débil",
-          "t_max": 26,
-          "t_agua": 23,
-          "uv_max": 7
-        },
-        {
           "fecha": "20260812",
           "cielo": "nuboso",
           "viento": "flojo",
@@ -341,7 +307,7 @@
           "uv_max": 7
         }
       ],
-      "forecast_4d_elaborado": "2026-08-11T23:50:20"
+      "forecast_4d_elaborado": "2026-08-12T05:50:18"
     },
     {
       "name": "Cueva",
@@ -452,5 +418,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-08-12T05:01:01.449849+00:00"
+  "generated_at": "2026-08-12T06:41:50.425367+00:00"
 }
