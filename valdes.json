@@ -1,10 +1,10 @@
 {
   "real_time": {
-    "ts": "2026-08-12T15:00:00+0000",
-    "temp_c": 22.9,
-    "wind_kmh": 4.7,
-    "wind_dir": 28.0,
-    "gust_kmh": 8.3,
+    "ts": "2026-08-12T16:00:00+0000",
+    "temp_c": 22.7,
+    "wind_kmh": 1.8,
+    "wind_dir": 331.0,
+    "gust_kmh": 6.5,
     "pres_hpa": 1012.2,
     "pres_tendencia": "estable",
     "humedad": 89.0
@@ -13,65 +13,9 @@
     "score": 55,
     "etiqueta": "Cielo muy nuboso"
   },
-  "que_se_acerca": {
-    "sector": "NE",
-    "disponible": true,
-    "nombre": "Cabo Peñas",
-    "dist_km": 57,
-    "lloviendo": false,
-    "prec_mm": 0,
-    "temp_c": 22.7,
-    "cielo_despejado": false,
-    "eta_horas": 12.1
-  },
-  "forecast_municipio": [
-    {
-      "fecha": "2026-08-12T00:00:00",
-      "cielo": "Cubierto",
-      "viento_dir": "C",
-      "viento_kmh": 0,
-      "t_max": 26,
-      "t_min": 18,
-      "prob_precipitacion": null
-    },
-    {
-      "fecha": "2026-08-13T00:00:00",
-      "cielo": "Cubierto con lluvia escasa",
-      "viento_dir": "NO",
-      "viento_kmh": 5,
-      "t_max": 25,
-      "t_min": 21,
-      "prob_precipitacion": 90
-    },
-    {
-      "fecha": "2026-08-14T00:00:00",
-      "cielo": "Cubierto con lluvia",
-      "viento_dir": "N",
-      "viento_kmh": 15,
-      "t_max": 24,
-      "t_min": 20,
-      "prob_precipitacion": 100
-    },
-    {
-      "fecha": "2026-08-15T00:00:00",
-      "cielo": "Cubierto con lluvia",
-      "viento_dir": "NE",
-      "viento_kmh": 15,
-      "t_max": 23,
-      "t_min": 20,
-      "prob_precipitacion": 100
-    }
-  ],
+  "que_se_acerca": null,
+  "forecast_municipio": null,
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-08-12T18:00",
-      "temp": "24",
-      "sens_termica": "24",
-      "cielo": "Cubierto",
-      "prob_precipitacion": "0",
-      "viento_dir": "NE",
-      "viento_kmh": "7"
-    },
     {
       "fecha_hora": "2026-08-12T19:00",
       "temp": "24",
@@ -227,7 +171,7 @@
     }
   ],
   "horaria_elaborado": "2026-08-12T15:41:12",
-  "horaria_es_respaldo": false,
+  "horaria_es_respaldo": true,
   "avisos": [],
   "maritima": {
     "texto": "Variable 1 a 3, principalmente N o NE hasta la noche. Rizada o marejadilla. Áreas de regular o mala por bruma o niebla en el oeste, al principio y a partir de la madrugada.",
@@ -245,18 +189,18 @@
     "vigencia_fin": "2026-08-13T12:00:00"
   },
   "netatmo_own": {
-    "ts": 1786550997,
+    "ts": 1786554627,
     "presion_hpa": 1017.9,
     "presion_tendencia": "stable",
     "exterior": {
-      "temp_c": 23.8,
-      "humedad": 93,
-      "tendencia": "down"
+      "temp_c": 23.4,
+      "humedad": 94,
+      "tendencia": "stable"
     },
     "viento": {
-      "kmh": 5,
-      "dir": 69,
-      "racha_kmh": 7
+      "kmh": 4,
+      "dir": 62,
+      "racha_kmh": 9
     },
     "lluvia": {
       "mm_1h": 0,
@@ -268,50 +212,50 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 23.9,
-      "humedad": 84
+      "temp_c": 23.3,
+      "humedad": 85
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
-      "temp_c": 24.6,
+      "temp_c": 24.5,
       "humedad": 80
     },
     {
       "lat": 43.56,
       "lon": -6.27,
       "ciudad": "Cudillero",
-      "temp_c": 24.9,
-      "humedad": 72
+      "temp_c": 24.8,
+      "humedad": 71
     },
     {
       "lat": 43.24,
       "lon": -6.56,
       "ciudad": "Allande",
-      "temp_c": 29.1,
-      "humedad": 69
+      "temp_c": 28.4,
+      "humedad": 70
     },
     {
       "lat": 43.4,
       "lon": -6.54,
       "ciudad": "Tineo",
-      "temp_c": 26.4,
-      "humedad": 73
+      "temp_c": 25.4,
+      "humedad": 76
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 27.1,
-      "humedad": 72
+      "temp_c": 25.6,
+      "humedad": 76
     },
     {
       "lat": 43.43,
       "lon": -6.76,
       "ciudad": "Boal",
-      "temp_c": 26.2,
-      "humedad": 77
+      "temp_c": 24,
+      "humedad": 83
     }
   ],
   "lugares": [
@@ -498,5 +442,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-08-12T16:11:10.877793+00:00"
+  "generated_at": "2026-08-12T17:12:05.691110+00:00"
 }
