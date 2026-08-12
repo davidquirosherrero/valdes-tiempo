@@ -1,67 +1,20 @@
 {
   "real_time": {
-    "ts": "2026-08-12T22:00:00+0000",
-    "temp_c": 21.6,
-    "wind_kmh": 6.1,
-    "wind_dir": 61.0,
-    "gust_kmh": 14.0,
-    "pres_hpa": 1013.3,
-    "pres_tendencia": "subiendo",
-    "humedad": 93.0
+    "ts": "2026-08-12T23:00:00+0000",
+    "temp_c": 21.3,
+    "wind_kmh": 2.2,
+    "wind_dir": 232.0,
+    "gust_kmh": 7.2,
+    "pres_hpa": 1013.5,
+    "pres_tendencia": "estable",
+    "humedad": 94.0
   },
   "recomendacion": {
     "score": 55,
     "etiqueta": "Cielo muy nuboso"
   },
-  "que_se_acerca": {
-    "sector": "NE",
-    "disponible": true,
-    "nombre": "Cabo Peñas",
-    "dist_km": 57,
-    "lloviendo": false,
-    "prec_mm": 0,
-    "temp_c": 22.3,
-    "cielo_despejado": false,
-    "eta_horas": 9.3
-  },
-  "forecast_municipio": [
-    {
-      "fecha": "2026-08-12T00:00:00",
-      "cielo": "Cubierto",
-      "viento_dir": "C",
-      "viento_kmh": 0,
-      "t_max": 26,
-      "t_min": 18,
-      "prob_precipitacion": null
-    },
-    {
-      "fecha": "2026-08-13T00:00:00",
-      "cielo": "Cubierto con lluvia escasa",
-      "viento_dir": "N",
-      "viento_kmh": 10,
-      "t_max": 26,
-      "t_min": 20,
-      "prob_precipitacion": 65
-    },
-    {
-      "fecha": "2026-08-14T00:00:00",
-      "cielo": "Cubierto con lluvia escasa",
-      "viento_dir": "C",
-      "viento_kmh": 0,
-      "t_max": 26,
-      "t_min": 20,
-      "prob_precipitacion": 90
-    },
-    {
-      "fecha": "2026-08-15T00:00:00",
-      "cielo": "Muy nuboso con lluvia",
-      "viento_dir": "NE",
-      "viento_kmh": 20,
-      "t_max": 24,
-      "t_min": 21,
-      "prob_precipitacion": 100
-    }
-  ],
+  "que_se_acerca": null,
+  "forecast_municipio": null,
   "forecast_horaria": [
     {
       "fecha_hora": "2026-08-13T01:00",
@@ -227,8 +180,8 @@
     "vigencia_fin": "2026-08-13T20:00:00"
   },
   "netatmo_own": {
-    "ts": 1786575195,
-    "presion_hpa": 1019.2,
+    "ts": 1786578824,
+    "presion_hpa": 1019,
     "presion_tendencia": "stable",
     "exterior": {
       "temp_c": 21.7,
@@ -250,42 +203,42 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 22,
+      "temp_c": 21.8,
       "humedad": 88
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
-      "temp_c": 22.4,
+      "temp_c": 22.3,
       "humedad": 87
     },
     {
       "lat": 43.56,
       "lon": -6.27,
       "ciudad": "Cudillero",
-      "temp_c": 23.8,
+      "temp_c": 23.7,
       "humedad": 74
     },
     {
       "lat": 43.24,
       "lon": -6.56,
       "ciudad": "Allande",
-      "temp_c": 21.7,
+      "temp_c": 21.6,
       "humedad": 85
     },
     {
       "lat": 43.4,
       "lon": -6.54,
       "ciudad": "Tineo",
-      "temp_c": 23.8,
+      "temp_c": 23.6,
       "humedad": 81
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 23.4,
+      "temp_c": 23.2,
       "humedad": 84
     },
     {
@@ -327,12 +280,21 @@
           "cielo": "muy nuboso",
           "viento": "flojo",
           "oleaje": "débil",
+          "t_max": 25,
+          "t_agua": 23,
+          "uv_max": 7
+        },
+        {
+          "fecha": "20260815",
+          "cielo": "muy nuboso con lluvia",
+          "viento": "flojo",
+          "oleaje": "moderado",
           "t_max": 24,
-          "t_agua": 24,
+          "t_agua": 23,
           "uv_max": 7
         }
       ],
-      "forecast_4d_elaborado": "2026-08-12T08:50:18"
+      "forecast_4d_elaborado": "2026-08-12T23:50:20"
     },
     {
       "name": "Luarca (1ª, 2ª y 3ª playa)",
@@ -355,7 +317,7 @@
           "cielo": "muy nuboso",
           "viento": "flojo",
           "oleaje": "débil",
-          "t_max": 25,
+          "t_max": 26,
           "t_agua": 24,
           "uv_max": 7
         },
@@ -364,12 +326,21 @@
           "cielo": "muy nuboso",
           "viento": "flojo",
           "oleaje": "débil",
+          "t_max": 25,
+          "t_agua": 24,
+          "uv_max": 7
+        },
+        {
+          "fecha": "20260815",
+          "cielo": "muy nuboso con lluvia",
+          "viento": "flojo",
+          "oleaje": "débil",
           "t_max": 24,
           "t_agua": 24,
           "uv_max": 7
         }
       ],
-      "forecast_4d_elaborado": "2026-08-12T08:50:18"
+      "forecast_4d_elaborado": "2026-08-12T23:50:20"
     },
     {
       "name": "Cueva",
@@ -480,5 +451,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-08-12T23:00:40.480782+00:00"
+  "generated_at": "2026-08-12T23:56:54.528118+00:00"
 }
