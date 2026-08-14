@@ -1,16 +1,16 @@
 {
   "real_time": {
-    "ts": "2026-08-14T04:00:00+0000",
-    "temp_c": 20.0,
-    "wind_kmh": 3.6,
-    "wind_dir": 167.0,
-    "gust_kmh": 6.5,
-    "pres_hpa": 1012.4,
+    "ts": "2026-08-14T06:00:00+0000",
+    "temp_c": 20.4,
+    "wind_kmh": 5.4,
+    "wind_dir": 169.0,
+    "gust_kmh": 12.6,
+    "pres_hpa": 1012.3,
     "pres_tendencia": "estable",
     "humedad": 96.0
   },
   "recomendacion": {
-    "score": 55,
+    "score": 35,
     "etiqueta": "Cielo muy nuboso"
   },
   "que_se_acerca": {
@@ -56,15 +56,6 @@
     }
   ],
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-08-14T07:00",
-      "temp": "22",
-      "sens_termica": "22",
-      "cielo": "Cubierto",
-      "prob_precipitacion": "20",
-      "viento_dir": "S",
-      "viento_kmh": "4"
-    },
     {
       "fecha_hora": "2026-08-14T08:00",
       "temp": "22",
@@ -217,9 +208,18 @@
       "prob_precipitacion": null,
       "viento_dir": "NE",
       "viento_kmh": "9"
+    },
+    {
+      "fecha_hora": "2026-08-15T01:00",
+      "temp": "21",
+      "sens_termica": "21",
+      "cielo": "Cubierto",
+      "prob_precipitacion": null,
+      "viento_dir": "N",
+      "viento_kmh": "7"
     }
   ],
-  "horaria_elaborado": "2026-08-13T21:19:10",
+  "horaria_elaborado": "2026-08-14T06:17:14",
   "horaria_es_respaldo": false,
   "avisos": [],
   "maritima": {
@@ -238,17 +238,17 @@
     "vigencia_fin": "2026-08-14T20:00:00"
   },
   "netatmo_own": {
-    "ts": 1786683470,
-    "presion_hpa": 1017.9,
-    "presion_tendencia": "stable",
+    "ts": 1786689518,
+    "presion_hpa": 1018.1,
+    "presion_tendencia": "down",
     "exterior": {
-      "temp_c": 19.8,
+      "temp_c": 20.7,
       "humedad": 100,
-      "tendencia": "stable"
+      "tendencia": "up"
     },
     "viento": {
       "kmh": 1,
-      "dir": 173,
+      "dir": 270,
       "racha_kmh": 3
     },
     "lluvia": {
@@ -261,14 +261,14 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 19.5,
-      "humedad": 91
+      "temp_c": 19.7,
+      "humedad": 92
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
-      "temp_c": 21.4,
+      "temp_c": 21.7,
       "humedad": 89
     },
     {
@@ -276,20 +276,20 @@
       "lon": -6.27,
       "ciudad": "Cudillero",
       "temp_c": 22.9,
-      "humedad": 73
+      "humedad": 75
     },
     {
       "lat": 43.24,
       "lon": -6.56,
       "ciudad": "Allande",
-      "temp_c": 19.5,
+      "temp_c": 19.1,
       "humedad": 89
     },
     {
       "lat": 43.4,
       "lon": -6.54,
       "ciudad": "Tineo",
-      "temp_c": 22.7,
+      "temp_c": 22.5,
       "humedad": 81
     },
     {
@@ -297,14 +297,14 @@
       "lon": -6.25,
       "ciudad": "Salas",
       "temp_c": 20.8,
-      "humedad": 89
+      "humedad": 90
     },
     {
       "lat": 43.43,
       "lon": -6.76,
       "ciudad": "Boal",
-      "temp_c": 22.3,
-      "humedad": 85
+      "temp_c": 22.2,
+      "humedad": 86
     }
   ],
   "lugares": [
@@ -316,15 +316,6 @@
       "ficha_aemet": "Otur",
       "forecast_4d": [
         {
-          "fecha": "20260813",
-          "cielo": "muy nuboso",
-          "viento": "flojo",
-          "oleaje": "débil",
-          "t_max": 26,
-          "t_agua": 23,
-          "uv_max": 7
-        },
-        {
           "fecha": "20260814",
           "cielo": "muy nuboso",
           "viento": "flojo",
@@ -352,7 +343,7 @@
           "uv_max": 7
         }
       ],
-      "forecast_4d_elaborado": "2026-08-14T00:00:20"
+      "forecast_4d_elaborado": "2026-08-14T05:50:18"
     },
     {
       "name": "Luarca (1ª, 2ª y 3ª playa)",
@@ -362,15 +353,6 @@
       "ficha_aemet": "Luarca",
       "forecast_4d": [
         {
-          "fecha": "20260813",
-          "cielo": "muy nuboso",
-          "viento": "flojo",
-          "oleaje": "débil",
-          "t_max": 26,
-          "t_agua": 24,
-          "uv_max": 7
-        },
-        {
           "fecha": "20260814",
           "cielo": "muy nuboso",
           "viento": "flojo",
@@ -398,7 +380,7 @@
           "uv_max": 7
         }
       ],
-      "forecast_4d_elaborado": "2026-08-14T00:00:20"
+      "forecast_4d_elaborado": "2026-08-14T05:50:18"
     },
     {
       "name": "Cueva",
@@ -509,5 +491,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-08-14T05:01:16.590882+00:00"
+  "generated_at": "2026-08-14T06:41:44.536063+00:00"
 }
