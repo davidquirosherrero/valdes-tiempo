@@ -1,29 +1,19 @@
 {
   "real_time": {
-    "ts": "2026-08-15T09:00:00+0000",
-    "temp_c": 20.5,
-    "wind_kmh": 6.5,
-    "wind_dir": 79.0,
-    "gust_kmh": 10.1,
+    "ts": "2026-08-15T10:00:00+0000",
+    "temp_c": 20.3,
+    "wind_kmh": 2.9,
+    "wind_dir": 226.0,
+    "gust_kmh": 13.0,
     "pres_hpa": 1011.1,
     "pres_tendencia": "estable",
-    "humedad": 93.0
+    "humedad": 95.0
   },
   "recomendacion": {
     "score": 35,
     "etiqueta": "Lluvia en las próximas horas"
   },
-  "que_se_acerca": {
-    "sector": "E",
-    "disponible": true,
-    "nombre": "Avilés",
-    "dist_km": 40,
-    "lloviendo": false,
-    "prec_mm": 0,
-    "temp_c": 20.9,
-    "cielo_despejado": false,
-    "eta_horas": 6.2
-  },
+  "que_se_acerca": null,
   "forecast_municipio": [
     {
       "fecha": "2026-08-15T00:00:00",
@@ -63,15 +53,6 @@
     }
   ],
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-08-15T11:00",
-      "temp": "20",
-      "sens_termica": "20",
-      "cielo": "Cubierto con lluvia escasa",
-      "prob_precipitacion": "100",
-      "viento_dir": "NE",
-      "viento_kmh": "9"
-    },
     {
       "fecha_hora": "2026-08-15T12:00",
       "temp": "21",
@@ -224,9 +205,18 @@
       "prob_precipitacion": "75",
       "viento_dir": "NE",
       "viento_kmh": "7"
+    },
+    {
+      "fecha_hora": "2026-08-16T05:00",
+      "temp": "21",
+      "sens_termica": "21",
+      "cielo": "Cubierto con lluvia escasa",
+      "prob_precipitacion": "75",
+      "viento_dir": "E",
+      "viento_kmh": "9"
     }
   ],
-  "horaria_elaborado": "2026-08-15T09:05:11",
+  "horaria_elaborado": "2026-08-15T10:23:11",
   "horaria_es_respaldo": false,
   "avisos": [],
   "maritima": {
@@ -252,21 +242,21 @@
     "vigencia_fin": "2026-08-16T12:00:00"
   },
   "netatmo_own": {
-    "ts": 1786786249,
-    "presion_hpa": 1016.7,
+    "ts": 1786789878,
+    "presion_hpa": 1016.9,
     "presion_tendencia": "stable",
     "exterior": {
       "temp_c": 21.3,
       "humedad": 100,
-      "tendencia": "up"
+      "tendencia": "stable"
     },
     "viento": {
-      "kmh": 4,
-      "dir": 315,
-      "racha_kmh": 13
+      "kmh": 5,
+      "dir": 72,
+      "racha_kmh": 11
     },
     "lluvia": {
-      "mm_1h": 0.101,
+      "mm_1h": 0,
       "mm_24h": 2.1
     }
   },
@@ -275,36 +265,43 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
+      "temp_c": 22.6,
+      "humedad": 88
+    },
+    {
+      "lat": 43.56,
+      "lon": -6.66,
+      "ciudad": "Navia",
       "temp_c": 21.9,
-      "humedad": 92
+      "humedad": 91
     },
     {
       "lat": 43.56,
       "lon": -6.27,
       "ciudad": "Cudillero",
-      "temp_c": 22.5,
-      "humedad": 77
+      "temp_c": 22.8,
+      "humedad": 76
     },
     {
       "lat": 43.4,
       "lon": -6.54,
       "ciudad": "Tineo",
-      "temp_c": 22.3,
-      "humedad": 83
+      "temp_c": 22.5,
+      "humedad": 82
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 19.9,
-      "humedad": 93
+      "temp_c": 21,
+      "humedad": 91
     },
     {
       "lat": 43.43,
       "lon": -6.76,
       "ciudad": "Boal",
       "temp_c": 22.1,
-      "humedad": 87
+      "humedad": 86
     }
   ],
   "lugares": [
@@ -491,5 +488,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-08-15T09:39:30.944767+00:00"
+  "generated_at": "2026-08-15T10:37:38.198522+00:00"
 }
