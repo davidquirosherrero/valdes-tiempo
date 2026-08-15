@@ -1,35 +1,28 @@
 {
   "real_time": {
-    "ts": "2026-08-15T18:00:00+0000",
-    "temp_c": 19.5,
+    "ts": "2026-08-15T19:00:00+0000",
+    "temp_c": 19.7,
     "wind_kmh": 9.7,
-    "wind_dir": 95.0,
-    "gust_kmh": 23.4,
-    "pres_hpa": 1010.0,
+    "wind_dir": 117.0,
+    "gust_kmh": 16.2,
+    "pres_hpa": 1010.2,
     "pres_tendencia": "estable",
-    "humedad": 97.0
+    "humedad": 95.0
   },
   "recomendacion": {
-    "score": 25,
+    "score": 35,
     "etiqueta": "Lluvia en las próximas horas"
   },
   "que_se_acerca": {
-    "sector": "E",
-    "disponible": true,
-    "nombre": "Avilés",
-    "dist_km": 40,
-    "lloviendo": true,
-    "prec_mm": 0.7999999999999999,
-    "temp_c": 19.3,
-    "cielo_despejado": false,
-    "eta_horas": 4.1
+    "sector": "SE",
+    "disponible": false
   },
   "forecast_municipio": [
     {
       "fecha": "2026-08-15T00:00:00",
       "cielo": "Cubierto con lluvia",
-      "viento_dir": "E",
-      "viento_kmh": 5,
+      "viento_dir": "C",
+      "viento_kmh": 0,
       "t_max": 23,
       "t_min": 20,
       "prob_precipitacion": 100
@@ -48,30 +41,21 @@
       "cielo": "Cubierto con lluvia escasa",
       "viento_dir": "NE",
       "viento_kmh": 20,
-      "t_max": 25,
+      "t_max": 24,
       "t_min": 20,
       "prob_precipitacion": 85
     },
     {
       "fecha": "2026-08-18T00:00:00",
-      "cielo": "Intervalos nubosos",
+      "cielo": "Muy nuboso",
       "viento_dir": "NE",
-      "viento_kmh": 20,
-      "t_max": 27,
-      "t_min": 20,
-      "prob_precipitacion": 35
+      "viento_kmh": 15,
+      "t_max": 25,
+      "t_min": 19,
+      "prob_precipitacion": 25
     }
   ],
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-08-15T20:00",
-      "temp": "21",
-      "sens_termica": "21",
-      "cielo": "Cubierto con lluvia escasa",
-      "prob_precipitacion": "100",
-      "viento_dir": "NE",
-      "viento_kmh": "15"
-    },
     {
       "fecha_hora": "2026-08-15T21:00",
       "temp": "21",
@@ -224,6 +208,15 @@
       "prob_precipitacion": "100",
       "viento_dir": "NE",
       "viento_kmh": "9"
+    },
+    {
+      "fecha_hora": "2026-08-16T14:00",
+      "temp": "22",
+      "sens_termica": "22",
+      "cielo": "Cubierto con lluvia escasa",
+      "prob_precipitacion": "80",
+      "viento_dir": "NE",
+      "viento_kmh": "10"
     }
   ],
   "horaria_elaborado": "2026-08-15T15:35:12",
@@ -252,8 +245,8 @@
     "vigencia_fin": "2026-08-16T20:00:00"
   },
   "netatmo_own": {
-    "ts": 1786819395,
-    "presion_hpa": 1015.9,
+    "ts": 1786821815,
+    "presion_hpa": 1015.5,
     "presion_tendencia": "stable",
     "exterior": {
       "temp_c": 19.7,
@@ -262,8 +255,8 @@
     },
     "viento": {
       "kmh": 1,
-      "dir": 45,
-      "racha_kmh": 5
+      "dir": 16,
+      "racha_kmh": 4
     },
     "lluvia": {
       "mm_1h": 0,
@@ -275,8 +268,8 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 19.1,
-      "humedad": 92
+      "temp_c": 19,
+      "humedad": 93
     },
     {
       "lat": 43.56,
@@ -289,28 +282,28 @@
       "lat": 43.56,
       "lon": -6.27,
       "ciudad": "Cudillero",
-      "temp_c": 22.1,
+      "temp_c": 22,
       "humedad": 76
     },
     {
       "lat": 43.24,
       "lon": -6.56,
       "ciudad": "Allande",
-      "temp_c": 18.4,
+      "temp_c": 18.1,
       "humedad": 88
     },
     {
       "lat": 43.4,
       "lon": -6.54,
       "ciudad": "Tineo",
-      "temp_c": 21.7,
+      "temp_c": 21.5,
       "humedad": 81
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 19.9,
+      "temp_c": 19.8,
       "humedad": 91
     },
     {
@@ -318,7 +311,7 @@
       "lon": -6.76,
       "ciudad": "Boal",
       "temp_c": 21.4,
-      "humedad": 85
+      "humedad": 86
     }
   ],
   "lugares": [
@@ -505,5 +498,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-08-15T18:46:38.230159+00:00"
+  "generated_at": "2026-08-15T19:33:18.820958+00:00"
 }
