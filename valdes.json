@@ -1,13 +1,13 @@
 {
   "real_time": {
-    "ts": "2026-08-15T21:00:00+0000",
-    "temp_c": 20.2,
-    "wind_kmh": 8.3,
-    "wind_dir": 115.0,
-    "gust_kmh": 15.5,
-    "pres_hpa": 1011.0,
-    "pres_tendencia": "subiendo",
-    "humedad": 88.0
+    "ts": "2026-08-15T22:00:00+0000",
+    "temp_c": 19.9,
+    "wind_kmh": 4.3,
+    "wind_dir": 121.0,
+    "gust_kmh": 13.0,
+    "pres_hpa": 1010.8,
+    "pres_tendencia": "estable",
+    "humedad": 91.0
   },
   "recomendacion": {
     "score": 50,
@@ -56,15 +56,6 @@
     }
   ],
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-08-15T23:00",
-      "temp": "21",
-      "sens_termica": "21",
-      "cielo": "Cubierto",
-      "prob_precipitacion": "100",
-      "viento_dir": "E",
-      "viento_kmh": "8"
-    },
     {
       "fecha_hora": "2026-08-16T00:00",
       "temp": "21",
@@ -217,6 +208,15 @@
       "prob_precipitacion": "65",
       "viento_dir": "NE",
       "viento_kmh": "15"
+    },
+    {
+      "fecha_hora": "2026-08-16T17:00",
+      "temp": "23",
+      "sens_termica": "23",
+      "cielo": "Cubierto",
+      "prob_precipitacion": "65",
+      "viento_dir": "NE",
+      "viento_kmh": "16"
     }
   ],
   "horaria_elaborado": "2026-08-15T21:03:09",
@@ -245,8 +245,8 @@
     "vigencia_fin": "2026-08-16T20:00:00"
   },
   "netatmo_own": {
-    "ts": 1786829074,
-    "presion_hpa": 1016.6,
+    "ts": 1786833307,
+    "presion_hpa": 1016.4,
     "presion_tendencia": "stable",
     "exterior": {
       "temp_c": 19.6,
@@ -254,13 +254,13 @@
       "tendencia": "stable"
     },
     "viento": {
-      "kmh": 1,
-      "dir": 357,
-      "racha_kmh": 4
+      "kmh": 0,
+      "dir": -1,
+      "racha_kmh": 1
     },
     "lluvia": {
       "mm_1h": 0,
-      "mm_24h": 2.7
+      "mm_24h": 0
     }
   },
   "netatmo_vecinas": [
@@ -268,15 +268,15 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 19.3,
+      "temp_c": 18.9,
       "humedad": 92
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
-      "temp_c": 20.1,
-      "humedad": 92
+      "temp_c": 20,
+      "humedad": 91
     },
     {
       "lat": 43.56,
@@ -303,7 +303,7 @@
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 19.5,
+      "temp_c": 19.4,
       "humedad": 92
     },
     {
@@ -498,5 +498,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-08-15T21:34:12.946334+00:00"
+  "generated_at": "2026-08-15T22:36:18.107663+00:00"
 }
