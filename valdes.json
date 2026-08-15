@@ -1,77 +1,31 @@
 {
   "real_time": {
-    "ts": "2026-08-15T05:00:00+0000",
-    "temp_c": 20.0,
-    "wind_kmh": 9.4,
-    "wind_dir": 72.0,
-    "gust_kmh": 14.8,
-    "pres_hpa": 1010.4,
+    "ts": "2026-08-15T06:00:00+0000",
+    "temp_c": 20.1,
+    "wind_kmh": 8.3,
+    "wind_dir": 46.0,
+    "gust_kmh": 17.6,
+    "pres_hpa": 1010.5,
     "pres_tendencia": "estable",
-    "humedad": 95.0
+    "humedad": 94.0
   },
   "recomendacion": {
-    "score": 55,
+    "score": 50,
     "etiqueta": "Cielo muy nuboso"
   },
   "que_se_acerca": {
-    "sector": "E",
+    "sector": "NE",
     "disponible": true,
-    "nombre": "Avilés",
-    "dist_km": 40,
-    "lloviendo": true,
-    "prec_mm": 0.2,
-    "temp_c": 19.4,
+    "nombre": "Cabo Peñas",
+    "dist_km": 57,
+    "lloviendo": false,
+    "prec_mm": 0,
+    "temp_c": 21.2,
     "cielo_despejado": false,
-    "eta_horas": 4.3
+    "eta_horas": 6.9
   },
-  "forecast_municipio": [
-    {
-      "fecha": "2026-08-14T00:00:00",
-      "cielo": "Cubierto",
-      "viento_dir": "C",
-      "viento_kmh": 0,
-      "t_max": 24,
-      "t_min": 20,
-      "prob_precipitacion": 25
-    },
-    {
-      "fecha": "2026-08-15T00:00:00",
-      "cielo": "Cubierto con lluvia",
-      "viento_dir": "NE",
-      "viento_kmh": 20,
-      "t_max": 24,
-      "t_min": 20,
-      "prob_precipitacion": 100
-    },
-    {
-      "fecha": "2026-08-16T00:00:00",
-      "cielo": "Cubierto con lluvia",
-      "viento_dir": "NE",
-      "viento_kmh": 5,
-      "t_max": 24,
-      "t_min": 20,
-      "prob_precipitacion": 100
-    },
-    {
-      "fecha": "2026-08-17T00:00:00",
-      "cielo": "Muy nuboso",
-      "viento_dir": "NE",
-      "viento_kmh": 20,
-      "t_max": 25,
-      "t_min": 19,
-      "prob_precipitacion": 35
-    }
-  ],
+  "forecast_municipio": null,
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-08-15T07:00",
-      "temp": "21",
-      "sens_termica": "21",
-      "cielo": "Cubierto",
-      "prob_precipitacion": "90",
-      "viento_dir": "NE",
-      "viento_kmh": "12"
-    },
     {
       "fecha_hora": "2026-08-15T08:00",
       "temp": "21",
@@ -227,7 +181,7 @@
     }
   ],
   "horaria_elaborado": "2026-08-14T21:03:11",
-  "horaria_es_respaldo": false,
+  "horaria_es_respaldo": true,
   "avisos": [],
   "maritima": {
     "texto": "N o NE 2 a 4 arreciando a 4 o 5 desde mediodía al oeste de Peñas, N o NW al este. Marejadilla aumentando a marejada al oeste. Mar de fondo del NW en torno a 1 m. Aguaceros locales y tormentas en extremo este desde la madrugada, con regular o mala",
@@ -245,22 +199,22 @@
     "vigencia_fin": "2026-08-15T20:00:00"
   },
   "netatmo_own": {
-    "ts": 1786772336,
-    "presion_hpa": 1016.1,
+    "ts": 1786776570,
+    "presion_hpa": 1016.5,
     "presion_tendencia": "stable",
     "exterior": {
-      "temp_c": 19.7,
+      "temp_c": 19.9,
       "humedad": 100,
       "tendencia": "stable"
     },
     "viento": {
-      "kmh": 1,
-      "dir": 55,
-      "racha_kmh": 4
+      "kmh": 3,
+      "dir": 54,
+      "racha_kmh": 5
     },
     "lluvia": {
-      "mm_1h": 1.111,
-      "mm_24h": 1.9
+      "mm_1h": 0.101,
+      "mm_24h": 2
     }
   },
   "netatmo_vecinas": [
@@ -268,35 +222,35 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 19.7,
+      "temp_c": 19.8,
       "humedad": 92
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
-      "temp_c": 20.6,
+      "temp_c": 20.3,
       "humedad": 89
     },
     {
       "lat": 43.56,
       "lon": -6.27,
       "ciudad": "Cudillero",
-      "temp_c": 22.1,
-      "humedad": 76
+      "temp_c": 22,
+      "humedad": 77
     },
     {
       "lat": 43.24,
       "lon": -6.56,
       "ciudad": "Allande",
-      "temp_c": 17.4,
+      "temp_c": 17.5,
       "humedad": 90
     },
     {
       "lat": 43.4,
       "lon": -6.54,
       "ciudad": "Tineo",
-      "temp_c": 21,
+      "temp_c": 21.2,
       "humedad": 83
     },
     {
@@ -310,7 +264,7 @@
       "lat": 43.43,
       "lon": -6.76,
       "ciudad": "Boal",
-      "temp_c": 20.4,
+      "temp_c": 20.6,
       "humedad": 87
     }
   ],
@@ -323,15 +277,6 @@
       "ficha_aemet": "Otur",
       "forecast_4d": [
         {
-          "fecha": "20260814",
-          "cielo": "muy nuboso",
-          "viento": "flojo",
-          "oleaje": "débil",
-          "t_max": 24,
-          "t_agua": 24,
-          "uv_max": 7
-        },
-        {
           "fecha": "20260815",
           "cielo": "muy nuboso con lluvia",
           "viento": "flojo",
@@ -359,7 +304,7 @@
           "uv_max": 7
         }
       ],
-      "forecast_4d_elaborado": "2026-08-15T00:00:18"
+      "forecast_4d_elaborado": "2026-08-15T05:50:18"
     },
     {
       "name": "Luarca (1ª, 2ª y 3ª playa)",
@@ -369,15 +314,6 @@
       "ficha_aemet": "Luarca",
       "forecast_4d": [
         {
-          "fecha": "20260814",
-          "cielo": "muy nuboso",
-          "viento": "flojo",
-          "oleaje": "débil",
-          "t_max": 24,
-          "t_agua": 24,
-          "uv_max": 7
-        },
-        {
           "fecha": "20260815",
           "cielo": "muy nuboso con lluvia",
           "viento": "flojo",
@@ -405,7 +341,7 @@
           "uv_max": 7
         }
       ],
-      "forecast_4d_elaborado": "2026-08-15T00:00:18"
+      "forecast_4d_elaborado": "2026-08-15T05:50:18"
     },
     {
       "name": "Cueva",
@@ -516,5 +452,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-08-15T05:39:54.148342+00:00"
+  "generated_at": "2026-08-15T06:57:01.544598+00:00"
 }
