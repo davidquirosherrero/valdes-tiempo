@@ -1,40 +1,68 @@
 {
   "real_time": {
-    "ts": "2026-08-15T15:00:00+0000",
-    "temp_c": 20.1,
-    "wind_kmh": 14.4,
-    "wind_dir": 79.0,
-    "gust_kmh": 24.1,
-    "pres_hpa": 1009.8,
+    "ts": "2026-08-15T16:00:00+0000",
+    "temp_c": 19.6,
+    "wind_kmh": 14.8,
+    "wind_dir": 71.0,
+    "gust_kmh": 25.9,
+    "pres_hpa": 1010.0,
     "pres_tendencia": "estable",
     "humedad": 96.0
   },
   "recomendacion": {
-    "score": 25,
-    "etiqueta": "Lluvia en las próximas horas"
+    "score": 50,
+    "etiqueta": "Cielo muy nuboso"
   },
   "que_se_acerca": {
     "sector": "E",
     "disponible": true,
     "nombre": "Avilés",
     "dist_km": 40,
-    "lloviendo": false,
-    "prec_mm": 0,
-    "temp_c": 20.6,
+    "lloviendo": true,
+    "prec_mm": 1.1,
+    "temp_c": 19.9,
     "cielo_despejado": false,
-    "eta_horas": 2.8
+    "eta_horas": 2.7
   },
-  "forecast_municipio": null,
-  "forecast_horaria": [
+  "forecast_municipio": [
     {
-      "fecha_hora": "2026-08-15T17:00",
-      "temp": "22",
-      "sens_termica": "22",
-      "cielo": "Cubierto con lluvia escasa",
-      "prob_precipitacion": "100",
-      "viento_dir": "NE",
-      "viento_kmh": "16"
+      "fecha": "2026-08-15T00:00:00",
+      "cielo": "Cubierto con lluvia",
+      "viento_dir": "E",
+      "viento_kmh": 5,
+      "t_max": 23,
+      "t_min": 20,
+      "prob_precipitacion": 100
     },
+    {
+      "fecha": "2026-08-16T00:00:00",
+      "cielo": "Cubierto con lluvia",
+      "viento_dir": "NE",
+      "viento_kmh": 10,
+      "t_max": 24,
+      "t_min": 20,
+      "prob_precipitacion": 100
+    },
+    {
+      "fecha": "2026-08-17T00:00:00",
+      "cielo": "Cubierto con lluvia escasa",
+      "viento_dir": "NE",
+      "viento_kmh": 20,
+      "t_max": 25,
+      "t_min": 20,
+      "prob_precipitacion": 85
+    },
+    {
+      "fecha": "2026-08-18T00:00:00",
+      "cielo": "Intervalos nubosos",
+      "viento_dir": "NE",
+      "viento_kmh": 20,
+      "t_max": 27,
+      "t_min": 20,
+      "prob_precipitacion": 35
+    }
+  ],
+  "forecast_horaria": [
     {
       "fecha_hora": "2026-08-15T18:00",
       "temp": "22",
@@ -169,10 +197,37 @@
       "prob_precipitacion": "100",
       "viento_dir": "NE",
       "viento_kmh": "6"
+    },
+    {
+      "fecha_hora": "2026-08-16T09:00",
+      "temp": "20",
+      "sens_termica": "20",
+      "cielo": "Cubierto",
+      "prob_precipitacion": "100",
+      "viento_dir": "NE",
+      "viento_kmh": "6"
+    },
+    {
+      "fecha_hora": "2026-08-16T10:00",
+      "temp": "21",
+      "sens_termica": "21",
+      "cielo": "Cubierto",
+      "prob_precipitacion": "100",
+      "viento_dir": "NE",
+      "viento_kmh": "1"
+    },
+    {
+      "fecha_hora": "2026-08-16T11:00",
+      "temp": "21",
+      "sens_termica": "21",
+      "cielo": "Cubierto",
+      "prob_precipitacion": "100",
+      "viento_dir": "NE",
+      "viento_kmh": "6"
     }
   ],
-  "horaria_elaborado": "2026-08-15T12:49:10",
-  "horaria_es_respaldo": true,
+  "horaria_elaborado": "2026-08-15T15:35:12",
+  "horaria_es_respaldo": false,
   "avisos": [],
   "maritima": {
     "texto": "Oeste de Cabo Lastres: NE 3 o 4. Marejadilla o marejada.\r\n Este de Cabo Lastres: Variable, principalmente N, 1 a 3. Rizada o marejadilla.\r\n Ambas zonas: Mar de fondo del NW en torno a 1 m. Lluvia ocasional.",
@@ -197,22 +252,22 @@
     "vigencia_fin": "2026-08-16T12:00:00"
   },
   "netatmo_own": {
-    "ts": 1786808024,
-    "presion_hpa": 1015.7,
+    "ts": 1786812012,
+    "presion_hpa": 1015.9,
     "presion_tendencia": "stable",
     "exterior": {
-      "temp_c": 20.2,
+      "temp_c": 19.8,
       "humedad": 100,
-      "tendencia": "down"
+      "tendencia": "stable"
     },
     "viento": {
-      "kmh": 5,
-      "dir": 33,
-      "racha_kmh": 9
+      "kmh": 4,
+      "dir": 31,
+      "racha_kmh": 11
     },
     "lluvia": {
-      "mm_1h": 0.101,
-      "mm_24h": 2.2
+      "mm_1h": 0.404,
+      "mm_24h": 2.7
     }
   },
   "netatmo_vecinas": [
@@ -220,49 +275,49 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 20.5,
-      "humedad": 90
+      "temp_c": 20,
+      "humedad": 91
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
-      "temp_c": 20.6,
+      "temp_c": 20,
       "humedad": 92
     },
     {
       "lat": 43.56,
       "lon": -6.27,
       "ciudad": "Cudillero",
-      "temp_c": 22.9,
+      "temp_c": 22.5,
       "humedad": 75
     },
     {
       "lat": 43.24,
       "lon": -6.56,
       "ciudad": "Allande",
-      "temp_c": 20.5,
-      "humedad": 82
+      "temp_c": 19.1,
+      "humedad": 85
     },
     {
       "lat": 43.4,
       "lon": -6.54,
       "ciudad": "Tineo",
-      "temp_c": 22.6,
+      "temp_c": 22.1,
       "humedad": 81
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 21.2,
-      "humedad": 87
+      "temp_c": 20.5,
+      "humedad": 89
     },
     {
       "lat": 43.43,
       "lon": -6.76,
       "ciudad": "Boal",
-      "temp_c": 21.7,
+      "temp_c": 21.1,
       "humedad": 86
     }
   ],
@@ -450,5 +505,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-08-15T15:33:59.120752+00:00"
+  "generated_at": "2026-08-15T16:40:40.856101+00:00"
 }
