@@ -1,70 +1,31 @@
 {
   "real_time": {
-    "ts": "2026-08-15T13:00:00+0000",
-    "temp_c": 20.5,
-    "wind_kmh": 7.9,
-    "wind_dir": 331.0,
-    "gust_kmh": 24.8,
-    "pres_hpa": 1010.1,
+    "ts": "2026-08-15T14:00:00+0000",
+    "temp_c": 20.1,
+    "wind_kmh": 19.1,
+    "wind_dir": 52.0,
+    "gust_kmh": 25.2,
+    "pres_hpa": 1009.9,
     "pres_tendencia": "bajando",
-    "humedad": 97.0
+    "humedad": 96.0
   },
   "recomendacion": {
     "score": 25,
     "etiqueta": "Lluvia en las próximas horas"
   },
   "que_se_acerca": {
-    "sector": "NW",
-    "disponible": false
+    "sector": "NE",
+    "disponible": true,
+    "nombre": "Cabo Peñas",
+    "dist_km": 57,
+    "lloviendo": true,
+    "prec_mm": 1.5,
+    "temp_c": 21.4,
+    "cielo_despejado": false,
+    "eta_horas": 3.0
   },
-  "forecast_municipio": [
-    {
-      "fecha": "2026-08-15T00:00:00",
-      "cielo": "Cubierto con lluvia",
-      "viento_dir": "E",
-      "viento_kmh": 5,
-      "t_max": 23,
-      "t_min": 20,
-      "prob_precipitacion": 100
-    },
-    {
-      "fecha": "2026-08-16T00:00:00",
-      "cielo": "Cubierto con lluvia",
-      "viento_dir": "NE",
-      "viento_kmh": 10,
-      "t_max": 24,
-      "t_min": 20,
-      "prob_precipitacion": 100
-    },
-    {
-      "fecha": "2026-08-17T00:00:00",
-      "cielo": "Cubierto con lluvia escasa",
-      "viento_dir": "NE",
-      "viento_kmh": 20,
-      "t_max": 25,
-      "t_min": 20,
-      "prob_precipitacion": 85
-    },
-    {
-      "fecha": "2026-08-18T00:00:00",
-      "cielo": "Intervalos nubosos",
-      "viento_dir": "NE",
-      "viento_kmh": 20,
-      "t_max": 27,
-      "t_min": 20,
-      "prob_precipitacion": 35
-    }
-  ],
+  "forecast_municipio": null,
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-08-15T15:00",
-      "temp": "22",
-      "sens_termica": "22",
-      "cielo": "Cubierto con lluvia escasa",
-      "prob_precipitacion": "100",
-      "viento_dir": "NE",
-      "viento_kmh": "16"
-    },
     {
       "fecha_hora": "2026-08-15T16:00",
       "temp": "22",
@@ -220,7 +181,7 @@
     }
   ],
   "horaria_elaborado": "2026-08-15T12:49:10",
-  "horaria_es_respaldo": false,
+  "horaria_es_respaldo": true,
   "avisos": [],
   "maritima": {
     "texto": "Oeste de Cabo Lastres: NE 3 o 4. Marejadilla o marejada.\r\n Este de Cabo Lastres: Variable, principalmente N, 1 a 3. Rizada o marejadilla.\r\n Ambas zonas: Mar de fondo del NW en torno a 1 m. Lluvia ocasional.",
@@ -245,18 +206,18 @@
     "vigencia_fin": "2026-08-16T12:00:00"
   },
   "netatmo_own": {
-    "ts": 1786801370,
-    "presion_hpa": 1015.7,
+    "ts": 1786804395,
+    "presion_hpa": 1015.5,
     "presion_tendencia": "stable",
     "exterior": {
-      "temp_c": 21,
+      "temp_c": 20.8,
       "humedad": 100,
       "tendencia": "stable"
     },
     "viento": {
-      "kmh": 5,
-      "dir": 58,
-      "racha_kmh": 12
+      "kmh": 4,
+      "dir": 74,
+      "racha_kmh": 11
     },
     "lluvia": {
       "mm_1h": 0,
@@ -268,49 +229,49 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 21.7,
+      "temp_c": 20.9,
       "humedad": 90
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
-      "temp_c": 20.9,
-      "humedad": 93
+      "temp_c": 21,
+      "humedad": 92
     },
     {
       "lat": 43.56,
       "lon": -6.27,
       "ciudad": "Cudillero",
-      "temp_c": 23.3,
-      "humedad": 75
+      "temp_c": 23.2,
+      "humedad": 74
     },
     {
       "lat": 43.24,
       "lon": -6.56,
       "ciudad": "Allande",
-      "temp_c": 23,
-      "humedad": 77
+      "temp_c": 21.7,
+      "humedad": 81
     },
     {
       "lat": 43.4,
       "lon": -6.54,
       "ciudad": "Tineo",
-      "temp_c": 23.9,
+      "temp_c": 23.7,
       "humedad": 78
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 22.6,
+      "temp_c": 22,
       "humedad": 85
     },
     {
       "lat": 43.43,
       "lon": -6.76,
       "ciudad": "Boal",
-      "temp_c": 23,
+      "temp_c": 22,
       "humedad": 85
     }
   ],
@@ -498,5 +459,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-08-15T13:43:18.155732+00:00"
+  "generated_at": "2026-08-15T14:37:58.218941+00:00"
 }
