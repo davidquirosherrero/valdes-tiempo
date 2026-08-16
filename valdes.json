@@ -1,17 +1,17 @@
 {
   "real_time": {
-    "ts": "2026-08-16T15:00:00+0000",
-    "temp_c": 21.7,
-    "wind_kmh": 3.2,
+    "ts": "2026-08-16T16:00:00+0000",
+    "temp_c": 22.1,
+    "wind_kmh": 4.0,
     "wind_dir": 79.0,
-    "gust_kmh": 8.3,
-    "pres_hpa": 1011.6,
+    "gust_kmh": 6.8,
+    "pres_hpa": 1011.4,
     "pres_tendencia": "estable",
-    "humedad": 78.0
+    "humedad": 76.0
   },
   "recomendacion": {
-    "score": 45,
-    "etiqueta": "Lluvia en las próximas horas"
+    "score": 40,
+    "etiqueta": "Cielo muy nuboso"
   },
   "que_se_acerca": {
     "sector": "E",
@@ -20,58 +20,12 @@
     "dist_km": 40,
     "lloviendo": false,
     "prec_mm": 0,
-    "temp_c": 21.4,
-    "cielo_despejado": false,
-    "eta_horas": 12.5
+    "temp_c": 21.6,
+    "cielo_despejado": true,
+    "eta_horas": 10.0
   },
-  "forecast_municipio": [
-    {
-      "fecha": "2026-08-16T00:00:00",
-      "cielo": "Cubierto",
-      "viento_dir": "E",
-      "viento_kmh": 10,
-      "t_max": 24,
-      "t_min": 20,
-      "prob_precipitacion": 100
-    },
-    {
-      "fecha": "2026-08-17T00:00:00",
-      "cielo": "Cubierto con lluvia escasa",
-      "viento_dir": "NE",
-      "viento_kmh": 15,
-      "t_max": 24,
-      "t_min": 20,
-      "prob_precipitacion": 100
-    },
-    {
-      "fecha": "2026-08-18T00:00:00",
-      "cielo": "Muy nuboso",
-      "viento_dir": "NE",
-      "viento_kmh": 20,
-      "t_max": 25,
-      "t_min": 20,
-      "prob_precipitacion": 45
-    },
-    {
-      "fecha": "2026-08-19T00:00:00",
-      "cielo": "Muy nuboso con lluvia",
-      "viento_dir": "NO",
-      "viento_kmh": 10,
-      "t_max": 24,
-      "t_min": 19,
-      "prob_precipitacion": 85
-    }
-  ],
+  "forecast_municipio": null,
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-08-16T17:00",
-      "temp": "22",
-      "sens_termica": "22",
-      "cielo": "Cubierto con lluvia escasa",
-      "prob_precipitacion": "80",
-      "viento_dir": "NE",
-      "viento_kmh": "16"
-    },
     {
       "fecha_hora": "2026-08-16T18:00",
       "temp": "22",
@@ -227,7 +181,7 @@
     }
   ],
   "horaria_elaborado": "2026-08-16T13:21:10",
-  "horaria_es_respaldo": false,
+  "horaria_es_respaldo": true,
   "avisos": [],
   "maritima": {
     "texto": "Oeste de Cabo Peñas: E o NE 3 o 4. Marejadilla o marejada.\r\n Este de Cabo Peñas: NE 2 o 3, tendiendo a Variable 1 a 3 a partir de la noche. \r\n Ambas zonas: Mar de fondo del NW en torno a 1 m mar adentro. Lluvia ocasional.",
@@ -252,18 +206,18 @@
     "vigencia_fin": "2026-08-17T12:00:00"
   },
   "netatmo_own": {
-    "ts": 1786893891,
+    "ts": 1786898126,
     "presion_hpa": 1017.2,
-    "presion_tendencia": "up",
+    "presion_tendencia": "stable",
     "exterior": {
       "temp_c": 22.8,
-      "humedad": 89,
-      "tendencia": "up"
+      "humedad": 88,
+      "tendencia": "stable"
     },
     "viento": {
       "kmh": 4,
-      "dir": 67,
-      "racha_kmh": 7
+      "dir": 64,
+      "racha_kmh": 8
     },
     "lluvia": {
       "mm_1h": 0,
@@ -275,50 +229,50 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 22.4,
+      "temp_c": 22.6,
       "humedad": 82
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
-      "temp_c": 23.2,
-      "humedad": 76
+      "temp_c": 23.4,
+      "humedad": 75
     },
     {
       "lat": 43.56,
       "lon": -6.27,
       "ciudad": "Cudillero",
-      "temp_c": 22.8,
-      "humedad": 72
+      "temp_c": 23,
+      "humedad": 71
     },
     {
       "lat": 43.24,
       "lon": -6.56,
       "ciudad": "Allande",
-      "temp_c": 19.6,
-      "humedad": 82
+      "temp_c": 18.8,
+      "humedad": 85
     },
     {
       "lat": 43.4,
       "lon": -6.54,
       "ciudad": "Tineo",
       "temp_c": 22.1,
-      "humedad": 78
+      "humedad": 77
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 20.7,
-      "humedad": 88
+      "temp_c": 20.6,
+      "humedad": 87
     },
     {
       "lat": 43.43,
       "lon": -6.76,
       "ciudad": "Boal",
-      "temp_c": 21.9,
-      "humedad": 83
+      "temp_c": 22.2,
+      "humedad": 82
     }
   ],
   "lugares": [
@@ -505,5 +459,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-08-16T15:34:47.432881+00:00"
+  "generated_at": "2026-08-16T16:41:03.615505+00:00"
 }
