@@ -1,27 +1,27 @@
 {
   "real_time": {
-    "ts": "2026-08-16T12:00:00+0000",
-    "temp_c": 20.9,
-    "wind_kmh": 8.6,
-    "wind_dir": 69.0,
-    "gust_kmh": 16.9,
-    "pres_hpa": 1011.8,
+    "ts": "2026-08-16T13:00:00+0000",
+    "temp_c": 21.1,
+    "wind_kmh": 12.2,
+    "wind_dir": 63.0,
+    "gust_kmh": 19.1,
+    "pres_hpa": 1011.7,
     "pres_tendencia": "estable",
-    "humedad": 84.0
+    "humedad": 80.0
   },
   "recomendacion": {
-    "score": 50,
-    "etiqueta": "Cielo muy nuboso"
+    "score": 70,
+    "etiqueta": "Buen día de playa — la presión está subiendo"
   },
   "que_se_acerca": {
-    "sector": "E",
+    "sector": "NE",
     "disponible": true,
-    "nombre": "Avilés",
-    "dist_km": 40,
+    "nombre": "Cabo Peñas",
+    "dist_km": 57,
     "lloviendo": false,
     "prec_mm": 0,
-    "temp_c": 20.8,
-    "cielo_despejado": false,
+    "temp_c": 22.1,
+    "cielo_despejado": true,
     "eta_horas": 4.7
   },
   "forecast_municipio": [
@@ -63,15 +63,6 @@
     }
   ],
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-08-16T14:00",
-      "temp": "23",
-      "sens_termica": "23",
-      "cielo": "Cubierto",
-      "prob_precipitacion": "80",
-      "viento_dir": "NE",
-      "viento_kmh": "13"
-    },
     {
       "fecha_hora": "2026-08-16T15:00",
       "temp": "22",
@@ -215,10 +206,28 @@
       "prob_precipitacion": "65",
       "viento_dir": "E",
       "viento_kmh": "7"
+    },
+    {
+      "fecha_hora": "2026-08-17T07:00",
+      "temp": "20",
+      "sens_termica": "20",
+      "cielo": "Cubierto",
+      "prob_precipitacion": "65",
+      "viento_dir": "NE",
+      "viento_kmh": "8"
+    },
+    {
+      "fecha_hora": "2026-08-17T08:00",
+      "temp": "20",
+      "sens_termica": "20",
+      "cielo": "Cubierto",
+      "prob_precipitacion": "95",
+      "viento_dir": "E",
+      "viento_kmh": "7"
     }
   ],
-  "horaria_elaborado": "2026-08-16T10:15:12",
-  "horaria_es_respaldo": true,
+  "horaria_elaborado": "2026-08-16T13:21:10",
+  "horaria_es_respaldo": false,
   "avisos": [],
   "maritima": {
     "texto": "Oeste de Cabo Peñas: E o NE 3 o 4. Marejadilla o marejada.\r\n Este de Cabo Peñas: NE 2 o 3, tendiendo a Variable 1 a 3 a partir de la noche. \r\n Ambas zonas: Mar de fondo del NW en torno a 1 m mar adentro. Lluvia ocasional.",
@@ -243,18 +252,18 @@
     "vigencia_fin": "2026-08-17T12:00:00"
   },
   "netatmo_own": {
-    "ts": 1786884817,
-    "presion_hpa": 1017.4,
-    "presion_tendencia": "stable",
+    "ts": 1786887841,
+    "presion_hpa": 1017.6,
+    "presion_tendencia": "up",
     "exterior": {
-      "temp_c": 22.2,
+      "temp_c": 21.9,
       "humedad": 91,
-      "tendencia": "stable"
+      "tendencia": "down"
     },
     "viento": {
-      "kmh": 8,
-      "dir": 69,
-      "racha_kmh": 13
+      "kmh": 4,
+      "dir": 59,
+      "racha_kmh": 7
     },
     "lluvia": {
       "mm_1h": 0,
@@ -266,43 +275,43 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 22.7,
-      "humedad": 86
+      "temp_c": 21.9,
+      "humedad": 83
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
-      "temp_c": 22.6,
+      "temp_c": 22.5,
       "humedad": 79
     },
     {
       "lat": 43.56,
       "lon": -6.27,
       "ciudad": "Cudillero",
-      "temp_c": 22.4,
-      "humedad": 74
+      "temp_c": 22.5,
+      "humedad": 73
     },
     {
       "lat": 43.24,
       "lon": -6.56,
       "ciudad": "Allande",
-      "temp_c": 24.8,
+      "temp_c": 24.2,
       "humedad": 74
     },
     {
       "lat": 43.4,
       "lon": -6.54,
       "ciudad": "Tineo",
-      "temp_c": 22.6,
-      "humedad": 78
+      "temp_c": 22.7,
+      "humedad": 77
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 20.9,
-      "humedad": 91
+      "temp_c": 21.1,
+      "humedad": 89
     },
     {
       "lat": 43.43,
@@ -496,5 +505,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-08-16T12:59:56.439763+00:00"
+  "generated_at": "2026-08-16T13:44:11.403092+00:00"
 }
