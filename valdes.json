@@ -1,28 +1,28 @@
 {
   "real_time": {
-    "ts": "2026-08-16T09:00:00+0000",
+    "ts": "2026-08-16T10:00:00+0000",
     "temp_c": 20.6,
-    "wind_kmh": 11.5,
-    "wind_dir": 83.0,
-    "gust_kmh": 20.5,
-    "pres_hpa": 1011.0,
+    "wind_kmh": 9.7,
+    "wind_dir": 58.0,
+    "gust_kmh": 18.7,
+    "pres_hpa": 1011.3,
     "pres_tendencia": "estable",
-    "humedad": 86.0
+    "humedad": 87.0
   },
   "recomendacion": {
     "score": 50,
     "etiqueta": "Cielo muy nuboso"
   },
   "que_se_acerca": {
-    "sector": "E",
+    "sector": "NE",
     "disponible": true,
-    "nombre": "Avilés",
-    "dist_km": 40,
+    "nombre": "Cabo Peñas",
+    "dist_km": 57,
     "lloviendo": false,
     "prec_mm": 0,
-    "temp_c": 21.2,
+    "temp_c": 21.5,
     "cielo_despejado": false,
-    "eta_horas": 3.5
+    "eta_horas": 5.9
   },
   "forecast_municipio": [
     {
@@ -63,15 +63,6 @@
     }
   ],
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-08-16T11:00",
-      "temp": "21",
-      "sens_termica": "21",
-      "cielo": "Cubierto",
-      "prob_precipitacion": "90",
-      "viento_dir": "E",
-      "viento_kmh": "7"
-    },
     {
       "fecha_hora": "2026-08-16T12:00",
       "temp": "21",
@@ -224,53 +215,105 @@
       "prob_precipitacion": "65",
       "viento_dir": "E",
       "viento_kmh": "7"
+    },
+    {
+      "fecha_hora": "2026-08-17T05:00",
+      "temp": "20",
+      "sens_termica": "20",
+      "cielo": "Cubierto",
+      "prob_precipitacion": "65",
+      "viento_dir": "E",
+      "viento_kmh": "5"
     }
   ],
-  "horaria_elaborado": "2026-08-16T09:05:11",
+  "horaria_elaborado": "2026-08-16T10:15:12",
   "horaria_es_respaldo": false,
   "avisos": [],
   "maritima": {
-    "texto": "Oeste de Cabo Lastres: NE 3 o 4. Marejadilla o marejada.\r\n Este de Cabo Lastres: Variable, principalmente N, 1 a 3. Rizada o marejadilla.\r\n Ambas zonas: Mar de fondo del NW en torno a 1 m. Lluvia ocasional.",
+    "texto": "Oeste de Cabo Peñas: E o NE 3 o 4. Marejadilla o marejada.\r\n Este de Cabo Peñas: NE 2 o 3, tendiendo a Variable 1 a 3 a partir de la noche. \r\n Ambas zonas: Mar de fondo del NW en torno a 1 m mar adentro. Lluvia ocasional.",
     "segmentos": [
       {
-        "zona": "Oeste de Cabo Lastres",
-        "texto": "NE 3 o 4. Marejadilla o marejada.",
-        "direccion": "NE",
+        "zona": "Oeste de Cabo Peñas",
+        "texto": "E o NE 3 o 4. Marejadilla o marejada.",
+        "direccion": "E",
         "fuerza": "3o4",
         "estado_mar": "marejadilla"
       },
       {
-        "zona": "Este de Cabo Lastres",
-        "texto": "Variable, principalmente N, 1 a 3. Rizada o marejadilla.",
-        "direccion": "Variable",
-        "fuerza": null,
-        "estado_mar": "marejadilla"
+        "zona": "Este de Cabo Peñas",
+        "texto": "NE 2 o 3, tendiendo a Variable 1 a 3 a partir de la noche.",
+        "direccion": "NE",
+        "fuerza": "2o3",
+        "estado_mar": null
       }
     ],
-    "avisos_texto": "No hay avisos.",
-    "vigencia_inicio": "2026-08-15T20:00:00",
-    "vigencia_fin": "2026-08-16T20:00:00"
+    "avisos_texto": "No hay aviso",
+    "vigencia_inicio": "2026-08-16T12:00:00",
+    "vigencia_fin": "2026-08-17T12:00:00"
   },
   "netatmo_own": {
-    "ts": 1786872719,
-    "presion_hpa": 1016.8,
+    "ts": 1786876348,
+    "presion_hpa": 1016.9,
     "presion_tendencia": "stable",
     "exterior": {
-      "temp_c": 22.1,
-      "humedad": 99,
+      "temp_c": 22.5,
+      "humedad": 94,
       "tendencia": "up"
     },
     "viento": {
-      "kmh": 5,
-      "dir": 64,
-      "racha_kmh": 12
+      "kmh": 7,
+      "dir": 60,
+      "racha_kmh": 11
     },
     "lluvia": {
       "mm_1h": 0,
       "mm_24h": 0.1
     }
   },
-  "netatmo_vecinas": [],
+  "netatmo_vecinas": [
+    {
+      "lat": 43.53,
+      "lon": -6.39,
+      "ciudad": "Valdés",
+      "temp_c": 22.2,
+      "humedad": 90
+    },
+    {
+      "lat": 43.56,
+      "lon": -6.66,
+      "ciudad": "Navia",
+      "temp_c": 22.2,
+      "humedad": 83
+    },
+    {
+      "lat": 43.56,
+      "lon": -6.27,
+      "ciudad": "Cudillero",
+      "temp_c": 22.1,
+      "humedad": 77
+    },
+    {
+      "lat": 43.4,
+      "lon": -6.54,
+      "ciudad": "Tineo",
+      "temp_c": 22.1,
+      "humedad": 80
+    },
+    {
+      "lat": 43.4,
+      "lon": -6.25,
+      "ciudad": "Salas",
+      "temp_c": 20.2,
+      "humedad": 93
+    },
+    {
+      "lat": 43.43,
+      "lon": -6.76,
+      "ciudad": "Boal",
+      "temp_c": 23.1,
+      "humedad": 83
+    }
+  ],
   "lugares": [
     {
       "name": "Otur",
@@ -455,5 +498,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-08-16T09:40:34.484037+00:00"
+  "generated_at": "2026-08-16T10:39:12.077108+00:00"
 }
