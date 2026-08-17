@@ -1,13 +1,13 @@
 {
   "real_time": {
-    "ts": "2026-08-17T12:00:00+0000",
-    "temp_c": 21.1,
-    "wind_kmh": 19.4,
-    "wind_dir": 74.0,
-    "gust_kmh": 28.1,
-    "pres_hpa": 1013.7,
+    "ts": "2026-08-17T13:00:00+0000",
+    "temp_c": 21.5,
+    "wind_kmh": 23.4,
+    "wind_dir": 79.0,
+    "gust_kmh": 30.2,
+    "pres_hpa": 1013.4,
     "pres_tendencia": "estable",
-    "humedad": 87.0
+    "humedad": 85.0
   },
   "recomendacion": {
     "score": 60,
@@ -20,9 +20,9 @@
     "dist_km": 40,
     "lloviendo": false,
     "prec_mm": 0,
-    "temp_c": 23.0,
+    "temp_c": 23.5,
     "cielo_despejado": true,
-    "eta_horas": 2.1
+    "eta_horas": 1.7
   },
   "forecast_municipio": [
     {
@@ -252,18 +252,18 @@
     "vigencia_fin": "2026-08-18T12:00:00"
   },
   "netatmo_own": {
-    "ts": 1786971462,
-    "presion_hpa": 1019.1,
+    "ts": 1786974488,
+    "presion_hpa": 1018.9,
     "presion_tendencia": "up",
     "exterior": {
-      "temp_c": 24.7,
-      "humedad": 86,
-      "tendencia": "up"
+      "temp_c": 24,
+      "humedad": 88,
+      "tendencia": "down"
     },
     "viento": {
       "kmh": 8,
-      "dir": 58,
-      "racha_kmh": 16
+      "dir": 67,
+      "racha_kmh": 15
     },
     "lluvia": {
       "mm_1h": 0,
@@ -275,50 +275,50 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 24.2,
-      "humedad": 81
+      "temp_c": 24.4,
+      "humedad": 79
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
-      "temp_c": 24.4,
-      "humedad": 77
+      "temp_c": 24.3,
+      "humedad": 76
     },
     {
       "lat": 43.56,
       "lon": -6.27,
       "ciudad": "Cudillero",
-      "temp_c": 23.6,
+      "temp_c": 23.5,
       "humedad": 71
     },
     {
       "lat": 43.24,
       "lon": -6.56,
       "ciudad": "Allande",
-      "temp_c": 24.9,
+      "temp_c": 25.5,
       "humedad": 71
     },
     {
       "lat": 43.4,
       "lon": -6.54,
       "ciudad": "Tineo",
-      "temp_c": 24.4,
-      "humedad": 76
+      "temp_c": 25.3,
+      "humedad": 72
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 22.4,
-      "humedad": 87
+      "temp_c": 23.5,
+      "humedad": 85
     },
     {
       "lat": 43.43,
       "lon": -6.76,
       "ciudad": "Boal",
-      "temp_c": 25.7,
-      "humedad": 76
+      "temp_c": 26.6,
+      "humedad": 74
     }
   ],
   "lugares": [
@@ -505,5 +505,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-08-17T13:04:35.910437+00:00"
+  "generated_at": "2026-08-17T13:52:18.380933+00:00"
 }
