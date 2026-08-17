@@ -1,11 +1,11 @@
 {
   "real_time": {
-    "ts": "2026-08-17T02:00:00+0000",
-    "temp_c": 19.9,
-    "wind_kmh": 6.1,
-    "wind_dir": 99.0,
-    "gust_kmh": 14.0,
-    "pres_hpa": 1011.7,
+    "ts": "2026-08-17T03:00:00+0000",
+    "temp_c": 20.0,
+    "wind_kmh": 9.4,
+    "wind_dir": 94.0,
+    "gust_kmh": 14.8,
+    "pres_hpa": 1011.5,
     "pres_tendencia": "estable",
     "humedad": 91.0
   },
@@ -20,58 +20,12 @@
     "dist_km": 40,
     "lloviendo": false,
     "prec_mm": 0,
-    "temp_c": 19.7,
+    "temp_c": 19.6,
     "cielo_despejado": false,
-    "eta_horas": 6.6
+    "eta_horas": 4.3
   },
-  "forecast_municipio": [
-    {
-      "fecha": "2026-08-16T00:00:00",
-      "cielo": "Cubierto",
-      "viento_dir": "C",
-      "viento_kmh": 0,
-      "t_max": 24,
-      "t_min": 20,
-      "prob_precipitacion": 10
-    },
-    {
-      "fecha": "2026-08-17T00:00:00",
-      "cielo": "Cubierto con lluvia escasa",
-      "viento_dir": "NE",
-      "viento_kmh": 20,
-      "t_max": 24,
-      "t_min": 20,
-      "prob_precipitacion": 100
-    },
-    {
-      "fecha": "2026-08-18T00:00:00",
-      "cielo": "Nuboso",
-      "viento_dir": "NE",
-      "viento_kmh": 20,
-      "t_max": 25,
-      "t_min": 19,
-      "prob_precipitacion": 30
-    },
-    {
-      "fecha": "2026-08-19T00:00:00",
-      "cielo": "Muy nuboso con lluvia escasa",
-      "viento_dir": "N",
-      "viento_kmh": 5,
-      "t_max": 25,
-      "t_min": 19,
-      "prob_precipitacion": 90
-    }
-  ],
+  "forecast_municipio": null,
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-08-17T05:00",
-      "temp": "20",
-      "sens_termica": "20",
-      "cielo": "Muy nuboso",
-      "prob_precipitacion": "80",
-      "viento_dir": "S",
-      "viento_kmh": "5"
-    },
     {
       "fecha_hora": "2026-08-17T06:00",
       "temp": "20",
@@ -227,7 +181,7 @@
     }
   ],
   "horaria_elaborado": "2026-08-16T21:03:11",
-  "horaria_es_respaldo": false,
+  "horaria_es_respaldo": true,
   "avisos": [],
   "maritima": {
     "texto": "Oeste de Cabo Peñas: E o NE 3 o 4. Marejadilla o marejada.\r\n Este de Cabo Peñas: Variable 1 a 3, arreciando a NE 3 o 4 a partir de la mañana. Marejadilla.\r\n Ambas zonas: Lluvia ocasional.",
@@ -252,11 +206,11 @@
     "vigencia_fin": "2026-08-17T20:00:00"
   },
   "netatmo_own": {
-    "ts": 1786935759,
-    "presion_hpa": 1017.2,
+    "ts": 1786938783,
+    "presion_hpa": 1017.1,
     "presion_tendencia": "stable",
     "exterior": {
-      "temp_c": 20.5,
+      "temp_c": 20.4,
       "humedad": 97,
       "tendencia": "stable"
     },
@@ -275,22 +229,22 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 19.5,
+      "temp_c": 19.4,
       "humedad": 90
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
-      "temp_c": 20.6,
-      "humedad": 86
+      "temp_c": 20.5,
+      "humedad": 87
     },
     {
       "lat": 43.56,
       "lon": -6.27,
       "ciudad": "Cudillero",
-      "temp_c": 21.6,
-      "humedad": 76
+      "temp_c": 21.5,
+      "humedad": 77
     },
     {
       "lat": 43.24,
@@ -310,14 +264,14 @@
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 19.1,
-      "humedad": 93
+      "temp_c": 19,
+      "humedad": 94
     },
     {
       "lat": 43.43,
       "lon": -6.76,
       "ciudad": "Boal",
-      "temp_c": 20.8,
+      "temp_c": 20.7,
       "humedad": 86
     }
   ],
@@ -523,5 +477,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-08-17T03:12:18.643583+00:00"
+  "generated_at": "2026-08-17T04:02:57.285619+00:00"
 }
