@@ -1,28 +1,28 @@
 {
   "real_time": {
-    "ts": "2026-08-17T10:00:00+0000",
-    "temp_c": 20.9,
-    "wind_kmh": 10.8,
-    "wind_dir": 64.0,
-    "gust_kmh": 19.4,
-    "pres_hpa": 1013.4,
+    "ts": "2026-08-17T12:00:00+0000",
+    "temp_c": 21.1,
+    "wind_kmh": 19.4,
+    "wind_dir": 74.0,
+    "gust_kmh": 28.1,
+    "pres_hpa": 1013.7,
     "pres_tendencia": "estable",
-    "humedad": 88.0
+    "humedad": 87.0
   },
   "recomendacion": {
-    "score": 70,
-    "etiqueta": "Buen día de playa — la presión está subiendo"
+    "score": 60,
+    "etiqueta": "Cielo muy nuboso"
   },
   "que_se_acerca": {
-    "sector": "NE",
+    "sector": "E",
     "disponible": true,
-    "nombre": "Cabo Peñas",
-    "dist_km": 57,
+    "nombre": "Avilés",
+    "dist_km": 40,
     "lloviendo": false,
     "prec_mm": 0,
-    "temp_c": 22.6,
-    "cielo_despejado": false,
-    "eta_horas": 5.3
+    "temp_c": 23.0,
+    "cielo_despejado": true,
+    "eta_horas": 2.1
   },
   "forecast_municipio": [
     {
@@ -63,24 +63,6 @@
     }
   ],
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-08-17T13:00",
-      "temp": "22",
-      "sens_termica": "22",
-      "cielo": "Cubierto",
-      "prob_precipitacion": "90",
-      "viento_dir": "E",
-      "viento_kmh": "13"
-    },
-    {
-      "fecha_hora": "2026-08-17T14:00",
-      "temp": "23",
-      "sens_termica": "23",
-      "cielo": "Cubierto",
-      "prob_precipitacion": "5",
-      "viento_dir": "E",
-      "viento_kmh": "15"
-    },
     {
       "fecha_hora": "2026-08-17T15:00",
       "temp": "23",
@@ -224,9 +206,27 @@
       "prob_precipitacion": "5",
       "viento_dir": "SE",
       "viento_kmh": "5"
+    },
+    {
+      "fecha_hora": "2026-08-18T07:00",
+      "temp": "19",
+      "sens_termica": "19",
+      "cielo": "Poco nuboso",
+      "prob_precipitacion": "5",
+      "viento_dir": "SE",
+      "viento_kmh": "7"
+    },
+    {
+      "fecha_hora": "2026-08-18T08:00",
+      "temp": "18",
+      "sens_termica": "18",
+      "cielo": "Despejado",
+      "prob_precipitacion": "0",
+      "viento_dir": "S",
+      "viento_kmh": "6"
     }
   ],
-  "horaria_elaborado": "2026-08-17T09:53:10",
+  "horaria_elaborado": "2026-08-17T12:43:11",
   "horaria_es_respaldo": false,
   "avisos": [],
   "maritima": {
@@ -252,18 +252,18 @@
     "vigencia_fin": "2026-08-18T12:00:00"
   },
   "netatmo_own": {
-    "ts": 1786966623,
-    "presion_hpa": 1019.4,
+    "ts": 1786971462,
+    "presion_hpa": 1019.1,
     "presion_tendencia": "up",
     "exterior": {
-      "temp_c": 23.7,
-      "humedad": 91,
+      "temp_c": 24.7,
+      "humedad": 86,
       "tendencia": "up"
     },
     "viento": {
-      "kmh": 7,
-      "dir": 67,
-      "racha_kmh": 12
+      "kmh": 8,
+      "dir": 58,
+      "racha_kmh": 16
     },
     "lluvia": {
       "mm_1h": 0,
@@ -275,50 +275,50 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 23,
-      "humedad": 85
+      "temp_c": 24.2,
+      "humedad": 81
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
       "temp_c": 24.4,
-      "humedad": 76
+      "humedad": 77
     },
     {
       "lat": 43.56,
       "lon": -6.27,
       "ciudad": "Cudillero",
-      "temp_c": 23.2,
-      "humedad": 73
+      "temp_c": 23.6,
+      "humedad": 71
     },
     {
       "lat": 43.24,
       "lon": -6.56,
       "ciudad": "Allande",
-      "temp_c": 21.9,
-      "humedad": 84
+      "temp_c": 24.9,
+      "humedad": 71
     },
     {
       "lat": 43.4,
       "lon": -6.54,
       "ciudad": "Tineo",
-      "temp_c": 23.4,
-      "humedad": 78
+      "temp_c": 24.4,
+      "humedad": 76
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 21.5,
-      "humedad": 90
+      "temp_c": 22.4,
+      "humedad": 87
     },
     {
       "lat": 43.43,
       "lon": -6.76,
       "ciudad": "Boal",
-      "temp_c": 23.8,
-      "humedad": 80
+      "temp_c": 25.7,
+      "humedad": 76
     }
   ],
   "lugares": [
@@ -505,5 +505,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-08-17T11:39:28.357852+00:00"
+  "generated_at": "2026-08-17T13:04:35.910437+00:00"
 }
