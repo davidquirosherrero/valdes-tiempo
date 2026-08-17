@@ -1,13 +1,13 @@
 {
   "real_time": {
-    "ts": "2026-08-17T16:00:00+0000",
-    "temp_c": 21.0,
-    "wind_kmh": 16.9,
-    "wind_dir": 60.0,
-    "gust_kmh": 29.9,
-    "pres_hpa": 1013.0,
+    "ts": "2026-08-17T17:00:00+0000",
+    "temp_c": 20.2,
+    "wind_kmh": 21.6,
+    "wind_dir": 54.0,
+    "gust_kmh": 30.2,
+    "pres_hpa": 1012.9,
     "pres_tendencia": "estable",
-    "humedad": 88.0
+    "humedad": 91.0
   },
   "recomendacion": {
     "score": 40,
@@ -20,9 +20,9 @@
     "dist_km": 57,
     "lloviendo": false,
     "prec_mm": 0,
-    "temp_c": 22.6,
-    "cielo_despejado": true,
-    "eta_horas": 3.4
+    "temp_c": 22.1,
+    "cielo_despejado": false,
+    "eta_horas": 2.6
   },
   "forecast_municipio": [
     {
@@ -63,15 +63,6 @@
     }
   ],
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-08-17T18:00",
-      "temp": "22",
-      "sens_termica": "22",
-      "cielo": "Cubierto",
-      "prob_precipitacion": "5",
-      "viento_dir": "NE",
-      "viento_kmh": "18"
-    },
     {
       "fecha_hora": "2026-08-17T19:00",
       "temp": "22",
@@ -227,7 +218,7 @@
     }
   ],
   "horaria_elaborado": "2026-08-17T14:55:12",
-  "horaria_es_respaldo": false,
+  "horaria_es_respaldo": true,
   "avisos": [],
   "maritima": {
     "texto": "Oeste de Cabo Peñas: E o NE 3 o 4. Marejadilla o marejada.\r\n Este de Cabo Peñas: E o NE 2 o 3. Marejadilla.\r\n Ambas zonas: Lluvia ocasional hasta la tarde. Localmente regular por nieblas de madrugada.",
@@ -252,22 +243,22 @@
     "vigencia_fin": "2026-08-18T12:00:00"
   },
   "netatmo_own": {
-    "ts": 1786984771,
-    "presion_hpa": 1018.7,
+    "ts": 1786988400,
+    "presion_hpa": 1018.4,
     "presion_tendencia": "stable",
     "exterior": {
-      "temp_c": 22.9,
-      "humedad": 89,
+      "temp_c": 22,
+      "humedad": 92,
       "tendencia": "down"
     },
     "viento": {
-      "kmh": 9,
-      "dir": 65,
-      "racha_kmh": 17
+      "kmh": 8,
+      "dir": 81,
+      "racha_kmh": 11
     },
     "lluvia": {
-      "mm_1h": 0,
-      "mm_24h": 0
+      "mm_1h": null,
+      "mm_24h": null
     }
   },
   "netatmo_vecinas": [
@@ -275,15 +266,15 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 24.4,
-      "humedad": 78
+      "temp_c": 22.8,
+      "humedad": 81
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
-      "temp_c": 23.5,
-      "humedad": 78
+      "temp_c": 22.7,
+      "humedad": 80
     },
     {
       "lat": 43.56,
@@ -296,29 +287,29 @@
       "lat": 43.24,
       "lon": -6.56,
       "ciudad": "Allande",
-      "temp_c": 24.5,
-      "humedad": 74
+      "temp_c": 22.3,
+      "humedad": 77
     },
     {
       "lat": 43.4,
       "lon": -6.54,
       "ciudad": "Tineo",
-      "temp_c": 25.2,
-      "humedad": 73
+      "temp_c": 24.2,
+      "humedad": 75
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 23.2,
-      "humedad": 82
+      "temp_c": 22.5,
+      "humedad": 83
     },
     {
       "lat": 43.43,
       "lon": -6.76,
       "ciudad": "Boal",
-      "temp_c": 23,
-      "humedad": 83
+      "temp_c": 22.4,
+      "humedad": 84
     }
   ],
   "lugares": [
@@ -505,5 +496,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-08-17T16:44:50.339047+00:00"
+  "generated_at": "2026-08-17T17:43:58.469225+00:00"
 }
