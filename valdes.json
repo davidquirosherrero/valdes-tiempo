@@ -1,13 +1,13 @@
 {
   "real_time": {
-    "ts": "2026-08-17T13:00:00+0000",
-    "temp_c": 21.5,
-    "wind_kmh": 23.4,
-    "wind_dir": 79.0,
-    "gust_kmh": 30.2,
-    "pres_hpa": 1013.4,
+    "ts": "2026-08-17T14:00:00+0000",
+    "temp_c": 21.8,
+    "wind_kmh": 15.8,
+    "wind_dir": 68.0,
+    "gust_kmh": 29.2,
+    "pres_hpa": 1013.1,
     "pres_tendencia": "estable",
-    "humedad": 85.0
+    "humedad": 82.0
   },
   "recomendacion": {
     "score": 60,
@@ -22,56 +22,10 @@
     "prec_mm": 0,
     "temp_c": 23.5,
     "cielo_despejado": true,
-    "eta_horas": 1.7
+    "eta_horas": 2.5
   },
-  "forecast_municipio": [
-    {
-      "fecha": "2026-08-17T00:00:00",
-      "cielo": "Cubierto",
-      "viento_dir": "S",
-      "viento_kmh": 5,
-      "t_max": 24,
-      "t_min": 19,
-      "prob_precipitacion": 20
-    },
-    {
-      "fecha": "2026-08-18T00:00:00",
-      "cielo": "Intervalos nubosos",
-      "viento_dir": "NE",
-      "viento_kmh": 20,
-      "t_max": 26,
-      "t_min": 18,
-      "prob_precipitacion": 15
-    },
-    {
-      "fecha": "2026-08-19T00:00:00",
-      "cielo": "Cubierto con lluvia escasa",
-      "viento_dir": "N",
-      "viento_kmh": 10,
-      "t_max": 24,
-      "t_min": 18,
-      "prob_precipitacion": 55
-    },
-    {
-      "fecha": "2026-08-20T00:00:00",
-      "cielo": "Cubierto con lluvia",
-      "viento_dir": "N",
-      "viento_kmh": 15,
-      "t_max": 23,
-      "t_min": 17,
-      "prob_precipitacion": 100
-    }
-  ],
+  "forecast_municipio": null,
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-08-17T15:00",
-      "temp": "23",
-      "sens_termica": "23",
-      "cielo": "Cubierto",
-      "prob_precipitacion": "5",
-      "viento_dir": "NE",
-      "viento_kmh": "16"
-    },
     {
       "fecha_hora": "2026-08-17T16:00",
       "temp": "23",
@@ -227,7 +181,7 @@
     }
   ],
   "horaria_elaborado": "2026-08-17T12:43:11",
-  "horaria_es_respaldo": false,
+  "horaria_es_respaldo": true,
   "avisos": [],
   "maritima": {
     "texto": "Oeste de Cabo Peñas: E o NE 3 o 4. Marejadilla o marejada.\r\n Este de Cabo Peñas: E o NE 2 o 3. Marejadilla.\r\n Ambas zonas: Lluvia ocasional hasta la tarde. Localmente regular por nieblas de madrugada.",
@@ -252,18 +206,18 @@
     "vigencia_fin": "2026-08-18T12:00:00"
   },
   "netatmo_own": {
-    "ts": 1786974488,
-    "presion_hpa": 1018.9,
+    "ts": 1786977512,
+    "presion_hpa": 1018.8,
     "presion_tendencia": "up",
     "exterior": {
-      "temp_c": 24,
-      "humedad": 88,
-      "tendencia": "down"
+      "temp_c": 24.9,
+      "humedad": 85,
+      "tendencia": "up"
     },
     "viento": {
       "kmh": 8,
-      "dir": 67,
-      "racha_kmh": 15
+      "dir": 68,
+      "racha_kmh": 17
     },
     "lluvia": {
       "mm_1h": 0,
@@ -275,50 +229,50 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 24.4,
+      "temp_c": 24.1,
       "humedad": 79
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
-      "temp_c": 24.3,
+      "temp_c": 23.9,
       "humedad": 76
     },
     {
       "lat": 43.56,
       "lon": -6.27,
       "ciudad": "Cudillero",
-      "temp_c": 23.5,
+      "temp_c": 23.7,
       "humedad": 71
     },
     {
       "lat": 43.24,
       "lon": -6.56,
       "ciudad": "Allande",
-      "temp_c": 25.5,
-      "humedad": 71
+      "temp_c": 25.3,
+      "humedad": 72
     },
     {
       "lat": 43.4,
       "lon": -6.54,
       "ciudad": "Tineo",
-      "temp_c": 25.3,
+      "temp_c": 26.1,
       "humedad": 72
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 23.5,
-      "humedad": 85
+      "temp_c": 24.4,
+      "humedad": 81
     },
     {
       "lat": 43.43,
       "lon": -6.76,
       "ciudad": "Boal",
-      "temp_c": 26.6,
-      "humedad": 74
+      "temp_c": 25.5,
+      "humedad": 77
     }
   ],
   "lugares": [
@@ -505,5 +459,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-08-17T13:52:18.380933+00:00"
+  "generated_at": "2026-08-17T14:43:01.497310+00:00"
 }
