@@ -1,49 +1,68 @@
 {
   "real_time": {
-    "ts": "2026-08-18T11:00:00+0000",
+    "ts": "2026-08-18T12:00:00+0000",
     "temp_c": 21.4,
-    "wind_kmh": 16.2,
-    "wind_dir": 61.0,
-    "gust_kmh": 31.3,
-    "pres_hpa": 1011.3,
+    "wind_kmh": 16.9,
+    "wind_dir": 69.0,
+    "gust_kmh": 28.8,
+    "pres_hpa": 1011.0,
     "pres_tendencia": "estable",
-    "humedad": 84.0
+    "humedad": 86.0
   },
   "recomendacion": {
     "score": 65,
     "etiqueta": "Buen día de playa — el cielo está despejado"
   },
   "que_se_acerca": {
-    "sector": "NE",
+    "sector": "E",
     "disponible": true,
-    "nombre": "Cabo Peñas",
-    "dist_km": 57,
+    "nombre": "Avilés",
+    "dist_km": 40,
     "lloviendo": false,
     "prec_mm": 0,
-    "temp_c": 22.9,
-    "cielo_despejado": false,
-    "eta_horas": 3.5
+    "temp_c": 23.8,
+    "cielo_despejado": true,
+    "eta_horas": 2.4
   },
-  "forecast_municipio": null,
+  "forecast_municipio": [
+    {
+      "fecha": "2026-08-18T00:00:00",
+      "cielo": "Nuboso",
+      "viento_dir": "S",
+      "viento_kmh": 5,
+      "t_max": 26,
+      "t_min": 18,
+      "prob_precipitacion": null
+    },
+    {
+      "fecha": "2026-08-19T00:00:00",
+      "cielo": "Cubierto con lluvia escasa",
+      "viento_dir": "NO",
+      "viento_kmh": 10,
+      "t_max": 24,
+      "t_min": 18,
+      "prob_precipitacion": 55
+    },
+    {
+      "fecha": "2026-08-20T00:00:00",
+      "cielo": "Muy nuboso con lluvia",
+      "viento_dir": "O",
+      "viento_kmh": 10,
+      "t_max": 21,
+      "t_min": 16,
+      "prob_precipitacion": 100
+    },
+    {
+      "fecha": "2026-08-21T00:00:00",
+      "cielo": "Nuboso con lluvia",
+      "viento_dir": "NO",
+      "viento_kmh": 10,
+      "t_max": 22,
+      "t_min": 16,
+      "prob_precipitacion": 95
+    }
+  ],
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-08-18T13:00",
-      "temp": "24",
-      "sens_termica": "24",
-      "cielo": "Poco nuboso",
-      "prob_precipitacion": "0",
-      "viento_dir": "NE",
-      "viento_kmh": "20"
-    },
-    {
-      "fecha_hora": "2026-08-18T14:00",
-      "temp": "25",
-      "sens_termica": "25",
-      "cielo": "Poco nuboso",
-      "prob_precipitacion": "0",
-      "viento_dir": "NE",
-      "viento_kmh": "20"
-    },
     {
       "fecha_hora": "2026-08-18T15:00",
       "temp": "24",
@@ -178,10 +197,37 @@
       "prob_precipitacion": "5",
       "viento_dir": "O",
       "viento_kmh": "3"
+    },
+    {
+      "fecha_hora": "2026-08-19T06:00",
+      "temp": "20",
+      "sens_termica": "20",
+      "cielo": "Cubierto",
+      "prob_precipitacion": "5",
+      "viento_dir": "O",
+      "viento_kmh": "4"
+    },
+    {
+      "fecha_hora": "2026-08-19T07:00",
+      "temp": "20",
+      "sens_termica": "20",
+      "cielo": "Cubierto",
+      "prob_precipitacion": "5",
+      "viento_dir": "O",
+      "viento_kmh": "5"
+    },
+    {
+      "fecha_hora": "2026-08-19T08:00",
+      "temp": "20",
+      "sens_termica": "20",
+      "cielo": "Cubierto",
+      "prob_precipitacion": "20",
+      "viento_dir": "O",
+      "viento_kmh": "4"
     }
   ],
-  "horaria_elaborado": "2026-08-18T08:59:10",
-  "horaria_es_respaldo": true,
+  "horaria_elaborado": "2026-08-18T12:01:13",
+  "horaria_es_respaldo": false,
   "avisos": [],
   "maritima": {
     "texto": "E o NE 4 o 5 amainando a E 3 o 4, y a Variable 1 o 2 desde medianoche. Rizada o marejadilla, localmente marejada en el oeste por la tarde.",
@@ -199,18 +245,18 @@
     "vigencia_fin": "2026-08-19T12:00:00"
   },
   "netatmo_own": {
-    "ts": 1787052597,
-    "presion_hpa": 1016.9,
+    "ts": 1787058043,
+    "presion_hpa": 1016.4,
     "presion_tendencia": "stable",
     "exterior": {
-      "temp_c": 25.7,
+      "temp_c": 25.5,
       "humedad": 83,
       "tendencia": "stable"
     },
     "viento": {
-      "kmh": 8,
-      "dir": 70,
-      "racha_kmh": 16
+      "kmh": 9,
+      "dir": 71,
+      "racha_kmh": 19
     },
     "lluvia": {
       "mm_1h": null,
@@ -223,48 +269,48 @@
       "lon": -6.39,
       "ciudad": "Valdés",
       "temp_c": 25.6,
-      "humedad": 76
+      "humedad": 75
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
-      "temp_c": 24.9,
-      "humedad": 74
+      "temp_c": 24.3,
+      "humedad": 77
     },
     {
       "lat": 43.56,
       "lon": -6.27,
       "ciudad": "Cudillero",
-      "temp_c": 23.3,
-      "humedad": 71
+      "temp_c": 23.8,
+      "humedad": 70
     },
     {
       "lat": 43.24,
       "lon": -6.56,
       "ciudad": "Allande",
-      "temp_c": 25.5,
-      "humedad": 68
+      "temp_c": 27.5,
+      "humedad": 66
     },
     {
       "lat": 43.4,
       "lon": -6.54,
       "ciudad": "Tineo",
-      "temp_c": 25.8,
-      "humedad": 67
+      "temp_c": 27,
+      "humedad": 66
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 25.8,
-      "humedad": 73
+      "temp_c": 28.5,
+      "humedad": 69
     },
     {
       "lat": 43.43,
       "lon": -6.76,
       "ciudad": "Boal",
-      "temp_c": 25.4,
+      "temp_c": 25.9,
       "humedad": 75
     }
   ],
@@ -452,5 +498,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-08-18T11:39:54.763895+00:00"
+  "generated_at": "2026-08-18T13:06:46.711227+00:00"
 }
