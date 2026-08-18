@@ -1,13 +1,13 @@
 {
   "real_time": {
-    "ts": "2026-08-18T02:00:00+0000",
-    "temp_c": 20.0,
-    "wind_kmh": 11.5,
-    "wind_dir": 96.0,
-    "gust_kmh": 24.8,
-    "pres_hpa": 1012.5,
+    "ts": "2026-08-18T03:00:00+0000",
+    "temp_c": 19.9,
+    "wind_kmh": 10.8,
+    "wind_dir": 102.0,
+    "gust_kmh": 25.6,
+    "pres_hpa": 1012.0,
     "pres_tendencia": "estable",
-    "humedad": 90.0
+    "humedad": 91.0
   },
   "recomendacion": {
     "score": 60,
@@ -20,11 +20,48 @@
     "dist_km": 40,
     "lloviendo": false,
     "prec_mm": 0,
-    "temp_c": 19.6,
+    "temp_c": 18.8,
     "cielo_despejado": false,
-    "eta_horas": 3.5
+    "eta_horas": 3.7
   },
-  "forecast_municipio": null,
+  "forecast_municipio": [
+    {
+      "fecha": "2026-08-17T00:00:00",
+      "cielo": "Cubierto",
+      "viento_dir": "S",
+      "viento_kmh": 5,
+      "t_max": 24,
+      "t_min": 19,
+      "prob_precipitacion": null
+    },
+    {
+      "fecha": "2026-08-18T00:00:00",
+      "cielo": "Poco nuboso",
+      "viento_dir": "NE",
+      "viento_kmh": 20,
+      "t_max": 26,
+      "t_min": 18,
+      "prob_precipitacion": null
+    },
+    {
+      "fecha": "2026-08-19T00:00:00",
+      "cielo": "Cubierto con lluvia escasa",
+      "viento_dir": "NO",
+      "viento_kmh": 10,
+      "t_max": 24,
+      "t_min": 18,
+      "prob_precipitacion": 70
+    },
+    {
+      "fecha": "2026-08-20T00:00:00",
+      "cielo": "Muy nuboso con lluvia",
+      "viento_dir": "O",
+      "viento_kmh": 10,
+      "t_max": 22,
+      "t_min": 16,
+      "prob_precipitacion": 100
+    }
+  ],
   "forecast_horaria": [
     {
       "fecha_hora": "2026-08-18T05:00",
@@ -169,10 +206,28 @@
       "prob_precipitacion": "0",
       "viento_dir": "NE",
       "viento_kmh": "18"
+    },
+    {
+      "fecha_hora": "2026-08-18T21:00",
+      "temp": "22",
+      "sens_termica": "22",
+      "cielo": "Despejado",
+      "prob_precipitacion": "0",
+      "viento_dir": "NE",
+      "viento_kmh": "16"
+    },
+    {
+      "fecha_hora": "2026-08-18T22:00",
+      "temp": "21",
+      "sens_termica": "21",
+      "cielo": "Poco nuboso",
+      "prob_precipitacion": "0",
+      "viento_dir": "E",
+      "viento_kmh": "11"
     }
   ],
   "horaria_elaborado": "2026-08-17T20:57:10",
-  "horaria_es_respaldo": true,
+  "horaria_es_respaldo": false,
   "avisos": [],
   "maritima": {
     "texto": "Oeste de Cabo Peñas: E o NE 3 o 4, ocasionalmente 5. Marejadilla o marejada.\r\n Este de Cabo Peñas: E o NE 2 o 3, ocasionalmente 4. Marejadilla.\r\n Ambas zonas: Lluvia ocasional hasta la tarde. Localmente regular por nieblas de madrugada.",
@@ -197,17 +252,17 @@
     "vigencia_fin": "2026-08-18T20:00:00"
   },
   "netatmo_own": {
-    "ts": 1787022458,
-    "presion_hpa": 1017.6,
+    "ts": 1787024878,
+    "presion_hpa": 1017.3,
     "presion_tendencia": "stable",
     "exterior": {
-      "temp_c": 19.2,
-      "humedad": 98,
+      "temp_c": 18.7,
+      "humedad": 99,
       "tendencia": "down"
     },
     "viento": {
       "kmh": 1,
-      "dir": 90,
+      "dir": 26,
       "racha_kmh": 4
     },
     "lluvia": {
@@ -215,7 +270,50 @@
       "mm_24h": 0
     }
   },
-  "netatmo_vecinas": [],
+  "netatmo_vecinas": [
+    {
+      "lat": 43.53,
+      "lon": -6.39,
+      "ciudad": "Valdés",
+      "temp_c": 18,
+      "humedad": 91
+    },
+    {
+      "lat": 43.56,
+      "lon": -6.66,
+      "ciudad": "Navia",
+      "temp_c": 19.2,
+      "humedad": 90
+    },
+    {
+      "lat": 43.56,
+      "lon": -6.27,
+      "ciudad": "Cudillero",
+      "temp_c": 21.3,
+      "humedad": 75
+    },
+    {
+      "lat": 43.4,
+      "lon": -6.54,
+      "ciudad": "Tineo",
+      "temp_c": 20.8,
+      "humedad": 83
+    },
+    {
+      "lat": 43.4,
+      "lon": -6.25,
+      "ciudad": "Salas",
+      "temp_c": 20,
+      "humedad": 90
+    },
+    {
+      "lat": 43.43,
+      "lon": -6.76,
+      "ciudad": "Boal",
+      "temp_c": 19.5,
+      "humedad": 86
+    }
+  ],
   "lugares": [
     {
       "name": "Otur",
@@ -418,5 +516,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-08-18T03:07:59.337831+00:00"
+  "generated_at": "2026-08-18T03:56:52.989581+00:00"
 }
