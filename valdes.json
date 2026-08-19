@@ -1,13 +1,13 @@
 {
   "real_time": {
-    "ts": "2026-08-19T09:00:00+0000",
-    "temp_c": 19.5,
-    "wind_kmh": 21.2,
+    "ts": "2026-08-19T10:00:00+0000",
+    "temp_c": 19.2,
+    "wind_kmh": 22.3,
     "wind_dir": 282.0,
-    "gust_kmh": 27.7,
-    "pres_hpa": 1007.5,
+    "gust_kmh": 30.2,
+    "pres_hpa": 1008.0,
     "pres_tendencia": "estable",
-    "humedad": 93.0
+    "humedad": 95.0
   },
   "recomendacion": {
     "score": 55,
@@ -20,21 +20,12 @@
     "dist_km": 44,
     "lloviendo": false,
     "prec_mm": 0,
-    "temp_c": 20.1,
+    "temp_c": 22.1,
     "cielo_despejado": false,
-    "eta_horas": 2.1
+    "eta_horas": 2.0
   },
   "forecast_municipio": null,
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-08-19T11:00",
-      "temp": "20",
-      "sens_termica": "20",
-      "cielo": "Cubierto",
-      "prob_precipitacion": "20",
-      "viento_dir": "NO",
-      "viento_kmh": "8"
-    },
     {
       "fecha_hora": "2026-08-19T12:00",
       "temp": "20",
@@ -184,33 +175,33 @@
   "horaria_es_respaldo": true,
   "avisos": [],
   "maritima": {
-    "texto": "E 3 o 4 amainando pronto a Variable 1 o 2, arreciando a NW 2 a 4 desde mediodía. Rizada o marejadilla.",
+    "texto": "Componente W 2 a 4 rolando a N o NW desde la madrugada. Rizada o marejadilla aumentando a marejadilla o marejada. Mar de fondo del NW de 1 a 2 m a partir de la noche. Aguaceros a partir de la noche. Nieblas o brumas cerca de la costa.",
     "segmentos": [
       {
         "zona": null,
-        "texto": "E 3 o 4 amainando pronto a Variable 1 o 2, arreciando a NW 2 a 4 desde mediodía. Rizada o marejadilla.",
+        "texto": "Componente W 2 a 4 rolando a N o NW desde la madrugada. Rizada o marejadilla aumentando a marejadilla o marejada. Mar de fondo del NW de 1 a 2 m a partir de la noche. Aguaceros a partir de la noche. Nieblas o brumas cerca de la costa.",
         "direccion": null,
         "fuerza": null,
         "estado_mar": null
       }
     ],
     "avisos_texto": "No hay avisos",
-    "vigencia_inicio": "2026-08-18T20:00:00",
-    "vigencia_fin": "2026-08-19T20:00:00"
+    "vigencia_inicio": "2026-08-19T12:00:00",
+    "vigencia_fin": "2026-08-20T12:00:00"
   },
   "netatmo_own": {
-    "ts": 1787132752,
-    "presion_hpa": 1013.7,
+    "ts": 1787135776,
+    "presion_hpa": 1014,
     "presion_tendencia": "stable",
     "exterior": {
-      "temp_c": 21.5,
-      "humedad": 96,
+      "temp_c": 21.2,
+      "humedad": 97,
       "tendencia": "stable"
     },
     "viento": {
       "kmh": 1,
-      "dir": 45,
-      "racha_kmh": 5
+      "dir": 90,
+      "racha_kmh": 4
     },
     "lluvia": {
       "mm_1h": 0,
@@ -223,49 +214,49 @@
       "lon": -6.39,
       "ciudad": "Valdés",
       "temp_c": 21.1,
-      "humedad": 90
+      "humedad": 89
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
-      "temp_c": 21.8,
-      "humedad": 85
+      "temp_c": 22.6,
+      "humedad": 84
     },
     {
       "lat": 43.56,
       "lon": -6.27,
       "ciudad": "Cudillero",
-      "temp_c": 21.6,
-      "humedad": 77
+      "temp_c": 21.5,
+      "humedad": 79
     },
     {
       "lat": 43.24,
       "lon": -6.56,
       "ciudad": "Allande",
-      "temp_c": 20.3,
-      "humedad": 91
+      "temp_c": 22.4,
+      "humedad": 84
     },
     {
       "lat": 43.4,
       "lon": -6.54,
       "ciudad": "Tineo",
-      "temp_c": 22.9,
-      "humedad": 79
+      "temp_c": 23.2,
+      "humedad": 77
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 22.2,
-      "humedad": 85
+      "temp_c": 22.8,
+      "humedad": 82
     },
     {
       "lat": 43.43,
       "lon": -6.76,
       "ciudad": "Boal",
-      "temp_c": 23.2,
-      "humedad": 84
+      "temp_c": 23.4,
+      "humedad": 83
     }
   ],
   "lugares": [
@@ -452,5 +443,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-08-19T09:48:44.765842+00:00"
+  "generated_at": "2026-08-19T10:45:03.754881+00:00"
 }
