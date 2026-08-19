@@ -1,13 +1,13 @@
 {
   "real_time": {
-    "ts": "2026-08-19T02:00:00+0000",
-    "temp_c": 19.7,
-    "wind_kmh": 14.4,
-    "wind_dir": 265.0,
-    "gust_kmh": 18.4,
-    "pres_hpa": 1008.0,
+    "ts": "2026-08-19T03:00:00+0000",
+    "temp_c": 20.1,
+    "wind_kmh": 10.4,
+    "wind_dir": 253.0,
+    "gust_kmh": 16.6,
+    "pres_hpa": 1007.6,
     "pres_tendencia": "estable",
-    "humedad": 97.0
+    "humedad": 96.0
   },
   "recomendacion": {
     "score": 50,
@@ -22,7 +22,7 @@
     "prec_mm": 0,
     "temp_c": 20.9,
     "cielo_despejado": false,
-    "eta_horas": 3.1
+    "eta_horas": 4.2
   },
   "forecast_municipio": [
     {
@@ -245,11 +245,11 @@
     "vigencia_fin": "2026-08-19T20:00:00"
   },
   "netatmo_own": {
-    "ts": 1787108556,
-    "presion_hpa": 1013.3,
+    "ts": 1787111580,
+    "presion_hpa": 1013,
     "presion_tendencia": "stable",
     "exterior": {
-      "temp_c": 20.3,
+      "temp_c": 20.2,
       "humedad": 100,
       "tendencia": "stable"
     },
@@ -263,7 +263,50 @@
       "mm_24h": 0
     }
   },
-  "netatmo_vecinas": [],
+  "netatmo_vecinas": [
+    {
+      "lat": 43.53,
+      "lon": -6.39,
+      "ciudad": "Valdés",
+      "temp_c": 19.3,
+      "humedad": 93
+    },
+    {
+      "lat": 43.56,
+      "lon": -6.66,
+      "ciudad": "Navia",
+      "temp_c": 20.6,
+      "humedad": 89
+    },
+    {
+      "lat": 43.56,
+      "lon": -6.27,
+      "ciudad": "Cudillero",
+      "temp_c": 21.9,
+      "humedad": 77
+    },
+    {
+      "lat": 43.4,
+      "lon": -6.54,
+      "ciudad": "Tineo",
+      "temp_c": 21.4,
+      "humedad": 83
+    },
+    {
+      "lat": 43.4,
+      "lon": -6.25,
+      "ciudad": "Salas",
+      "temp_c": 21.1,
+      "humedad": 88
+    },
+    {
+      "lat": 43.43,
+      "lon": -6.76,
+      "ciudad": "Boal",
+      "temp_c": 21.8,
+      "humedad": 86
+    }
+  ],
   "lugares": [
     {
       "name": "Otur",
@@ -466,5 +509,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-08-19T03:10:34.686292+00:00"
+  "generated_at": "2026-08-19T03:57:56.788308+00:00"
 }
