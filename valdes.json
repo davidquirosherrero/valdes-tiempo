@@ -1,17 +1,17 @@
 {
   "real_time": {
-    "ts": "2026-08-19T14:00:00+0000",
-    "temp_c": 24.3,
-    "wind_kmh": 6.8,
-    "wind_dir": 278.0,
-    "gust_kmh": 10.8,
-    "pres_hpa": 1007.3,
+    "ts": "2026-08-19T15:00:00+0000",
+    "temp_c": 24.4,
+    "wind_kmh": 9.7,
+    "wind_dir": 281.0,
+    "gust_kmh": 14.4,
+    "pres_hpa": 1007.2,
     "pres_tendencia": "estable",
-    "humedad": 73.0
+    "humedad": 72.0
   },
   "recomendacion": {
-    "score": 80,
-    "etiqueta": "Buen día de playa — el cielo está despejado"
+    "score": 65,
+    "etiqueta": "Buen día de playa — el viento es flojo"
   },
   "que_se_acerca": {
     "sector": "W",
@@ -22,7 +22,7 @@
     "prec_mm": 0,
     "temp_c": 25.5,
     "cielo_despejado": true,
-    "eta_horas": 6.5
+    "eta_horas": 4.5
   },
   "forecast_municipio": [
     {
@@ -63,15 +63,6 @@
     }
   ],
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-08-19T16:00",
-      "temp": "24",
-      "sens_termica": "24",
-      "cielo": "Despejado",
-      "prob_precipitacion": "0",
-      "viento_dir": "N",
-      "viento_kmh": "9"
-    },
     {
       "fecha_hora": "2026-08-19T17:00",
       "temp": "23",
@@ -215,10 +206,28 @@
       "prob_precipitacion": "100",
       "viento_dir": "O",
       "viento_kmh": "9"
+    },
+    {
+      "fecha_hora": "2026-08-20T09:00",
+      "temp": "18",
+      "sens_termica": "18",
+      "cielo": "Cubierto con lluvia escasa",
+      "prob_precipitacion": "100",
+      "viento_dir": "O",
+      "viento_kmh": "6"
+    },
+    {
+      "fecha_hora": "2026-08-20T10:00",
+      "temp": "18",
+      "sens_termica": "18",
+      "cielo": "Cubierto con lluvia escasa",
+      "prob_precipitacion": "100",
+      "viento_dir": "SO",
+      "viento_kmh": "6"
     }
   ],
-  "horaria_elaborado": "2026-08-19T12:41:11",
-  "horaria_es_respaldo": true,
+  "horaria_elaborado": "2026-08-19T15:19:10",
+  "horaria_es_respaldo": false,
   "avisos": [],
   "maritima": {
     "texto": "Componente W 2 a 4 rolando a N o NW desde la madrugada. Rizada o marejadilla aumentando a marejadilla o marejada. Mar de fondo del NW de 1 a 2 m a partir de la noche. Aguaceros a partir de la noche. Nieblas o brumas cerca de la costa.",
@@ -236,18 +245,18 @@
     "vigencia_fin": "2026-08-20T12:00:00"
   },
   "netatmo_own": {
-    "ts": 1787150902,
+    "ts": 1787153926,
     "presion_hpa": 1013,
     "presion_tendencia": "stable",
     "exterior": {
-      "temp_c": 27,
-      "humedad": 76,
-      "tendencia": "up"
+      "temp_c": 26.5,
+      "humedad": 77,
+      "tendencia": "stable"
     },
     "viento": {
       "kmh": 3,
-      "dir": 51,
-      "racha_kmh": 9
+      "dir": 45,
+      "racha_kmh": 11
     },
     "lluvia": {
       "mm_1h": 0,
@@ -259,50 +268,50 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 24.7,
-      "humedad": 75
+      "temp_c": 24.9,
+      "humedad": 73
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
-      "temp_c": 23.6,
-      "humedad": 73
+      "temp_c": 23.8,
+      "humedad": 75
     },
     {
       "lat": 43.56,
       "lon": -6.27,
       "ciudad": "Cudillero",
-      "temp_c": 23,
-      "humedad": 67
+      "temp_c": 23.3,
+      "humedad": 66
     },
     {
       "lat": 43.24,
       "lon": -6.56,
       "ciudad": "Allande",
-      "temp_c": 27.2,
+      "temp_c": 26.5,
       "humedad": 68
     },
     {
       "lat": 43.4,
       "lon": -6.54,
       "ciudad": "Tineo",
-      "temp_c": 27,
-      "humedad": 68
+      "temp_c": 26.5,
+      "humedad": 64
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 28,
-      "humedad": 67
+      "temp_c": 27.8,
+      "humedad": 63
     },
     {
       "lat": 43.43,
       "lon": -6.76,
       "ciudad": "Boal",
-      "temp_c": 29,
-      "humedad": 63
+      "temp_c": 27.6,
+      "humedad": 64
     }
   ],
   "lugares": [
@@ -489,5 +498,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-08-19T14:52:57.409095+00:00"
+  "generated_at": "2026-08-19T15:45:23.684731+00:00"
 }
