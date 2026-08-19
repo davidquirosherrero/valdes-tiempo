@@ -1,12 +1,12 @@
 {
   "real_time": {
-    "ts": "2026-08-19T03:00:00+0000",
-    "temp_c": 20.1,
-    "wind_kmh": 10.4,
-    "wind_dir": 253.0,
-    "gust_kmh": 16.6,
-    "pres_hpa": 1007.6,
-    "pres_tendencia": "estable",
+    "ts": "2026-08-19T04:00:00+0000",
+    "temp_c": 20.0,
+    "wind_kmh": 9.4,
+    "wind_dir": 168.0,
+    "gust_kmh": 12.2,
+    "pres_hpa": 1007.3,
+    "pres_tendencia": "bajando",
     "humedad": 96.0
   },
   "recomendacion": {
@@ -14,64 +14,11 @@
     "etiqueta": "Cielo muy nuboso"
   },
   "que_se_acerca": {
-    "sector": "W",
-    "disponible": true,
-    "nombre": "Ribadeo",
-    "dist_km": 44,
-    "lloviendo": false,
-    "prec_mm": 0,
-    "temp_c": 20.9,
-    "cielo_despejado": false,
-    "eta_horas": 4.2
+    "sector": "S",
+    "disponible": false
   },
-  "forecast_municipio": [
-    {
-      "fecha": "2026-08-18T00:00:00",
-      "cielo": "Nuboso",
-      "viento_dir": "S",
-      "viento_kmh": 5,
-      "t_max": 26,
-      "t_min": 18,
-      "prob_precipitacion": null
-    },
-    {
-      "fecha": "2026-08-19T00:00:00",
-      "cielo": "Cubierto con lluvia escasa",
-      "viento_dir": "NO",
-      "viento_kmh": 10,
-      "t_max": 25,
-      "t_min": 19,
-      "prob_precipitacion": 90
-    },
-    {
-      "fecha": "2026-08-20T00:00:00",
-      "cielo": "Muy nuboso con lluvia",
-      "viento_dir": "SO",
-      "viento_kmh": 5,
-      "t_max": 22,
-      "t_min": 16,
-      "prob_precipitacion": 100
-    },
-    {
-      "fecha": "2026-08-21T00:00:00",
-      "cielo": "Intervalos nubosos con lluvia escasa",
-      "viento_dir": "NO",
-      "viento_kmh": 15,
-      "t_max": 22,
-      "t_min": 15,
-      "prob_precipitacion": 95
-    }
-  ],
+  "forecast_municipio": null,
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-08-19T05:00",
-      "temp": "20",
-      "sens_termica": "20",
-      "cielo": "Cubierto",
-      "prob_precipitacion": "5",
-      "viento_dir": "O",
-      "viento_kmh": "3"
-    },
     {
       "fecha_hora": "2026-08-19T06:00",
       "temp": "20",
@@ -227,7 +174,7 @@
     }
   ],
   "horaria_elaborado": "2026-08-18T21:11:11",
-  "horaria_es_respaldo": false,
+  "horaria_es_respaldo": true,
   "avisos": [],
   "maritima": {
     "texto": "E 3 o 4 amainando pronto a Variable 1 o 2, arreciando a NW 2 a 4 desde mediodía. Rizada o marejadilla.",
@@ -245,11 +192,11 @@
     "vigencia_fin": "2026-08-19T20:00:00"
   },
   "netatmo_own": {
-    "ts": 1787111580,
-    "presion_hpa": 1013,
+    "ts": 1787114605,
+    "presion_hpa": 1012.8,
     "presion_tendencia": "stable",
     "exterior": {
-      "temp_c": 20.2,
+      "temp_c": 20.1,
       "humedad": 100,
       "tendencia": "stable"
     },
@@ -263,50 +210,7 @@
       "mm_24h": 0
     }
   },
-  "netatmo_vecinas": [
-    {
-      "lat": 43.53,
-      "lon": -6.39,
-      "ciudad": "Valdés",
-      "temp_c": 19.3,
-      "humedad": 93
-    },
-    {
-      "lat": 43.56,
-      "lon": -6.66,
-      "ciudad": "Navia",
-      "temp_c": 20.6,
-      "humedad": 89
-    },
-    {
-      "lat": 43.56,
-      "lon": -6.27,
-      "ciudad": "Cudillero",
-      "temp_c": 21.9,
-      "humedad": 77
-    },
-    {
-      "lat": 43.4,
-      "lon": -6.54,
-      "ciudad": "Tineo",
-      "temp_c": 21.4,
-      "humedad": 83
-    },
-    {
-      "lat": 43.4,
-      "lon": -6.25,
-      "ciudad": "Salas",
-      "temp_c": 21.1,
-      "humedad": 88
-    },
-    {
-      "lat": 43.43,
-      "lon": -6.76,
-      "ciudad": "Boal",
-      "temp_c": 21.8,
-      "humedad": 86
-    }
-  ],
+  "netatmo_vecinas": [],
   "lugares": [
     {
       "name": "Otur",
@@ -509,5 +413,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-08-19T03:57:56.788308+00:00"
+  "generated_at": "2026-08-19T04:50:56.694847+00:00"
 }
