@@ -1,12 +1,12 @@
 {
   "real_time": {
-    "ts": "2026-08-19T04:00:00+0000",
+    "ts": "2026-08-19T05:00:00+0000",
     "temp_c": 20.0,
-    "wind_kmh": 9.4,
-    "wind_dir": 168.0,
-    "gust_kmh": 12.2,
-    "pres_hpa": 1007.3,
-    "pres_tendencia": "bajando",
+    "wind_kmh": 7.2,
+    "wind_dir": 270.0,
+    "gust_kmh": 9.7,
+    "pres_hpa": 1007.2,
+    "pres_tendencia": "estable",
     "humedad": 96.0
   },
   "recomendacion": {
@@ -14,20 +14,18 @@
     "etiqueta": "Cielo muy nuboso"
   },
   "que_se_acerca": {
-    "sector": "S",
-    "disponible": false
+    "sector": "W",
+    "disponible": true,
+    "nombre": "Ribadeo",
+    "dist_km": 44,
+    "lloviendo": false,
+    "prec_mm": 0,
+    "temp_c": 20.9,
+    "cielo_despejado": false,
+    "eta_horas": 6.1
   },
   "forecast_municipio": null,
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-08-19T06:00",
-      "temp": "20",
-      "sens_termica": "20",
-      "cielo": "Cubierto",
-      "prob_precipitacion": "5",
-      "viento_dir": "O",
-      "viento_kmh": "2"
-    },
     {
       "fecha_hora": "2026-08-19T07:00",
       "temp": "20",
@@ -192,7 +190,7 @@
     "vigencia_fin": "2026-08-19T20:00:00"
   },
   "netatmo_own": {
-    "ts": 1787114605,
+    "ts": 1787118235,
     "presion_hpa": 1012.8,
     "presion_tendencia": "stable",
     "exterior": {
@@ -210,7 +208,50 @@
       "mm_24h": 0
     }
   },
-  "netatmo_vecinas": [],
+  "netatmo_vecinas": [
+    {
+      "lat": 43.53,
+      "lon": -6.39,
+      "ciudad": "Valdés",
+      "temp_c": 19.4,
+      "humedad": 93
+    },
+    {
+      "lat": 43.56,
+      "lon": -6.66,
+      "ciudad": "Navia",
+      "temp_c": 20.5,
+      "humedad": 90
+    },
+    {
+      "lat": 43.56,
+      "lon": -6.27,
+      "ciudad": "Cudillero",
+      "temp_c": 21.9,
+      "humedad": 77
+    },
+    {
+      "lat": 43.4,
+      "lon": -6.54,
+      "ciudad": "Tineo",
+      "temp_c": 21.6,
+      "humedad": 83
+    },
+    {
+      "lat": 43.4,
+      "lon": -6.25,
+      "ciudad": "Salas",
+      "temp_c": 20.9,
+      "humedad": 89
+    },
+    {
+      "lat": 43.43,
+      "lon": -6.76,
+      "ciudad": "Boal",
+      "temp_c": 21.7,
+      "humedad": 86
+    }
+  ],
   "lugares": [
     {
       "name": "Otur",
@@ -413,5 +454,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-08-19T04:50:56.694847+00:00"
+  "generated_at": "2026-08-19T05:45:55.135852+00:00"
 }
