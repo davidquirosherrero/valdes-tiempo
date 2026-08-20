@@ -1,40 +1,31 @@
 {
   "real_time": {
-    "ts": "2026-08-20T08:00:00+0000",
-    "temp_c": 17.0,
-    "wind_kmh": 6.1,
-    "wind_dir": 259.0,
-    "gust_kmh": 9.0,
-    "pres_hpa": 1008.2,
+    "ts": "2026-08-20T09:00:00+0000",
+    "temp_c": 17.1,
+    "wind_kmh": 3.6,
+    "wind_dir": 231.0,
+    "gust_kmh": 6.8,
+    "pres_hpa": 1008.5,
     "pres_tendencia": "estable",
-    "humedad": 96.0
+    "humedad": 97.0
   },
   "recomendacion": {
-    "score": 55,
+    "score": 50,
     "etiqueta": "Cielo muy nuboso"
   },
   "que_se_acerca": {
-    "sector": "W",
+    "sector": "SW",
     "disponible": true,
-    "nombre": "Ribadeo",
-    "dist_km": 44,
-    "lloviendo": true,
-    "prec_mm": 0.2,
-    "temp_c": 17.3,
+    "nombre": "Lugo",
+    "dist_km": 89,
+    "lloviendo": false,
+    "prec_mm": 0,
+    "temp_c": 16.8,
     "cielo_despejado": false,
-    "eta_horas": 7.2
+    "eta_horas": 24.7
   },
   "forecast_municipio": null,
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-08-20T10:00",
-      "temp": "18",
-      "sens_termica": "18",
-      "cielo": "Cubierto",
-      "prob_precipitacion": "100",
-      "viento_dir": "O",
-      "viento_kmh": "4"
-    },
     {
       "fecha_hora": "2026-08-20T11:00",
       "temp": "18",
@@ -184,37 +175,37 @@
   "horaria_es_respaldo": true,
   "avisos": [],
   "maritima": {
-    "texto": "Componente W 2 a 4 . Principalmente marejadilla. Mar de fondo del NW de 1 a 2 m aumentando en torno a los 2 m. Aguaceros dispersos. Nieblas o brumas cerca de la costa.",
+    "texto": "Oeste de Peñas: Componente W 3 o 4 arreciando a 5 mar adentro al este de Bustos al avanzar la madrugada. Marejadilla o marejada.\r\n Este de Peñas: W o NW 3 o 4 arreciando a 4 o 5 a partir de la noche, localmente 6 mar adentro en el este al avanzar la madrugada. Marejadilla aumentando gradualmente a marejada al avanzar la tarde, predominando la marejada a partir de la madrugada.\r\n Ambas zonas: Mar de fondo del NW de 1 a 2 m aumentando temporalmente a 2 a 3 m mar adentro. Aguaceros ocasionales.",
     "segmentos": [
       {
-        "zona": null,
-        "texto": "Componente W 2 a 4 . Principalmente marejadilla. Mar de fondo del NW de 1 a 2 m aumentando en torno a los 2 m. Aguaceros dispersos. Nieblas o brumas cerca de la costa.",
-        "direccion": null,
-        "fuerza": null,
-        "estado_mar": null
+        "zona": "Oeste de Peñas",
+        "texto": "Componente W 3 o 4 arreciando a 5 mar adentro al este de Bustos al avanzar la madrugada. Marejadilla o marejada.",
+        "direccion": "W",
+        "fuerza": "3o4",
+        "estado_mar": "marejadilla"
       }
     ],
-    "avisos_texto": "No hay avisos",
-    "vigencia_inicio": "2026-08-19T20:00:00",
-    "vigencia_fin": "2026-08-20T20:00:00"
+    "avisos_texto": "No hay avisos.",
+    "vigencia_inicio": "2026-08-20T12:00:00",
+    "vigencia_fin": "2026-08-21T12:00:00"
   },
   "netatmo_own": {
-    "ts": 1787215765,
-    "presion_hpa": 1014.1,
+    "ts": 1787219321,
+    "presion_hpa": 1014.6,
     "presion_tendencia": "stable",
     "exterior": {
-      "temp_c": 17.3,
+      "temp_c": 17.5,
       "humedad": 100,
       "tendencia": "stable"
     },
     "viento": {
       "kmh": 3,
-      "dir": 315,
-      "racha_kmh": 5
+      "dir": 305,
+      "racha_kmh": 4
     },
     "lluvia": {
       "mm_1h": 0.202,
-      "mm_24h": 12.4
+      "mm_24h": 12.6
     }
   },
   "netatmo_vecinas": [
@@ -222,49 +213,49 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 16.7,
-      "humedad": 92
+      "temp_c": 16.2,
+      "humedad": 93
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
-      "temp_c": 18.6,
-      "humedad": 92
+      "temp_c": 18.7,
+      "humedad": 91
     },
     {
       "lat": 43.56,
       "lon": -6.27,
       "ciudad": "Cudillero",
       "temp_c": 19.7,
-      "humedad": 74
+      "humedad": 75
     },
     {
       "lat": 43.24,
       "lon": -6.56,
       "ciudad": "Allande",
-      "temp_c": 16.1,
-      "humedad": 89
+      "temp_c": 16.8,
+      "humedad": 90
     },
     {
       "lat": 43.4,
       "lon": -6.54,
       "ciudad": "Tineo",
-      "temp_c": 19.4,
-      "humedad": 80
+      "temp_c": 19.3,
+      "humedad": 81
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 18.4,
+      "temp_c": 18.3,
       "humedad": 88
     },
     {
       "lat": 43.43,
       "lon": -6.76,
       "ciudad": "Boal",
-      "temp_c": 19.5,
+      "temp_c": 19.7,
       "humedad": 85
     }
   ],
@@ -275,36 +266,8 @@
       "lon": -6.597,
       "tipo": "playa",
       "ficha_aemet": "Otur",
-      "forecast_4d": [
-        {
-          "fecha": "20260820",
-          "cielo": "muy nuboso con lluvia",
-          "viento": "flojo",
-          "oleaje": "débil",
-          "t_max": 22,
-          "t_agua": 24,
-          "uv_max": 6
-        },
-        {
-          "fecha": "20260821",
-          "cielo": "nuboso",
-          "viento": "flojo",
-          "oleaje": "débil",
-          "t_max": 22,
-          "t_agua": 23,
-          "uv_max": 7
-        },
-        {
-          "fecha": "20260822",
-          "cielo": "despejado",
-          "viento": "moderado",
-          "oleaje": "fuerte",
-          "t_max": 25,
-          "t_agua": 22,
-          "uv_max": 6
-        }
-      ],
-      "forecast_4d_elaborado": "2026-08-20T08:50:18"
+      "forecast_4d": null,
+      "forecast_4d_elaborado": null
     },
     {
       "name": "Luarca (1ª, 2ª y 3ª playa)",
@@ -452,5 +415,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-08-20T08:55:56.061558+00:00"
+  "generated_at": "2026-08-20T09:49:48.382734+00:00"
 }
