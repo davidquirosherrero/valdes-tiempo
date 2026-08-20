@@ -1,16 +1,16 @@
 {
   "real_time": {
-    "ts": "2026-08-20T22:00:00+0000",
+    "ts": "2026-08-20T23:00:00+0000",
     "temp_c": 18.2,
-    "wind_kmh": 21.6,
-    "wind_dir": 259.0,
-    "gust_kmh": 29.9,
-    "pres_hpa": 1009.7,
-    "pres_tendencia": "subiendo",
-    "humedad": 87.0
+    "wind_kmh": 22.7,
+    "wind_dir": 270.0,
+    "gust_kmh": 33.1,
+    "pres_hpa": 1009.6,
+    "pres_tendencia": "estable",
+    "humedad": 90.0
   },
   "recomendacion": {
-    "score": 40,
+    "score": 35,
     "etiqueta": "Lluvia en las próximas horas"
   },
   "que_se_acerca": {
@@ -22,7 +22,7 @@
     "prec_mm": 0,
     "temp_c": 19.2,
     "cielo_despejado": false,
-    "eta_horas": 2.0
+    "eta_horas": 1.9
   },
   "forecast_municipio": [
     {
@@ -63,15 +63,6 @@
     }
   ],
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-08-21T00:00",
-      "temp": "17",
-      "sens_termica": "17",
-      "cielo": "Intervalos nubosos con lluvia escasa",
-      "prob_precipitacion": "0",
-      "viento_dir": "SO",
-      "viento_kmh": "8"
-    },
     {
       "fecha_hora": "2026-08-21T01:00",
       "temp": "17",
@@ -224,6 +215,15 @@
       "prob_precipitacion": "20",
       "viento_dir": "NO",
       "viento_kmh": "15"
+    },
+    {
+      "fecha_hora": "2026-08-21T18:00",
+      "temp": "20",
+      "sens_termica": "20",
+      "cielo": "Poco nuboso",
+      "prob_precipitacion": "20",
+      "viento_dir": "N",
+      "viento_kmh": "8"
     }
   ],
   "horaria_elaborado": "2026-08-20T20:57:10",
@@ -245,22 +245,22 @@
     "vigencia_fin": "2026-08-21T20:00:00"
   },
   "netatmo_own": {
-    "ts": 1787265481,
+    "ts": 1787269111,
     "presion_hpa": 1015.4,
     "presion_tendencia": "stable",
     "exterior": {
-      "temp_c": 17.2,
+      "temp_c": 17.3,
       "humedad": 99,
       "tendencia": "stable"
     },
     "viento": {
       "kmh": 1,
-      "dir": 239,
+      "dir": 176,
       "racha_kmh": 4
     },
     "lluvia": {
-      "mm_1h": 0.808,
-      "mm_24h": 0
+      "mm_1h": 0.202,
+      "mm_24h": 0.2
     }
   },
   "netatmo_vecinas": [
@@ -268,49 +268,49 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 16.4,
-      "humedad": 89
+      "temp_c": 16.5,
+      "humedad": 90
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
-      "temp_c": 19.2,
-      "humedad": 84
+      "temp_c": 18.5,
+      "humedad": 89
     },
     {
       "lat": 43.56,
       "lon": -6.27,
       "ciudad": "Cudillero",
-      "temp_c": 19.4,
-      "humedad": 72
+      "temp_c": 19.2,
+      "humedad": 75
     },
     {
       "lat": 43.24,
       "lon": -6.56,
       "ciudad": "Allande",
-      "temp_c": 14.4,
-      "humedad": 87
+      "temp_c": 14.6,
+      "humedad": 88
     },
     {
       "lat": 43.4,
       "lon": -6.54,
       "ciudad": "Tineo",
-      "temp_c": 18.7,
+      "temp_c": 18.5,
       "humedad": 80
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 17.1,
-      "humedad": 82
+      "temp_c": 17,
+      "humedad": 84
     },
     {
       "lat": 43.43,
       "lon": -6.76,
       "ciudad": "Boal",
-      "temp_c": 19,
+      "temp_c": 18.9,
       "humedad": 85
     }
   ],
@@ -321,36 +321,8 @@
       "lon": -6.597,
       "tipo": "playa",
       "ficha_aemet": "Otur",
-      "forecast_4d": [
-        {
-          "fecha": "20260820",
-          "cielo": "muy nuboso con lluvia",
-          "viento": "flojo",
-          "oleaje": "débil",
-          "t_max": 22,
-          "t_agua": 24,
-          "uv_max": 6
-        },
-        {
-          "fecha": "20260821",
-          "cielo": "nuboso",
-          "viento": "flojo",
-          "oleaje": "débil",
-          "t_max": 22,
-          "t_agua": 23,
-          "uv_max": 7
-        },
-        {
-          "fecha": "20260822",
-          "cielo": "despejado",
-          "viento": "moderado",
-          "oleaje": "fuerte",
-          "t_max": 25,
-          "t_agua": 22,
-          "uv_max": 6
-        }
-      ],
-      "forecast_4d_elaborado": "2026-08-20T08:50:18"
+      "forecast_4d": null,
+      "forecast_4d_elaborado": null
     },
     {
       "name": "Luarca (1ª, 2ª y 3ª playa)",
@@ -498,5 +470,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-08-20T22:44:31.055285+00:00"
+  "generated_at": "2026-08-20T23:39:41.980514+00:00"
 }
