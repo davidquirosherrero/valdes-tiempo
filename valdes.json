@@ -1,28 +1,28 @@
 {
   "real_time": {
-    "ts": "2026-08-20T12:00:00+0000",
-    "temp_c": 16.4,
-    "wind_kmh": 11.5,
-    "wind_dir": 226.0,
-    "gust_kmh": 25.2,
-    "pres_hpa": 1009.8,
-    "pres_tendencia": "subiendo",
-    "humedad": 99.0
+    "ts": "2026-08-20T13:00:00+0000",
+    "temp_c": 18.3,
+    "wind_kmh": 14.0,
+    "wind_dir": 270.0,
+    "gust_kmh": 18.4,
+    "pres_hpa": 1009.2,
+    "pres_tendencia": "estable",
+    "humedad": 87.0
   },
   "recomendacion": {
     "score": 75,
     "etiqueta": "Buen día de playa — la presión está subiendo"
   },
   "que_se_acerca": {
-    "sector": "SW",
+    "sector": "W",
     "disponible": true,
-    "nombre": "Lugo",
-    "dist_km": 89,
+    "nombre": "Ribadeo",
+    "dist_km": 44,
     "lloviendo": true,
-    "prec_mm": 5.199999999999999,
-    "temp_c": 15.4,
+    "prec_mm": 0.4,
+    "temp_c": 18.4,
     "cielo_despejado": false,
-    "eta_horas": 7.7
+    "eta_horas": 3.1
   },
   "forecast_municipio": [
     {
@@ -226,7 +226,7 @@
       "viento_kmh": "8"
     }
   ],
-  "horaria_elaborado": "2026-08-20T12:45:12",
+  "horaria_elaborado": "2026-08-20T13:49:11",
   "horaria_es_respaldo": false,
   "avisos": [],
   "maritima": {
@@ -244,8 +244,76 @@
     "vigencia_inicio": "2026-08-20T12:00:00",
     "vigencia_fin": "2026-08-21T12:00:00"
   },
-  "netatmo_own": null,
-  "netatmo_vecinas": [],
+  "netatmo_own": {
+    "ts": 1787233716,
+    "presion_hpa": 1014.8,
+    "presion_tendencia": "up",
+    "exterior": {
+      "temp_c": 20.7,
+      "humedad": 99,
+      "tendencia": "up"
+    },
+    "viento": {
+      "kmh": 9,
+      "dir": 291,
+      "racha_kmh": 30
+    },
+    "lluvia": {
+      "mm_1h": 0,
+      "mm_24h": 14.7
+    }
+  },
+  "netatmo_vecinas": [
+    {
+      "lat": 43.53,
+      "lon": -6.39,
+      "ciudad": "Valdés",
+      "temp_c": 18.1,
+      "humedad": 90
+    },
+    {
+      "lat": 43.56,
+      "lon": -6.66,
+      "ciudad": "Navia",
+      "temp_c": 22.6,
+      "humedad": 74
+    },
+    {
+      "lat": 43.56,
+      "lon": -6.27,
+      "ciudad": "Cudillero",
+      "temp_c": 19.9,
+      "humedad": 73
+    },
+    {
+      "lat": 43.24,
+      "lon": -6.56,
+      "ciudad": "Allande",
+      "temp_c": 15.5,
+      "humedad": 88
+    },
+    {
+      "lat": 43.4,
+      "lon": -6.54,
+      "ciudad": "Tineo",
+      "temp_c": 19.6,
+      "humedad": 79
+    },
+    {
+      "lat": 43.4,
+      "lon": -6.25,
+      "ciudad": "Salas",
+      "temp_c": 18.4,
+      "humedad": 86
+    },
+    {
+      "lat": 43.43,
+      "lon": -6.76,
+      "ciudad": "Boal",
+      "temp_c": 20.7,
+      "humedad": 83
+    }
+  ],
   "lugares": [
     {
       "name": "Otur",
@@ -430,5 +498,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-08-20T13:10:13.025231+00:00"
+  "generated_at": "2026-08-20T13:58:23.268004+00:00"
 }
