@@ -1,13 +1,13 @@
 {
   "real_time": {
-    "ts": "2026-08-22T22:00:00+0000",
-    "temp_c": 19.2,
-    "wind_kmh": 15.8,
-    "wind_dir": 64.0,
-    "gust_kmh": 32.8,
-    "pres_hpa": 1006.7,
+    "ts": "2026-08-22T23:00:00+0000",
+    "temp_c": 19.5,
+    "wind_kmh": 18.7,
+    "wind_dir": 51.0,
+    "gust_kmh": 32.4,
+    "pres_hpa": 1006.6,
     "pres_tendencia": "estable",
-    "humedad": 89.0
+    "humedad": 88.0
   },
   "recomendacion": {
     "score": 30,
@@ -20,21 +20,49 @@
     "dist_km": 57,
     "lloviendo": false,
     "prec_mm": 0,
-    "temp_c": 20.5,
+    "temp_c": 20.6,
     "cielo_despejado": false,
-    "eta_horas": 3.6
+    "eta_horas": 3.0
   },
-  "forecast_municipio": null,
-  "forecast_horaria": [
+  "forecast_municipio": [
     {
-      "fecha_hora": "2026-08-23T00:00",
-      "temp": "21",
-      "sens_termica": "21",
-      "cielo": "Cubierto",
-      "prob_precipitacion": "50",
+      "fecha": "2026-08-22T00:00:00",
+      "cielo": "Muy nuboso",
       "viento_dir": "SE",
-      "viento_kmh": "5"
+      "viento_kmh": 5,
+      "t_max": 25,
+      "t_min": 16,
+      "prob_precipitacion": null
     },
+    {
+      "fecha": "2026-08-23T00:00:00",
+      "cielo": "Intervalos nubosos con lluvia escasa",
+      "viento_dir": "N",
+      "viento_kmh": 10,
+      "t_max": 25,
+      "t_min": 18,
+      "prob_precipitacion": 95
+    },
+    {
+      "fecha": "2026-08-24T00:00:00",
+      "cielo": "Muy nuboso con lluvia",
+      "viento_dir": "N",
+      "viento_kmh": 10,
+      "t_max": 25,
+      "t_min": 18,
+      "prob_precipitacion": 100
+    },
+    {
+      "fecha": "2026-08-25T00:00:00",
+      "cielo": "Nuboso con lluvia",
+      "viento_dir": "O",
+      "viento_kmh": 15,
+      "t_max": 25,
+      "t_min": 16,
+      "prob_precipitacion": 95
+    }
+  ],
+  "forecast_horaria": [
     {
       "fecha_hora": "2026-08-23T01:00",
       "temp": "21",
@@ -178,10 +206,28 @@
       "prob_precipitacion": "45",
       "viento_dir": "N",
       "viento_kmh": "6"
+    },
+    {
+      "fecha_hora": "2026-08-23T17:00",
+      "temp": "24",
+      "sens_termica": "24",
+      "cielo": "Nubes altas",
+      "prob_precipitacion": "45",
+      "viento_dir": "NE",
+      "viento_kmh": "3"
+    },
+    {
+      "fecha_hora": "2026-08-23T18:00",
+      "temp": "23",
+      "sens_termica": "23",
+      "cielo": "Nubes altas",
+      "prob_precipitacion": "45",
+      "viento_dir": "NE",
+      "viento_kmh": "3"
     }
   ],
   "horaria_elaborado": "2026-08-22T21:05:11",
-  "horaria_es_respaldo": true,
+  "horaria_es_respaldo": false,
   "avisos": [],
   "maritima": {
     "texto": "E o NE 4 o 5 amainando a 2 a 4 al final. Marejada o fuerte marejada disminuyendo a marejadilla o marejada. Mar de fondo del N o NE de 1 a 2 m, disminuyendo. Aguaceros y tormentas en el oeste. Regular",
@@ -199,18 +245,18 @@
     "vigencia_fin": "2026-08-23T20:00:00"
   },
   "netatmo_own": {
-    "ts": 1787437676,
-    "presion_hpa": 1012.3,
+    "ts": 1787441306,
+    "presion_hpa": 1012.4,
     "presion_tendencia": "stable",
     "exterior": {
-      "temp_c": 19.7,
+      "temp_c": 20.2,
       "humedad": 94,
       "tendencia": "up"
     },
     "viento": {
       "kmh": 3,
       "dir": 90,
-      "racha_kmh": 7
+      "racha_kmh": 8
     },
     "lluvia": {
       "mm_1h": 0,
@@ -223,49 +269,49 @@
       "lon": -6.39,
       "ciudad": "Valdés",
       "temp_c": 20.2,
-      "humedad": 83
+      "humedad": 84
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
-      "temp_c": 19.7,
+      "temp_c": 19.9,
       "humedad": 85
     },
     {
       "lat": 43.56,
       "lon": -6.27,
       "ciudad": "Cudillero",
-      "temp_c": 21.6,
-      "humedad": 70
+      "temp_c": 21.5,
+      "humedad": 71
     },
     {
       "lat": 43.24,
       "lon": -6.56,
       "ciudad": "Allande",
       "temp_c": 17.4,
-      "humedad": 83
+      "humedad": 84
     },
     {
       "lat": 43.4,
       "lon": -6.54,
       "ciudad": "Tineo",
-      "temp_c": 20.1,
-      "humedad": 77
+      "temp_c": 19.8,
+      "humedad": 79
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 20.7,
-      "humedad": 79
+      "temp_c": 20.6,
+      "humedad": 80
     },
     {
       "lat": 43.43,
       "lon": -6.76,
       "ciudad": "Boal",
       "temp_c": 20.4,
-      "humedad": 82
+      "humedad": 83
     }
   ],
   "lugares": [
@@ -452,5 +498,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-08-22T22:37:01.758250+00:00"
+  "generated_at": "2026-08-22T23:34:18.752879+00:00"
 }
