@@ -1,70 +1,31 @@
 {
   "real_time": {
-    "ts": "2026-08-22T07:00:00+0000",
-    "temp_c": 17.6,
-    "wind_kmh": 10.4,
-    "wind_dir": 138.0,
-    "gust_kmh": 18.7,
-    "pres_hpa": 1007.7,
+    "ts": "2026-08-22T08:00:00+0000",
+    "temp_c": 20.5,
+    "wind_kmh": 7.6,
+    "wind_dir": 111.0,
+    "gust_kmh": 18.4,
+    "pres_hpa": 1007.3,
     "pres_tendencia": "estable",
-    "humedad": 74.0
+    "humedad": 64.0
   },
   "recomendacion": {
     "score": 35,
     "etiqueta": "Bastante oleaje en la playa"
   },
   "que_se_acerca": {
-    "sector": "SE",
-    "disponible": false
+    "sector": "E",
+    "disponible": true,
+    "nombre": "Avilés",
+    "dist_km": 40,
+    "lloviendo": false,
+    "prec_mm": 0,
+    "temp_c": 20.0,
+    "cielo_despejado": true,
+    "eta_horas": 5.3
   },
-  "forecast_municipio": [
-    {
-      "fecha": "2026-08-22T00:00:00",
-      "cielo": "Intervalos nubosos",
-      "viento_dir": "NE",
-      "viento_kmh": 30,
-      "t_max": 25,
-      "t_min": 16,
-      "prob_precipitacion": 10
-    },
-    {
-      "fecha": "2026-08-23T00:00:00",
-      "cielo": "Intervalos nubosos con lluvia escasa",
-      "viento_dir": "N",
-      "viento_kmh": 10,
-      "t_max": 25,
-      "t_min": 18,
-      "prob_precipitacion": 65
-    },
-    {
-      "fecha": "2026-08-24T00:00:00",
-      "cielo": "Muy nuboso con lluvia",
-      "viento_dir": "C",
-      "viento_kmh": 0,
-      "t_max": 25,
-      "t_min": 18,
-      "prob_precipitacion": 100
-    },
-    {
-      "fecha": "2026-08-25T00:00:00",
-      "cielo": "Muy nuboso con lluvia",
-      "viento_dir": "NO",
-      "viento_kmh": 10,
-      "t_max": 24,
-      "t_min": 16,
-      "prob_precipitacion": 100
-    }
-  ],
+  "forecast_municipio": null,
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-08-22T09:00",
-      "temp": "18",
-      "sens_termica": "18",
-      "cielo": "Despejado",
-      "prob_precipitacion": "0",
-      "viento_dir": "S",
-      "viento_kmh": "8"
-    },
     {
       "fecha_hora": "2026-08-22T10:00",
       "temp": "19",
@@ -220,7 +181,7 @@
     }
   ],
   "horaria_elaborado": "2026-08-22T07:15:15",
-  "horaria_es_respaldo": false,
+  "horaria_es_respaldo": true,
   "avisos": [],
   "maritima": {
     "texto": "E o NE 2 o 3 arreciando a E 5 o 6. Marejadilla aumentando a marejada o fuerte marejada. Mar de fondo del NW de 1 a 2 m, disminuyendo.",
@@ -244,7 +205,7 @@
     "exterior": {
       "temp_c": 19.7,
       "humedad": 89,
-      "tendencia": "up"
+      "tendencia": null
     },
     "viento": {
       "kmh": 1,
@@ -261,50 +222,50 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 17.5,
-      "humedad": 87
+      "temp_c": 19.5,
+      "humedad": 79
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
-      "temp_c": 23.3,
-      "humedad": 61
+      "temp_c": 22.7,
+      "humedad": 65
     },
     {
       "lat": 43.56,
       "lon": -6.27,
       "ciudad": "Cudillero",
-      "temp_c": 19.3,
-      "humedad": 66
+      "temp_c": 19.8,
+      "humedad": 65
     },
     {
       "lat": 43.24,
       "lon": -6.56,
       "ciudad": "Allande",
-      "temp_c": 17.3,
-      "humedad": 84
+      "temp_c": 19.1,
+      "humedad": 76
     },
     {
       "lat": 43.4,
       "lon": -6.54,
       "ciudad": "Tineo",
-      "temp_c": 17.8,
-      "humedad": 76
+      "temp_c": 19.7,
+      "humedad": 71
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 16.2,
-      "humedad": 85
+      "temp_c": 18.2,
+      "humedad": 81
     },
     {
       "lat": 43.43,
       "lon": -6.76,
       "ciudad": "Boal",
-      "temp_c": 17.5,
-      "humedad": 85
+      "temp_c": 18.6,
+      "humedad": 83
     }
   ],
   "lugares": [
@@ -491,5 +452,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-08-22T07:45:17.573805+00:00"
+  "generated_at": "2026-08-22T08:46:59.712781+00:00"
 }
