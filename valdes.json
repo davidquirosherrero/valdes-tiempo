@@ -1,13 +1,13 @@
 {
   "real_time": {
-    "ts": "2026-08-22T21:00:00+0000",
-    "temp_c": 19.4,
-    "wind_kmh": 23.4,
-    "wind_dir": 57.0,
-    "gust_kmh": 36.7,
-    "pres_hpa": 1006.8,
-    "pres_tendencia": "subiendo",
-    "humedad": 88.0
+    "ts": "2026-08-22T22:00:00+0000",
+    "temp_c": 19.2,
+    "wind_kmh": 15.8,
+    "wind_dir": 64.0,
+    "gust_kmh": 32.8,
+    "pres_hpa": 1006.7,
+    "pres_tendencia": "estable",
+    "humedad": 89.0
   },
   "recomendacion": {
     "score": 30,
@@ -22,19 +22,10 @@
     "prec_mm": 0,
     "temp_c": 20.5,
     "cielo_despejado": false,
-    "eta_horas": 2.4
+    "eta_horas": 3.6
   },
   "forecast_municipio": null,
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-08-22T23:00",
-      "temp": "21",
-      "sens_termica": "21",
-      "cielo": "Cubierto",
-      "prob_precipitacion": "0",
-      "viento_dir": "E",
-      "viento_kmh": "8"
-    },
     {
       "fecha_hora": "2026-08-23T00:00",
       "temp": "21",
@@ -190,7 +181,7 @@
     }
   ],
   "horaria_elaborado": "2026-08-22T21:05:11",
-  "horaria_es_respaldo": false,
+  "horaria_es_respaldo": true,
   "avisos": [],
   "maritima": {
     "texto": "E o NE 4 o 5 amainando a 2 a 4 al final. Marejada o fuerte marejada disminuyendo a marejadilla o marejada. Mar de fondo del N o NE de 1 a 2 m, disminuyendo. Aguaceros y tormentas en el oeste. Regular",
@@ -208,18 +199,18 @@
     "vigencia_fin": "2026-08-23T20:00:00"
   },
   "netatmo_own": {
-    "ts": 1787434401,
-    "presion_hpa": 1012.4,
+    "ts": 1787437676,
+    "presion_hpa": 1012.3,
     "presion_tendencia": "stable",
     "exterior": {
-      "temp_c": 19.3,
-      "humedad": 93,
-      "tendencia": "stable"
+      "temp_c": 19.7,
+      "humedad": 94,
+      "tendencia": "up"
     },
     "viento": {
       "kmh": 3,
       "dir": 90,
-      "racha_kmh": 5
+      "racha_kmh": 7
     },
     "lluvia": {
       "mm_1h": 0,
@@ -231,22 +222,22 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 19.9,
-      "humedad": 82
+      "temp_c": 20.2,
+      "humedad": 83
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
-      "temp_c": 19.3,
+      "temp_c": 19.7,
       "humedad": 85
     },
     {
       "lat": 43.56,
       "lon": -6.27,
       "ciudad": "Cudillero",
-      "temp_c": 21.7,
-      "humedad": 69
+      "temp_c": 21.6,
+      "humedad": 70
     },
     {
       "lat": 43.24,
@@ -259,21 +250,21 @@
       "lat": 43.4,
       "lon": -6.54,
       "ciudad": "Tineo",
-      "temp_c": 20.7,
-      "humedad": 76
+      "temp_c": 20.1,
+      "humedad": 77
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 20.8,
-      "humedad": 78
+      "temp_c": 20.7,
+      "humedad": 79
     },
     {
       "lat": 43.43,
       "lon": -6.76,
       "ciudad": "Boal",
-      "temp_c": 20.7,
+      "temp_c": 20.4,
       "humedad": 82
     }
   ],
@@ -461,5 +452,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-08-22T21:34:51.858683+00:00"
+  "generated_at": "2026-08-22T22:37:01.758250+00:00"
 }
