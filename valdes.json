@@ -1,13 +1,13 @@
 {
   "real_time": {
-    "ts": "2026-08-22T18:00:00+0000",
-    "temp_c": 20.1,
-    "wind_kmh": 31.3,
-    "wind_dir": 53.0,
-    "gust_kmh": 46.8,
-    "pres_hpa": 1005.7,
+    "ts": "2026-08-22T19:00:00+0000",
+    "temp_c": 19.8,
+    "wind_kmh": 28.1,
+    "wind_dir": 54.0,
+    "gust_kmh": 46.1,
+    "pres_hpa": 1005.8,
     "pres_tendencia": "estable",
-    "humedad": 81.0
+    "humedad": 83.0
   },
   "recomendacion": {
     "score": 30,
@@ -20,21 +20,49 @@
     "dist_km": 57,
     "lloviendo": false,
     "prec_mm": 0,
-    "temp_c": 20.5,
+    "temp_c": 20.3,
     "cielo_despejado": false,
-    "eta_horas": 1.8
+    "eta_horas": 2.0
   },
-  "forecast_municipio": null,
-  "forecast_horaria": [
+  "forecast_municipio": [
     {
-      "fecha_hora": "2026-08-22T20:00",
-      "temp": "22",
-      "sens_termica": "22",
-      "cielo": "Nubes altas",
-      "prob_precipitacion": "5",
-      "viento_dir": "E",
-      "viento_kmh": "25"
+      "fecha": "2026-08-22T00:00:00",
+      "cielo": "Muy nuboso",
+      "viento_dir": "C",
+      "viento_kmh": 0,
+      "t_max": 25,
+      "t_min": 16,
+      "prob_precipitacion": 5
     },
+    {
+      "fecha": "2026-08-23T00:00:00",
+      "cielo": "Intervalos nubosos con lluvia escasa",
+      "viento_dir": "N",
+      "viento_kmh": 5,
+      "t_max": 25,
+      "t_min": 18,
+      "prob_precipitacion": 80
+    },
+    {
+      "fecha": "2026-08-24T00:00:00",
+      "cielo": "Muy nuboso con lluvia",
+      "viento_dir": "N",
+      "viento_kmh": 10,
+      "t_max": 25,
+      "t_min": 18,
+      "prob_precipitacion": 100
+    },
+    {
+      "fecha": "2026-08-25T00:00:00",
+      "cielo": "Nuboso con lluvia",
+      "viento_dir": "O",
+      "viento_kmh": 15,
+      "t_max": 25,
+      "t_min": 16,
+      "prob_precipitacion": 95
+    }
+  ],
+  "forecast_horaria": [
     {
       "fecha_hora": "2026-08-22T21:00",
       "temp": "22",
@@ -190,7 +218,7 @@
     }
   ],
   "horaria_elaborado": "2026-08-22T16:59:10",
-  "horaria_es_respaldo": false,
+  "horaria_es_respaldo": true,
   "avisos": [],
   "maritima": {
     "texto": "E o NE 4 o 5 amainando a 2 a 4 al final. Marejada o fuerte marejada disminuyendo a marejadilla o marejada. Mar de fondo del N o NE de 1 a 2 m, disminuyendo. Aguaceros y tormentas en el oeste. Regular",
@@ -208,18 +236,18 @@
     "vigencia_fin": "2026-08-23T20:00:00"
   },
   "netatmo_own": {
-    "ts": 1787424072,
-    "presion_hpa": 1011.6,
+    "ts": 1787427096,
+    "presion_hpa": 1011.8,
     "presion_tendencia": "stable",
     "exterior": {
-      "temp_c": 21.2,
-      "humedad": 86,
+      "temp_c": 20.3,
+      "humedad": 88,
       "tendencia": "down"
     },
     "viento": {
       "kmh": 5,
-      "dir": 97,
-      "racha_kmh": 13
+      "dir": 83,
+      "racha_kmh": 15
     },
     "lluvia": {
       "mm_1h": 0,
@@ -231,50 +259,50 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 21.4,
-      "humedad": 77
+      "temp_c": 20.5,
+      "humedad": 79
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
-      "temp_c": 20.8,
-      "humedad": 79
+      "temp_c": 20.2,
+      "humedad": 80
     },
     {
       "lat": 43.56,
       "lon": -6.27,
       "ciudad": "Cudillero",
-      "temp_c": 22.9,
-      "humedad": 63
+      "temp_c": 22.4,
+      "humedad": 64
     },
     {
       "lat": 43.24,
       "lon": -6.56,
       "ciudad": "Allande",
-      "temp_c": 20.8,
-      "humedad": 74
+      "temp_c": 19,
+      "humedad": 77
     },
     {
       "lat": 43.4,
       "lon": -6.54,
       "ciudad": "Tineo",
-      "temp_c": 22.9,
+      "temp_c": 22.4,
       "humedad": 72
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 22.2,
-      "humedad": 73
+      "temp_c": 21.6,
+      "humedad": 74
     },
     {
       "lat": 43.43,
       "lon": -6.76,
       "ciudad": "Boal",
-      "temp_c": 23.6,
-      "humedad": 75
+      "temp_c": 22.7,
+      "humedad": 78
     }
   ],
   "lugares": [
@@ -461,5 +489,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-08-22T18:48:02.851262+00:00"
+  "generated_at": "2026-08-22T19:33:57.866551+00:00"
 }
