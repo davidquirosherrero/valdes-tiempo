@@ -1,30 +1,67 @@
 {
   "real_time": {
-    "ts": "2026-08-23T12:00:00+0000",
-    "temp_c": 23.1,
-    "wind_kmh": 5.4,
-    "wind_dir": 274.0,
-    "gust_kmh": 21.6,
-    "pres_hpa": 1006.3,
-    "pres_tendencia": "estable",
-    "humedad": 73.0
+    "ts": "2026-08-23T13:00:00+0000",
+    "temp_c": 22.4,
+    "wind_kmh": 5.8,
+    "wind_dir": 87.0,
+    "gust_kmh": 10.1,
+    "pres_hpa": 1005.5,
+    "pres_tendencia": "bajando",
+    "humedad": 75.0
   },
   "recomendacion": {
     "score": 80,
     "etiqueta": "Buen día de playa — la presión está subiendo"
   },
   "que_se_acerca": {
-    "sector": "W",
+    "sector": "E",
     "disponible": true,
-    "nombre": "Ribadeo",
-    "dist_km": 44,
+    "nombre": "Avilés",
+    "dist_km": 40,
     "lloviendo": false,
     "prec_mm": 0,
-    "temp_c": 21.0,
-    "cielo_despejado": false,
-    "eta_horas": 8.1
+    "temp_c": 22.2,
+    "cielo_despejado": true,
+    "eta_horas": 6.9
   },
-  "forecast_municipio": null,
+  "forecast_municipio": [
+    {
+      "fecha": "2026-08-23T00:00:00",
+      "cielo": "Poco nuboso",
+      "viento_dir": "C",
+      "viento_kmh": 0,
+      "t_max": 25,
+      "t_min": 18,
+      "prob_precipitacion": 20
+    },
+    {
+      "fecha": "2026-08-24T00:00:00",
+      "cielo": "Muy nuboso con lluvia",
+      "viento_dir": "C",
+      "viento_kmh": 0,
+      "t_max": 25,
+      "t_min": 17,
+      "prob_precipitacion": 100
+    },
+    {
+      "fecha": "2026-08-25T00:00:00",
+      "cielo": "Nuboso con lluvia",
+      "viento_dir": "O",
+      "viento_kmh": 15,
+      "t_max": 26,
+      "t_min": 16,
+      "prob_precipitacion": 100
+    },
+    {
+      "fecha": "2026-08-26T00:00:00",
+      "cielo": "Intervalos nubosos con lluvia",
+      "viento_dir": "C",
+      "viento_kmh": 0,
+      "t_max": 25,
+      "t_min": 15,
+      "prob_precipitacion": 100
+    }
+  ],
   "forecast_horaria": [
     {
       "fecha_hora": "2026-08-23T15:00",
@@ -169,10 +206,28 @@
       "prob_precipitacion": "15",
       "viento_dir": "S",
       "viento_kmh": "9"
+    },
+    {
+      "fecha_hora": "2026-08-24T07:00",
+      "temp": "18",
+      "sens_termica": "18",
+      "cielo": "Nuboso",
+      "prob_precipitacion": "15",
+      "viento_dir": "S",
+      "viento_kmh": "5"
+    },
+    {
+      "fecha_hora": "2026-08-24T08:00",
+      "temp": "18",
+      "sens_termica": "18",
+      "cielo": "Intervalos nubosos con lluvia escasa",
+      "prob_precipitacion": "90",
+      "viento_dir": "S",
+      "viento_kmh": "6"
     }
   ],
-  "horaria_elaborado": "2026-08-23T08:55:11",
-  "horaria_es_respaldo": true,
+  "horaria_elaborado": "2026-08-23T13:07:10",
+  "horaria_es_respaldo": false,
   "avisos": [],
   "maritima": {
     "texto": "Variable 1 a 3 arreciando a E o NE 3 a 5 desde la tarde y rolando a W o SW desde la madrugada. Marejadilla o marejada. Mar de fondo del N o NE de 1 a 2 m. Aguaceros y tormentas en el oeste al final. Regular",
@@ -190,25 +245,75 @@
     "vigencia_fin": "2026-08-24T12:00:00"
   },
   "netatmo_own": {
-    "ts": 1787489950,
-    "presion_hpa": 1011,
+    "ts": 1787492582,
+    "presion_hpa": 1010.8,
     "presion_tendencia": "up",
     "exterior": {
-      "temp_c": 25.2,
-      "humedad": 82,
+      "temp_c": 25.1,
+      "humedad": 81,
       "tendencia": "stable"
     },
     "viento": {
-      "kmh": 3,
-      "dir": 68,
-      "racha_kmh": 7
+      "kmh": 4,
+      "dir": 48,
+      "racha_kmh": 5
     },
     "lluvia": {
       "mm_1h": 0,
       "mm_24h": 0
     }
   },
-  "netatmo_vecinas": [],
+  "netatmo_vecinas": [
+    {
+      "lat": 43.53,
+      "lon": -6.39,
+      "ciudad": "Valdés",
+      "temp_c": 25.4,
+      "humedad": 74
+    },
+    {
+      "lat": 43.56,
+      "lon": -6.66,
+      "ciudad": "Navia",
+      "temp_c": 25.5,
+      "humedad": 71
+    },
+    {
+      "lat": 43.56,
+      "lon": -6.27,
+      "ciudad": "Cudillero",
+      "temp_c": 23.2,
+      "humedad": 70
+    },
+    {
+      "lat": 43.24,
+      "lon": -6.56,
+      "ciudad": "Allande",
+      "temp_c": 24.8,
+      "humedad": 65
+    },
+    {
+      "lat": 43.4,
+      "lon": -6.54,
+      "ciudad": "Tineo",
+      "temp_c": 25.2,
+      "humedad": 62
+    },
+    {
+      "lat": 43.4,
+      "lon": -6.25,
+      "ciudad": "Salas",
+      "temp_c": 25.4,
+      "humedad": 70
+    },
+    {
+      "lat": 43.43,
+      "lon": -6.76,
+      "ciudad": "Boal",
+      "temp_c": 25.8,
+      "humedad": 70
+    }
+  ],
   "lugares": [
     {
       "name": "Otur",
@@ -393,5 +498,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-08-23T13:00:50.774837+00:00"
+  "generated_at": "2026-08-23T13:45:21.339784+00:00"
 }
