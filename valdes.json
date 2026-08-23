@@ -1,13 +1,13 @@
 {
   "real_time": {
-    "ts": "2026-08-23T10:00:00+0000",
-    "temp_c": 19.2,
-    "wind_kmh": 16.9,
-    "wind_dir": 272.0,
-    "gust_kmh": 30.6,
-    "pres_hpa": 1007.0,
+    "ts": "2026-08-23T11:00:00+0000",
+    "temp_c": 20.4,
+    "wind_kmh": 15.8,
+    "wind_dir": 271.0,
+    "gust_kmh": 25.6,
+    "pres_hpa": 1006.9,
     "pres_tendencia": "subiendo",
-    "humedad": 87.0
+    "humedad": 84.0
   },
   "recomendacion": {
     "score": 60,
@@ -22,7 +22,7 @@
     "prec_mm": 0,
     "temp_c": 21.0,
     "cielo_despejado": false,
-    "eta_horas": 2.6
+    "eta_horas": 2.8
   },
   "forecast_municipio": [
     {
@@ -63,15 +63,6 @@
     }
   ],
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-08-23T12:00",
-      "temp": "21",
-      "sens_termica": "21",
-      "cielo": "Nubes altas",
-      "prob_precipitacion": "30",
-      "viento_dir": "N",
-      "viento_kmh": "1"
-    },
     {
       "fecha_hora": "2026-08-23T13:00",
       "temp": "22",
@@ -224,6 +215,15 @@
       "prob_precipitacion": "15",
       "viento_dir": "S",
       "viento_kmh": "4"
+    },
+    {
+      "fecha_hora": "2026-08-24T06:00",
+      "temp": "18",
+      "sens_termica": "18",
+      "cielo": "Nubes altas",
+      "prob_precipitacion": "15",
+      "viento_dir": "S",
+      "viento_kmh": "9"
     }
   ],
   "horaria_elaborado": "2026-08-23T08:55:11",
@@ -245,17 +245,17 @@
     "vigencia_fin": "2026-08-24T12:00:00"
   },
   "netatmo_own": {
-    "ts": 1787481479,
-    "presion_hpa": 1012.6,
+    "ts": 1787484503,
+    "presion_hpa": 1012.2,
     "presion_tendencia": "stable",
     "exterior": {
-      "temp_c": 22.7,
-      "humedad": 89,
+      "temp_c": 24.4,
+      "humedad": 86,
       "tendencia": "up"
     },
     "viento": {
       "kmh": 3,
-      "dir": 45,
+      "dir": 48,
       "racha_kmh": 5
     },
     "lluvia": {
@@ -268,50 +268,50 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 22.4,
-      "humedad": 81
+      "temp_c": 24.3,
+      "humedad": 78
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
-      "temp_c": 23.4,
-      "humedad": 77
+      "temp_c": 24.4,
+      "humedad": 75
     },
     {
       "lat": 43.57,
       "lon": -6.21,
       "ciudad": "Cudillero",
-      "temp_c": 22.5,
-      "humedad": 83
+      "temp_c": 23.4,
+      "humedad": 81
     },
     {
       "lat": 43.24,
       "lon": -6.56,
       "ciudad": "Allande",
-      "temp_c": 22.1,
-      "humedad": 76
+      "temp_c": 23.7,
+      "humedad": 71
     },
     {
       "lat": 43.4,
       "lon": -6.54,
       "ciudad": "Tineo",
-      "temp_c": 22.4,
-      "humedad": 75
+      "temp_c": 23.9,
+      "humedad": 72
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 22.9,
-      "humedad": 79
+      "temp_c": 24,
+      "humedad": 71
     },
     {
       "lat": 43.43,
       "lon": -6.76,
       "ciudad": "Boal",
-      "temp_c": 22.3,
-      "humedad": 81
+      "temp_c": 23.7,
+      "humedad": 77
     }
   ],
   "lugares": [
@@ -498,5 +498,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-08-23T10:38:48.752321+00:00"
+  "generated_at": "2026-08-23T11:33:37.315407+00:00"
 }
