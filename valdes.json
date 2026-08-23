@@ -1,13 +1,13 @@
 {
   "real_time": {
-    "ts": "2026-08-23T03:00:00+0000",
-    "temp_c": 20.3,
-    "wind_kmh": 7.9,
-    "wind_dir": 114.0,
-    "gust_kmh": 29.9,
-    "pres_hpa": 1005.3,
+    "ts": "2026-08-23T04:00:00+0000",
+    "temp_c": 20.0,
+    "wind_kmh": 9.4,
+    "wind_dir": 142.0,
+    "gust_kmh": 13.0,
+    "pres_hpa": 1004.6,
     "pres_tendencia": "bajando",
-    "humedad": 87.0
+    "humedad": 86.0
   },
   "recomendacion": {
     "score": 40,
@@ -238,17 +238,17 @@
     "vigencia_fin": "2026-08-23T20:00:00"
   },
   "netatmo_own": {
-    "ts": 1787457282,
-    "presion_hpa": 1010.2,
+    "ts": 1787460307,
+    "presion_hpa": 1009.6,
     "presion_tendencia": "stable",
     "exterior": {
-      "temp_c": 20,
-      "humedad": 95,
+      "temp_c": 19.8,
+      "humedad": 94,
       "tendencia": "stable"
     },
     "viento": {
-      "kmh": 1,
-      "dir": 90,
+      "kmh": 0,
+      "dir": -1,
       "racha_kmh": 3
     },
     "lluvia": {
@@ -261,14 +261,14 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 18.8,
-      "humedad": 88
+      "temp_c": 18.7,
+      "humedad": 89
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
-      "temp_c": 20.2,
+      "temp_c": 19.9,
       "humedad": 84
     },
     {
@@ -276,34 +276,34 @@
       "lon": -6.27,
       "ciudad": "Cudillero",
       "temp_c": 21.1,
-      "humedad": 76
+      "humedad": 74
     },
     {
       "lat": 43.24,
       "lon": -6.56,
       "ciudad": "Allande",
-      "temp_c": 17,
+      "temp_c": 16.8,
       "humedad": 87
     },
     {
       "lat": 43.4,
       "lon": -6.54,
       "ciudad": "Tineo",
-      "temp_c": 20.2,
+      "temp_c": 20,
       "humedad": 80
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 19.7,
-      "humedad": 85
+      "temp_c": 19.5,
+      "humedad": 86
     },
     {
       "lat": 43.43,
       "lon": -6.76,
       "ciudad": "Boal",
-      "temp_c": 19.7,
+      "temp_c": 19.6,
       "humedad": 85
     }
   ],
@@ -509,5 +509,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-08-23T04:03:41.972810+00:00"
+  "generated_at": "2026-08-23T04:51:20.157492+00:00"
 }
