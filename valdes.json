@@ -1,96 +1,85 @@
 {
   "real_time": {
-    "ts": "2026-08-23T05:00:00+0000",
-    "temp_c": 20.0,
-    "wind_kmh": 11.2,
-    "wind_dir": 150.0,
-    "gust_kmh": 15.1,
-    "pres_hpa": 1004.2,
-    "pres_tendencia": "bajando",
-    "humedad": 84.0
+    "ts": "2026-08-23T07:00:00+0000",
+    "temp_c": 19.2,
+    "wind_kmh": 9.0,
+    "wind_dir": 242.0,
+    "gust_kmh": 15.8,
+    "pres_hpa": 1005.2,
+    "pres_tendencia": "estable",
+    "humedad": 87.0
   },
   "recomendacion": {
-    "score": 20,
-    "etiqueta": "Bastante oleaje en la playa"
+    "score": 40,
+    "etiqueta": "Cielo nubes altas"
   },
   "que_se_acerca": {
-    "sector": "SE",
-    "disponible": false
+    "sector": "SW",
+    "disponible": true,
+    "nombre": "Lugo",
+    "dist_km": 89,
+    "lloviendo": false,
+    "prec_mm": 0,
+    "temp_c": 16.7,
+    "cielo_despejado": false,
+    "eta_horas": 9.9
   },
   "forecast_municipio": [
-    {
-      "fecha": "2026-08-22T00:00:00",
-      "cielo": "Muy nuboso",
-      "viento_dir": "SE",
-      "viento_kmh": 5,
-      "t_max": 25,
-      "t_min": 16,
-      "prob_precipitacion": null
-    },
     {
       "fecha": "2026-08-23T00:00:00",
       "cielo": "Intervalos nubosos con lluvia escasa",
       "viento_dir": "N",
-      "viento_kmh": 10,
+      "viento_kmh": 5,
       "t_max": 25,
       "t_min": 18,
       "prob_precipitacion": 95
     },
     {
       "fecha": "2026-08-24T00:00:00",
-      "cielo": "Muy nuboso con lluvia",
-      "viento_dir": "N",
-      "viento_kmh": 10,
+      "cielo": "Cubierto con lluvia",
+      "viento_dir": "NE",
+      "viento_kmh": 5,
       "t_max": 25,
-      "t_min": 18,
+      "t_min": 17,
       "prob_precipitacion": 100
     },
     {
       "fecha": "2026-08-25T00:00:00",
-      "cielo": "Nuboso con lluvia",
+      "cielo": "Muy nuboso con lluvia",
       "viento_dir": "O",
       "viento_kmh": 15,
-      "t_max": 25,
+      "t_max": 26,
       "t_min": 16,
-      "prob_precipitacion": 95
+      "prob_precipitacion": 100
+    },
+    {
+      "fecha": "2026-08-26T00:00:00",
+      "cielo": "Intervalos nubosos con lluvia",
+      "viento_dir": "C",
+      "viento_kmh": 0,
+      "t_max": 25,
+      "t_min": 15,
+      "prob_precipitacion": 100
     }
   ],
   "forecast_horaria": [
     {
-      "fecha_hora": "2026-08-23T07:00",
-      "temp": "19",
-      "sens_termica": "19",
-      "cielo": "Nubes altas",
-      "prob_precipitacion": "40",
-      "viento_dir": "S",
-      "viento_kmh": "7"
-    },
-    {
-      "fecha_hora": "2026-08-23T08:00",
+      "fecha_hora": "2026-08-23T09:00",
       "temp": "19",
       "sens_termica": "19",
       "cielo": "Nubes altas",
       "prob_precipitacion": "35",
-      "viento_dir": "S",
-      "viento_kmh": "6"
+      "viento_dir": "SO",
+      "viento_kmh": "4"
     },
     {
-      "fecha_hora": "2026-08-23T09:00",
+      "fecha_hora": "2026-08-23T10:00",
       "temp": "20",
       "sens_termica": "20",
       "cielo": "Nubes altas",
       "prob_precipitacion": "35",
-      "viento_dir": "S",
-      "viento_kmh": "6"
-    },
-    {
-      "fecha_hora": "2026-08-23T10:00",
-      "temp": "21",
-      "sens_termica": "21",
-      "cielo": "Nubes altas",
-      "prob_precipitacion": "35",
-      "viento_dir": "NO",
-      "viento_kmh": "4"
+      "viento_dir": "O",
+      "viento_kmh": "3"
     },
     {
       "fecha_hora": "2026-08-23T11:00",
@@ -98,11 +87,20 @@
       "sens_termica": "21",
       "cielo": "Nubes altas",
       "prob_precipitacion": "35",
-      "viento_dir": "NO",
-      "viento_kmh": "6"
+      "viento_dir": "N",
+      "viento_kmh": "3"
     },
     {
       "fecha_hora": "2026-08-23T12:00",
+      "temp": "21",
+      "sens_termica": "21",
+      "cielo": "Nubes altas",
+      "prob_precipitacion": "35",
+      "viento_dir": "NO",
+      "viento_kmh": "5"
+    },
+    {
+      "fecha_hora": "2026-08-23T13:00",
       "temp": "22",
       "sens_termica": "22",
       "cielo": "Nubes altas",
@@ -111,22 +109,13 @@
       "viento_kmh": "7"
     },
     {
-      "fecha_hora": "2026-08-23T13:00",
-      "temp": "23",
-      "sens_termica": "23",
-      "cielo": "Nubes altas",
-      "prob_precipitacion": "35",
-      "viento_dir": "NO",
-      "viento_kmh": "8"
-    },
-    {
       "fecha_hora": "2026-08-23T14:00",
       "temp": "23",
       "sens_termica": "23",
       "cielo": "Nubes altas",
       "prob_precipitacion": "45",
       "viento_dir": "N",
-      "viento_kmh": "9"
+      "viento_kmh": "7"
     },
     {
       "fecha_hora": "2026-08-23T15:00",
@@ -135,7 +124,7 @@
       "cielo": "Nubes altas",
       "prob_precipitacion": "45",
       "viento_dir": "N",
-      "viento_kmh": "6"
+      "viento_kmh": "8"
     },
     {
       "fecha_hora": "2026-08-23T16:00",
@@ -152,8 +141,8 @@
       "sens_termica": "24",
       "cielo": "Nubes altas",
       "prob_precipitacion": "45",
-      "viento_dir": "NE",
-      "viento_kmh": "3"
+      "viento_dir": "N",
+      "viento_kmh": "6"
     },
     {
       "fecha_hora": "2026-08-23T18:00",
@@ -161,13 +150,13 @@
       "sens_termica": "23",
       "cielo": "Nubes altas",
       "prob_precipitacion": "45",
-      "viento_dir": "NE",
-      "viento_kmh": "3"
+      "viento_dir": "N",
+      "viento_kmh": "5"
     },
     {
       "fecha_hora": "2026-08-23T19:00",
-      "temp": "22",
-      "sens_termica": "22",
+      "temp": "23",
+      "sens_termica": "23",
       "cielo": "Nubes altas",
       "prob_precipitacion": "45",
       "viento_dir": "N",
@@ -175,21 +164,21 @@
     },
     {
       "fecha_hora": "2026-08-23T20:00",
-      "temp": "21",
-      "sens_termica": "21",
-      "cielo": "Nuboso con lluvia escasa",
+      "temp": "22",
+      "sens_termica": "22",
+      "cielo": "Muy nuboso con lluvia escasa",
       "prob_precipitacion": "50",
       "viento_dir": "N",
-      "viento_kmh": "5"
+      "viento_kmh": "4"
     },
     {
       "fecha_hora": "2026-08-23T21:00",
       "temp": "21",
       "sens_termica": "21",
-      "cielo": "Muy nuboso con lluvia escasa",
+      "cielo": "Intervalos nubosos con lluvia escasa",
       "prob_precipitacion": "50",
-      "viento_dir": "NO",
-      "viento_kmh": "8"
+      "viento_dir": "O",
+      "viento_kmh": "1"
     },
     {
       "fecha_hora": "2026-08-23T22:00",
@@ -197,8 +186,8 @@
       "sens_termica": "21",
       "cielo": "Intervalos nubosos con lluvia escasa",
       "prob_precipitacion": "50",
-      "viento_dir": "O",
-      "viento_kmh": "4"
+      "viento_dir": "NO",
+      "viento_kmh": "6"
     },
     {
       "fecha_hora": "2026-08-23T23:00",
@@ -206,20 +195,38 @@
       "sens_termica": "20",
       "cielo": "Intervalos nubosos con lluvia escasa",
       "prob_precipitacion": "50",
-      "viento_dir": "S",
-      "viento_kmh": "5"
+      "viento_dir": "NO",
+      "viento_kmh": "4"
     },
     {
       "fecha_hora": "2026-08-24T00:00",
       "temp": "20",
       "sens_termica": "20",
       "cielo": "Intervalos nubosos con lluvia escasa",
-      "prob_precipitacion": null,
+      "prob_precipitacion": "85",
+      "viento_dir": "O",
+      "viento_kmh": "4"
+    },
+    {
+      "fecha_hora": "2026-08-24T01:00",
+      "temp": "19",
+      "sens_termica": "19",
+      "cielo": "Intervalos nubosos con lluvia escasa",
+      "prob_precipitacion": "85",
+      "viento_dir": "SO",
+      "viento_kmh": "3"
+    },
+    {
+      "fecha_hora": "2026-08-24T02:00",
+      "temp": "19",
+      "sens_termica": "19",
+      "cielo": "Cubierto",
+      "prob_precipitacion": "45",
       "viento_dir": "S",
-      "viento_kmh": "6"
+      "viento_kmh": "5"
     }
   ],
-  "horaria_elaborado": "2026-08-22T21:05:11",
+  "horaria_elaborado": "2026-08-23T07:09:10",
   "horaria_es_respaldo": false,
   "avisos": [],
   "maritima": {
@@ -238,18 +245,18 @@
     "vigencia_fin": "2026-08-23T20:00:00"
   },
   "netatmo_own": {
-    "ts": 1787463331,
-    "presion_hpa": 1009.7,
+    "ts": 1787470590,
+    "presion_hpa": 1011,
     "presion_tendencia": "down",
     "exterior": {
-      "temp_c": 19.3,
-      "humedad": 94,
-      "tendencia": "down"
+      "temp_c": 19.9,
+      "humedad": 95,
+      "tendencia": "up"
     },
     "viento": {
       "kmh": 1,
-      "dir": 90,
-      "racha_kmh": 4
+      "dir": 126,
+      "racha_kmh": 3
     },
     "lluvia": {
       "mm_1h": 0,
@@ -261,50 +268,50 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 18.3,
+      "temp_c": 18.4,
       "humedad": 90
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
-      "temp_c": 19.8,
-      "humedad": 85
+      "temp_c": 20.4,
+      "humedad": 84
     },
     {
       "lat": 43.56,
       "lon": -6.27,
       "ciudad": "Cudillero",
       "temp_c": 20.9,
-      "humedad": 72
+      "humedad": 73
     },
     {
       "lat": 43.24,
       "lon": -6.56,
       "ciudad": "Allande",
-      "temp_c": 16.4,
-      "humedad": 87
+      "temp_c": 17.3,
+      "humedad": 88
     },
     {
       "lat": 43.4,
       "lon": -6.54,
       "ciudad": "Tineo",
-      "temp_c": 19.8,
+      "temp_c": 20,
       "humedad": 80
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 19.1,
-      "humedad": 86
+      "temp_c": 19.2,
+      "humedad": 87
     },
     {
       "lat": 43.43,
       "lon": -6.76,
       "ciudad": "Boal",
-      "temp_c": 19.4,
-      "humedad": 85
+      "temp_c": 19.6,
+      "humedad": 86
     }
   ],
   "lugares": [
@@ -316,15 +323,6 @@
       "ficha_aemet": "Otur",
       "forecast_4d": [
         {
-          "fecha": "20260822",
-          "cielo": "despejado",
-          "viento": "flojo",
-          "oleaje": "fuerte",
-          "t_max": 25,
-          "t_agua": 21,
-          "uv_max": 6
-        },
-        {
           "fecha": "20260823",
           "cielo": "muy nuboso",
           "viento": "flojo",
@@ -352,7 +350,7 @@
           "uv_max": 6
         }
       ],
-      "forecast_4d_elaborado": "2026-08-22T23:50:18"
+      "forecast_4d_elaborado": "2026-08-23T05:50:18"
     },
     {
       "name": "Luarca (1ª, 2ª y 3ª playa)",
@@ -362,15 +360,6 @@
       "ficha_aemet": "Luarca",
       "forecast_4d": [
         {
-          "fecha": "20260822",
-          "cielo": "despejado",
-          "viento": "flojo",
-          "oleaje": "débil",
-          "t_max": 25,
-          "t_agua": 22,
-          "uv_max": 6
-        },
-        {
           "fecha": "20260823",
           "cielo": "muy nuboso",
           "viento": "flojo",
@@ -398,7 +387,7 @@
           "uv_max": 6
         }
       ],
-      "forecast_4d_elaborado": "2026-08-22T23:50:18"
+      "forecast_4d_elaborado": "2026-08-23T05:50:18"
     },
     {
       "name": "Cueva",
@@ -509,5 +498,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-08-23T05:44:33.607207+00:00"
+  "generated_at": "2026-08-23T07:46:32.360419+00:00"
 }
