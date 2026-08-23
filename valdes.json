@@ -1,77 +1,21 @@
 {
   "real_time": {
-    "ts": "2026-08-23T20:00:00+0000",
-    "temp_c": 20.3,
-    "wind_kmh": 4.0,
-    "wind_dir": 62.0,
-    "gust_kmh": 10.4,
-    "pres_hpa": 1004.4,
-    "pres_tendencia": "estable",
-    "humedad": 94.0
+    "ts": "2026-08-23T21:00:00+0000",
+    "temp_c": 20.5,
+    "wind_kmh": 2.9,
+    "wind_dir": 291.0,
+    "gust_kmh": 13.3,
+    "pres_hpa": 1004.5,
+    "pres_tendencia": "subiendo",
+    "humedad": 93.0
   },
   "recomendacion": {
     "score": 30,
     "etiqueta": "Cielo muy nuboso"
   },
-  "que_se_acerca": {
-    "sector": "NE",
-    "disponible": true,
-    "nombre": "Cabo Peñas",
-    "dist_km": 57,
-    "lloviendo": false,
-    "prec_mm": 0,
-    "temp_c": 21.1,
-    "cielo_despejado": false,
-    "eta_horas": 14.2
-  },
-  "forecast_municipio": [
-    {
-      "fecha": "2026-08-23T00:00:00",
-      "cielo": "Muy nuboso",
-      "viento_dir": "S",
-      "viento_kmh": 5,
-      "t_max": 25,
-      "t_min": 18,
-      "prob_precipitacion": 20
-    },
-    {
-      "fecha": "2026-08-24T00:00:00",
-      "cielo": "Cubierto con lluvia",
-      "viento_dir": "NE",
-      "viento_kmh": 10,
-      "t_max": 25,
-      "t_min": 17,
-      "prob_precipitacion": 100
-    },
-    {
-      "fecha": "2026-08-25T00:00:00",
-      "cielo": "Intervalos nubosos con lluvia",
-      "viento_dir": "SO",
-      "viento_kmh": 20,
-      "t_max": 25,
-      "t_min": 16,
-      "prob_precipitacion": 100
-    },
-    {
-      "fecha": "2026-08-26T00:00:00",
-      "cielo": "Intervalos nubosos con lluvia",
-      "viento_dir": "S",
-      "viento_kmh": 5,
-      "t_max": 25,
-      "t_min": 16,
-      "prob_precipitacion": 100
-    }
-  ],
+  "que_se_acerca": null,
+  "forecast_municipio": null,
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-08-23T22:00",
-      "temp": "21",
-      "sens_termica": "21",
-      "cielo": "Cubierto",
-      "prob_precipitacion": "5",
-      "viento_dir": "O",
-      "viento_kmh": "2"
-    },
     {
       "fecha_hora": "2026-08-23T23:00",
       "temp": "20",
@@ -227,7 +171,7 @@
     }
   ],
   "horaria_elaborado": "2026-08-23T19:15:12",
-  "horaria_es_respaldo": false,
+  "horaria_es_respaldo": true,
   "avisos": [],
   "maritima": {
     "texto": "Variable 1 a 3 arreciando temporalmente a E o NE 3 o 4 por la noche y a SW durante la mañana. Marejadilla o marejada. Mar de fondo del NE en torno a 1 m disminuyendo. Aguaceros y tormentas. Regular o mala",
@@ -245,11 +189,11 @@
     "vigencia_fin": "2026-08-24T20:00:00"
   },
   "netatmo_own": {
-    "ts": 1787517056,
-    "presion_hpa": 1010.6,
+    "ts": 1787519173,
+    "presion_hpa": 1010.1,
     "presion_tendencia": "down",
     "exterior": {
-      "temp_c": 21.2,
+      "temp_c": 21,
       "humedad": 97,
       "tendencia": "stable"
     },
@@ -268,49 +212,49 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 19.9,
-      "humedad": 88
+      "temp_c": 20.1,
+      "humedad": 89
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
-      "temp_c": 22,
-      "humedad": 84
+      "temp_c": 21.2,
+      "humedad": 86
     },
     {
       "lat": 43.56,
       "lon": -6.27,
       "ciudad": "Cudillero",
-      "temp_c": 23.2,
-      "humedad": 72
+      "temp_c": 22.8,
+      "humedad": 73
     },
     {
       "lat": 43.24,
       "lon": -6.56,
       "ciudad": "Allande",
-      "temp_c": 20.6,
-      "humedad": 71
+      "temp_c": 18.6,
+      "humedad": 79
     },
     {
       "lat": 43.4,
       "lon": -6.54,
       "ciudad": "Tineo",
-      "temp_c": 22.2,
+      "temp_c": 22,
       "humedad": 78
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 22,
-      "humedad": 79
+      "temp_c": 21.6,
+      "humedad": 80
     },
     {
       "lat": 43.43,
       "lon": -6.76,
       "ciudad": "Boal",
-      "temp_c": 21.9,
+      "temp_c": 21.3,
       "humedad": 85
     }
   ],
@@ -498,5 +442,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-08-23T20:37:43.640290+00:00"
+  "generated_at": "2026-08-23T21:35:00.820947+00:00"
 }
