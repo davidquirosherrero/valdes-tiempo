@@ -1,21 +1,28 @@
 {
   "real_time": {
-    "ts": "2026-08-24T04:00:00+0000",
-    "temp_c": 18.8,
-    "wind_kmh": 7.9,
-    "wind_dir": 195.0,
-    "gust_kmh": 17.6,
-    "pres_hpa": 1000.5,
+    "ts": "2026-08-24T05:00:00+0000",
+    "temp_c": 19.3,
+    "wind_kmh": 15.8,
+    "wind_dir": 266.0,
+    "gust_kmh": 21.2,
+    "pres_hpa": 999.8,
     "pres_tendencia": "bajando",
-    "humedad": 91.0
+    "humedad": 87.0
   },
   "recomendacion": {
     "score": 40,
     "etiqueta": "Cielo nubes altas"
   },
   "que_se_acerca": {
-    "sector": "S",
-    "disponible": false
+    "sector": "W",
+    "disponible": true,
+    "nombre": "Ribadeo",
+    "dist_km": 44,
+    "lloviendo": false,
+    "prec_mm": 0,
+    "temp_c": 20.1,
+    "cielo_despejado": false,
+    "eta_horas": 2.8
   },
   "forecast_municipio": [
     {
@@ -256,7 +263,57 @@
       "mm_24h": 0
     }
   },
-  "netatmo_vecinas": [],
+  "netatmo_vecinas": [
+    {
+      "lat": 43.53,
+      "lon": -6.39,
+      "ciudad": "Valdés",
+      "temp_c": 17.4,
+      "humedad": 92
+    },
+    {
+      "lat": 43.56,
+      "lon": -6.66,
+      "ciudad": "Navia",
+      "temp_c": 20.3,
+      "humedad": 86
+    },
+    {
+      "lat": 43.56,
+      "lon": -6.27,
+      "ciudad": "Cudillero",
+      "temp_c": 20.8,
+      "humedad": 72
+    },
+    {
+      "lat": 43.24,
+      "lon": -6.56,
+      "ciudad": "Allande",
+      "temp_c": 15.5,
+      "humedad": 83
+    },
+    {
+      "lat": 43.4,
+      "lon": -6.54,
+      "ciudad": "Tineo",
+      "temp_c": 19.1,
+      "humedad": 80
+    },
+    {
+      "lat": 43.4,
+      "lon": -6.25,
+      "ciudad": "Salas",
+      "temp_c": 18.6,
+      "humedad": 85
+    },
+    {
+      "lat": 43.43,
+      "lon": -6.76,
+      "ciudad": "Boal",
+      "temp_c": 18.6,
+      "humedad": 86
+    }
+  ],
   "lugares": [
     {
       "name": "Otur",
@@ -459,5 +516,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-08-24T05:00:24.232743+00:00"
+  "generated_at": "2026-08-24T05:52:43.983722+00:00"
 }
