@@ -1,70 +1,24 @@
 {
   "real_time": {
-    "ts": "2026-08-25T09:00:00+0000",
-    "temp_c": 21.2,
-    "wind_kmh": 6.8,
-    "wind_dir": 297.0,
-    "gust_kmh": 12.2,
-    "pres_hpa": 1005.2,
+    "ts": "2026-08-25T10:00:00+0000",
+    "temp_c": 21.7,
+    "wind_kmh": 6.1,
+    "wind_dir": 319.0,
+    "gust_kmh": 10.1,
+    "pres_hpa": 1005.4,
     "pres_tendencia": "estable",
     "humedad": 70.0
   },
   "recomendacion": {
-    "score": 65,
-    "etiqueta": "Buen día de playa — el cielo está despejado"
+    "score": 70,
+    "etiqueta": "Buen día de playa — la presión está subiendo"
   },
   "que_se_acerca": {
     "sector": "NW",
     "disponible": false
   },
-  "forecast_municipio": [
-    {
-      "fecha": "2026-08-25T00:00:00",
-      "cielo": "Muy nuboso con lluvia",
-      "viento_dir": "S",
-      "viento_kmh": 5,
-      "t_max": 25,
-      "t_min": 17,
-      "prob_precipitacion": 100
-    },
-    {
-      "fecha": "2026-08-26T00:00:00",
-      "cielo": "Intervalos nubosos con lluvia",
-      "viento_dir": "NO",
-      "viento_kmh": 10,
-      "t_max": 24,
-      "t_min": 16,
-      "prob_precipitacion": 100
-    },
-    {
-      "fecha": "2026-08-27T00:00:00",
-      "cielo": "Muy nuboso con lluvia",
-      "viento_dir": "C",
-      "viento_kmh": 0,
-      "t_max": 20,
-      "t_min": 14,
-      "prob_precipitacion": 100
-    },
-    {
-      "fecha": "2026-08-28T00:00:00",
-      "cielo": "Intervalos nubosos con lluvia",
-      "viento_dir": "O",
-      "viento_kmh": 10,
-      "t_max": 25,
-      "t_min": 14,
-      "prob_precipitacion": 90
-    }
-  ],
+  "forecast_municipio": null,
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-08-25T11:00",
-      "temp": "21",
-      "sens_termica": "21",
-      "cielo": "Poco nuboso",
-      "prob_precipitacion": "20",
-      "viento_dir": "NE",
-      "viento_kmh": "5"
-    },
     {
       "fecha_hora": "2026-08-25T12:00",
       "temp": "22",
@@ -220,7 +174,7 @@
     }
   ],
   "horaria_elaborado": "2026-08-25T09:39:10",
-  "horaria_es_respaldo": false,
+  "horaria_es_respaldo": true,
   "avisos": [
     {
       "evento": "Aviso de lluvias de nivel amarillo",
@@ -245,18 +199,18 @@
     "vigencia_fin": "2026-08-26T12:00:00"
   },
   "netatmo_own": {
-    "ts": 1787651331,
-    "presion_hpa": 1010.9,
-    "presion_tendencia": "stable",
+    "ts": 1787654356,
+    "presion_hpa": 1011.1,
+    "presion_tendencia": "up",
     "exterior": {
       "temp_c": 22.9,
-      "humedad": 83,
+      "humedad": 82,
       "tendencia": "up"
     },
     "viento": {
-      "kmh": 3,
-      "dir": 53,
-      "racha_kmh": 5
+      "kmh": 4,
+      "dir": 38,
+      "racha_kmh": 8
     },
     "lluvia": {
       "mm_1h": 0,
@@ -268,50 +222,50 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 21.9,
-      "humedad": 90
+      "temp_c": 24,
+      "humedad": 77
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
-      "temp_c": 25.4,
+      "temp_c": 24.3,
       "humedad": 70
     },
     {
       "lat": 43.56,
       "lon": -6.27,
       "ciudad": "Cudillero",
-      "temp_c": 21.3,
-      "humedad": 72
+      "temp_c": 21.9,
+      "humedad": 69
     },
     {
       "lat": 43.24,
       "lon": -6.56,
       "ciudad": "Allande",
-      "temp_c": 20.8,
-      "humedad": 80
+      "temp_c": 21.1,
+      "humedad": 75
     },
     {
       "lat": 43.4,
       "lon": -6.54,
       "ciudad": "Tineo",
-      "temp_c": 21.3,
-      "humedad": 80
+      "temp_c": 22.1,
+      "humedad": 74
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 19.9,
-      "humedad": 82
+      "temp_c": 20.6,
+      "humedad": 80
     },
     {
       "lat": 43.43,
       "lon": -6.76,
       "ciudad": "Boal",
-      "temp_c": 21.7,
-      "humedad": 80
+      "temp_c": 22.1,
+      "humedad": 79
     }
   ],
   "lugares": [
@@ -498,5 +452,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-08-25T09:50:29.985652+00:00"
+  "generated_at": "2026-08-25T10:48:56.364671+00:00"
 }
