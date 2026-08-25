@@ -1,17 +1,17 @@
 {
   "real_time": {
-    "ts": "2026-08-25T12:00:00+0000",
-    "temp_c": 21.2,
-    "wind_kmh": 6.8,
-    "wind_dir": 88.0,
-    "gust_kmh": 10.4,
-    "pres_hpa": 1005.6,
+    "ts": "2026-08-25T13:00:00+0000",
+    "temp_c": 21.3,
+    "wind_kmh": 10.4,
+    "wind_dir": 87.0,
+    "gust_kmh": 17.3,
+    "pres_hpa": 1005.2,
     "pres_tendencia": "estable",
-    "humedad": 74.0
+    "humedad": 72.0
   },
   "recomendacion": {
-    "score": 85,
-    "etiqueta": "Buen día de playa — la presión está subiendo"
+    "score": 60,
+    "etiqueta": "Aviso amarillo activo"
   },
   "que_se_acerca": {
     "sector": "E",
@@ -20,9 +20,9 @@
     "dist_km": 40,
     "lloviendo": false,
     "prec_mm": 0,
-    "temp_c": 21.4,
+    "temp_c": 21.1,
     "cielo_despejado": true,
-    "eta_horas": 5.9
+    "eta_horas": 3.8
   },
   "forecast_municipio": [
     {
@@ -63,15 +63,6 @@
     }
   ],
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-08-25T15:00",
-      "temp": "23",
-      "sens_termica": "23",
-      "cielo": "Poco nuboso",
-      "prob_precipitacion": "100",
-      "viento_dir": "NE",
-      "viento_kmh": "8"
-    },
     {
       "fecha_hora": "2026-08-25T16:00",
       "temp": "22",
@@ -224,6 +215,15 @@
       "prob_precipitacion": "65",
       "viento_dir": "S",
       "viento_kmh": "5"
+    },
+    {
+      "fecha_hora": "2026-08-26T09:00",
+      "temp": "18",
+      "sens_termica": "18",
+      "cielo": "Intervalos nubosos con lluvia escasa",
+      "prob_precipitacion": "65",
+      "viento_dir": "S",
+      "viento_kmh": "7"
     }
   ],
   "horaria_elaborado": "2026-08-25T12:01:12",
@@ -252,17 +252,17 @@
     "vigencia_fin": "2026-08-26T12:00:00"
   },
   "netatmo_own": {
-    "ts": 1787663429,
-    "presion_hpa": 1010.7,
+    "ts": 1787666453,
+    "presion_hpa": 1010.8,
     "presion_tendencia": "up",
     "exterior": {
-      "temp_c": 24.3,
+      "temp_c": 23.9,
       "humedad": 81,
-      "tendencia": "up"
+      "tendencia": "down"
     },
     "viento": {
       "kmh": 4,
-      "dir": 65,
+      "dir": 71,
       "racha_kmh": 8
     },
     "lluvia": {
@@ -270,7 +270,57 @@
       "mm_24h": 0
     }
   },
-  "netatmo_vecinas": [],
+  "netatmo_vecinas": [
+    {
+      "lat": 43.53,
+      "lon": -6.39,
+      "ciudad": "Valdés",
+      "temp_c": 24.9,
+      "humedad": 72
+    },
+    {
+      "lat": 43.56,
+      "lon": -6.66,
+      "ciudad": "Navia",
+      "temp_c": 24.4,
+      "humedad": 70
+    },
+    {
+      "lat": 43.56,
+      "lon": -6.27,
+      "ciudad": "Cudillero",
+      "temp_c": 23.3,
+      "humedad": 66
+    },
+    {
+      "lat": 43.24,
+      "lon": -6.56,
+      "ciudad": "Allande",
+      "temp_c": 26.6,
+      "humedad": 58
+    },
+    {
+      "lat": 43.4,
+      "lon": -6.54,
+      "ciudad": "Tineo",
+      "temp_c": 24.2,
+      "humedad": 65
+    },
+    {
+      "lat": 43.4,
+      "lon": -6.25,
+      "ciudad": "Salas",
+      "temp_c": 22.8,
+      "humedad": 75
+    },
+    {
+      "lat": 43.43,
+      "lon": -6.76,
+      "ciudad": "Boal",
+      "temp_c": 24.3,
+      "humedad": 73
+    }
+  ],
   "lugares": [
     {
       "name": "Otur",
@@ -455,5 +505,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-08-25T13:10:38.972685+00:00"
+  "generated_at": "2026-08-25T14:03:11.812923+00:00"
 }
