@@ -1,77 +1,24 @@
 {
   "real_time": {
-    "ts": "2026-08-25T21:00:00+0000",
-    "temp_c": 18.5,
-    "wind_kmh": 3.6,
-    "wind_dir": 59.0,
-    "gust_kmh": 12.6,
+    "ts": "2026-08-25T22:00:00+0000",
+    "temp_c": 18.3,
+    "wind_kmh": 7.9,
+    "wind_dir": 192.0,
+    "gust_kmh": 11.5,
     "pres_hpa": 1006.1,
     "pres_tendencia": "estable",
-    "humedad": 92.0
+    "humedad": 94.0
   },
   "recomendacion": {
     "score": 25,
     "etiqueta": "Lluvia en las próximas horas"
   },
   "que_se_acerca": {
-    "sector": "NE",
-    "disponible": true,
-    "nombre": "Cabo Peñas",
-    "dist_km": 57,
-    "lloviendo": false,
-    "prec_mm": 0,
-    "temp_c": 18.9,
-    "cielo_despejado": false,
-    "eta_horas": 15.8
+    "sector": "S",
+    "disponible": false
   },
-  "forecast_municipio": [
-    {
-      "fecha": "2026-08-25T00:00:00",
-      "cielo": "Muy nuboso con lluvia escasa",
-      "viento_dir": "S",
-      "viento_kmh": 5,
-      "t_max": 25,
-      "t_min": 17,
-      "prob_precipitacion": 85
-    },
-    {
-      "fecha": "2026-08-26T00:00:00",
-      "cielo": "Nuboso con lluvia",
-      "viento_dir": "C",
-      "viento_kmh": 0,
-      "t_max": 24,
-      "t_min": 16,
-      "prob_precipitacion": 100
-    },
-    {
-      "fecha": "2026-08-27T00:00:00",
-      "cielo": "Muy nuboso con lluvia",
-      "viento_dir": "C",
-      "viento_kmh": 0,
-      "t_max": 20,
-      "t_min": 14,
-      "prob_precipitacion": 100
-    },
-    {
-      "fecha": "2026-08-28T00:00:00",
-      "cielo": "Intervalos nubosos con lluvia escasa",
-      "viento_dir": "SO",
-      "viento_kmh": 25,
-      "t_max": 25,
-      "t_min": 15,
-      "prob_precipitacion": 75
-    }
-  ],
+  "forecast_municipio": null,
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-08-25T23:00",
-      "temp": "19",
-      "sens_termica": "19",
-      "cielo": "Cubierto con lluvia",
-      "prob_precipitacion": "85",
-      "viento_dir": "S",
-      "viento_kmh": "6"
-    },
     {
       "fecha_hora": "2026-08-26T00:00",
       "temp": "18",
@@ -224,6 +171,15 @@
       "prob_precipitacion": "100",
       "viento_dir": "NO",
       "viento_kmh": "8"
+    },
+    {
+      "fecha_hora": "2026-08-26T17:00",
+      "temp": "19",
+      "sens_termica": "19",
+      "cielo": "Cubierto",
+      "prob_precipitacion": "100",
+      "viento_dir": "N",
+      "viento_kmh": "4"
     }
   ],
   "horaria_elaborado": "2026-08-25T21:03:09",
@@ -252,8 +208,8 @@
     "vigencia_fin": "2026-08-26T20:00:00"
   },
   "netatmo_own": {
-    "ts": 1787693809,
-    "presion_hpa": 1011.8,
+    "ts": 1787697438,
+    "presion_hpa": 1011.2,
     "presion_tendencia": "stable",
     "exterior": {
       "temp_c": 18.4,
@@ -263,14 +219,64 @@
     "viento": {
       "kmh": 0,
       "dir": -1,
-      "racha_kmh": 3
+      "racha_kmh": 1
     },
     "lluvia": {
       "mm_1h": 0,
-      "mm_24h": 0.5
+      "mm_24h": 0
     }
   },
-  "netatmo_vecinas": [],
+  "netatmo_vecinas": [
+    {
+      "lat": 43.53,
+      "lon": -6.39,
+      "ciudad": "Valdés",
+      "temp_c": 17.4,
+      "humedad": 92
+    },
+    {
+      "lat": 43.56,
+      "lon": -6.66,
+      "ciudad": "Navia",
+      "temp_c": 19.3,
+      "humedad": 88
+    },
+    {
+      "lat": 43.56,
+      "lon": -6.27,
+      "ciudad": "Cudillero",
+      "temp_c": 21.1,
+      "humedad": 72
+    },
+    {
+      "lat": 43.24,
+      "lon": -6.56,
+      "ciudad": "Allande",
+      "temp_c": 16.1,
+      "humedad": 85
+    },
+    {
+      "lat": 43.4,
+      "lon": -6.54,
+      "ciudad": "Tineo",
+      "temp_c": 19.9,
+      "humedad": 82
+    },
+    {
+      "lat": 43.4,
+      "lon": -6.25,
+      "ciudad": "Salas",
+      "temp_c": 18.9,
+      "humedad": 90
+    },
+    {
+      "lat": 43.43,
+      "lon": -6.76,
+      "ciudad": "Boal",
+      "temp_c": 20,
+      "humedad": 86
+    }
+  ],
   "lugares": [
     {
       "name": "Otur",
@@ -455,5 +461,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-08-25T21:43:08.828437+00:00"
+  "generated_at": "2026-08-25T22:44:04.763356+00:00"
 }
