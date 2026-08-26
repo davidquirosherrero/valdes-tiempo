@@ -1,20 +1,20 @@
 {
   "real_time": {
-    "ts": "2026-08-26T02:00:00+0000",
-    "temp_c": 17.7,
-    "wind_kmh": 18.7,
-    "wind_dir": 151.0,
-    "gust_kmh": 26.3,
-    "pres_hpa": 1003.2,
+    "ts": "2026-08-26T04:00:00+0000",
+    "temp_c": 17.5,
+    "wind_kmh": 12.6,
+    "wind_dir": 168.0,
+    "gust_kmh": 20.5,
+    "pres_hpa": 1002.4,
     "pres_tendencia": "bajando",
-    "humedad": 92.0
+    "humedad": 91.0
   },
   "recomendacion": {
     "score": 30,
     "etiqueta": "Aviso amarillo activo"
   },
   "que_se_acerca": {
-    "sector": "SE",
+    "sector": "S",
     "disponible": false
   },
   "forecast_municipio": [
@@ -56,15 +56,6 @@
     }
   ],
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-08-26T05:00",
-      "temp": "17",
-      "sens_termica": "17",
-      "cielo": "Nubes altas",
-      "prob_precipitacion": "0",
-      "viento_dir": "S",
-      "viento_kmh": "6"
-    },
     {
       "fecha_hora": "2026-08-26T06:00",
       "temp": "17",
@@ -220,7 +211,7 @@
     }
   ],
   "horaria_elaborado": "2026-08-25T21:03:09",
-  "horaria_es_respaldo": false,
+  "horaria_es_respaldo": true,
   "avisos": [
     {
       "evento": "Aviso de lluvias de nivel amarillo",
@@ -245,18 +236,18 @@
     "vigencia_fin": "2026-08-26T20:00:00"
   },
   "netatmo_own": {
-    "ts": 1787713770,
-    "presion_hpa": 1008.3,
+    "ts": 1787719820,
+    "presion_hpa": 1006.8,
     "presion_tendencia": "down",
     "exterior": {
-      "temp_c": 17.6,
-      "humedad": 99,
+      "temp_c": 17.4,
+      "humedad": 98,
       "tendencia": "stable"
     },
     "viento": {
       "kmh": 1,
-      "dir": 142,
-      "racha_kmh": 4
+      "dir": 90,
+      "racha_kmh": 5
     },
     "lluvia": {
       "mm_1h": 0,
@@ -275,42 +266,42 @@
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
-      "temp_c": 17.7,
+      "temp_c": 17.8,
       "humedad": 88
     },
     {
       "lat": 43.56,
       "lon": -6.27,
       "ciudad": "Cudillero",
-      "temp_c": 20,
-      "humedad": 72
+      "temp_c": 19.8,
+      "humedad": 73
     },
     {
       "lat": 43.24,
       "lon": -6.56,
       "ciudad": "Allande",
-      "temp_c": 14.9,
+      "temp_c": 14.6,
       "humedad": 88
     },
     {
       "lat": 43.4,
       "lon": -6.54,
       "ciudad": "Tineo",
-      "temp_c": 18.7,
+      "temp_c": 18.3,
       "humedad": 81
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 17.2,
+      "temp_c": 16.7,
       "humedad": 89
     },
     {
       "lat": 43.43,
       "lon": -6.76,
       "ciudad": "Boal",
-      "temp_c": 18.5,
+      "temp_c": 18.3,
       "humedad": 86
     }
   ],
@@ -516,5 +507,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-08-26T03:17:29.116850+00:00"
+  "generated_at": "2026-08-26T04:54:57.754549+00:00"
 }
