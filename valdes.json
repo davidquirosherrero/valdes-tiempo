@@ -1,21 +1,28 @@
 {
   "real_time": {
-    "ts": "2026-08-30T12:00:00+0000",
-    "temp_c": 20.4,
-    "wind_kmh": 22.0,
-    "wind_dir": 299.0,
-    "gust_kmh": 33.1,
-    "pres_hpa": 1011.2,
+    "ts": "2026-08-30T16:00:00+0000",
+    "temp_c": 21.6,
+    "wind_kmh": 17.6,
+    "wind_dir": 283.0,
+    "gust_kmh": 28.1,
+    "pres_hpa": 1011.4,
     "pres_tendencia": "estable",
-    "humedad": 77.0
+    "humedad": 70.0
   },
   "recomendacion": {
     "score": 70,
     "etiqueta": "Buen día de playa — el cielo está despejado"
   },
   "que_se_acerca": {
-    "sector": "NW",
-    "disponible": false
+    "sector": "W",
+    "disponible": true,
+    "nombre": "Ribadeo",
+    "dist_km": 44,
+    "lloviendo": false,
+    "prec_mm": 0,
+    "temp_c": 26.4,
+    "cielo_despejado": true,
+    "eta_horas": 2.5
   },
   "forecast_municipio": [
     {
@@ -56,51 +63,6 @@
     }
   ],
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-08-30T14:00",
-      "temp": "23",
-      "sens_termica": "23",
-      "cielo": "Despejado",
-      "prob_precipitacion": "0",
-      "viento_dir": "O",
-      "viento_kmh": "17"
-    },
-    {
-      "fecha_hora": "2026-08-30T15:00",
-      "temp": "23",
-      "sens_termica": "23",
-      "cielo": "Despejado",
-      "prob_precipitacion": "0",
-      "viento_dir": "NO",
-      "viento_kmh": "24"
-    },
-    {
-      "fecha_hora": "2026-08-30T16:00",
-      "temp": "23",
-      "sens_termica": "23",
-      "cielo": "Despejado",
-      "prob_precipitacion": "0",
-      "viento_dir": "NO",
-      "viento_kmh": "16"
-    },
-    {
-      "fecha_hora": "2026-08-30T17:00",
-      "temp": "22",
-      "sens_termica": "22",
-      "cielo": "Despejado",
-      "prob_precipitacion": "0",
-      "viento_dir": "NO",
-      "viento_kmh": "16"
-    },
-    {
-      "fecha_hora": "2026-08-30T18:00",
-      "temp": "21",
-      "sens_termica": "21",
-      "cielo": "Despejado",
-      "prob_precipitacion": "0",
-      "viento_dir": "NO",
-      "viento_kmh": "16"
-    },
     {
       "fecha_hora": "2026-08-30T19:00",
       "temp": "20",
@@ -217,39 +179,84 @@
       "prob_precipitacion": "0",
       "viento_dir": "S",
       "viento_kmh": "8"
+    },
+    {
+      "fecha_hora": "2026-08-31T08:00",
+      "temp": "15",
+      "sens_termica": "15",
+      "cielo": "Cubierto",
+      "prob_precipitacion": "0",
+      "viento_dir": "S",
+      "viento_kmh": "7"
+    },
+    {
+      "fecha_hora": "2026-08-31T09:00",
+      "temp": "17",
+      "sens_termica": "17",
+      "cielo": "Cubierto",
+      "prob_precipitacion": "0",
+      "viento_dir": "S",
+      "viento_kmh": "6"
+    },
+    {
+      "fecha_hora": "2026-08-31T10:00",
+      "temp": "18",
+      "sens_termica": "18",
+      "cielo": "Cubierto",
+      "prob_precipitacion": "0",
+      "viento_dir": "SO",
+      "viento_kmh": "7"
+    },
+    {
+      "fecha_hora": "2026-08-31T11:00",
+      "temp": "19",
+      "sens_termica": "19",
+      "cielo": "Cubierto",
+      "prob_precipitacion": "0",
+      "viento_dir": "NO",
+      "viento_kmh": "6"
+    },
+    {
+      "fecha_hora": "2026-08-31T12:00",
+      "temp": "20",
+      "sens_termica": "20",
+      "cielo": "Muy nuboso",
+      "prob_precipitacion": "0",
+      "viento_dir": "NO",
+      "viento_kmh": "10"
     }
   ],
-  "horaria_elaborado": "2026-08-30T12:01:12",
+  "horaria_elaborado": "2026-08-30T16:05:12",
   "horaria_es_respaldo": false,
   "avisos": [],
   "maritima": {
-    "texto": "Componente W 4 o 5, ocasionalmente 6 en el extremo oeste por la tarde, amainando a 3 o 4 a partir de la madrugada. Marejada o fuerte marejada disminuyendo a marejadilla, localmente rizada cerca de la costa a partir de la madrugada. Mar de fondo del NW de 1 a 2 m aumentando a 2 a 3 m a partir de la madrugada. Lluvia ocasional.",
+    "texto": "Componente W 4 o 5, ocasionalmente 6 en el extremo oeste al principio, amainando a 3 o 4 a partir de la madrugada. Marejada o fuerte marejada disminuyendo a marejadilla a partir de la madrugada. A partir del mediodía, Variable 1 a 3 y principalmente rizada. Mar de fondo del NW de 1 a 2 m aumentando a 2 a 3 m a partir de la madrugada pero disminuyendo a 1 a 2 m al final. Lluvia ocasional.",
     "segmentos": [
       {
         "zona": null,
-        "texto": "Componente W 4 o 5, ocasionalmente 6 en el extremo oeste por la tarde, amainando a 3 o 4 a partir de la madrugada. Marejada o fuerte marejada disminuyendo a marejadilla, localmente rizada cerca de la costa a partir de la madrugada. Mar de fondo del NW de 1 a 2 m aumentando a 2 a 3 m a partir de la madrugada. Lluvia ocasional.",
+        "texto": "Componente W 4 o 5, ocasionalmente 6 en el extremo oeste al principio, amainando a 3 o 4 a partir de la madrugada. Marejada o fuerte marejada disminuyendo a marejadilla a partir de la madrugada. A partir del mediodía, Variable 1 a 3 y principalmente rizada. Mar de fondo del NW de 1 a 2 m aumentando a 2 a 3 m a partir de la madrugada pero disminuyendo a 1 a 2 m al final. Lluvia ocasional.",
         "direccion": null,
         "fuerza": null,
         "estado_mar": null
       }
     ],
     "avisos_texto": "No hay avisos.",
-    "vigencia_inicio": "2026-08-30T12:00:00",
-    "vigencia_fin": "2026-08-31T12:00:00"
+    "vigencia_inicio": "2026-08-30T20:00:00",
+    "vigencia_fin": "2026-08-31T20:00:00"
   },
   "netatmo_own": {
-    "ts": 1788094357,
-    "presion_hpa": 1016.9,
+    "ts": 1788110687,
+    "presion_hpa": 1017.5,
     "presion_tendencia": "stable",
     "exterior": {
-      "temp_c": 22.4,
-      "humedad": 84,
-      "tendencia": "up"
+      "temp_c": 23.8,
+      "humedad": 75,
+      "tendencia": "stable"
     },
     "viento": {
       "kmh": 3,
-      "dir": 45,
-      "racha_kmh": 8
+      "dir": 30,
+      "racha_kmh": 9
     },
     "lluvia": {
       "mm_1h": 0,
@@ -261,50 +268,50 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 23.5,
-      "humedad": 66
+      "temp_c": 22.4,
+      "humedad": 71
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
-      "temp_c": 22.4,
-      "humedad": 72
+      "temp_c": 21.5,
+      "humedad": 74
     },
     {
       "lat": 43.56,
       "lon": -6.27,
       "ciudad": "Cudillero",
-      "temp_c": 20.6,
-      "humedad": 67
+      "temp_c": 22.5,
+      "humedad": 62
     },
     {
       "lat": 43.24,
       "lon": -6.56,
       "ciudad": "Allande",
-      "temp_c": 24.2,
-      "humedad": 55
+      "temp_c": 26.1,
+      "humedad": 50
     },
     {
       "lat": 43.4,
       "lon": -6.54,
       "ciudad": "Tineo",
-      "temp_c": 24.3,
-      "humedad": 55
+      "temp_c": 23.2,
+      "humedad": 64
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 26.3,
-      "humedad": 58
+      "temp_c": 24.1,
+      "humedad": 63
     },
     {
       "lat": 43.43,
       "lon": -6.76,
       "ciudad": "Boal",
-      "temp_c": 24.8,
-      "humedad": 57
+      "temp_c": 25.2,
+      "humedad": 62
     }
   ],
   "lugares": [
@@ -491,5 +498,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-08-30T12:52:42.124947+00:00"
+  "generated_at": "2026-08-30T17:28:21.025678+00:00"
 }
