@@ -1,13 +1,13 @@
 {
   "real_time": {
-    "ts": "2026-09-01T14:00:00+0000",
-    "temp_c": 21.1,
-    "wind_kmh": 23.4,
-    "wind_dir": 47.0,
-    "gust_kmh": 40.0,
-    "pres_hpa": 1012.6,
-    "pres_tendencia": "bajando",
-    "humedad": 78.0
+    "ts": "2026-09-01T18:00:00+0000",
+    "temp_c": 20.3,
+    "wind_kmh": 23.0,
+    "wind_dir": 53.0,
+    "gust_kmh": 34.2,
+    "pres_hpa": 1013.7,
+    "pres_tendencia": "subiendo",
+    "humedad": 82.0
   },
   "recomendacion": {
     "score": 70,
@@ -20,9 +20,9 @@
     "dist_km": 57,
     "lloviendo": false,
     "prec_mm": 0,
-    "temp_c": 21.6,
-    "cielo_despejado": true,
-    "eta_horas": 2.4
+    "temp_c": 20.6,
+    "cielo_despejado": false,
+    "eta_horas": 2.5
   },
   "forecast_municipio": [
     {
@@ -63,42 +63,6 @@
     }
   ],
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-09-01T16:00",
-      "temp": "24",
-      "sens_termica": "24",
-      "cielo": "Despejado",
-      "prob_precipitacion": "0",
-      "viento_dir": "NE",
-      "viento_kmh": "20"
-    },
-    {
-      "fecha_hora": "2026-09-01T17:00",
-      "temp": "23",
-      "sens_termica": "23",
-      "cielo": "Poco nuboso",
-      "prob_precipitacion": "0",
-      "viento_dir": "NE",
-      "viento_kmh": "21"
-    },
-    {
-      "fecha_hora": "2026-09-01T18:00",
-      "temp": "23",
-      "sens_termica": "23",
-      "cielo": "Poco nuboso",
-      "prob_precipitacion": "0",
-      "viento_dir": "NE",
-      "viento_kmh": "18"
-    },
-    {
-      "fecha_hora": "2026-09-01T19:00",
-      "temp": "22",
-      "sens_termica": "22",
-      "cielo": "Poco nuboso",
-      "prob_precipitacion": "0",
-      "viento_dir": "NE",
-      "viento_kmh": "18"
-    },
     {
       "fecha_hora": "2026-09-01T20:00",
       "temp": "21",
@@ -224,39 +188,75 @@
       "prob_precipitacion": "0",
       "viento_dir": "S",
       "viento_kmh": "5"
+    },
+    {
+      "fecha_hora": "2026-09-02T10:00",
+      "temp": "18",
+      "sens_termica": "18",
+      "cielo": "Nuboso",
+      "prob_precipitacion": "0",
+      "viento_dir": "C",
+      "viento_kmh": "0"
+    },
+    {
+      "fecha_hora": "2026-09-02T11:00",
+      "temp": "20",
+      "sens_termica": "20",
+      "cielo": "Poco nuboso",
+      "prob_precipitacion": "0",
+      "viento_dir": "N",
+      "viento_kmh": "6"
+    },
+    {
+      "fecha_hora": "2026-09-02T12:00",
+      "temp": "21",
+      "sens_termica": "21",
+      "cielo": "Poco nuboso",
+      "prob_precipitacion": "0",
+      "viento_dir": "N",
+      "viento_kmh": "7"
+    },
+    {
+      "fecha_hora": "2026-09-02T13:00",
+      "temp": "21",
+      "sens_termica": "21",
+      "cielo": "Nuboso",
+      "prob_precipitacion": "0",
+      "viento_dir": "NE",
+      "viento_kmh": "8"
     }
   ],
-  "horaria_elaborado": "2026-09-01T13:45:12",
+  "horaria_elaborado": "2026-09-01T18:17:14",
   "horaria_es_respaldo": false,
   "avisos": [],
   "maritima": {
-    "texto": "Componente E 3 o 4, salvo Variable 1 a 3 al oeste de Peñas al principio, amainando a E o SE 2 o 3 desde medianoche y a Variable 1 a 3 al final. Marejadilla disminuyendo a rizada. Mar de fondo del NW de 1 a 2 m, disminuyendo. Lluvia ocasional a partir de la madrugada. Localmente regular.",
+    "texto": "Componente E 2 a 4, amainando temporalmente Variable o S 1 a 3 durante la madrugada. Rizada o marejadilla. Mar de fondo del NW de 1 m, disminuyendo. Áreas de regular o mala por bruma o niebla, cerca de la costa, desde la madrugada hasta la tarde",
     "segmentos": [
       {
         "zona": null,
-        "texto": "Componente E 3 o 4, salvo Variable 1 a 3 al oeste de Peñas al principio, amainando a E o SE 2 o 3 desde medianoche y a Variable 1 a 3 al final. Marejadilla disminuyendo a rizada. Mar de fondo del NW de 1 a 2 m, disminuyendo. Lluvia ocasional a partir de la madrugada. Localmente regular.",
+        "texto": "Componente E 2 a 4, amainando temporalmente Variable o S 1 a 3 durante la madrugada. Rizada o marejadilla. Mar de fondo del NW de 1 m, disminuyendo. Áreas de regular o mala por bruma o niebla, cerca de la costa, desde la madrugada hasta la tarde",
         "direccion": null,
         "fuerza": null,
         "estado_mar": null
       }
     ],
     "avisos_texto": "No hay avisos.",
-    "vigencia_inicio": "2026-09-01T12:00:00",
-    "vigencia_fin": "2026-09-02T12:00:00"
+    "vigencia_inicio": "2026-09-01T20:00:00",
+    "vigencia_fin": "2026-09-02T20:00:00"
   },
   "netatmo_own": {
-    "ts": 1788273979,
-    "presion_hpa": 1018.3,
+    "ts": 1788287286,
+    "presion_hpa": 1019.7,
     "presion_tendencia": "stable",
     "exterior": {
-      "temp_c": 23.9,
-      "humedad": 81,
-      "tendencia": "up"
+      "temp_c": 21.8,
+      "humedad": 84,
+      "tendencia": "down"
     },
     "viento": {
-      "kmh": 9,
-      "dir": 70,
-      "racha_kmh": 20
+      "kmh": 4,
+      "dir": 76,
+      "racha_kmh": 11
     },
     "lluvia": {
       "mm_1h": 0,
@@ -268,50 +268,50 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 24.6,
-      "humedad": 73
+      "temp_c": 22.9,
+      "humedad": 75
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
-      "temp_c": 21.9,
-      "humedad": 77
+      "temp_c": 20.7,
+      "humedad": 80
     },
     {
       "lat": 43.56,
       "lon": -6.27,
       "ciudad": "Cudillero",
-      "temp_c": 22.6,
-      "humedad": 67
+      "temp_c": 23.8,
+      "humedad": 63
     },
     {
       "lat": 43.24,
       "lon": -6.56,
       "ciudad": "Allande",
-      "temp_c": 25.6,
-      "humedad": 60
+      "temp_c": 19.1,
+      "humedad": 78
     },
     {
       "lat": 43.4,
       "lon": -6.54,
       "ciudad": "Tineo",
-      "temp_c": 25.6,
-      "humedad": 64
+      "temp_c": 22.5,
+      "humedad": 72
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 26.4,
-      "humedad": 61
+      "temp_c": 22.3,
+      "humedad": 73
     },
     {
       "lat": 43.43,
       "lon": -6.76,
       "ciudad": "Boal",
-      "temp_c": 24.8,
-      "humedad": 68
+      "temp_c": 21.5,
+      "humedad": 78
     }
   ],
   "lugares": [
@@ -498,5 +498,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-09-01T14:52:42.125549+00:00"
+  "generated_at": "2026-09-01T18:29:32.829576+00:00"
 }
