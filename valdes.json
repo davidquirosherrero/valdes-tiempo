@@ -1,21 +1,28 @@
 {
   "real_time": {
-    "ts": "2026-09-02T12:00:00+0000",
-    "temp_c": 21.1,
-    "wind_kmh": 5.0,
-    "wind_dir": 8.0,
-    "gust_kmh": 10.4,
-    "pres_hpa": 1016.6,
+    "ts": "2026-09-02T18:00:00+0000",
+    "temp_c": 20.3,
+    "wind_kmh": 20.9,
+    "wind_dir": 53.0,
+    "gust_kmh": 30.2,
+    "pres_hpa": 1016.1,
     "pres_tendencia": "estable",
-    "humedad": 85.0
+    "humedad": 86.0
   },
   "recomendacion": {
-    "score": 75,
-    "etiqueta": "Buen día de playa — la presión está subiendo"
+    "score": 80,
+    "etiqueta": "Buen día de playa — el cielo está despejado"
   },
   "que_se_acerca": {
-    "sector": "N",
-    "disponible": false
+    "sector": "NE",
+    "disponible": true,
+    "nombre": "Cabo Peñas",
+    "dist_km": 57,
+    "lloviendo": false,
+    "prec_mm": 0,
+    "temp_c": 20.8,
+    "cielo_despejado": false,
+    "eta_horas": 2.7
   },
   "forecast_municipio": [
     {
@@ -56,42 +63,6 @@
     }
   ],
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-09-02T16:00",
-      "temp": "23",
-      "sens_termica": "23",
-      "cielo": "Muy nuboso",
-      "prob_precipitacion": "0",
-      "viento_dir": "NE",
-      "viento_kmh": "10"
-    },
-    {
-      "fecha_hora": "2026-09-02T17:00",
-      "temp": "23",
-      "sens_termica": "23",
-      "cielo": "Muy nuboso",
-      "prob_precipitacion": "0",
-      "viento_dir": "NE",
-      "viento_kmh": "10"
-    },
-    {
-      "fecha_hora": "2026-09-02T18:00",
-      "temp": "23",
-      "sens_termica": "23",
-      "cielo": "Nuboso",
-      "prob_precipitacion": "0",
-      "viento_dir": "NE",
-      "viento_kmh": "11"
-    },
-    {
-      "fecha_hora": "2026-09-02T19:00",
-      "temp": "22",
-      "sens_termica": "22",
-      "cielo": "Poco nuboso",
-      "prob_precipitacion": "0",
-      "viento_dir": "NE",
-      "viento_kmh": "11"
-    },
     {
       "fecha_hora": "2026-09-02T20:00",
       "temp": "21",
@@ -217,38 +188,74 @@
       "prob_precipitacion": "0",
       "viento_dir": "SO",
       "viento_kmh": "4"
+    },
+    {
+      "fecha_hora": "2026-09-03T10:00",
+      "temp": "19",
+      "sens_termica": "19",
+      "cielo": "Despejado",
+      "prob_precipitacion": "0",
+      "viento_dir": "E",
+      "viento_kmh": "5"
+    },
+    {
+      "fecha_hora": "2026-09-03T11:00",
+      "temp": "20",
+      "sens_termica": "20",
+      "cielo": "Despejado",
+      "prob_precipitacion": "0",
+      "viento_dir": "NE",
+      "viento_kmh": "11"
+    },
+    {
+      "fecha_hora": "2026-09-03T12:00",
+      "temp": "22",
+      "sens_termica": "22",
+      "cielo": "Despejado",
+      "prob_precipitacion": "0",
+      "viento_dir": "NE",
+      "viento_kmh": "16"
+    },
+    {
+      "fecha_hora": "2026-09-03T13:00",
+      "temp": "23",
+      "sens_termica": "23",
+      "cielo": "Poco nuboso",
+      "prob_precipitacion": "0",
+      "viento_dir": "NE",
+      "viento_kmh": "16"
     }
   ],
-  "horaria_elaborado": "2026-09-02T13:13:10",
+  "horaria_elaborado": "2026-09-02T17:05:12",
   "horaria_es_respaldo": false,
   "avisos": [],
   "maritima": {
-    "texto": "NE 2 a 4 arreciando a E o SE 3 o 4. Marejadilla, aumentando a marejada al final mar adentro.",
+    "texto": "E o SE 3 o 4, arreciando a E 4 o 5. Marejadilla aumentando a marejada.",
     "segmentos": [
       {
         "zona": null,
-        "texto": "NE 2 a 4 arreciando a E o SE 3 o 4. Marejadilla, aumentando a marejada al final mar adentro.",
+        "texto": "E o SE 3 o 4, arreciando a E 4 o 5. Marejadilla aumentando a marejada.",
         "direccion": null,
         "fuerza": null,
         "estado_mar": null
       }
     ],
     "avisos_texto": "No hay avisos",
-    "vigencia_inicio": "2026-09-02T12:00:00",
-    "vigencia_fin": "2026-09-03T12:00:00"
+    "vigencia_inicio": "2026-09-02T20:00:00",
+    "vigencia_fin": "2026-09-03T20:00:00"
   },
   "netatmo_own": {
-    "ts": 1788359262,
-    "presion_hpa": 1022,
-    "presion_tendencia": "up",
+    "ts": 1788374385,
+    "presion_hpa": 1021.5,
+    "presion_tendencia": "stable",
     "exterior": {
-      "temp_c": 24.7,
-      "humedad": 84,
-      "tendencia": "stable"
+      "temp_c": 21.5,
+      "humedad": 86,
+      "tendencia": "down"
     },
     "viento": {
-      "kmh": 5,
-      "dir": 65,
+      "kmh": 4,
+      "dir": 70,
       "racha_kmh": 9
     },
     "lluvia": {
@@ -256,7 +263,50 @@
       "mm_24h": 0
     }
   },
-  "netatmo_vecinas": [],
+  "netatmo_vecinas": [
+    {
+      "lat": 43.53,
+      "lon": -6.39,
+      "ciudad": "Valdés",
+      "temp_c": 22.6,
+      "humedad": 76
+    },
+    {
+      "lat": 43.56,
+      "lon": -6.66,
+      "ciudad": "Navia",
+      "temp_c": 20.5,
+      "humedad": 83
+    },
+    {
+      "lat": 43.56,
+      "lon": -6.27,
+      "ciudad": "Cudillero",
+      "temp_c": 24.9,
+      "humedad": 61
+    },
+    {
+      "lat": 43.4,
+      "lon": -6.54,
+      "ciudad": "Tineo",
+      "temp_c": 23.3,
+      "humedad": 72
+    },
+    {
+      "lat": 43.4,
+      "lon": -6.25,
+      "ciudad": "Salas",
+      "temp_c": 22,
+      "humedad": 75
+    },
+    {
+      "lat": 43.43,
+      "lon": -6.76,
+      "ciudad": "Boal",
+      "temp_c": 22.2,
+      "humedad": 75
+    }
+  ],
   "lugares": [
     {
       "name": "Otur",
@@ -441,5 +491,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-09-02T14:28:29.901982+00:00"
+  "generated_at": "2026-09-02T18:41:22.805662+00:00"
 }
