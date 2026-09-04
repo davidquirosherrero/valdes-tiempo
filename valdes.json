@@ -1,16 +1,16 @@
 {
   "real_time": {
-    "ts": "2026-09-03T23:00:00+0000",
-    "temp_c": 20.7,
-    "wind_kmh": 9.0,
-    "wind_dir": 249.0,
-    "gust_kmh": 18.0,
-    "pres_hpa": 1012.6,
+    "ts": "2026-09-04T04:00:00+0000",
+    "temp_c": 17.9,
+    "wind_kmh": 9.7,
+    "wind_dir": 265.0,
+    "gust_kmh": 15.5,
+    "pres_hpa": 1012.0,
     "pres_tendencia": "estable",
-    "humedad": 88.0
+    "humedad": 93.0
   },
   "recomendacion": {
-    "score": 40,
+    "score": 60,
     "etiqueta": "Aviso amarillo activo"
   },
   "que_se_acerca": {
@@ -20,9 +20,9 @@
     "dist_km": 44,
     "lloviendo": false,
     "prec_mm": 0,
-    "temp_c": 18.8,
+    "temp_c": 19.1,
     "cielo_despejado": false,
-    "eta_horas": 4.9
+    "eta_horas": 4.5
   },
   "forecast_municipio": [
     {
@@ -63,42 +63,6 @@
     }
   ],
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-09-04T02:00",
-      "temp": "20",
-      "sens_termica": "20",
-      "cielo": "Despejado",
-      "prob_precipitacion": "0",
-      "viento_dir": "S",
-      "viento_kmh": "2"
-    },
-    {
-      "fecha_hora": "2026-09-04T03:00",
-      "temp": "20",
-      "sens_termica": "20",
-      "cielo": "Despejado",
-      "prob_precipitacion": "0",
-      "viento_dir": "S",
-      "viento_kmh": "3"
-    },
-    {
-      "fecha_hora": "2026-09-04T04:00",
-      "temp": "19",
-      "sens_termica": "19",
-      "cielo": "Despejado",
-      "prob_precipitacion": "0",
-      "viento_dir": "O",
-      "viento_kmh": "2"
-    },
-    {
-      "fecha_hora": "2026-09-04T05:00",
-      "temp": "18",
-      "sens_termica": "18",
-      "cielo": "Despejado",
-      "prob_precipitacion": "0",
-      "viento_dir": "O",
-      "viento_kmh": "2"
-    },
     {
       "fecha_hora": "2026-09-04T06:00",
       "temp": "18",
@@ -224,6 +188,42 @@
       "prob_precipitacion": "0",
       "viento_dir": "N",
       "viento_kmh": "6"
+    },
+    {
+      "fecha_hora": "2026-09-04T20:00",
+      "temp": "21",
+      "sens_termica": "21",
+      "cielo": "Cubierto",
+      "prob_precipitacion": "0",
+      "viento_dir": "NE",
+      "viento_kmh": "5"
+    },
+    {
+      "fecha_hora": "2026-09-04T21:00",
+      "temp": "21",
+      "sens_termica": "21",
+      "cielo": "Cubierto",
+      "prob_precipitacion": "0",
+      "viento_dir": "E",
+      "viento_kmh": "6"
+    },
+    {
+      "fecha_hora": "2026-09-04T22:00",
+      "temp": "21",
+      "sens_termica": "21",
+      "cielo": "Cubierto",
+      "prob_precipitacion": "0",
+      "viento_dir": "E",
+      "viento_kmh": "4"
+    },
+    {
+      "fecha_hora": "2026-09-04T23:00",
+      "temp": "21",
+      "sens_termica": "21",
+      "cielo": "Cubierto",
+      "prob_precipitacion": "0",
+      "viento_dir": "E",
+      "viento_kmh": "3"
     }
   ],
   "horaria_elaborado": "2026-09-03T21:03:10",
@@ -258,17 +258,17 @@
     "vigencia_fin": "2026-09-04T20:00:00"
   },
   "netatmo_own": {
-    "ts": 1788480255,
-    "presion_hpa": 1018.2,
-    "presion_tendencia": "down",
+    "ts": 1788495982,
+    "presion_hpa": 1017.8,
+    "presion_tendencia": "stable",
     "exterior": {
-      "temp_c": 17.4,
-      "humedad": 98,
+      "temp_c": 15.7,
+      "humedad": 100,
       "tendencia": "down"
     },
     "viento": {
       "kmh": 3,
-      "dir": 270,
+      "dir": 323,
       "racha_kmh": 5
     },
     "lluvia": {
@@ -281,43 +281,43 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 20.6,
-      "humedad": 75
+      "temp_c": 19.1,
+      "humedad": 78
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
-      "temp_c": 20.1,
-      "humedad": 87
+      "temp_c": 18.6,
+      "humedad": 90
     },
     {
       "lat": 43.56,
       "lon": -6.27,
       "ciudad": "Cudillero",
-      "temp_c": 22.3,
+      "temp_c": 20.9,
       "humedad": 70
     },
     {
       "lat": 43.4,
       "lon": -6.54,
       "ciudad": "Tineo",
-      "temp_c": 20.4,
+      "temp_c": 18.4,
       "humedad": 75
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 22.5,
-      "humedad": 68
+      "temp_c": 20,
+      "humedad": 76
     },
     {
       "lat": 43.43,
       "lon": -6.76,
       "ciudad": "Boal",
-      "temp_c": 21.8,
-      "humedad": 77
+      "temp_c": 20.3,
+      "humedad": 79
     }
   ],
   "lugares": [
@@ -394,15 +394,24 @@
         },
         {
           "fecha": "20260905",
+          "cielo": "muy nuboso",
+          "viento": "flojo",
+          "oleaje": "débil",
+          "t_max": 27,
+          "t_agua": 23,
+          "uv_max": 6
+        },
+        {
+          "fecha": "20260906",
           "cielo": "nuboso",
           "viento": "flojo",
           "oleaje": "débil",
-          "t_max": 26,
-          "t_agua": 22,
+          "t_max": 24,
+          "t_agua": 23,
           "uv_max": 6
         }
       ],
-      "forecast_4d_elaborado": "2026-09-03T08:50:31"
+      "forecast_4d_elaborado": "2026-09-04T00:00:24"
     },
     {
       "name": "Cueva",
@@ -513,5 +522,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-09-04T00:05:26.577884+00:00"
+  "generated_at": "2026-09-04T04:31:26.403701+00:00"
 }
