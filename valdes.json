@@ -1,113 +1,31 @@
 {
   "real_time": {
-    "ts": "2026-09-05T03:00:00+0000",
-    "temp_c": 20.2,
-    "wind_kmh": 5.8,
-    "wind_dir": 86.0,
-    "gust_kmh": 11.5,
-    "pres_hpa": 1014.2,
-    "pres_tendencia": "bajando",
-    "humedad": 90.0
+    "ts": "2026-09-05T08:00:00+0000",
+    "temp_c": 20.3,
+    "wind_kmh": 16.9,
+    "wind_dir": 56.0,
+    "gust_kmh": 26.6,
+    "pres_hpa": 1013.7,
+    "pres_tendencia": "estable",
+    "humedad": 92.0
   },
   "recomendacion": {
-    "score": 40,
+    "score": 20,
     "etiqueta": "Aviso amarillo activo"
   },
   "que_se_acerca": {
-    "sector": "E",
+    "sector": "NE",
     "disponible": true,
-    "nombre": "Avilés",
-    "dist_km": 40,
+    "nombre": "Cabo Peñas",
+    "dist_km": 57,
     "lloviendo": false,
     "prec_mm": 0,
-    "temp_c": 19.8,
+    "temp_c": 20.5,
     "cielo_despejado": false,
-    "eta_horas": 6.9
+    "eta_horas": 3.4
   },
-  "forecast_municipio": [
-    {
-      "fecha": "2026-09-04T00:00:00",
-      "cielo": "Muy nuboso",
-      "viento_dir": "C",
-      "viento_kmh": 0,
-      "t_max": 24,
-      "t_min": 17,
-      "prob_precipitacion": null
-    },
-    {
-      "fecha": "2026-09-05T00:00:00",
-      "cielo": "Nuboso",
-      "viento_dir": "E",
-      "viento_kmh": 20,
-      "t_max": 27,
-      "t_min": 19,
-      "prob_precipitacion": 20
-    },
-    {
-      "fecha": "2026-09-06T00:00:00",
-      "cielo": "Intervalos nubosos",
-      "viento_dir": "NO",
-      "viento_kmh": 10,
-      "t_max": 24,
-      "t_min": 18,
-      "prob_precipitacion": 10
-    },
-    {
-      "fecha": "2026-09-07T00:00:00",
-      "cielo": "Nuboso",
-      "viento_dir": "NO",
-      "viento_kmh": 10,
-      "t_max": 24,
-      "t_min": 18,
-      "prob_precipitacion": 20
-    }
-  ],
+  "forecast_municipio": null,
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-09-05T06:00",
-      "temp": "20",
-      "sens_termica": "20",
-      "cielo": "Cubierto",
-      "prob_precipitacion": "0",
-      "viento_dir": "SE",
-      "viento_kmh": "3"
-    },
-    {
-      "fecha_hora": "2026-09-05T07:00",
-      "temp": "19",
-      "sens_termica": "19",
-      "cielo": "Cubierto",
-      "prob_precipitacion": "0",
-      "viento_dir": "S",
-      "viento_kmh": "5"
-    },
-    {
-      "fecha_hora": "2026-09-05T08:00",
-      "temp": "19",
-      "sens_termica": "19",
-      "cielo": "Poco nuboso",
-      "prob_precipitacion": "10",
-      "viento_dir": "E",
-      "viento_kmh": "3"
-    },
-    {
-      "fecha_hora": "2026-09-05T09:00",
-      "temp": "20",
-      "sens_termica": "20",
-      "cielo": "Poco nuboso",
-      "prob_precipitacion": "10",
-      "viento_dir": "E",
-      "viento_kmh": "6"
-    },
-    {
-      "fecha_hora": "2026-09-05T10:00",
-      "temp": "21",
-      "sens_termica": "21",
-      "cielo": "Cubierto",
-      "prob_precipitacion": "10",
-      "viento_dir": "NE",
-      "viento_kmh": "13"
-    },
     {
       "fecha_hora": "2026-09-05T11:00",
       "temp": "21",
@@ -227,19 +145,19 @@
     }
   ],
   "horaria_elaborado": "2026-09-04T21:03:10",
-  "horaria_es_respaldo": false,
+  "horaria_es_respaldo": true,
   "avisos": [
     {
       "evento": "Aviso de lluvias de nivel amarillo",
       "nivel": "amarillo",
       "onset": "2026-09-05T16:00:00+02:00",
-      "expires": "2026-09-05T21:59:59+02:00"
+      "expires": "2026-09-05T23:59:59+02:00"
     },
     {
       "evento": "Aviso de tormentas de nivel amarillo",
       "nivel": "amarillo",
       "onset": "2026-09-05T16:00:00+02:00",
-      "expires": "2026-09-05T21:59:59+02:00"
+      "expires": "2026-09-05T23:59:59+02:00"
     }
   ],
   "maritima": {
@@ -258,18 +176,18 @@
     "vigencia_fin": "2026-09-05T20:00:00"
   },
   "netatmo_own": {
-    "ts": 1788582344,
-    "presion_hpa": 1019.5,
-    "presion_tendencia": "stable",
+    "ts": 1788598675,
+    "presion_hpa": 1019,
+    "presion_tendencia": "down",
     "exterior": {
-      "temp_c": 19.9,
-      "humedad": 99,
-      "tendencia": "stable"
+      "temp_c": 23.9,
+      "humedad": 96,
+      "tendencia": "up"
     },
     "viento": {
-      "kmh": 1,
-      "dir": 90,
-      "racha_kmh": 3
+      "kmh": 4,
+      "dir": 70,
+      "racha_kmh": 9
     },
     "lluvia": {
       "mm_1h": 0,
@@ -281,43 +199,43 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 20.2,
+      "temp_c": 22.1,
       "humedad": 88
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
-      "temp_c": 20.4,
-      "humedad": 87
+      "temp_c": 23.7,
+      "humedad": 82
     },
     {
       "lat": 43.56,
       "lon": -6.27,
       "ciudad": "Cudillero",
-      "temp_c": 21.3,
-      "humedad": 77
+      "temp_c": 21.5,
+      "humedad": 78
     },
     {
       "lat": 43.4,
       "lon": -6.54,
       "ciudad": "Tineo",
-      "temp_c": 21.3,
-      "humedad": 82
+      "temp_c": 22.7,
+      "humedad": 80
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 20.4,
-      "humedad": 87
+      "temp_c": 20.3,
+      "humedad": 90
     },
     {
       "lat": 43.43,
       "lon": -6.76,
       "ciudad": "Boal",
-      "temp_c": 21.5,
-      "humedad": 85
+      "temp_c": 22.5,
+      "humedad": 84
     }
   ],
   "lugares": [
@@ -329,15 +247,6 @@
       "ficha_aemet": "Otur",
       "forecast_4d": [
         {
-          "fecha": "20260904",
-          "cielo": "despejado",
-          "viento": "flojo",
-          "oleaje": "débil",
-          "t_max": 24,
-          "t_agua": 23,
-          "uv_max": 6
-        },
-        {
           "fecha": "20260905",
           "cielo": "muy nuboso",
           "viento": "flojo",
@@ -365,7 +274,7 @@
           "uv_max": 6
         }
       ],
-      "forecast_4d_elaborado": "2026-09-05T00:00:25"
+      "forecast_4d_elaborado": "2026-09-05T05:51:11"
     },
     {
       "name": "Luarca (1ª, 2ª y 3ª playa)",
@@ -375,15 +284,6 @@
       "ficha_aemet": "Luarca",
       "forecast_4d": [
         {
-          "fecha": "20260904",
-          "cielo": "despejado",
-          "viento": "flojo",
-          "oleaje": "débil",
-          "t_max": 24,
-          "t_agua": 23,
-          "uv_max": 6
-        },
-        {
           "fecha": "20260905",
           "cielo": "muy nuboso",
           "viento": "flojo",
@@ -411,7 +311,7 @@
           "uv_max": 6
         }
       ],
-      "forecast_4d_elaborado": "2026-09-05T00:00:25"
+      "forecast_4d_elaborado": "2026-09-05T08:51:12"
     },
     {
       "name": "Cueva",
@@ -522,5 +422,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-09-05T04:26:24.630342+00:00"
+  "generated_at": "2026-09-05T09:03:59.324747+00:00"
 }
