@@ -1,28 +1,28 @@
 {
   "real_time": {
-    "ts": "2026-09-05T15:00:00+0000",
-    "temp_c": 20.6,
-    "wind_kmh": 21.2,
-    "wind_dir": 55.0,
-    "gust_kmh": 34.9,
-    "pres_hpa": 1011.2,
-    "pres_tendencia": "estable",
-    "humedad": 92.0
+    "ts": "2026-09-05T17:00:00+0000",
+    "temp_c": 19.9,
+    "wind_kmh": 19.4,
+    "wind_dir": 69.0,
+    "gust_kmh": 35.3,
+    "pres_hpa": 1010.2,
+    "pres_tendencia": "bajando",
+    "humedad": 94.0
   },
   "recomendacion": {
-    "score": 10,
-    "etiqueta": "Aviso amarillo activo"
+    "score": 0,
+    "etiqueta": "Viento fuerte de S"
   },
   "que_se_acerca": {
-    "sector": "NE",
+    "sector": "E",
     "disponible": true,
-    "nombre": "Cabo Peñas",
-    "dist_km": 57,
+    "nombre": "Avilés",
+    "dist_km": 40,
     "lloviendo": false,
     "prec_mm": 0,
-    "temp_c": 21.5,
+    "temp_c": 22.0,
     "cielo_despejado": false,
-    "eta_horas": 2.7
+    "eta_horas": 2.1
   },
   "forecast_municipio": [
     {
@@ -63,24 +63,6 @@
     }
   ],
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-09-05T18:00",
-      "temp": "25",
-      "sens_termica": "25",
-      "cielo": "Cubierto",
-      "prob_precipitacion": "20",
-      "viento_dir": "E",
-      "viento_kmh": "20"
-    },
-    {
-      "fecha_hora": "2026-09-05T19:00",
-      "temp": "24",
-      "sens_termica": "24",
-      "cielo": "Cubierto",
-      "prob_precipitacion": "20",
-      "viento_dir": "E",
-      "viento_kmh": "14"
-    },
     {
       "fecha_hora": "2026-09-05T20:00",
       "temp": "23",
@@ -224,9 +206,27 @@
       "prob_precipitacion": "5",
       "viento_dir": "NO",
       "viento_kmh": "10"
+    },
+    {
+      "fecha_hora": "2026-09-06T12:00",
+      "temp": "21",
+      "sens_termica": "21",
+      "cielo": "Poco nuboso",
+      "prob_precipitacion": "5",
+      "viento_dir": "NO",
+      "viento_kmh": "10"
+    },
+    {
+      "fecha_hora": "2026-09-06T13:00",
+      "temp": "23",
+      "sens_termica": "23",
+      "cielo": "Poco nuboso",
+      "prob_precipitacion": "5",
+      "viento_dir": "NO",
+      "viento_kmh": "10"
     }
   ],
-  "horaria_elaborado": "2026-09-05T13:51:11",
+  "horaria_elaborado": "2026-09-05T16:05:11",
   "horaria_es_respaldo": false,
   "avisos": [
     {
@@ -243,33 +243,33 @@
     }
   ],
   "maritima": {
-    "texto": "Componente E 4 o 5, localmente 6 mar adentro al oeste de Peñas, amainando a Variable 1 a 3, de oeste a este, a partir de la madrugada, arreciando a W o NW 4 o 5 al final. Marejada, disminuyendo a marejadilla de madrugada, aumentando a marejada en el oeste al final. Mar de fondo del NW de 1 a 2 m. Aguaceros y tormentas ocasionales por la tarde. Áreas de regular o mala por bruma o niebla,  en el oeste, a partir de la madrugada.",
+    "texto": "Componente E 4 o 5, localmente 6 mar adentro al oeste de Peñas, amainando a Variable 1 a 3, de oeste a este, a partir de la madrugada, arreciando a W o NW 4 o 5 por la mañana, ocasionalmente 6 en el extremo oeste. Marejadilla o marejada, localmente fuerte marejada en el extremo oeste. Mar de fondo del NW de 1 a 2 m. Aguaceros y tormentas ocasionales al principio y a partir de la mañana. Áreas de regular o mala por bruma o niebla, en el oeste de madrugada.",
     "segmentos": [
       {
         "zona": null,
-        "texto": "Componente E 4 o 5, localmente 6 mar adentro al oeste de Peñas, amainando a Variable 1 a 3, de oeste a este, a partir de la madrugada, arreciando a W o NW 4 o 5 al final. Marejada, disminuyendo a marejadilla de madrugada, aumentando a marejada en el oeste al final. Mar de fondo del NW de 1 a 2 m. Aguaceros y tormentas ocasionales por la tarde. Áreas de regular o mala por bruma o niebla,  en el oeste, a partir de la madrugada.",
+        "texto": "Componente E 4 o 5, localmente 6 mar adentro al oeste de Peñas, amainando a Variable 1 a 3, de oeste a este, a partir de la madrugada, arreciando a W o NW 4 o 5 por la mañana, ocasionalmente 6 en el extremo oeste. Marejadilla o marejada, localmente fuerte marejada en el extremo oeste. Mar de fondo del NW de 1 a 2 m. Aguaceros y tormentas ocasionales al principio y a partir de la mañana. Áreas de regular o mala por bruma o niebla, en el oeste de madrugada.",
         "direccion": null,
         "fuerza": null,
         "estado_mar": null
       }
     ],
     "avisos_texto": "No hay avisos.",
-    "vigencia_inicio": "2026-09-05T12:00:00",
-    "vigencia_fin": "2026-09-06T12:00:00"
+    "vigencia_inicio": "2026-09-05T20:00:00",
+    "vigencia_fin": "2026-09-06T20:00:00"
   },
   "netatmo_own": {
-    "ts": 1788624080,
-    "presion_hpa": 1016.6,
+    "ts": 1788631942,
+    "presion_hpa": 1016.7,
     "presion_tendencia": "down",
     "exterior": {
-      "temp_c": 23.6,
-      "humedad": 89,
+      "temp_c": 21.4,
+      "humedad": 95,
       "tendencia": "down"
     },
     "viento": {
-      "kmh": 4,
-      "dir": 73,
-      "racha_kmh": 8
+      "kmh": 1,
+      "dir": 90,
+      "racha_kmh": 5
     },
     "lluvia": {
       "mm_1h": 0,
@@ -281,43 +281,43 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 25.9,
-      "humedad": 77
+      "temp_c": 23.5,
+      "humedad": 80
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
-      "temp_c": 23.2,
-      "humedad": 81
+      "temp_c": 21.4,
+      "humedad": 90
     },
     {
       "lat": 43.56,
       "lon": -6.27,
       "ciudad": "Cudillero",
-      "temp_c": 23.6,
-      "humedad": 72
+      "temp_c": 22.8,
+      "humedad": 73
     },
     {
       "lat": 43.4,
       "lon": -6.54,
       "ciudad": "Tineo",
-      "temp_c": 28.1,
-      "humedad": 70
+      "temp_c": 25.8,
+      "humedad": 76
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 27,
-      "humedad": 74
+      "temp_c": 24.7,
+      "humedad": 79
     },
     {
       "lat": 43.43,
       "lon": -6.76,
       "ciudad": "Boal",
-      "temp_c": 28.8,
-      "humedad": 71
+      "temp_c": 24.4,
+      "humedad": 84
     }
   ],
   "lugares": [
@@ -504,5 +504,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-09-05T16:03:47.696037+00:00"
+  "generated_at": "2026-09-05T18:17:09.397322+00:00"
 }
