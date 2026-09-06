@@ -1,13 +1,13 @@
 {
   "real_time": {
-    "ts": "2026-09-06T18:00:00+0000",
-    "temp_c": 22.2,
-    "wind_kmh": 13.7,
-    "wind_dir": 267.0,
-    "gust_kmh": 19.4,
-    "pres_hpa": 1015.9,
-    "pres_tendencia": "subiendo",
-    "humedad": 73.0
+    "ts": "2026-09-06T20:00:00+0000",
+    "temp_c": 20.5,
+    "wind_kmh": 9.4,
+    "wind_dir": 257.0,
+    "gust_kmh": 13.3,
+    "pres_hpa": 1016.4,
+    "pres_tendencia": "estable",
+    "humedad": 79.0
   },
   "recomendacion": {
     "score": 85,
@@ -22,65 +22,10 @@
     "prec_mm": 0,
     "temp_c": 23.9,
     "cielo_despejado": true,
-    "eta_horas": 3.2
+    "eta_horas": 4.7
   },
-  "forecast_municipio": [
-    {
-      "fecha": "2026-09-06T00:00:00",
-      "cielo": "Poco nuboso",
-      "viento_dir": "S",
-      "viento_kmh": 10,
-      "t_max": 25,
-      "t_min": 19,
-      "prob_precipitacion": 25
-    },
-    {
-      "fecha": "2026-09-07T00:00:00",
-      "cielo": "Intervalos nubosos",
-      "viento_dir": "NO",
-      "viento_kmh": 15,
-      "t_max": 25,
-      "t_min": 18,
-      "prob_precipitacion": 10
-    },
-    {
-      "fecha": "2026-09-08T00:00:00",
-      "cielo": "Muy nuboso con lluvia",
-      "viento_dir": "O",
-      "viento_kmh": 20,
-      "t_max": 26,
-      "t_min": 17,
-      "prob_precipitacion": 100
-    },
-    {
-      "fecha": "2026-09-09T00:00:00",
-      "cielo": "Nuboso con lluvia escasa",
-      "viento_dir": "NE",
-      "viento_kmh": 10,
-      "t_max": 21,
-      "t_min": 15,
-      "prob_precipitacion": 95
-    }
-  ],
+  "forecast_municipio": null,
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-09-06T21:00",
-      "temp": "20",
-      "sens_termica": "20",
-      "cielo": "Nubes altas",
-      "prob_precipitacion": "0",
-      "viento_dir": "O",
-      "viento_kmh": "6"
-    },
-    {
-      "fecha_hora": "2026-09-06T22:00",
-      "temp": "20",
-      "sens_termica": "20",
-      "cielo": "Nubes altas",
-      "prob_precipitacion": "0",
-      "viento_dir": "S",
-      "viento_kmh": "4"
-    },
     {
       "fecha_hora": "2026-09-06T23:00",
       "temp": "19",
@@ -227,7 +172,7 @@
     }
   ],
   "horaria_elaborado": "2026-09-06T17:03:11",
-  "horaria_es_respaldo": false,
+  "horaria_es_respaldo": true,
   "avisos": [],
   "maritima": {
     "texto": "Componente W 1 a 3. Marejadilla. Mar de fondo del NW de 1 a 2 m. Áreas de regular o mala por bruma o niebla hasta la tarde.",
@@ -245,12 +190,12 @@
     "vigencia_fin": "2026-09-07T20:00:00"
   },
   "netatmo_own": {
-    "ts": 1788721456,
-    "presion_hpa": 1021.7,
+    "ts": 1788729319,
+    "presion_hpa": 1022.7,
     "presion_tendencia": "up",
     "exterior": {
-      "temp_c": 21.2,
-      "humedad": 87,
+      "temp_c": 20,
+      "humedad": 90,
       "tendencia": "down"
     },
     "viento": {
@@ -448,5 +393,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-09-06T19:10:25.549709+00:00"
+  "generated_at": "2026-09-06T21:19:57.261772+00:00"
 }
