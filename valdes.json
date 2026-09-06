@@ -1,106 +1,31 @@
 {
   "real_time": {
-    "ts": "2026-09-06T05:00:00+0000",
+    "ts": "2026-09-06T10:00:00+0000",
     "temp_c": 21.1,
-    "wind_kmh": 5.0,
-    "wind_dir": 334.0,
-    "gust_kmh": 24.1,
-    "pres_hpa": 1010.8,
-    "pres_tendencia": "estable",
-    "humedad": 78.0
+    "wind_kmh": 17.6,
+    "wind_dir": 280.0,
+    "gust_kmh": 31.0,
+    "pres_hpa": 1013.5,
+    "pres_tendencia": "subiendo",
+    "humedad": 85.0
   },
   "recomendacion": {
-    "score": 45,
-    "etiqueta": "Cielo intervalos nubosos"
+    "score": 85,
+    "etiqueta": "Buen día de playa — la presión está subiendo"
   },
   "que_se_acerca": {
-    "sector": "NW",
-    "disponible": false
+    "sector": "W",
+    "disponible": true,
+    "nombre": "Ribadeo",
+    "dist_km": 44,
+    "lloviendo": false,
+    "prec_mm": 0,
+    "temp_c": 23.0,
+    "cielo_despejado": false,
+    "eta_horas": 2.5
   },
-  "forecast_municipio": [
-    {
-      "fecha": "2026-09-05T00:00:00",
-      "cielo": "Intervalos nubosos",
-      "viento_dir": "O",
-      "viento_kmh": 5,
-      "t_max": 27,
-      "t_min": 18,
-      "prob_precipitacion": 35
-    },
-    {
-      "fecha": "2026-09-06T00:00:00",
-      "cielo": "Intervalos nubosos con lluvia escasa",
-      "viento_dir": "NO",
-      "viento_kmh": 15,
-      "t_max": 25,
-      "t_min": 19,
-      "prob_precipitacion": 70
-    },
-    {
-      "fecha": "2026-09-07T00:00:00",
-      "cielo": "Nuboso",
-      "viento_dir": "NO",
-      "viento_kmh": 15,
-      "t_max": 25,
-      "t_min": 19,
-      "prob_precipitacion": 15
-    },
-    {
-      "fecha": "2026-09-08T00:00:00",
-      "cielo": "Muy nuboso con lluvia",
-      "viento_dir": "O",
-      "viento_kmh": 15,
-      "t_max": 25,
-      "t_min": 16,
-      "prob_precipitacion": 100
-    }
-  ],
+  "forecast_municipio": null,
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-09-06T07:00",
-      "temp": "20",
-      "sens_termica": "20",
-      "cielo": "Intervalos nubosos",
-      "prob_precipitacion": "25",
-      "viento_dir": "S",
-      "viento_kmh": "10"
-    },
-    {
-      "fecha_hora": "2026-09-06T08:00",
-      "temp": "19",
-      "sens_termica": "19",
-      "cielo": "Intervalos nubosos",
-      "prob_precipitacion": "30",
-      "viento_dir": "S",
-      "viento_kmh": "8"
-    },
-    {
-      "fecha_hora": "2026-09-06T09:00",
-      "temp": "21",
-      "sens_termica": "21",
-      "cielo": "Intervalos nubosos",
-      "prob_precipitacion": "30",
-      "viento_dir": "SO",
-      "viento_kmh": "7"
-    },
-    {
-      "fecha_hora": "2026-09-06T10:00",
-      "temp": "23",
-      "sens_termica": "23",
-      "cielo": "Intervalos nubosos",
-      "prob_precipitacion": "30",
-      "viento_dir": "NO",
-      "viento_kmh": "15"
-    },
-    {
-      "fecha_hora": "2026-09-06T11:00",
-      "temp": "23",
-      "sens_termica": "23",
-      "cielo": "Intervalos nubosos",
-      "prob_precipitacion": "30",
-      "viento_dir": "NO",
-      "viento_kmh": "10"
-    },
     {
       "fecha_hora": "2026-09-06T12:00",
       "temp": "23",
@@ -220,36 +145,36 @@
     }
   ],
   "horaria_elaborado": "2026-09-06T05:41:11",
-  "horaria_es_respaldo": false,
+  "horaria_es_respaldo": true,
   "avisos": [],
   "maritima": {
-    "texto": "Componente E 4 o 5, localmente 6 mar adentro al oeste de Peñas, amainando a Variable 1 a 3, de oeste a este, a partir de la madrugada, arreciando a W o NW 4 o 5 por la mañana, ocasionalmente 6 en el extremo oeste. Marejadilla o marejada, localmente fuerte marejada en el extremo oeste. Mar de fondo del NW de 1 a 2 m. Aguaceros y tormentas ocasionales al principio y a partir de la mañana. Áreas de regular o mala por bruma o niebla, en el oeste de madrugada.",
+    "texto": "Variable 1 a 3, de oeste a este, arreciando pronto a W o NW 4 o 5, amainando a Componente W 1 a 3 desde la noche. Marejadilla o marejada, disminuyendo a marejadilla. Mar de fondo del NW de 1 a 2 m. Aguaceros ocasionales. Áreas de regular o mala por bruma o niebla",
     "segmentos": [
       {
         "zona": null,
-        "texto": "Componente E 4 o 5, localmente 6 mar adentro al oeste de Peñas, amainando a Variable 1 a 3, de oeste a este, a partir de la madrugada, arreciando a W o NW 4 o 5 por la mañana, ocasionalmente 6 en el extremo oeste. Marejadilla o marejada, localmente fuerte marejada en el extremo oeste. Mar de fondo del NW de 1 a 2 m. Aguaceros y tormentas ocasionales al principio y a partir de la mañana. Áreas de regular o mala por bruma o niebla, en el oeste de madrugada.",
+        "texto": "Variable 1 a 3, de oeste a este, arreciando pronto a W o NW 4 o 5, amainando a Componente W 1 a 3 desde la noche. Marejadilla o marejada, disminuyendo a marejadilla. Mar de fondo del NW de 1 a 2 m. Aguaceros ocasionales. Áreas de regular o mala por bruma o niebla",
         "direccion": null,
         "fuerza": null,
         "estado_mar": null
       }
     ],
     "avisos_texto": "No hay avisos.",
-    "vigencia_inicio": "2026-09-05T20:00:00",
-    "vigencia_fin": "2026-09-06T20:00:00"
+    "vigencia_inicio": "2026-09-06T12:00:00",
+    "vigencia_fin": "2026-09-07T12:00:00"
   },
   "netatmo_own": {
-    "ts": 1788673667,
-    "presion_hpa": 1016.6,
-    "presion_tendencia": "down",
+    "ts": 1788691815,
+    "presion_hpa": 1019.4,
+    "presion_tendencia": "up",
     "exterior": {
-      "temp_c": 20.9,
-      "humedad": 86,
+      "temp_c": 23.6,
+      "humedad": 88,
       "tendencia": "down"
     },
     "viento": {
-      "kmh": 1,
-      "dir": 90,
-      "racha_kmh": 4
+      "kmh": 5,
+      "dir": 68,
+      "racha_kmh": 11
     },
     "lluvia": {
       "mm_1h": 0,
@@ -261,43 +186,43 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 20.8,
-      "humedad": 80
+      "temp_c": 24.3,
+      "humedad": 79
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
-      "temp_c": 21.8,
-      "humedad": 93
+      "temp_c": 24.4,
+      "humedad": 76
     },
     {
-      "lat": 43.56,
-      "lon": -6.27,
+      "lat": 43.57,
+      "lon": -6.21,
       "ciudad": "Cudillero",
-      "temp_c": 22.9,
-      "humedad": 59
+      "temp_c": 23.8,
+      "humedad": 82
     },
     {
       "lat": 43.4,
       "lon": -6.54,
       "ciudad": "Tineo",
-      "temp_c": 19.7,
-      "humedad": 80
+      "temp_c": 26.6,
+      "humedad": 68
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 19.7,
-      "humedad": 80
+      "temp_c": 27,
+      "humedad": 68
     },
     {
       "lat": 43.43,
       "lon": -6.76,
       "ciudad": "Boal",
-      "temp_c": 19.9,
-      "humedad": 86
+      "temp_c": 24.8,
+      "humedad": 79
     }
   ],
   "lugares": [
@@ -331,12 +256,12 @@
           "cielo": "muy nuboso con lluvia",
           "viento": "flojo",
           "oleaje": "débil",
-          "t_max": 25,
+          "t_max": 26,
           "t_agua": 22,
           "uv_max": 6
         }
       ],
-      "forecast_4d_elaborado": "2026-09-06T05:50:28"
+      "forecast_4d_elaborado": "2026-09-06T08:51:12"
     },
     {
       "name": "Luarca (1ª, 2ª y 3ª playa)",
@@ -368,12 +293,12 @@
           "cielo": "muy nuboso con lluvia",
           "viento": "flojo",
           "oleaje": "débil",
-          "t_max": 25,
+          "t_max": 26,
           "t_agua": 21,
           "uv_max": 6
         }
       ],
-      "forecast_4d_elaborado": "2026-09-06T05:50:28"
+      "forecast_4d_elaborado": "2026-09-06T08:51:12"
     },
     {
       "name": "Cueva",
@@ -484,5 +409,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-09-06T05:56:50.664577+00:00"
+  "generated_at": "2026-09-06T10:54:51.085788+00:00"
 }
