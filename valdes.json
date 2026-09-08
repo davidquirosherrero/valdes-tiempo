@@ -1,17 +1,17 @@
 {
   "real_time": {
-    "ts": "2026-09-08T18:00:00+0000",
-    "temp_c": 16.9,
-    "wind_kmh": 10.8,
-    "wind_dir": 273.0,
-    "gust_kmh": 14.0,
-    "pres_hpa": 1012.9,
+    "ts": "2026-09-08T21:00:00+0000",
+    "temp_c": 16.5,
+    "wind_kmh": 5.4,
+    "wind_dir": 255.0,
+    "gust_kmh": 16.9,
+    "pres_hpa": 1014.7,
     "pres_tendencia": "subiendo",
     "humedad": 97.0
   },
   "recomendacion": {
-    "score": 45,
-    "etiqueta": "Lluvia en las próximas horas"
+    "score": 60,
+    "etiqueta": "Aviso amarillo activo"
   },
   "que_se_acerca": {
     "sector": "W",
@@ -22,74 +22,10 @@
     "prec_mm": 0.4,
     "temp_c": 18.2,
     "cielo_despejado": false,
-    "eta_horas": 4.1
+    "eta_horas": 8.1
   },
-  "forecast_municipio": [
-    {
-      "fecha": "2026-09-08T00:00:00",
-      "cielo": "Cubierto con lluvia",
-      "viento_dir": "N",
-      "viento_kmh": 10,
-      "t_max": 25,
-      "t_min": 16,
-      "prob_precipitacion": 100
-    },
-    {
-      "fecha": "2026-09-09T00:00:00",
-      "cielo": "Nuboso con lluvia escasa",
-      "viento_dir": "NE",
-      "viento_kmh": 5,
-      "t_max": 21,
-      "t_min": 15,
-      "prob_precipitacion": 90
-    },
-    {
-      "fecha": "2026-09-10T00:00:00",
-      "cielo": "Poco nuboso",
-      "viento_dir": "NE",
-      "viento_kmh": 10,
-      "t_max": 23,
-      "t_min": 12,
-      "prob_precipitacion": 5
-    },
-    {
-      "fecha": "2026-09-11T00:00:00",
-      "cielo": "Cubierto con lluvia",
-      "viento_dir": "C",
-      "viento_kmh": 0,
-      "t_max": 21,
-      "t_min": 15,
-      "prob_precipitacion": 65
-    }
-  ],
+  "forecast_municipio": null,
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-09-08T20:00",
-      "temp": "19",
-      "sens_termica": "19",
-      "cielo": "Cubierto con lluvia escasa",
-      "prob_precipitacion": "100",
-      "viento_dir": "NO",
-      "viento_kmh": "7"
-    },
-    {
-      "fecha_hora": "2026-09-08T21:00",
-      "temp": "18",
-      "sens_termica": "18",
-      "cielo": "Cubierto con lluvia escasa",
-      "prob_precipitacion": "100",
-      "viento_dir": "NO",
-      "viento_kmh": "6"
-    },
-    {
-      "fecha_hora": "2026-09-08T22:00",
-      "temp": "18",
-      "sens_termica": "18",
-      "cielo": "Cubierto",
-      "prob_precipitacion": "100",
-      "viento_dir": "N",
-      "viento_kmh": "8"
-    },
     {
       "fecha_hora": "2026-09-08T23:00",
       "temp": "18",
@@ -227,7 +163,7 @@
     }
   ],
   "horaria_elaborado": "2026-09-08T16:23:11",
-  "horaria_es_respaldo": false,
+  "horaria_es_respaldo": true,
   "avisos": [
     {
       "evento": "Aviso de lluvias de nivel amarillo",
@@ -252,75 +188,25 @@
     "vigencia_fin": "2026-09-09T20:00:00"
   },
   "netatmo_own": {
-    "ts": 1788892291,
-    "presion_hpa": 1018.9,
+    "ts": 1788903916,
+    "presion_hpa": 1020.3,
     "presion_tendencia": "up",
     "exterior": {
-      "temp_c": 16.6,
+      "temp_c": 16.2,
       "humedad": 100,
       "tendencia": "stable"
     },
     "viento": {
-      "kmh": 16,
-      "dir": 304,
-      "racha_kmh": 21
+      "kmh": 8,
+      "dir": 302,
+      "racha_kmh": 12
     },
     "lluvia": {
-      "mm_1h": 1.6159999999999999,
-      "mm_24h": 20
+      "mm_1h": 1.212,
+      "mm_24h": 23.2
     }
   },
-  "netatmo_vecinas": [
-    {
-      "lat": 43.53,
-      "lon": -6.39,
-      "ciudad": "Valdés",
-      "temp_c": 19.2,
-      "humedad": 84
-    },
-    {
-      "lat": 43.56,
-      "lon": -6.66,
-      "ciudad": "Navia",
-      "temp_c": 19.9,
-      "humedad": 87
-    },
-    {
-      "lat": 43.56,
-      "lon": -6.27,
-      "ciudad": "Cudillero",
-      "temp_c": 19.3,
-      "humedad": 77
-    },
-    {
-      "lat": 43.24,
-      "lon": -6.56,
-      "ciudad": "Allande",
-      "temp_c": 14.5,
-      "humedad": 90
-    },
-    {
-      "lat": 43.4,
-      "lon": -6.54,
-      "ciudad": "Tineo",
-      "temp_c": 20,
-      "humedad": 79
-    },
-    {
-      "lat": 43.4,
-      "lon": -6.25,
-      "ciudad": "Salas",
-      "temp_c": 18.2,
-      "humedad": 87
-    },
-    {
-      "lat": 43.43,
-      "lon": -6.76,
-      "ciudad": "Boal",
-      "temp_c": 18.9,
-      "humedad": 86
-    }
-  ],
+  "netatmo_vecinas": [],
   "lugares": [
     {
       "name": "Otur",
@@ -505,5 +391,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-09-08T18:39:20.333449+00:00"
+  "generated_at": "2026-09-08T21:50:56.218999+00:00"
 }
