@@ -1,17 +1,17 @@
 {
   "real_time": {
-    "ts": "2026-09-10T13:00:00+0000",
-    "temp_c": 20.3,
-    "wind_kmh": 15.8,
-    "wind_dir": 51.0,
-    "gust_kmh": 26.6,
-    "pres_hpa": 1011.8,
-    "pres_tendencia": "bajando",
-    "humedad": 62.0
+    "ts": "2026-09-10T17:00:00+0000",
+    "temp_c": 19.8,
+    "wind_kmh": 9.4,
+    "wind_dir": 59.0,
+    "gust_kmh": 21.6,
+    "pres_hpa": 1011.0,
+    "pres_tendencia": "estable",
+    "humedad": 72.0
   },
   "recomendacion": {
-    "score": 75,
-    "etiqueta": "Buen día de playa — la presión está subiendo"
+    "score": 80,
+    "etiqueta": "Buen día de playa — el cielo está despejado"
   },
   "que_se_acerca": {
     "sector": "NE",
@@ -20,85 +20,12 @@
     "dist_km": 57,
     "lloviendo": false,
     "prec_mm": 0,
-    "temp_c": 20.0,
+    "temp_c": 19.6,
     "cielo_despejado": true,
-    "eta_horas": 3.6
+    "eta_horas": 6.1
   },
-  "forecast_municipio": [
-    {
-      "fecha": "2026-09-10T00:00:00",
-      "cielo": "Despejado",
-      "viento_dir": "S",
-      "viento_kmh": 10,
-      "t_max": 23,
-      "t_min": 13,
-      "prob_precipitacion": null
-    },
-    {
-      "fecha": "2026-09-11T00:00:00",
-      "cielo": "Poco nuboso",
-      "viento_dir": "NE",
-      "viento_kmh": 15,
-      "t_max": 23,
-      "t_min": 14,
-      "prob_precipitacion": null
-    },
-    {
-      "fecha": "2026-09-12T00:00:00",
-      "cielo": "Poco nuboso",
-      "viento_dir": "E",
-      "viento_kmh": 20,
-      "t_max": 24,
-      "t_min": 14,
-      "prob_precipitacion": null
-    },
-    {
-      "fecha": "2026-09-13T00:00:00",
-      "cielo": "Poco nuboso",
-      "viento_dir": "NE",
-      "viento_kmh": 20,
-      "t_max": 25,
-      "t_min": 14,
-      "prob_precipitacion": null
-    }
-  ],
+  "forecast_municipio": null,
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-09-10T16:00",
-      "temp": "21",
-      "sens_termica": "21",
-      "cielo": "Muy nuboso",
-      "prob_precipitacion": "0",
-      "viento_dir": "NE",
-      "viento_kmh": "12"
-    },
-    {
-      "fecha_hora": "2026-09-10T17:00",
-      "temp": "21",
-      "sens_termica": "21",
-      "cielo": "Cubierto",
-      "prob_precipitacion": "0",
-      "viento_dir": "NE",
-      "viento_kmh": "11"
-    },
-    {
-      "fecha_hora": "2026-09-10T18:00",
-      "temp": "20",
-      "sens_termica": "20",
-      "cielo": "Nubes altas",
-      "prob_precipitacion": "0",
-      "viento_dir": "NE",
-      "viento_kmh": "10"
-    },
-    {
-      "fecha_hora": "2026-09-10T19:00",
-      "temp": "20",
-      "sens_termica": "20",
-      "cielo": "Despejado",
-      "prob_precipitacion": "0",
-      "viento_dir": "NE",
-      "viento_kmh": "9"
-    },
     {
       "fecha_hora": "2026-09-10T20:00",
       "temp": "19",
@@ -227,36 +154,36 @@
     }
   ],
   "horaria_elaborado": "2026-09-10T13:23:11",
-  "horaria_es_respaldo": false,
+  "horaria_es_respaldo": true,
   "avisos": [],
   "maritima": {
-    "texto": "Componente E 3 o 4, amainando a Variable 1 a 3, principalmente SE, de madrugada. Rizada o marejadilla. Mar de fondo del NW de 1 a 2 m hasta la madrugada.",
+    "texto": "Componente E 3 o 4, amainando a Variable 1 a 3 de madrugada, arreciando a mediodía a E o NE 3 o 4, localmente 5 al final. Rizada o marejadilla, aumentando a marejada en el oeste al final. Mar de fondo del NW de 1 a 2 m hasta la madrugada.",
     "segmentos": [
       {
         "zona": null,
-        "texto": "Componente E 3 o 4, amainando a Variable 1 a 3, principalmente SE, de madrugada. Rizada o marejadilla. Mar de fondo del NW de 1 a 2 m hasta la madrugada.",
+        "texto": "Componente E 3 o 4, amainando a Variable 1 a 3 de madrugada, arreciando a mediodía a E o NE 3 o 4, localmente 5 al final. Rizada o marejadilla, aumentando a marejada en el oeste al final. Mar de fondo del NW de 1 a 2 m hasta la madrugada.",
         "direccion": null,
         "fuerza": null,
         "estado_mar": null
       }
     ],
     "avisos_texto": "No hay avisos.",
-    "vigencia_inicio": "2026-09-10T12:00:00",
-    "vigencia_fin": "2026-09-11T12:00:00"
+    "vigencia_inicio": "2026-09-10T20:00:00",
+    "vigencia_fin": "2026-09-11T20:00:00"
   },
   "netatmo_own": {
-    "ts": 1789049805,
-    "presion_hpa": 1017.4,
-    "presion_tendencia": "up",
+    "ts": 1789064323,
+    "presion_hpa": 1017.1,
+    "presion_tendencia": "stable",
     "exterior": {
-      "temp_c": 23.4,
-      "humedad": 71,
-      "tendencia": "stable"
+      "temp_c": 20.4,
+      "humedad": 81,
+      "tendencia": "down"
     },
     "viento": {
-      "kmh": 8,
-      "dir": 63,
-      "racha_kmh": 15
+      "kmh": 1,
+      "dir": 90,
+      "racha_kmh": 4
     },
     "lluvia": {
       "mm_1h": 0,
@@ -268,50 +195,50 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 23,
-      "humedad": 68
+      "temp_c": 21.8,
+      "humedad": 71
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
-      "temp_c": 20.4,
-      "humedad": 71
+      "temp_c": 20.5,
+      "humedad": 73
     },
     {
       "lat": 43.56,
       "lon": -6.27,
       "ciudad": "Cudillero",
-      "temp_c": 20.5,
-      "humedad": 61
+      "temp_c": 21.3,
+      "humedad": 62
     },
     {
       "lat": 43.24,
       "lon": -6.56,
       "ciudad": "Allande",
-      "temp_c": 24.8,
-      "humedad": 60
+      "temp_c": 19.4,
+      "humedad": 73
     },
     {
       "lat": 43.4,
       "lon": -6.54,
       "ciudad": "Tineo",
-      "temp_c": 24.1,
-      "humedad": 60
+      "temp_c": 21.5,
+      "humedad": 67
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 24.8,
-      "humedad": 58
+      "temp_c": 21.3,
+      "humedad": 68
     },
     {
       "lat": 43.43,
       "lon": -6.76,
       "ciudad": "Boal",
-      "temp_c": 23.8,
-      "humedad": 64
+      "temp_c": 21.2,
+      "humedad": 70
     }
   ],
   "lugares": [
@@ -498,5 +425,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-09-10T14:25:40.269392+00:00"
+  "generated_at": "2026-09-10T18:26:53.086688+00:00"
 }
