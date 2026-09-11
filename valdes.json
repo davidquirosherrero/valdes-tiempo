@@ -1,16 +1,16 @@
 {
   "real_time": {
-    "ts": "2026-09-10T23:00:00+0000",
-    "temp_c": 16.6,
+    "ts": "2026-09-11T04:00:00+0000",
+    "temp_c": 15.0,
     "wind_kmh": 11.5,
-    "wind_dir": 158.0,
-    "gust_kmh": 13.7,
-    "pres_hpa": 1013.7,
-    "pres_tendencia": "subiendo",
-    "humedad": 82.0
+    "wind_dir": 165.0,
+    "gust_kmh": 15.8,
+    "pres_hpa": 1013.4,
+    "pres_tendencia": "estable",
+    "humedad": 87.0
   },
   "recomendacion": {
-    "score": 75,
+    "score": 85,
     "etiqueta": "Buen día de playa — la presión está subiendo"
   },
   "que_se_acerca": {
@@ -56,42 +56,6 @@
     }
   ],
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-09-11T02:00",
-      "temp": "16",
-      "sens_termica": "16",
-      "cielo": "Cubierto",
-      "prob_precipitacion": "0",
-      "viento_dir": "S",
-      "viento_kmh": "8"
-    },
-    {
-      "fecha_hora": "2026-09-11T03:00",
-      "temp": "15",
-      "sens_termica": "15",
-      "cielo": "Cubierto",
-      "prob_precipitacion": "0",
-      "viento_dir": "S",
-      "viento_kmh": "7"
-    },
-    {
-      "fecha_hora": "2026-09-11T04:00",
-      "temp": "15",
-      "sens_termica": "15",
-      "cielo": "Cubierto",
-      "prob_precipitacion": "0",
-      "viento_dir": "S",
-      "viento_kmh": "7"
-    },
-    {
-      "fecha_hora": "2026-09-11T05:00",
-      "temp": "15",
-      "sens_termica": "15",
-      "cielo": "Poco nuboso",
-      "prob_precipitacion": "0",
-      "viento_dir": "SO",
-      "viento_kmh": "6"
-    },
     {
       "fecha_hora": "2026-09-11T06:00",
       "temp": "15",
@@ -217,6 +181,42 @@
       "prob_precipitacion": "0",
       "viento_dir": "E",
       "viento_kmh": "20"
+    },
+    {
+      "fecha_hora": "2026-09-11T20:00",
+      "temp": "20",
+      "sens_termica": "20",
+      "cielo": "Despejado",
+      "prob_precipitacion": "0",
+      "viento_dir": "E",
+      "viento_kmh": "20"
+    },
+    {
+      "fecha_hora": "2026-09-11T21:00",
+      "temp": "19",
+      "sens_termica": "19",
+      "cielo": "Despejado",
+      "prob_precipitacion": "0",
+      "viento_dir": "E",
+      "viento_kmh": "15"
+    },
+    {
+      "fecha_hora": "2026-09-11T22:00",
+      "temp": "18",
+      "sens_termica": "18",
+      "cielo": "Despejado",
+      "prob_precipitacion": "0",
+      "viento_dir": "E",
+      "viento_kmh": "8"
+    },
+    {
+      "fecha_hora": "2026-09-11T23:00",
+      "temp": "17",
+      "sens_termica": "17",
+      "cielo": "Despejado",
+      "prob_precipitacion": "0",
+      "viento_dir": "S",
+      "viento_kmh": "6"
     }
   ],
   "horaria_elaborado": "2026-09-10T21:01:10",
@@ -238,17 +238,17 @@
     "vigencia_fin": "2026-09-11T20:00:00"
   },
   "netatmo_own": {
-    "ts": 1789084888,
+    "ts": 1789101219,
     "presion_hpa": 1019.1,
     "presion_tendencia": "up",
     "exterior": {
-      "temp_c": 16.5,
-      "humedad": 90,
-      "tendencia": "stable"
+      "temp_c": 14,
+      "humedad": 93,
+      "tendencia": "down"
     },
     "viento": {
       "kmh": 1,
-      "dir": 135,
+      "dir": 122,
       "racha_kmh": 3
     },
     "lluvia": {
@@ -261,50 +261,50 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 17.5,
+      "temp_c": 16.3,
       "humedad": 80
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
-      "temp_c": 17.7,
-      "humedad": 78
+      "temp_c": 15.4,
+      "humedad": 82
     },
     {
       "lat": 43.56,
       "lon": -6.27,
       "ciudad": "Cudillero",
-      "temp_c": 19.5,
-      "humedad": 64
+      "temp_c": 18.4,
+      "humedad": 66
     },
     {
       "lat": 43.24,
       "lon": -6.56,
       "ciudad": "Allande",
-      "temp_c": 15.6,
-      "humedad": 82
+      "temp_c": 14.1,
+      "humedad": 84
     },
     {
       "lat": 43.4,
       "lon": -6.54,
       "ciudad": "Tineo",
-      "temp_c": 18,
+      "temp_c": 17.2,
       "humedad": 76
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 18,
-      "humedad": 74
+      "temp_c": 16.3,
+      "humedad": 76
     },
     {
       "lat": 43.43,
       "lon": -6.76,
       "ciudad": "Boal",
-      "temp_c": 18,
-      "humedad": 80
+      "temp_c": 15.9,
+      "humedad": 81
     }
   ],
   "lugares": [
@@ -329,7 +329,7 @@
           "cielo": "despejado",
           "viento": "flojo",
           "oleaje": "débil",
-          "t_max": 22,
+          "t_max": 23,
           "t_agua": 22,
           "uv_max": 6
         },
@@ -341,9 +341,18 @@
           "t_max": 24,
           "t_agua": 21,
           "uv_max": 6
+        },
+        {
+          "fecha": "20260913",
+          "cielo": "despejado",
+          "viento": "flojo",
+          "oleaje": "débil",
+          "t_max": 25,
+          "t_agua": 21,
+          "uv_max": 6
         }
       ],
-      "forecast_4d_elaborado": "2026-09-10T08:51:12"
+      "forecast_4d_elaborado": "2026-09-11T00:00:24"
     },
     {
       "name": "Luarca (1ª, 2ª y 3ª playa)",
@@ -500,5 +509,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-09-11T00:09:30.870027+00:00"
+  "generated_at": "2026-09-11T04:38:23.939514+00:00"
 }
