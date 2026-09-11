@@ -1,17 +1,17 @@
 {
   "real_time": {
-    "ts": "2026-09-11T13:00:00+0000",
-    "temp_c": 20.9,
-    "wind_kmh": 14.4,
-    "wind_dir": 30.0,
-    "gust_kmh": 34.6,
-    "pres_hpa": 1015.6,
+    "ts": "2026-09-11T18:00:00+0000",
+    "temp_c": 20.0,
+    "wind_kmh": 22.7,
+    "wind_dir": 53.0,
+    "gust_kmh": 39.2,
+    "pres_hpa": 1015.7,
     "pres_tendencia": "estable",
-    "humedad": 75.0
+    "humedad": 77.0
   },
   "recomendacion": {
-    "score": 90,
-    "etiqueta": "Buen día de playa — la presión está subiendo"
+    "score": 70,
+    "etiqueta": "Buen día de playa — el cielo está despejado"
   },
   "que_se_acerca": {
     "sector": "NE",
@@ -20,9 +20,9 @@
     "dist_km": 57,
     "lloviendo": false,
     "prec_mm": 0,
-    "temp_c": 21.0,
+    "temp_c": 19.9,
     "cielo_despejado": true,
-    "eta_horas": 4.0
+    "eta_horas": 2.5
   },
   "forecast_municipio": [
     {
@@ -63,42 +63,6 @@
     }
   ],
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-09-11T16:00",
-      "temp": "22",
-      "sens_termica": "22",
-      "cielo": "Despejado",
-      "prob_precipitacion": "0",
-      "viento_dir": "NE",
-      "viento_kmh": "17"
-    },
-    {
-      "fecha_hora": "2026-09-11T17:00",
-      "temp": "22",
-      "sens_termica": "22",
-      "cielo": "Despejado",
-      "prob_precipitacion": "0",
-      "viento_dir": "NE",
-      "viento_kmh": "16"
-    },
-    {
-      "fecha_hora": "2026-09-11T18:00",
-      "temp": "22",
-      "sens_termica": "22",
-      "cielo": "Despejado",
-      "prob_precipitacion": "0",
-      "viento_dir": "NE",
-      "viento_kmh": "17"
-    },
-    {
-      "fecha_hora": "2026-09-11T19:00",
-      "temp": "21",
-      "sens_termica": "21",
-      "cielo": "Despejado",
-      "prob_precipitacion": "0",
-      "viento_dir": "NE",
-      "viento_kmh": "19"
-    },
     {
       "fecha_hora": "2026-09-11T20:00",
       "temp": "20",
@@ -224,39 +188,75 @@
       "prob_precipitacion": "0",
       "viento_dir": "S",
       "viento_kmh": "8"
+    },
+    {
+      "fecha_hora": "2026-09-12T10:00",
+      "temp": "17",
+      "sens_termica": "17",
+      "cielo": "Despejado",
+      "prob_precipitacion": "0",
+      "viento_dir": "S",
+      "viento_kmh": "4"
+    },
+    {
+      "fecha_hora": "2026-09-12T11:00",
+      "temp": "19",
+      "sens_termica": "19",
+      "cielo": "Poco nuboso",
+      "prob_precipitacion": "0",
+      "viento_dir": "E",
+      "viento_kmh": "8"
+    },
+    {
+      "fecha_hora": "2026-09-12T12:00",
+      "temp": "20",
+      "sens_termica": "20",
+      "cielo": "Despejado",
+      "prob_precipitacion": "0",
+      "viento_dir": "NE",
+      "viento_kmh": "19"
+    },
+    {
+      "fecha_hora": "2026-09-12T13:00",
+      "temp": "22",
+      "sens_termica": "22",
+      "cielo": "Despejado",
+      "prob_precipitacion": "0",
+      "viento_dir": "NE",
+      "viento_kmh": "22"
     }
   ],
-  "horaria_elaborado": "2026-09-11T13:29:10",
+  "horaria_elaborado": "2026-09-11T16:19:09",
   "horaria_es_respaldo": false,
   "avisos": [],
   "maritima": {
-    "texto": "Variable 1 a 3, arreciando pronto a E o NE 3 o 4, localmente 5 al oeste de Peñas. Rizada o marejadilla, aumentando a marejadilla, localmente marejada en el oeste. Mar de fondo del NW en torno 1 m mar adentro al final. Localmente regular al final.",
+    "texto": "Componente E 3 o 4, arreciando a 4 o 5, localmente 6 al oeste de Peñas. Marejadilla aumentando a marejada. Mar de fondo del NW de 1 a 2 m. Localmente regular desde la madrugada.",
     "segmentos": [
       {
         "zona": null,
-        "texto": "Variable 1 a 3, arreciando pronto a E o NE 3 o 4, localmente 5 al oeste de Peñas. Rizada o marejadilla, aumentando a marejadilla, localmente marejada en el oeste. Mar de fondo del NW en torno 1 m mar adentro al final. Localmente regular al final.",
+        "texto": "Componente E 3 o 4, arreciando a 4 o 5, localmente 6 al oeste de Peñas. Marejadilla aumentando a marejada. Mar de fondo del NW de 1 a 2 m. Localmente regular desde la madrugada.",
         "direccion": null,
         "fuerza": null,
         "estado_mar": null
       }
     ],
     "avisos_texto": "No hay avisos.",
-    "vigencia_inicio": "2026-09-11T12:00:00",
-    "vigencia_fin": "2026-09-12T12:00:00"
+    "vigencia_inicio": "2026-09-11T20:00:00",
+    "vigencia_fin": "2026-09-12T20:00:00"
   },
   "netatmo_own": {
-    "ts": 1789136301,
-    "presion_hpa": 1021.2,
-    "presion_tendencia": "up",
+    "ts": 1789151422,
+    "presion_hpa": 1021.3,
+    "presion_tendencia": "stable",
     "exterior": {
-      "temp_c": 23.3,
-      "humedad": 78,
-      "tendencia": "stable"
+      "temp_c": 20.3,
+      "humedad": 83,
+      "tendencia": "down"
     },
     "viento": {
-      "kmh": 11,
-      "dir": 69,
-      "racha_kmh": 19
+      "kmh": 8,
+      "dir": 76,
+      "racha_kmh": 13
     },
     "lluvia": {
       "mm_1h": 0,
@@ -268,50 +268,50 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 23.7,
-      "humedad": 70
+      "temp_c": 21.7,
+      "humedad": 71
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
-      "temp_c": 21.2,
-      "humedad": 76
+      "temp_c": 19.8,
+      "humedad": 78
     },
     {
       "lat": 43.56,
       "lon": -6.27,
       "ciudad": "Cudillero",
-      "temp_c": 21.3,
-      "humedad": 65
+      "temp_c": 23.4,
+      "humedad": 59
     },
     {
       "lat": 43.24,
       "lon": -6.56,
       "ciudad": "Allande",
-      "temp_c": 23.2,
-      "humedad": 68
+      "temp_c": 19.5,
+      "humedad": 72
     },
     {
       "lat": 43.4,
       "lon": -6.54,
       "ciudad": "Tineo",
-      "temp_c": 24,
-      "humedad": 65
+      "temp_c": 22,
+      "humedad": 70
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 25.5,
-      "humedad": 62
+      "temp_c": 20.9,
+      "humedad": 69
     },
     {
       "lat": 43.43,
       "lon": -6.76,
       "ciudad": "Boal",
-      "temp_c": 22.9,
-      "humedad": 71
+      "temp_c": 20.4,
+      "humedad": 77
     }
   ],
   "lugares": [
@@ -498,5 +498,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-09-11T14:25:23.950013+00:00"
+  "generated_at": "2026-09-11T18:31:33.581781+00:00"
 }
