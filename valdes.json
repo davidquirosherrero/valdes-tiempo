@@ -1,13 +1,13 @@
 {
   "real_time": {
-    "ts": "2026-09-12T13:00:00+0000",
-    "temp_c": 20.0,
-    "wind_kmh": 29.9,
-    "wind_dir": 48.0,
-    "gust_kmh": 46.4,
-    "pres_hpa": 1016.0,
-    "pres_tendencia": "estable",
-    "humedad": 78.0
+    "ts": "2026-09-12T16:00:00+0000",
+    "temp_c": 20.1,
+    "wind_kmh": 36.0,
+    "wind_dir": 49.0,
+    "gust_kmh": 50.8,
+    "pres_hpa": 1014.9,
+    "pres_tendencia": "bajando",
+    "humedad": 81.0
   },
   "recomendacion": {
     "score": 65,
@@ -20,9 +20,9 @@
     "dist_km": 57,
     "lloviendo": false,
     "prec_mm": 0,
-    "temp_c": 21.9,
+    "temp_c": 20.8,
     "cielo_despejado": true,
-    "eta_horas": 1.9
+    "eta_horas": 1.6
   },
   "forecast_municipio": [
     {
@@ -63,33 +63,6 @@
     }
   ],
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-09-12T16:00",
-      "temp": "23",
-      "sens_termica": "23",
-      "cielo": "Despejado",
-      "prob_precipitacion": "0",
-      "viento_dir": "E",
-      "viento_kmh": "29"
-    },
-    {
-      "fecha_hora": "2026-09-12T17:00",
-      "temp": "23",
-      "sens_termica": "23",
-      "cielo": "Despejado",
-      "prob_precipitacion": "0",
-      "viento_dir": "E",
-      "viento_kmh": "28"
-    },
-    {
-      "fecha_hora": "2026-09-12T18:00",
-      "temp": "22",
-      "sens_termica": "22",
-      "cielo": "Despejado",
-      "prob_precipitacion": "0",
-      "viento_dir": "E",
-      "viento_kmh": "29"
-    },
     {
       "fecha_hora": "2026-09-12T19:00",
       "temp": "21",
@@ -224,9 +197,36 @@
       "prob_precipitacion": "0",
       "viento_dir": "SO",
       "viento_kmh": "5"
+    },
+    {
+      "fecha_hora": "2026-09-13T10:00",
+      "temp": "18",
+      "sens_termica": "18",
+      "cielo": "Despejado",
+      "prob_precipitacion": "0",
+      "viento_dir": "SO",
+      "viento_kmh": "2"
+    },
+    {
+      "fecha_hora": "2026-09-13T11:00",
+      "temp": "20",
+      "sens_termica": "20",
+      "cielo": "Poco nuboso",
+      "prob_precipitacion": "0",
+      "viento_dir": "E",
+      "viento_kmh": "15"
+    },
+    {
+      "fecha_hora": "2026-09-13T12:00",
+      "temp": "21",
+      "sens_termica": "21",
+      "cielo": "Poco nuboso",
+      "prob_precipitacion": "0",
+      "viento_dir": "NE",
+      "viento_kmh": "16"
     }
   ],
-  "horaria_elaborado": "2026-09-12T13:57:10",
+  "horaria_elaborado": "2026-09-12T16:23:11",
   "horaria_es_respaldo": false,
   "avisos": [],
   "maritima": {
@@ -245,25 +245,75 @@
     "vigencia_fin": "2026-09-13T12:00:00"
   },
   "netatmo_own": {
-    "ts": 1789221691,
-    "presion_hpa": 1021.8,
+    "ts": 1789232580,
+    "presion_hpa": 1021,
     "presion_tendencia": "stable",
     "exterior": {
-      "temp_c": 23.7,
-      "humedad": 78,
-      "tendencia": "stable"
+      "temp_c": 22.6,
+      "humedad": 82,
+      "tendencia": "down"
     },
     "viento": {
-      "kmh": 11,
-      "dir": 72,
-      "racha_kmh": 21
+      "kmh": 9,
+      "dir": 75,
+      "racha_kmh": 19
     },
     "lluvia": {
       "mm_1h": 0,
       "mm_24h": 0
     }
   },
-  "netatmo_vecinas": [],
+  "netatmo_vecinas": [
+    {
+      "lat": 43.53,
+      "lon": -6.39,
+      "ciudad": "Valdés",
+      "temp_c": 23.3,
+      "humedad": 73
+    },
+    {
+      "lat": 43.56,
+      "lon": -6.66,
+      "ciudad": "Navia",
+      "temp_c": 20.5,
+      "humedad": 80
+    },
+    {
+      "lat": 43.56,
+      "lon": -6.27,
+      "ciudad": "Cudillero",
+      "temp_c": 23,
+      "humedad": 64
+    },
+    {
+      "lat": 43.24,
+      "lon": -6.56,
+      "ciudad": "Allande",
+      "temp_c": 24.3,
+      "humedad": 64
+    },
+    {
+      "lat": 43.4,
+      "lon": -6.54,
+      "ciudad": "Tineo",
+      "temp_c": 24.5,
+      "humedad": 66
+    },
+    {
+      "lat": 43.4,
+      "lon": -6.25,
+      "ciudad": "Salas",
+      "temp_c": 22.9,
+      "humedad": 68
+    },
+    {
+      "lat": 43.43,
+      "lon": -6.76,
+      "ciudad": "Boal",
+      "temp_c": 24.6,
+      "humedad": 68
+    }
+  ],
   "lugares": [
     {
       "name": "Otur",
@@ -448,5 +498,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-09-12T14:06:27.829421+00:00"
+  "generated_at": "2026-09-12T17:08:34.527955+00:00"
 }
