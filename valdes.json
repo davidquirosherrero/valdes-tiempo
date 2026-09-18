@@ -1,17 +1,17 @@
 {
   "real_time": {
-    "ts": "2026-09-18T14:00:00+0000",
-    "temp_c": 19.4,
-    "wind_kmh": 7.2,
-    "wind_dir": 39.0,
-    "gust_kmh": 16.2,
-    "pres_hpa": 1013.8,
+    "ts": "2026-09-18T17:00:00+0000",
+    "temp_c": 18.3,
+    "wind_kmh": 9.7,
+    "wind_dir": 67.0,
+    "gust_kmh": 20.5,
+    "pres_hpa": 1013.4,
     "pres_tendencia": "estable",
-    "humedad": 78.0
+    "humedad": 86.0
   },
   "recomendacion": {
-    "score": 75,
-    "etiqueta": "Buen día de playa — la presión está subiendo"
+    "score": 55,
+    "etiqueta": "Cielo muy nuboso"
   },
   "que_se_acerca": {
     "sector": "NE",
@@ -20,9 +20,9 @@
     "dist_km": 57,
     "lloviendo": false,
     "prec_mm": 0,
-    "temp_c": 19.4,
-    "cielo_despejado": false,
-    "eta_horas": 7.9
+    "temp_c": 18.8,
+    "cielo_despejado": true,
+    "eta_horas": 5.9
   },
   "forecast_municipio": [
     {
@@ -63,42 +63,6 @@
     }
   ],
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-09-18T16:00",
-      "temp": "19",
-      "sens_termica": "19",
-      "cielo": "Cubierto",
-      "prob_precipitacion": "55",
-      "viento_dir": "E",
-      "viento_kmh": "9"
-    },
-    {
-      "fecha_hora": "2026-09-18T17:00",
-      "temp": "20",
-      "sens_termica": "20",
-      "cielo": "Cubierto",
-      "prob_precipitacion": "55",
-      "viento_dir": "NE",
-      "viento_kmh": "12"
-    },
-    {
-      "fecha_hora": "2026-09-18T18:00",
-      "temp": "20",
-      "sens_termica": "20",
-      "cielo": "Cubierto",
-      "prob_precipitacion": "55",
-      "viento_dir": "E",
-      "viento_kmh": "12"
-    },
-    {
-      "fecha_hora": "2026-09-18T19:00",
-      "temp": "19",
-      "sens_termica": "19",
-      "cielo": "Cubierto",
-      "prob_precipitacion": "55",
-      "viento_dir": "NE",
-      "viento_kmh": "13"
-    },
     {
       "fecha_hora": "2026-09-18T20:00",
       "temp": "19",
@@ -224,39 +188,75 @@
       "prob_precipitacion": "0",
       "viento_dir": "S",
       "viento_kmh": "7"
+    },
+    {
+      "fecha_hora": "2026-09-19T10:00",
+      "temp": "17",
+      "sens_termica": "17",
+      "cielo": "Despejado",
+      "prob_precipitacion": "0",
+      "viento_dir": "S",
+      "viento_kmh": "4"
+    },
+    {
+      "fecha_hora": "2026-09-19T11:00",
+      "temp": "18",
+      "sens_termica": "18",
+      "cielo": "Despejado",
+      "prob_precipitacion": "0",
+      "viento_dir": "E",
+      "viento_kmh": "7"
+    },
+    {
+      "fecha_hora": "2026-09-19T12:00",
+      "temp": "19",
+      "sens_termica": "19",
+      "cielo": "Despejado",
+      "prob_precipitacion": "0",
+      "viento_dir": "E",
+      "viento_kmh": "9"
+    },
+    {
+      "fecha_hora": "2026-09-19T13:00",
+      "temp": "20",
+      "sens_termica": "20",
+      "cielo": "Despejado",
+      "prob_precipitacion": "0",
+      "viento_dir": "NE",
+      "viento_kmh": "18"
     }
   ],
-  "horaria_elaborado": "2026-09-18T12:11:08",
+  "horaria_elaborado": "2026-09-18T16:41:11",
   "horaria_es_respaldo": false,
   "avisos": [],
   "maritima": {
-    "texto": "N o NE 2 o 3 al principio, arreciando a E o SE 3 o 4, localmente 5 cerca de la costa oeste y en torno a Peñas al final. Rizada o marejadilla, aumentando a marejada al este de Peñas. Mar de fondo NW en torno a 3 m, salvo de 2 a 3 m cerca de la costa, disminuyendo en torno a 2 m desde la madrugada. Lluvias cerca de la costa al principio. Regular cerca de la costa al  principio.",
+    "texto": "E o NE 3 o 4 al principio, rolando a E o SE y arreciando a 4 o 5 desde el mediodía al este de Peñas. Marejadilla, aumentando a marejada. Mar de fondo NW en torno a 3 m al principio, disminuyendo de 2 a 3 m y en torno a 2 m desde el mediodía. Áreas de regular cerca de la costa.",
     "segmentos": [
       {
         "zona": null,
-        "texto": "N o NE 2 o 3 al principio, arreciando a E o SE 3 o 4, localmente 5 cerca de la costa oeste y en torno a Peñas al final. Rizada o marejadilla, aumentando a marejada al este de Peñas. Mar de fondo NW en torno a 3 m, salvo de 2 a 3 m cerca de la costa, disminuyendo en torno a 2 m desde la madrugada. Lluvias cerca de la costa al principio. Regular cerca de la costa al  principio.",
+        "texto": "E o NE 3 o 4 al principio, rolando a E o SE y arreciando a 4 o 5 desde el mediodía al este de Peñas. Marejadilla, aumentando a marejada. Mar de fondo NW en torno a 3 m al principio, disminuyendo de 2 a 3 m y en torno a 2 m desde el mediodía. Áreas de regular cerca de la costa.",
         "direccion": null,
         "fuerza": null,
         "estado_mar": null
       }
     ],
     "avisos_texto": "No hay avisos",
-    "vigencia_inicio": "2026-09-18T12:00:00",
-    "vigencia_fin": "2026-09-19T12:00:00"
+    "vigencia_inicio": "2026-09-18T20:00:00",
+    "vigencia_fin": "2026-09-19T20:00:00"
   },
   "netatmo_own": {
-    "ts": 1789743366,
-    "presion_hpa": 1019.1,
-    "presion_tendencia": "up",
+    "ts": 1789755460,
+    "presion_hpa": 1019,
+    "presion_tendencia": "stable",
     "exterior": {
-      "temp_c": 20.1,
-      "humedad": 83,
+      "temp_c": 18.6,
+      "humedad": 89,
       "tendencia": "down"
     },
     "viento": {
-      "kmh": 7,
-      "dir": 67,
-      "racha_kmh": 11
+      "kmh": 5,
+      "dir": 73,
+      "racha_kmh": 8
     },
     "lluvia": {
       "mm_1h": 0,
@@ -268,50 +268,50 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 21.5,
-      "humedad": 72
+      "temp_c": 19.5,
+      "humedad": 77
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
-      "temp_c": 21.4,
-      "humedad": 73
+      "temp_c": 19.3,
+      "humedad": 78
     },
     {
       "lat": 43.56,
       "lon": -6.27,
       "ciudad": "Cudillero",
-      "temp_c": 21,
-      "humedad": 64
+      "temp_c": 20.2,
+      "humedad": 67
     },
     {
       "lat": 43.24,
       "lon": -6.56,
       "ciudad": "Allande",
-      "temp_c": 19,
-      "humedad": 73
+      "temp_c": 15.8,
+      "humedad": 81
     },
     {
       "lat": 43.4,
       "lon": -6.54,
       "ciudad": "Tineo",
-      "temp_c": 20.2,
-      "humedad": 71
+      "temp_c": 19.4,
+      "humedad": 73
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 18.2,
+      "temp_c": 17.4,
       "humedad": 83
     },
     {
       "lat": 43.43,
       "lon": -6.76,
       "ciudad": "Boal",
-      "temp_c": 19.7,
-      "humedad": 76
+      "temp_c": 18.7,
+      "humedad": 79
     }
   ],
   "lugares": [
@@ -498,5 +498,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-09-18T14:59:36.255216+00:00"
+  "generated_at": "2026-09-18T18:27:44.666886+00:00"
 }
