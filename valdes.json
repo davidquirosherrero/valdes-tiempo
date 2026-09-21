@@ -1,133 +1,31 @@
 {
   "real_time": {
-    "ts": "2026-09-21T05:00:00+0000",
-    "temp_c": 17.4,
-    "wind_kmh": 11.5,
-    "wind_dir": 144.0,
-    "gust_kmh": 15.8,
-    "pres_hpa": 1019.8,
-    "pres_tendencia": "estable",
-    "humedad": 88.0
+    "ts": "2026-09-21T13:00:00+0000",
+    "temp_c": 19.0,
+    "wind_kmh": 19.4,
+    "wind_dir": 59.0,
+    "gust_kmh": 32.0,
+    "pres_hpa": 1018.7,
+    "pres_tendencia": "bajando",
+    "humedad": 87.0
   },
   "recomendacion": {
-    "score": 80,
-    "etiqueta": "Buen día de playa — el cielo está despejado"
+    "score": 35,
+    "etiqueta": "Cielo nubes altas"
   },
   "que_se_acerca": {
-    "sector": "SE",
-    "disponible": false
+    "sector": "NE",
+    "disponible": true,
+    "nombre": "Cabo Peñas",
+    "dist_km": 57,
+    "lloviendo": false,
+    "prec_mm": 0,
+    "temp_c": 21.0,
+    "cielo_despejado": false,
+    "eta_horas": 2.9
   },
-  "forecast_municipio": [
-    {
-      "fecha": "2026-09-20T00:00:00",
-      "cielo": "Despejado",
-      "viento_dir": "S",
-      "viento_kmh": 5,
-      "t_max": 23,
-      "t_min": 13,
-      "prob_precipitacion": null
-    },
-    {
-      "fecha": "2026-09-21T00:00:00",
-      "cielo": "Despejado",
-      "viento_dir": "E",
-      "viento_kmh": 20,
-      "t_max": 24,
-      "t_min": 15,
-      "prob_precipitacion": null
-    },
-    {
-      "fecha": "2026-09-22T00:00:00",
-      "cielo": "Despejado",
-      "viento_dir": "E",
-      "viento_kmh": 15,
-      "t_max": 24,
-      "t_min": 14,
-      "prob_precipitacion": null
-    },
-    {
-      "fecha": "2026-09-23T00:00:00",
-      "cielo": "Nuboso",
-      "viento_dir": "NE",
-      "viento_kmh": 10,
-      "t_max": 23,
-      "t_min": 14,
-      "prob_precipitacion": null
-    }
-  ],
+  "forecast_municipio": null,
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-09-21T08:00",
-      "temp": "16",
-      "sens_termica": "16",
-      "cielo": "Despejado",
-      "prob_precipitacion": "0",
-      "viento_dir": "S",
-      "viento_kmh": "4"
-    },
-    {
-      "fecha_hora": "2026-09-21T09:00",
-      "temp": "17",
-      "sens_termica": "17",
-      "cielo": "Despejado",
-      "prob_precipitacion": "0",
-      "viento_dir": "S",
-      "viento_kmh": "3"
-    },
-    {
-      "fecha_hora": "2026-09-21T10:00",
-      "temp": "17",
-      "sens_termica": "17",
-      "cielo": "Poco nuboso",
-      "prob_precipitacion": "0",
-      "viento_dir": "SO",
-      "viento_kmh": "1"
-    },
-    {
-      "fecha_hora": "2026-09-21T11:00",
-      "temp": "18",
-      "sens_termica": "18",
-      "cielo": "Nubes altas",
-      "prob_precipitacion": "0",
-      "viento_dir": "E",
-      "viento_kmh": "10"
-    },
-    {
-      "fecha_hora": "2026-09-21T12:00",
-      "temp": "20",
-      "sens_termica": "20",
-      "cielo": "Despejado",
-      "prob_precipitacion": "0",
-      "viento_dir": "NE",
-      "viento_kmh": "16"
-    },
-    {
-      "fecha_hora": "2026-09-21T13:00",
-      "temp": "21",
-      "sens_termica": "21",
-      "cielo": "Despejado",
-      "prob_precipitacion": "0",
-      "viento_dir": "NE",
-      "viento_kmh": "18"
-    },
-    {
-      "fecha_hora": "2026-09-21T14:00",
-      "temp": "23",
-      "sens_termica": "23",
-      "cielo": "Nubes altas",
-      "prob_precipitacion": "0",
-      "viento_dir": "E",
-      "viento_kmh": "21"
-    },
-    {
-      "fecha_hora": "2026-09-21T15:00",
-      "temp": "23",
-      "sens_termica": "23",
-      "cielo": "Nubes altas",
-      "prob_precipitacion": "0",
-      "viento_dir": "E",
-      "viento_kmh": "20"
-    },
     {
       "fecha_hora": "2026-09-21T16:00",
       "temp": "23",
@@ -135,43 +33,43 @@
       "cielo": "Nubes altas",
       "prob_precipitacion": "0",
       "viento_dir": "E",
-      "viento_kmh": "19"
+      "viento_kmh": "18"
     },
     {
       "fecha_hora": "2026-09-21T17:00",
-      "temp": "24",
-      "sens_termica": "24",
-      "cielo": "Nubes altas",
-      "prob_precipitacion": "0",
-      "viento_dir": "NE",
-      "viento_kmh": "17"
-    },
-    {
-      "fecha_hora": "2026-09-21T18:00",
       "temp": "23",
       "sens_termica": "23",
       "cielo": "Nubes altas",
       "prob_precipitacion": "0",
+      "viento_dir": "NE",
+      "viento_kmh": "16"
+    },
+    {
+      "fecha_hora": "2026-09-21T18:00",
+      "temp": "22",
+      "sens_termica": "22",
+      "cielo": "Nubes altas",
+      "prob_precipitacion": "0",
       "viento_dir": "E",
-      "viento_kmh": "18"
+      "viento_kmh": "16"
     },
     {
       "fecha_hora": "2026-09-21T19:00",
-      "temp": "22",
-      "sens_termica": "22",
-      "cielo": "Despejado",
+      "temp": "21",
+      "sens_termica": "21",
+      "cielo": "Nubes altas",
       "prob_precipitacion": "0",
       "viento_dir": "E",
-      "viento_kmh": "17"
+      "viento_kmh": "16"
     },
     {
       "fecha_hora": "2026-09-21T20:00",
-      "temp": "21",
-      "sens_termica": "21",
-      "cielo": "Despejado",
+      "temp": "20",
+      "sens_termica": "20",
+      "cielo": "Nubes altas",
       "prob_precipitacion": "0",
       "viento_dir": "E",
-      "viento_kmh": "11"
+      "viento_kmh": "12"
     },
     {
       "fecha_hora": "2026-09-21T21:00",
@@ -180,7 +78,7 @@
       "cielo": "Nubes altas",
       "prob_precipitacion": "0",
       "viento_dir": "E",
-      "viento_kmh": "4"
+      "viento_kmh": "5"
     },
     {
       "fecha_hora": "2026-09-21T22:00",
@@ -188,125 +86,129 @@
       "sens_termica": "19",
       "cielo": "Nubes altas",
       "prob_precipitacion": "0",
-      "viento_dir": "SO",
-      "viento_kmh": "3"
+      "viento_dir": "SE",
+      "viento_kmh": "1"
     },
     {
       "fecha_hora": "2026-09-21T23:00",
       "temp": "18",
       "sens_termica": "18",
-      "cielo": "Despejado",
+      "cielo": "Nubes altas",
       "prob_precipitacion": "0",
       "viento_dir": "SO",
-      "viento_kmh": "3"
+      "viento_kmh": "2"
     },
     {
       "fecha_hora": "2026-09-22T00:00",
-      "temp": "18",
-      "sens_termica": "18",
-      "cielo": "Despejado",
-      "prob_precipitacion": null,
-      "viento_dir": "C",
-      "viento_kmh": "0"
+      "temp": "17",
+      "sens_termica": "17",
+      "cielo": "Poco nuboso",
+      "prob_precipitacion": "0",
+      "viento_dir": "SO",
+      "viento_kmh": "2"
     },
     {
       "fecha_hora": "2026-09-22T01:00",
       "temp": "17",
       "sens_termica": "17",
       "cielo": "Despejado",
-      "prob_precipitacion": null,
+      "prob_precipitacion": "0",
       "viento_dir": "E",
+      "viento_kmh": "1"
+    },
+    {
+      "fecha_hora": "2026-09-22T02:00",
+      "temp": "16",
+      "sens_termica": "16",
+      "cielo": "Poco nuboso",
+      "prob_precipitacion": "0",
+      "viento_dir": "SO",
+      "viento_kmh": "1"
+    },
+    {
+      "fecha_hora": "2026-09-22T03:00",
+      "temp": "16",
+      "sens_termica": "16",
+      "cielo": "Nubes altas",
+      "prob_precipitacion": "0",
+      "viento_dir": "SO",
+      "viento_kmh": "2"
+    },
+    {
+      "fecha_hora": "2026-09-22T04:00",
+      "temp": "16",
+      "sens_termica": "16",
+      "cielo": "Poco nuboso",
+      "prob_precipitacion": "0",
+      "viento_dir": "O",
+      "viento_kmh": "2"
+    },
+    {
+      "fecha_hora": "2026-09-22T05:00",
+      "temp": "16",
+      "sens_termica": "16",
+      "cielo": "Despejado",
+      "prob_precipitacion": "0",
+      "viento_dir": "O",
+      "viento_kmh": "1"
+    },
+    {
+      "fecha_hora": "2026-09-22T06:00",
+      "temp": "16",
+      "sens_termica": "16",
+      "cielo": "Despejado",
+      "prob_precipitacion": "0",
+      "viento_dir": "E",
+      "viento_kmh": "4"
+    },
+    {
+      "fecha_hora": "2026-09-22T07:00",
+      "temp": "15",
+      "sens_termica": "15",
+      "cielo": "Despejado",
+      "prob_precipitacion": "0",
+      "viento_dir": "S",
+      "viento_kmh": "3"
+    },
+    {
+      "fecha_hora": "2026-09-22T08:00",
+      "temp": "15",
+      "sens_termica": "15",
+      "cielo": "Despejado",
+      "prob_precipitacion": "0",
+      "viento_dir": "S",
+      "viento_kmh": "3"
+    },
+    {
+      "fecha_hora": "2026-09-22T09:00",
+      "temp": "17",
+      "sens_termica": "17",
+      "cielo": "Despejado",
+      "prob_precipitacion": "0",
+      "viento_dir": "S",
       "viento_kmh": "3"
     }
   ],
-  "horaria_elaborado": "2026-09-21T05:51:09",
+  "horaria_elaborado": "2026-09-21T13:31:08",
   "horaria_es_respaldo": false,
   "avisos": [],
   "maritima": {
-    "texto": "Componente E 3 a 5 tendiendo temporalmente a Variable 1 o 2 cerca de la costa al avanzar la madrugada. Marejadilla o marejada disminuyendo localmente a rizada cerca de la costa al avanzar la madrugada. Mar de fondo del NW de 1 a 2 m. Áreas de regular o localmente mala por bruma o niebla cerca de la costa al avanzar la madrugada.",
+    "texto": "Oeste de Peñas: E 4 a 6, amainando a 3 a 5 desde la madrugada. Marejada.\r\n Este de Peñas: E 3 o 4 arreciando pronto a 4 o 5, disminuyendo a 2 a 4 desde la madrugada. Marejada o marejadilla. \r\n Ambas zonas: Mar de fondo del NW de 1 a 2 m. Áreas de regular o mala hasta la tarde y desde la madrugada",
     "segmentos": [
       {
-        "zona": null,
-        "texto": "Componente E 3 a 5 tendiendo temporalmente a Variable 1 o 2 cerca de la costa al avanzar la madrugada. Marejadilla o marejada disminuyendo localmente a rizada cerca de la costa al avanzar la madrugada. Mar de fondo del NW de 1 a 2 m. Áreas de regular o localmente mala por bruma o niebla cerca de la costa al avanzar la madrugada.",
-        "direccion": null,
-        "fuerza": null,
-        "estado_mar": null
+        "zona": "Oeste de Peñas",
+        "texto": "E 4 a 6, amainando a 3 a 5 desde la madrugada. Marejada.",
+        "direccion": "E",
+        "fuerza": "4",
+        "estado_mar": "marejada"
       }
     ],
-    "avisos_texto": "No hay avisos.",
-    "vigencia_inicio": "2026-09-20T20:00:00",
-    "vigencia_fin": "2026-09-21T20:00:00"
+    "avisos_texto": "No hay aviso",
+    "vigencia_inicio": "2026-09-21T12:00:00",
+    "vigencia_fin": "2026-09-22T12:00:00"
   },
-  "netatmo_own": {
-    "ts": 1789971082,
-    "presion_hpa": 1025.4,
-    "presion_tendencia": "stable",
-    "exterior": {
-      "temp_c": 14,
-      "humedad": 99,
-      "tendencia": "down"
-    },
-    "viento": {
-      "kmh": 1,
-      "dir": 270,
-      "racha_kmh": 4
-    },
-    "lluvia": {
-      "mm_1h": 0,
-      "mm_24h": 0
-    }
-  },
-  "netatmo_vecinas": [
-    {
-      "lat": 43.53,
-      "lon": -6.39,
-      "ciudad": "Valdés",
-      "temp_c": 17,
-      "humedad": 86
-    },
-    {
-      "lat": 43.56,
-      "lon": -6.66,
-      "ciudad": "Navia",
-      "temp_c": 15.2,
-      "humedad": 91
-    },
-    {
-      "lat": 43.56,
-      "lon": -6.27,
-      "ciudad": "Cudillero",
-      "temp_c": 18.7,
-      "humedad": 73
-    },
-    {
-      "lat": 43.24,
-      "lon": -6.56,
-      "ciudad": "Allande",
-      "temp_c": 13.5,
-      "humedad": 88
-    },
-    {
-      "lat": 43.4,
-      "lon": -6.54,
-      "ciudad": "Tineo",
-      "temp_c": 17.3,
-      "humedad": 78
-    },
-    {
-      "lat": 43.4,
-      "lon": -6.25,
-      "ciudad": "Salas",
-      "temp_c": 17.9,
-      "humedad": 85
-    },
-    {
-      "lat": 43.43,
-      "lon": -6.76,
-      "ciudad": "Boal",
-      "temp_c": 18.3,
-      "humedad": 84
-    }
-  ],
+  "netatmo_own": null,
+  "netatmo_vecinas": [],
   "lugares": [
     {
       "name": "Otur",
@@ -338,12 +240,12 @@
           "cielo": "despejado",
           "viento": "flojo",
           "oleaje": "débil",
-          "t_max": 23,
+          "t_max": 22,
           "t_agua": 20,
           "uv_max": 5
         }
       ],
-      "forecast_4d_elaborado": "2026-09-21T05:51:12"
+      "forecast_4d_elaborado": "2026-09-21T08:51:13"
     },
     {
       "name": "Luarca (1ª, 2ª y 3ª playa)",
@@ -380,7 +282,7 @@
           "uv_max": 5
         }
       ],
-      "forecast_4d_elaborado": "2026-09-21T05:51:12"
+      "forecast_4d_elaborado": "2026-09-21T08:51:13"
     },
     {
       "name": "Cueva",
@@ -491,5 +393,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-09-21T06:19:18.481387+00:00"
+  "generated_at": "2026-09-21T14:07:05.808029+00:00"
 }
