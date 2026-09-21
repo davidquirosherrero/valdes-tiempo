@@ -1,76 +1,68 @@
 {
   "real_time": {
-    "ts": "2026-09-21T13:00:00+0000",
-    "temp_c": 19.0,
-    "wind_kmh": 19.4,
-    "wind_dir": 59.0,
-    "gust_kmh": 32.0,
-    "pres_hpa": 1018.7,
-    "pres_tendencia": "bajando",
-    "humedad": 87.0
+    "ts": "2026-09-21T18:00:00+0000",
+    "temp_c": 18.2,
+    "wind_kmh": 18.7,
+    "wind_dir": 106.0,
+    "gust_kmh": 30.2,
+    "pres_hpa": 1017.2,
+    "pres_tendencia": "estable",
+    "humedad": 92.0
   },
   "recomendacion": {
-    "score": 35,
+    "score": 45,
     "etiqueta": "Cielo nubes altas"
   },
   "que_se_acerca": {
-    "sector": "NE",
+    "sector": "E",
     "disponible": true,
-    "nombre": "Cabo Peñas",
-    "dist_km": 57,
+    "nombre": "Avilés",
+    "dist_km": 40,
     "lloviendo": false,
     "prec_mm": 0,
-    "temp_c": 21.0,
-    "cielo_despejado": false,
-    "eta_horas": 2.9
+    "temp_c": 20.1,
+    "cielo_despejado": true,
+    "eta_horas": 2.1
   },
-  "forecast_municipio": null,
-  "forecast_horaria": [
+  "forecast_municipio": [
     {
-      "fecha_hora": "2026-09-21T16:00",
-      "temp": "23",
-      "sens_termica": "23",
-      "cielo": "Nubes altas",
-      "prob_precipitacion": "0",
-      "viento_dir": "E",
-      "viento_kmh": "18"
+      "fecha": "2026-09-21T00:00:00",
+      "cielo": "Despejado",
+      "viento_dir": "C",
+      "viento_kmh": 0,
+      "t_max": 25,
+      "t_min": 15,
+      "prob_precipitacion": null
     },
     {
-      "fecha_hora": "2026-09-21T17:00",
-      "temp": "23",
-      "sens_termica": "23",
-      "cielo": "Nubes altas",
-      "prob_precipitacion": "0",
+      "fecha": "2026-09-22T00:00:00",
+      "cielo": "Despejado",
+      "viento_dir": "E",
+      "viento_kmh": 20,
+      "t_max": 24,
+      "t_min": 14,
+      "prob_precipitacion": null
+    },
+    {
+      "fecha": "2026-09-23T00:00:00",
+      "cielo": "Poco nuboso",
       "viento_dir": "NE",
-      "viento_kmh": "16"
+      "viento_kmh": 10,
+      "t_max": 23,
+      "t_min": 13,
+      "prob_precipitacion": null
     },
     {
-      "fecha_hora": "2026-09-21T18:00",
-      "temp": "22",
-      "sens_termica": "22",
-      "cielo": "Nubes altas",
-      "prob_precipitacion": "0",
-      "viento_dir": "E",
-      "viento_kmh": "16"
-    },
-    {
-      "fecha_hora": "2026-09-21T19:00",
-      "temp": "21",
-      "sens_termica": "21",
-      "cielo": "Nubes altas",
-      "prob_precipitacion": "0",
-      "viento_dir": "E",
-      "viento_kmh": "16"
-    },
-    {
-      "fecha_hora": "2026-09-21T20:00",
-      "temp": "20",
-      "sens_termica": "20",
-      "cielo": "Nubes altas",
-      "prob_precipitacion": "0",
-      "viento_dir": "E",
-      "viento_kmh": "12"
-    },
+      "fecha": "2026-09-24T00:00:00",
+      "cielo": "Poco nuboso",
+      "viento_dir": "NE",
+      "viento_kmh": 10,
+      "t_max": 24,
+      "t_min": 12,
+      "prob_precipitacion": null
+    }
+  ],
+  "forecast_horaria": [
     {
       "fecha_hora": "2026-09-21T21:00",
       "temp": "20",
@@ -190,25 +182,93 @@
     }
   ],
   "horaria_elaborado": "2026-09-21T13:31:08",
-  "horaria_es_respaldo": false,
+  "horaria_es_respaldo": true,
   "avisos": [],
   "maritima": {
-    "texto": "Oeste de Peñas: E 4 a 6, amainando a 3 a 5 desde la madrugada. Marejada.\r\n Este de Peñas: E 3 o 4 arreciando pronto a 4 o 5, disminuyendo a 2 a 4 desde la madrugada. Marejada o marejadilla. \r\n Ambas zonas: Mar de fondo del NW de 1 a 2 m. Áreas de regular o mala hasta la tarde y desde la madrugada",
+    "texto": "Oeste de Peñas: E 4 a 6, amainando temporalmente a 3 a 5 desde la madrugada hasta la tarde. Marejada.\r\n Este de Peñas: E 4 o 5, disminuyendo temporalmente a 3 o 4 desde la madrugada hasta la tarde. Marejada o marejadilla. \r\n Ambas zonas: Mar de fondo del NW de 1 a 2 m. Áreas de regular o mala desde la madrugada hasta la tarde",
     "segmentos": [
       {
         "zona": "Oeste de Peñas",
-        "texto": "E 4 a 6, amainando a 3 a 5 desde la madrugada. Marejada.",
+        "texto": "E 4 a 6, amainando temporalmente a 3 a 5 desde la madrugada hasta la tarde. Marejada.",
         "direccion": "E",
         "fuerza": "4",
         "estado_mar": "marejada"
       }
     ],
     "avisos_texto": "No hay aviso",
-    "vigencia_inicio": "2026-09-21T12:00:00",
-    "vigencia_fin": "2026-09-22T12:00:00"
+    "vigencia_inicio": "2026-09-21T20:00:00",
+    "vigencia_fin": "2026-09-22T20:00:00"
   },
-  "netatmo_own": null,
-  "netatmo_vecinas": [],
+  "netatmo_own": {
+    "ts": 1790018760,
+    "presion_hpa": 1023.2,
+    "presion_tendencia": "down",
+    "exterior": {
+      "temp_c": 18.2,
+      "humedad": 94,
+      "tendencia": "down"
+    },
+    "viento": {
+      "kmh": 1,
+      "dir": 125,
+      "racha_kmh": 3
+    },
+    "lluvia": {
+      "mm_1h": 0,
+      "mm_24h": 0
+    }
+  },
+  "netatmo_vecinas": [
+    {
+      "lat": 43.53,
+      "lon": -6.39,
+      "ciudad": "Valdés",
+      "temp_c": 22,
+      "humedad": 79
+    },
+    {
+      "lat": 43.56,
+      "lon": -6.66,
+      "ciudad": "Navia",
+      "temp_c": 18.5,
+      "humedad": 87
+    },
+    {
+      "lat": 43.56,
+      "lon": -6.27,
+      "ciudad": "Cudillero",
+      "temp_c": 21.2,
+      "humedad": 69
+    },
+    {
+      "lat": 43.24,
+      "lon": -6.56,
+      "ciudad": "Allande",
+      "temp_c": 22.2,
+      "humedad": 68
+    },
+    {
+      "lat": 43.4,
+      "lon": -6.54,
+      "ciudad": "Tineo",
+      "temp_c": 22.8,
+      "humedad": 75
+    },
+    {
+      "lat": 43.4,
+      "lon": -6.25,
+      "ciudad": "Salas",
+      "temp_c": 22.5,
+      "humedad": 75
+    },
+    {
+      "lat": 43.43,
+      "lon": -6.76,
+      "ciudad": "Boal",
+      "temp_c": 22.4,
+      "humedad": 81
+    }
+  ],
   "lugares": [
     {
       "name": "Otur",
@@ -393,5 +453,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-09-21T14:07:05.808029+00:00"
+  "generated_at": "2026-09-21T19:26:48.310904+00:00"
 }
