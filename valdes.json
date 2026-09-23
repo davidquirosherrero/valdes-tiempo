@@ -1,177 +1,85 @@
 {
   "real_time": {
-    "ts": "2026-09-23T05:00:00+0000",
-    "temp_c": 14.0,
-    "wind_kmh": 13.0,
-    "wind_dir": 172.0,
-    "gust_kmh": 18.4,
-    "pres_hpa": 1015.0,
-    "pres_tendencia": "estable",
-    "humedad": 99.0
+    "ts": "2026-09-23T16:00:00+0000",
+    "temp_c": 19.9,
+    "wind_kmh": 19.8,
+    "wind_dir": 81.0,
+    "gust_kmh": 27.4,
+    "pres_hpa": 1014.2,
+    "pres_tendencia": "bajando",
+    "humedad": 86.0
   },
   "recomendacion": {
-    "score": 65,
-    "etiqueta": "Buen día de playa — el viento es flojo"
+    "score": 80,
+    "etiqueta": "Buen día de playa — el cielo está despejado"
   },
   "que_se_acerca": {
-    "sector": "S",
-    "disponible": false
+    "sector": "E",
+    "disponible": true,
+    "nombre": "Avilés",
+    "dist_km": 40,
+    "lloviendo": false,
+    "prec_mm": 0,
+    "temp_c": 21.2,
+    "cielo_despejado": true,
+    "eta_horas": 2.0
   },
   "forecast_municipio": [
     {
-      "fecha": "2026-09-22T00:00:00",
-      "cielo": "Despejado",
-      "viento_dir": "SO",
-      "viento_kmh": 5,
-      "t_max": 24,
-      "t_min": 13,
-      "prob_precipitacion": null
-    },
-    {
       "fecha": "2026-09-23T00:00:00",
       "cielo": "Poco nuboso",
-      "viento_dir": "N",
-      "viento_kmh": 5,
-      "t_max": 23,
+      "viento_dir": "C",
+      "viento_kmh": 0,
+      "t_max": 22,
       "t_min": 13,
       "prob_precipitacion": null
     },
     {
       "fecha": "2026-09-24T00:00:00",
       "cielo": "Despejado",
-      "viento_dir": "C",
-      "viento_kmh": 0,
-      "t_max": 26,
-      "t_min": 12,
+      "viento_dir": "N",
+      "viento_kmh": 5,
+      "t_max": 27,
+      "t_min": 13,
       "prob_precipitacion": null
     },
     {
       "fecha": "2026-09-25T00:00:00",
-      "cielo": "Poco nuboso",
+      "cielo": "Nuboso",
       "viento_dir": "NO",
-      "viento_kmh": 15,
+      "viento_kmh": 10,
       "t_max": 21,
-      "t_min": 13,
+      "t_min": 12,
       "prob_precipitacion": null
+    },
+    {
+      "fecha": "2026-09-26T00:00:00",
+      "cielo": "Intervalos nubosos",
+      "viento_dir": "NE",
+      "viento_kmh": 15,
+      "t_max": 23,
+      "t_min": 15,
+      "prob_precipitacion": 10
     }
   ],
   "forecast_horaria": [
     {
-      "fecha_hora": "2026-09-23T07:00",
-      "temp": "14",
-      "sens_termica": "14",
-      "cielo": "Nubes altas",
-      "prob_precipitacion": "0",
-      "viento_dir": "S",
-      "viento_kmh": "9"
-    },
-    {
-      "fecha_hora": "2026-09-23T08:00",
-      "temp": "14",
-      "sens_termica": "14",
-      "cielo": "Despejado",
-      "prob_precipitacion": "0",
-      "viento_dir": "S",
-      "viento_kmh": "9"
-    },
-    {
-      "fecha_hora": "2026-09-23T09:00",
-      "temp": "14",
-      "sens_termica": "14",
-      "cielo": "Despejado",
-      "prob_precipitacion": "0",
-      "viento_dir": "S",
-      "viento_kmh": "9"
-    },
-    {
-      "fecha_hora": "2026-09-23T10:00",
-      "temp": "16",
-      "sens_termica": "16",
-      "cielo": "Despejado",
-      "prob_precipitacion": "0",
-      "viento_dir": "S",
-      "viento_kmh": "6"
-    },
-    {
-      "fecha_hora": "2026-09-23T11:00",
-      "temp": "17",
-      "sens_termica": "17",
-      "cielo": "Despejado",
-      "prob_precipitacion": "0",
-      "viento_dir": "NE",
-      "viento_kmh": "6"
-    },
-    {
-      "fecha_hora": "2026-09-23T12:00",
-      "temp": "18",
-      "sens_termica": "18",
-      "cielo": "Bruma",
-      "prob_precipitacion": "0",
-      "viento_dir": "NE",
-      "viento_kmh": "8"
-    },
-    {
-      "fecha_hora": "2026-09-23T13:00",
-      "temp": "19",
-      "sens_termica": "19",
-      "cielo": "Despejado",
-      "prob_precipitacion": "0",
-      "viento_dir": "N",
-      "viento_kmh": "7"
-    },
-    {
-      "fecha_hora": "2026-09-23T14:00",
+      "fecha_hora": "2026-09-23T18:00",
       "temp": "20",
       "sens_termica": "20",
       "cielo": "Despejado",
       "prob_precipitacion": "0",
-      "viento_dir": "N",
-      "viento_kmh": "7"
-    },
-    {
-      "fecha_hora": "2026-09-23T15:00",
-      "temp": "21",
-      "sens_termica": "21",
-      "cielo": "Despejado",
-      "prob_precipitacion": "0",
-      "viento_dir": "N",
-      "viento_kmh": "7"
-    },
-    {
-      "fecha_hora": "2026-09-23T16:00",
-      "temp": "22",
-      "sens_termica": "22",
-      "cielo": "Bruma",
-      "prob_precipitacion": "0",
       "viento_dir": "NE",
-      "viento_kmh": "7"
-    },
-    {
-      "fecha_hora": "2026-09-23T17:00",
-      "temp": "22",
-      "sens_termica": "22",
-      "cielo": "Bruma",
-      "prob_precipitacion": "0",
-      "viento_dir": "NE",
-      "viento_kmh": "6"
-    },
-    {
-      "fecha_hora": "2026-09-23T18:00",
-      "temp": "21",
-      "sens_termica": "21",
-      "cielo": "Despejado",
-      "prob_precipitacion": "0",
-      "viento_dir": "NE",
-      "viento_kmh": "5"
+      "viento_kmh": "10"
     },
     {
       "fecha_hora": "2026-09-23T19:00",
-      "temp": "20",
-      "sens_termica": "20",
+      "temp": "19",
+      "sens_termica": "19",
       "cielo": "Nubes altas",
       "prob_precipitacion": "0",
-      "viento_dir": "E",
-      "viento_kmh": "5"
+      "viento_dir": "NE",
+      "viento_kmh": "10"
     },
     {
       "fecha_hora": "2026-09-23T20:00",
@@ -180,16 +88,16 @@
       "cielo": "Poco nuboso",
       "prob_precipitacion": "0",
       "viento_dir": "NE",
-      "viento_kmh": "4"
+      "viento_kmh": "9"
     },
     {
       "fecha_hora": "2026-09-23T21:00",
       "temp": "18",
       "sens_termica": "18",
-      "cielo": "Despejado",
+      "cielo": "Poco nuboso",
       "prob_precipitacion": "0",
-      "viento_dir": "SE",
-      "viento_kmh": "2"
+      "viento_dir": "E",
+      "viento_kmh": "4"
     },
     {
       "fecha_hora": "2026-09-23T22:00",
@@ -197,59 +105,158 @@
       "sens_termica": "17",
       "cielo": "Despejado",
       "prob_precipitacion": "0",
-      "viento_dir": "S",
+      "viento_dir": "SO",
       "viento_kmh": "5"
     },
     {
       "fecha_hora": "2026-09-23T23:00",
+      "temp": "17",
+      "sens_termica": "17",
+      "cielo": "Despejado",
+      "prob_precipitacion": "0",
+      "viento_dir": "S",
+      "viento_kmh": "4"
+    },
+    {
+      "fecha_hora": "2026-09-24T00:00",
       "temp": "16",
       "sens_termica": "16",
       "cielo": "Despejado",
       "prob_precipitacion": "0",
-      "viento_dir": "S",
-      "viento_kmh": "5"
+      "viento_dir": "O",
+      "viento_kmh": "4"
     },
     {
-      "fecha_hora": "2026-09-24T00:00",
+      "fecha_hora": "2026-09-24T01:00",
       "temp": "15",
       "sens_termica": "15",
       "cielo": "Despejado",
-      "prob_precipitacion": null,
+      "prob_precipitacion": "0",
+      "viento_dir": "O",
+      "viento_kmh": "6"
+    },
+    {
+      "fecha_hora": "2026-09-24T02:00",
+      "temp": "15",
+      "sens_termica": "15",
+      "cielo": "Despejado",
+      "prob_precipitacion": "0",
       "viento_dir": "O",
       "viento_kmh": "4"
+    },
+    {
+      "fecha_hora": "2026-09-24T03:00",
+      "temp": "14",
+      "sens_termica": "14",
+      "cielo": "Despejado",
+      "prob_precipitacion": "0",
+      "viento_dir": "O",
+      "viento_kmh": "2"
+    },
+    {
+      "fecha_hora": "2026-09-24T04:00",
+      "temp": "14",
+      "sens_termica": "14",
+      "cielo": "Despejado",
+      "prob_precipitacion": "0",
+      "viento_dir": "O",
+      "viento_kmh": "5"
+    },
+    {
+      "fecha_hora": "2026-09-24T05:00",
+      "temp": "14",
+      "sens_termica": "14",
+      "cielo": "Despejado",
+      "prob_precipitacion": "0",
+      "viento_dir": "SO",
+      "viento_kmh": "2"
+    },
+    {
+      "fecha_hora": "2026-09-24T06:00",
+      "temp": "13",
+      "sens_termica": "13",
+      "cielo": "Bruma",
+      "prob_precipitacion": "0",
+      "viento_dir": "SE",
+      "viento_kmh": "1"
+    },
+    {
+      "fecha_hora": "2026-09-24T07:00",
+      "temp": "13",
+      "sens_termica": "13",
+      "cielo": "Despejado",
+      "prob_precipitacion": "0",
+      "viento_dir": "NO",
+      "viento_kmh": "2"
+    },
+    {
+      "fecha_hora": "2026-09-24T08:00",
+      "temp": "13",
+      "sens_termica": "13",
+      "cielo": "Despejado",
+      "prob_precipitacion": "0",
+      "viento_dir": "SO",
+      "viento_kmh": "3"
+    },
+    {
+      "fecha_hora": "2026-09-24T09:00",
+      "temp": "16",
+      "sens_termica": "16",
+      "cielo": "Despejado",
+      "prob_precipitacion": "0",
+      "viento_dir": "SO",
+      "viento_kmh": "3"
+    },
+    {
+      "fecha_hora": "2026-09-24T10:00",
+      "temp": "19",
+      "sens_termica": "19",
+      "cielo": "Despejado",
+      "prob_precipitacion": "0",
+      "viento_dir": "SO",
+      "viento_kmh": "5"
+    },
+    {
+      "fecha_hora": "2026-09-24T11:00",
+      "temp": "22",
+      "sens_termica": "22",
+      "cielo": "Despejado",
+      "prob_precipitacion": "0",
+      "viento_dir": "N",
+      "viento_kmh": "3"
     }
   ],
-  "horaria_elaborado": "2026-09-22T21:03:07",
+  "horaria_elaborado": "2026-09-23T16:29:07",
   "horaria_es_respaldo": false,
   "avisos": [],
   "maritima": {
-    "texto": "E 4 o 5 amainando a Variable 2 o 3, arreciando de nuevo a E 3 o 4 al final en el oeste. Marejada disminuyendo pronto a marejadilla. Mar de fondo del NW aumentando a 1 a 2 m.",
+    "texto": "Variable 1 a 3, arreciando a E 2 a 4 desde la tarde. Rizada o marejadilla al este y marejadilla o marejada al oeste. Mar de fondo del NW de 2 a 3 m disminuyendo a 1 a 2 m. Áreas de bruma o niebla con regular o mala",
     "segmentos": [
       {
         "zona": null,
-        "texto": "E 4 o 5 amainando a Variable 2 o 3, arreciando de nuevo a E 3 o 4 al final en el oeste. Marejada disminuyendo pronto a marejadilla. Mar de fondo del NW aumentando a 1 a 2 m.",
+        "texto": "Variable 1 a 3, arreciando a E 2 a 4 desde la tarde. Rizada o marejadilla al este y marejadilla o marejada al oeste. Mar de fondo del NW de 2 a 3 m disminuyendo a 1 a 2 m. Áreas de bruma o niebla con regular o mala",
         "direccion": null,
         "fuerza": null,
         "estado_mar": null
       }
     ],
-    "avisos_texto": "No hay avisos",
-    "vigencia_inicio": "2026-09-22T20:00:00",
-    "vigencia_fin": "2026-09-23T20:00:00"
+    "avisos_texto": "No hay aviso",
+    "vigencia_inicio": "2026-09-23T12:00:00",
+    "vigencia_fin": "2026-09-24T12:00:00"
   },
   "netatmo_own": {
-    "ts": 1790142835,
-    "presion_hpa": 1020.7,
+    "ts": 1790182409,
+    "presion_hpa": 1019.4,
     "presion_tendencia": "stable",
     "exterior": {
-      "temp_c": 15.5,
-      "humedad": 100,
+      "temp_c": 22.8,
+      "humedad": 86,
       "tendencia": "stable"
     },
     "viento": {
-      "kmh": 1,
-      "dir": 234,
-      "racha_kmh": 4
+      "kmh": 8,
+      "dir": 67,
+      "racha_kmh": 13
     },
     "lluvia": {
       "mm_1h": 0,
@@ -261,50 +268,50 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 16.1,
-      "humedad": 85
+      "temp_c": 24,
+      "humedad": 77
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
-      "temp_c": 16.3,
-      "humedad": 93
+      "temp_c": 20.5,
+      "humedad": 85
     },
     {
       "lat": 43.56,
       "lon": -6.27,
       "ciudad": "Cudillero",
-      "temp_c": 18.3,
-      "humedad": 72
+      "temp_c": 22.8,
+      "humedad": 70
     },
     {
       "lat": 43.24,
       "lon": -6.56,
       "ciudad": "Allande",
-      "temp_c": 12.1,
-      "humedad": 84
+      "temp_c": 26.3,
+      "humedad": 49
     },
     {
       "lat": 43.4,
       "lon": -6.54,
       "ciudad": "Tineo",
-      "temp_c": 16,
-      "humedad": 73
+      "temp_c": 24.5,
+      "humedad": 60
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 15.2,
-      "humedad": 82
+      "temp_c": 24.4,
+      "humedad": 58
     },
     {
       "lat": 43.43,
       "lon": -6.76,
       "ciudad": "Boal",
-      "temp_c": 18.6,
-      "humedad": 86
+      "temp_c": 26.5,
+      "humedad": 59
     }
   ],
   "lugares": [
@@ -320,7 +327,7 @@
           "cielo": "despejado",
           "viento": "flojo",
           "oleaje": "débil",
-          "t_max": 23,
+          "t_max": 22,
           "t_agua": 19,
           "uv_max": 5
         },
@@ -343,7 +350,7 @@
           "uv_max": 5
         }
       ],
-      "forecast_4d_elaborado": "2026-09-23T05:51:13"
+      "forecast_4d_elaborado": "2026-09-23T08:51:13"
     },
     {
       "name": "Luarca (1ª, 2ª y 3ª playa)",
@@ -357,7 +364,7 @@
           "cielo": "despejado",
           "viento": "flojo",
           "oleaje": "débil",
-          "t_max": 23,
+          "t_max": 22,
           "t_agua": 20,
           "uv_max": 5
         },
@@ -366,7 +373,7 @@
           "cielo": "despejado",
           "viento": "flojo",
           "oleaje": "débil",
-          "t_max": 26,
+          "t_max": 27,
           "t_agua": 19,
           "uv_max": 5
         },
@@ -380,7 +387,7 @@
           "uv_max": 5
         }
       ],
-      "forecast_4d_elaborado": "2026-09-23T05:51:13"
+      "forecast_4d_elaborado": "2026-09-23T08:51:13"
     },
     {
       "name": "Cueva",
@@ -491,5 +498,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-09-23T05:57:38.953501+00:00"
+  "generated_at": "2026-09-23T16:56:21.383622+00:00"
 }
