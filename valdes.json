@@ -1,105 +1,31 @@
 {
   "real_time": {
-    "ts": "2026-09-28T06:00:00+0000",
-    "temp_c": 16.0,
-    "wind_kmh": 7.6,
-    "wind_dir": 195.0,
-    "gust_kmh": 10.8,
-    "pres_hpa": 1007.7,
-    "pres_tendencia": "estable",
-    "humedad": 97.0
+    "ts": "2026-09-28T14:00:00+0000",
+    "temp_c": 19.4,
+    "wind_kmh": 10.4,
+    "wind_dir": 85.0,
+    "gust_kmh": 15.8,
+    "pres_hpa": 1006.4,
+    "pres_tendencia": "bajando",
+    "humedad": 87.0
   },
   "recomendacion": {
-    "score": 30,
-    "etiqueta": "Aviso amarillo activo"
+    "score": 25,
+    "etiqueta": "Lluvia en las próximas horas"
   },
   "que_se_acerca": {
-    "sector": "S",
-    "disponible": false
+    "sector": "E",
+    "disponible": true,
+    "nombre": "Avilés",
+    "dist_km": 40,
+    "lloviendo": false,
+    "prec_mm": 0,
+    "temp_c": 19.9,
+    "cielo_despejado": false,
+    "eta_horas": 3.8
   },
   "forecast_municipio": null,
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-09-28T08:00",
-      "temp": "16",
-      "sens_termica": "16",
-      "cielo": "Nubes altas",
-      "prob_precipitacion": "15",
-      "viento_dir": "S",
-      "viento_kmh": "7"
-    },
-    {
-      "fecha_hora": "2026-09-28T09:00",
-      "temp": "17",
-      "sens_termica": "17",
-      "cielo": "Poco nuboso",
-      "prob_precipitacion": "15",
-      "viento_dir": "S",
-      "viento_kmh": "8"
-    },
-    {
-      "fecha_hora": "2026-09-28T10:00",
-      "temp": "18",
-      "sens_termica": "18",
-      "cielo": "Nubes altas",
-      "prob_precipitacion": "15",
-      "viento_dir": "S",
-      "viento_kmh": "5"
-    },
-    {
-      "fecha_hora": "2026-09-28T11:00",
-      "temp": "18",
-      "sens_termica": "18",
-      "cielo": "Nubes altas",
-      "prob_precipitacion": "15",
-      "viento_dir": "E",
-      "viento_kmh": "1"
-    },
-    {
-      "fecha_hora": "2026-09-28T12:00",
-      "temp": "19",
-      "sens_termica": "19",
-      "cielo": "Nubes altas",
-      "prob_precipitacion": "15",
-      "viento_dir": "N",
-      "viento_kmh": "7"
-    },
-    {
-      "fecha_hora": "2026-09-28T13:00",
-      "temp": "20",
-      "sens_termica": "20",
-      "cielo": "Nubes altas",
-      "prob_precipitacion": "15",
-      "viento_dir": "N",
-      "viento_kmh": "6"
-    },
-    {
-      "fecha_hora": "2026-09-28T14:00",
-      "temp": "21",
-      "sens_termica": "21",
-      "cielo": "Intervalos nubosos con lluvia escasa",
-      "prob_precipitacion": "100",
-      "viento_dir": "N",
-      "viento_kmh": "6"
-    },
-    {
-      "fecha_hora": "2026-09-28T15:00",
-      "temp": "20",
-      "sens_termica": "20",
-      "cielo": "Intervalos nubosos con lluvia escasa",
-      "prob_precipitacion": "100",
-      "viento_dir": "NE",
-      "viento_kmh": "6"
-    },
-    {
-      "fecha_hora": "2026-09-28T16:00",
-      "temp": "22",
-      "sens_termica": "22",
-      "cielo": "Intervalos nubosos con lluvia escasa",
-      "prob_precipitacion": "100",
-      "viento_dir": "NE",
-      "viento_kmh": "8"
-    },
     {
       "fecha_hora": "2026-09-28T17:00",
       "temp": "21",
@@ -135,37 +61,43 @@
       "evento": "Aviso de lluvias de nivel amarillo",
       "nivel": "amarillo",
       "onset": "2026-09-28T15:00:00+02:00",
-      "expires": "2026-09-28T20:59:59+02:00"
+      "expires": "2026-09-28T21:59:59+02:00"
+    },
+    {
+      "evento": "Aviso de tormentas de nivel amarillo",
+      "nivel": "amarillo",
+      "onset": "2026-09-28T15:00:00+02:00",
+      "expires": "2026-09-28T21:59:59+02:00"
     }
   ],
   "maritima": {
-    "texto": "E o NE 2 a 4, temporalmente Variable 1 a 3 de madrugada y por la mañana. Marejadilla. Mar de fondo del NW de 1 a 2 m. Aguaceros ocasionales en el extremo este, y aguaceros al final en el oeste.",
+    "texto": "Variable 1 a 3, arreciando a S o SE 2 a 4 desde la madrugada. Marejadilla. Mar de fondo del NW de 1 a 2 m. Aguaceros y tormentas en el oeste hasta la madrugada. Regular",
     "segmentos": [
       {
         "zona": null,
-        "texto": "E o NE 2 a 4, temporalmente Variable 1 a 3 de madrugada y por la mañana. Marejadilla. Mar de fondo del NW de 1 a 2 m. Aguaceros ocasionales en el extremo este, y aguaceros al final en el oeste.",
+        "texto": "Variable 1 a 3, arreciando a S o SE 2 a 4 desde la madrugada. Marejadilla. Mar de fondo del NW de 1 a 2 m. Aguaceros y tormentas en el oeste hasta la madrugada. Regular",
         "direccion": null,
         "fuerza": null,
         "estado_mar": null
       }
     ],
     "avisos_texto": "No hay avisos",
-    "vigencia_inicio": "2026-09-27T20:00:00",
-    "vigencia_fin": "2026-09-28T20:00:00"
+    "vigencia_inicio": "2026-09-28T12:00:00",
+    "vigencia_fin": "2026-09-29T12:00:00"
   },
   "netatmo_own": {
-    "ts": 1790577974,
-    "presion_hpa": 1013.4,
-    "presion_tendencia": "down",
+    "ts": 1790608914,
+    "presion_hpa": 1011.2,
+    "presion_tendencia": "stable",
     "exterior": {
-      "temp_c": 16.2,
-      "humedad": 100,
-      "tendencia": "stable"
+      "temp_c": 21.8,
+      "humedad": 94,
+      "tendencia": "up"
     },
     "viento": {
-      "kmh": 3,
-      "dir": 270,
-      "racha_kmh": 5
+      "kmh": 8,
+      "dir": 74,
+      "racha_kmh": 16
     },
     "lluvia": {
       "mm_1h": 0,
@@ -177,50 +109,50 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 17.5,
-      "humedad": 87
+      "temp_c": 24.7,
+      "humedad": 75
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
-      "temp_c": 17.9,
-      "humedad": 90
+      "temp_c": 21.6,
+      "humedad": 82
     },
     {
       "lat": 43.57,
       "lon": -6.21,
       "ciudad": "Cudillero",
-      "temp_c": 17.9,
-      "humedad": 91
+      "temp_c": 24.3,
+      "humedad": 76
     },
     {
       "lat": 43.24,
       "lon": -6.56,
       "ciudad": "Allande",
-      "temp_c": 14.4,
-      "humedad": 85
+      "temp_c": 23.4,
+      "humedad": 69
     },
     {
       "lat": 43.33,
       "lon": -6.42,
       "ciudad": "Tineo",
-      "temp_c": 14,
-      "humedad": 99
+      "temp_c": 21.1,
+      "humedad": 79
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 16.8,
-      "humedad": 86
+      "temp_c": 24.2,
+      "humedad": 69
     },
     {
       "lat": 43.43,
       "lon": -6.76,
       "ciudad": "Boal",
-      "temp_c": 17.7,
-      "humedad": 87
+      "temp_c": 24.9,
+      "humedad": 74
     }
   ],
   "lugares": [
@@ -236,7 +168,7 @@
           "cielo": "muy nuboso",
           "viento": "flojo",
           "oleaje": "débil",
-          "t_max": 23,
+          "t_max": 22,
           "t_agua": 20,
           "uv_max": 4
         },
@@ -245,7 +177,7 @@
           "cielo": "muy nuboso",
           "viento": "flojo",
           "oleaje": "débil",
-          "t_max": 26,
+          "t_max": 24,
           "t_agua": 19,
           "uv_max": 5
         },
@@ -254,12 +186,12 @@
           "cielo": "nuboso",
           "viento": "flojo",
           "oleaje": "débil",
-          "t_max": 23,
+          "t_max": 24,
           "t_agua": 20,
           "uv_max": 4
         }
       ],
-      "forecast_4d_elaborado": "2026-09-28T05:51:14"
+      "forecast_4d_elaborado": "2026-09-28T08:51:14"
     },
     {
       "name": "Luarca (1ª, 2ª y 3ª playa)",
@@ -282,7 +214,7 @@
           "cielo": "muy nuboso",
           "viento": "flojo",
           "oleaje": "débil",
-          "t_max": 26,
+          "t_max": 25,
           "t_agua": 19,
           "uv_max": 5
         },
@@ -291,12 +223,12 @@
           "cielo": "nuboso",
           "viento": "flojo",
           "oleaje": "débil",
-          "t_max": 23,
+          "t_max": 24,
           "t_agua": 19,
           "uv_max": 4
         }
       ],
-      "forecast_4d_elaborado": "2026-09-28T05:51:14"
+      "forecast_4d_elaborado": "2026-09-28T08:51:14"
     },
     {
       "name": "Cueva",
@@ -407,5 +339,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-09-28T06:52:00.859152+00:00"
+  "generated_at": "2026-09-28T15:25:59.491780+00:00"
 }
