@@ -1,124 +1,31 @@
 {
   "real_time": {
-    "ts": "2026-09-29T07:00:00+0000",
-    "temp_c": 18.7,
-    "wind_kmh": 19.4,
-    "wind_dir": 150.0,
-    "gust_kmh": 38.5,
-    "pres_hpa": 1000.1,
+    "ts": "2026-09-29T15:00:00+0000",
+    "temp_c": 26.2,
+    "wind_kmh": 5.4,
+    "wind_dir": 67.0,
+    "gust_kmh": 14.8,
+    "pres_hpa": 998.8,
     "pres_tendencia": "bajando",
-    "humedad": 76.0
+    "humedad": 45.0
   },
   "recomendacion": {
-    "score": 20,
+    "score": 40,
     "etiqueta": "Lluvia en las próximas horas"
   },
   "que_se_acerca": {
-    "sector": "SE",
-    "disponible": false
+    "sector": "NE",
+    "disponible": true,
+    "nombre": "Cabo Peñas",
+    "dist_km": 57,
+    "lloviendo": false,
+    "prec_mm": 0,
+    "temp_c": 25.7,
+    "cielo_despejado": true,
+    "eta_horas": 10.6
   },
-  "forecast_municipio": [
-    {
-      "fecha": "2026-09-29T00:00:00",
-      "cielo": "Cubierto con lluvia",
-      "viento_dir": "E",
-      "viento_kmh": 5,
-      "t_max": 25,
-      "t_min": 16,
-      "prob_precipitacion": 100
-    },
-    {
-      "fecha": "2026-09-30T00:00:00",
-      "cielo": "Intervalos nubosos con lluvia",
-      "viento_dir": "SO",
-      "viento_kmh": 20,
-      "t_max": 24,
-      "t_min": 14,
-      "prob_precipitacion": 95
-    },
-    {
-      "fecha": "2026-10-01T00:00:00",
-      "cielo": "Nuboso con lluvia escasa",
-      "viento_dir": "NE",
-      "viento_kmh": 10,
-      "t_max": 20,
-      "t_min": 12,
-      "prob_precipitacion": 65
-    },
-    {
-      "fecha": "2026-10-02T00:00:00",
-      "cielo": "Muy nuboso con lluvia escasa",
-      "viento_dir": "NE",
-      "viento_kmh": 15,
-      "t_max": 22,
-      "t_min": 14,
-      "prob_precipitacion": 65
-    }
-  ],
+  "forecast_municipio": null,
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-09-29T10:00",
-      "temp": "19",
-      "sens_termica": "19",
-      "cielo": "Cubierto con lluvia escasa",
-      "prob_precipitacion": "55",
-      "viento_dir": "SE",
-      "viento_kmh": "6"
-    },
-    {
-      "fecha_hora": "2026-09-29T11:00",
-      "temp": "19",
-      "sens_termica": "19",
-      "cielo": "Cubierto con lluvia escasa",
-      "prob_precipitacion": "55",
-      "viento_dir": "SE",
-      "viento_kmh": "8"
-    },
-    {
-      "fecha_hora": "2026-09-29T12:00",
-      "temp": "21",
-      "sens_termica": "21",
-      "cielo": "Cubierto con lluvia escasa",
-      "prob_precipitacion": "55",
-      "viento_dir": "SE",
-      "viento_kmh": "7"
-    },
-    {
-      "fecha_hora": "2026-09-29T13:00",
-      "temp": "23",
-      "sens_termica": "23",
-      "cielo": "Cubierto con lluvia escasa",
-      "prob_precipitacion": "55",
-      "viento_dir": "E",
-      "viento_kmh": "5"
-    },
-    {
-      "fecha_hora": "2026-09-29T14:00",
-      "temp": "23",
-      "sens_termica": "23",
-      "cielo": "Cubierto con lluvia escasa",
-      "prob_precipitacion": "95",
-      "viento_dir": "E",
-      "viento_kmh": "7"
-    },
-    {
-      "fecha_hora": "2026-09-29T15:00",
-      "temp": "22",
-      "sens_termica": "22",
-      "cielo": "Intervalos nubosos con lluvia escasa",
-      "prob_precipitacion": "95",
-      "viento_dir": "S",
-      "viento_kmh": "3"
-    },
-    {
-      "fecha_hora": "2026-09-29T16:00",
-      "temp": "24",
-      "sens_termica": "24",
-      "cielo": "Intervalos nubosos con lluvia escasa",
-      "prob_precipitacion": "95",
-      "viento_dir": "O",
-      "viento_kmh": "3"
-    },
     {
       "fecha_hora": "2026-09-29T17:00",
       "temp": "24",
@@ -220,40 +127,40 @@
     }
   ],
   "horaria_elaborado": "2026-09-29T08:13:07",
-  "horaria_es_respaldo": false,
+  "horaria_es_respaldo": true,
   "avisos": [],
   "maritima": {
-    "texto": "Variable 1 a 3, arreciando a S o SE 2 a 4 desde medianoche, temporalmente 5 al oeste de Peñas por la mañana y al este de Peñas durante la tarde. Marejadilla aumentando a marejada mar adentro. Mar de fondo del NW de 1 a 2 m disminuyendo en torno a 1 m. Aguaceros, tormentas desde la tarde. Regular",
+    "texto": "Variable, principalmente E durante la tarde y W durante la noche y madrugada 1 a 5, ocasionalmente 6 mar adentro. Marejadilla o marejada mar adentro y rizada o marejadilla cerca de la costa. Mar de fondo del NW en torno a 1 m. Aguaceros ocasionales.",
     "segmentos": [
       {
         "zona": null,
-        "texto": "Variable 1 a 3, arreciando a S o SE 2 a 4 desde medianoche, temporalmente 5 al oeste de Peñas por la mañana y al este de Peñas durante la tarde. Marejadilla aumentando a marejada mar adentro. Mar de fondo del NW de 1 a 2 m disminuyendo en torno a 1 m. Aguaceros, tormentas desde la tarde. Regular",
+        "texto": "Variable, principalmente E durante la tarde y W durante la noche y madrugada 1 a 5, ocasionalmente 6 mar adentro. Marejadilla o marejada mar adentro y rizada o marejadilla cerca de la costa. Mar de fondo del NW en torno a 1 m. Aguaceros ocasionales.",
         "direccion": null,
         "fuerza": null,
         "estado_mar": null
       }
     ],
-    "avisos_texto": "No hay avisos",
-    "vigencia_inicio": "2026-09-28T20:00:00",
-    "vigencia_fin": "2026-09-29T20:00:00"
+    "avisos_texto": "No hay avisos.",
+    "vigencia_inicio": "2026-09-29T12:00:00",
+    "vigencia_fin": "2026-09-30T12:00:00"
   },
   "netatmo_own": {
-    "ts": 1790670166,
-    "presion_hpa": 1005.5,
-    "presion_tendencia": "down",
+    "ts": 1790696792,
+    "presion_hpa": 1004,
+    "presion_tendencia": "stable",
     "exterior": {
-      "temp_c": 20.6,
-      "humedad": 90,
-      "tendencia": "up"
+      "temp_c": 23.9,
+      "humedad": 76,
+      "tendencia": "stable"
     },
     "viento": {
       "kmh": 1,
-      "dir": 90,
-      "racha_kmh": 5
+      "dir": 127,
+      "racha_kmh": 4
     },
     "lluvia": {
       "mm_1h": 0,
-      "mm_24h": 0
+      "mm_24h": 0.4
     }
   },
   "netatmo_vecinas": [
@@ -261,50 +168,50 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 18,
-      "humedad": 84
+      "temp_c": 25.5,
+      "humedad": 53
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
-      "temp_c": 20.2,
-      "humedad": 80
+      "temp_c": 25.3,
+      "humedad": 59
     },
     {
       "lat": 43.57,
       "lon": -6.21,
       "ciudad": "Cudillero",
-      "temp_c": 20.3,
-      "humedad": 78
+      "temp_c": 22.5,
+      "humedad": 80
     },
     {
       "lat": 43.24,
       "lon": -6.56,
       "ciudad": "Allande",
-      "temp_c": 20.4,
-      "humedad": 67
+      "temp_c": 24.1,
+      "humedad": 55
     },
     {
       "lat": 43.33,
       "lon": -6.42,
       "ciudad": "Tineo",
-      "temp_c": 18.7,
-      "humedad": 78
+      "temp_c": 22.8,
+      "humedad": 60
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 15.7,
-      "humedad": 89
+      "temp_c": 21.7,
+      "humedad": 70
     },
     {
       "lat": 43.43,
       "lon": -6.76,
       "ciudad": "Boal",
-      "temp_c": 19.2,
-      "humedad": 86
+      "temp_c": 25.7,
+      "humedad": 55
     }
   ],
   "lugares": [
@@ -320,7 +227,7 @@
           "cielo": "muy nuboso",
           "viento": "flojo",
           "oleaje": "débil",
-          "t_max": 27,
+          "t_max": 25,
           "t_agua": 19,
           "uv_max": 5
         },
@@ -343,7 +250,7 @@
           "uv_max": 4
         }
       ],
-      "forecast_4d_elaborado": "2026-09-29T05:51:12"
+      "forecast_4d_elaborado": "2026-09-29T08:51:14"
     },
     {
       "name": "Luarca (1ª, 2ª y 3ª playa)",
@@ -357,7 +264,7 @@
           "cielo": "muy nuboso",
           "viento": "flojo",
           "oleaje": "débil",
-          "t_max": 27,
+          "t_max": 25,
           "t_agua": 19,
           "uv_max": 5
         },
@@ -380,7 +287,7 @@
           "uv_max": 4
         }
       ],
-      "forecast_4d_elaborado": "2026-09-29T05:51:12"
+      "forecast_4d_elaborado": "2026-09-29T08:51:14"
     },
     {
       "name": "Cueva",
@@ -491,5 +398,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-09-29T08:28:38.622274+00:00"
+  "generated_at": "2026-09-29T15:50:01.034418+00:00"
 }
