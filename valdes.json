@@ -1,17 +1,17 @@
 {
   "real_time": {
-    "ts": "2026-09-28T21:00:00+0000",
+    "ts": "2026-09-29T01:00:00+0000",
     "temp_c": 18.2,
-    "wind_kmh": 13.0,
-    "wind_dir": 157.0,
-    "gust_kmh": 20.2,
-    "pres_hpa": 1005.2,
-    "pres_tendencia": "estable",
-    "humedad": 92.0
+    "wind_kmh": 19.1,
+    "wind_dir": 153.0,
+    "gust_kmh": 24.5,
+    "pres_hpa": 1003.1,
+    "pres_tendencia": "bajando",
+    "humedad": 85.0
   },
   "recomendacion": {
-    "score": 60,
-    "etiqueta": "El tiempo tiende a empeorar"
+    "score": 45,
+    "etiqueta": "Cielo nubes altas"
   },
   "que_se_acerca": {
     "sector": "SE",
@@ -56,42 +56,6 @@
     }
   ],
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-09-28T23:00",
-      "temp": "18",
-      "sens_termica": "18",
-      "cielo": "Despejado",
-      "prob_precipitacion": "20",
-      "viento_dir": "S",
-      "viento_kmh": "7"
-    },
-    {
-      "fecha_hora": "2026-09-29T00:00",
-      "temp": "17",
-      "sens_termica": "17",
-      "cielo": "Cubierto",
-      "prob_precipitacion": "100",
-      "viento_dir": "SO",
-      "viento_kmh": "4"
-    },
-    {
-      "fecha_hora": "2026-09-29T01:00",
-      "temp": "17",
-      "sens_termica": "17",
-      "cielo": "Poco nuboso",
-      "prob_precipitacion": "100",
-      "viento_dir": "SO",
-      "viento_kmh": "4"
-    },
-    {
-      "fecha_hora": "2026-09-29T02:00",
-      "temp": "16",
-      "sens_termica": "16",
-      "cielo": "Poco nuboso",
-      "prob_precipitacion": "0",
-      "viento_dir": "C",
-      "viento_kmh": "0"
-    },
     {
       "fecha_hora": "2026-09-29T03:00",
       "temp": "16",
@@ -217,6 +181,42 @@
       "prob_precipitacion": "95",
       "viento_dir": "SO",
       "viento_kmh": "1"
+    },
+    {
+      "fecha_hora": "2026-09-29T17:00",
+      "temp": "25",
+      "sens_termica": "25",
+      "cielo": "Cubierto",
+      "prob_precipitacion": "95",
+      "viento_dir": "S",
+      "viento_kmh": "2"
+    },
+    {
+      "fecha_hora": "2026-09-29T18:00",
+      "temp": "25",
+      "sens_termica": "25",
+      "cielo": "Cubierto",
+      "prob_precipitacion": "95",
+      "viento_dir": "E",
+      "viento_kmh": "3"
+    },
+    {
+      "fecha_hora": "2026-09-29T19:00",
+      "temp": "25",
+      "sens_termica": "25",
+      "cielo": "Cubierto",
+      "prob_precipitacion": "95",
+      "viento_dir": "SE",
+      "viento_kmh": "4"
+    },
+    {
+      "fecha_hora": "2026-09-29T20:00",
+      "temp": "25",
+      "sens_termica": "25",
+      "cielo": "Cubierto",
+      "prob_precipitacion": "100",
+      "viento_dir": "NE",
+      "viento_kmh": "4"
     }
   ],
   "horaria_elaborado": "2026-09-28T20:57:07",
@@ -238,22 +238,22 @@
     "vigencia_fin": "2026-09-29T20:00:00"
   },
   "netatmo_own": {
-    "ts": 1790632663,
-    "presion_hpa": 1010.4,
+    "ts": 1790646574,
+    "presion_hpa": 1008.2,
     "presion_tendencia": "down",
     "exterior": {
-      "temp_c": 18.9,
-      "humedad": 100,
-      "tendencia": "up"
+      "temp_c": 18.8,
+      "humedad": 94,
+      "tendencia": "stable"
     },
     "viento": {
-      "kmh": 4,
-      "dir": 221,
-      "racha_kmh": 7
+      "kmh": 3,
+      "dir": 190,
+      "racha_kmh": 9
     },
     "lluvia": {
       "mm_1h": 0,
-      "mm_24h": 26.5
+      "mm_24h": 0
     }
   },
   "netatmo_vecinas": [
@@ -261,49 +261,49 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 18.3,
-      "humedad": 86
+      "temp_c": 17.5,
+      "humedad": 85
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
-      "temp_c": 18.4,
-      "humedad": 88
+      "temp_c": 17.8,
+      "humedad": 86
     },
     {
       "lat": 43.57,
       "lon": -6.21,
       "ciudad": "Cudillero",
-      "temp_c": 19.6,
-      "humedad": 91
+      "temp_c": 18.2,
+      "humedad": 89
     },
     {
       "lat": 43.24,
       "lon": -6.56,
       "ciudad": "Allande",
-      "temp_c": 16.2,
-      "humedad": 86
+      "temp_c": 14.6,
+      "humedad": 88
     },
     {
       "lat": 43.33,
       "lon": -6.42,
       "ciudad": "Tineo",
-      "temp_c": 14.8,
-      "humedad": 99
+      "temp_c": 13.8,
+      "humedad": 98
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 18.8,
+      "temp_c": 16.9,
       "humedad": 85
     },
     {
       "lat": 43.43,
       "lon": -6.76,
       "ciudad": "Boal",
-      "temp_c": 19.4,
+      "temp_c": 18,
       "humedad": 86
     }
   ],
@@ -329,21 +329,30 @@
           "cielo": "muy nuboso",
           "viento": "flojo",
           "oleaje": "débil",
-          "t_max": 24,
+          "t_max": 27,
           "t_agua": 19,
           "uv_max": 5
         },
         {
           "fecha": "20260930",
-          "cielo": "nuboso",
+          "cielo": "despejado",
           "viento": "flojo",
           "oleaje": "débil",
           "t_max": 24,
           "t_agua": 20,
           "uv_max": 4
+        },
+        {
+          "fecha": "20261001",
+          "cielo": "muy nuboso",
+          "viento": "flojo",
+          "oleaje": "débil",
+          "t_max": 20,
+          "t_agua": 20,
+          "uv_max": 4
         }
       ],
-      "forecast_4d_elaborado": "2026-09-28T08:51:14"
+      "forecast_4d_elaborado": "2026-09-29T00:00:26"
     },
     {
       "name": "Luarca (1ª, 2ª y 3ª playa)",
@@ -366,21 +375,30 @@
           "cielo": "muy nuboso",
           "viento": "flojo",
           "oleaje": "débil",
-          "t_max": 25,
+          "t_max": 27,
           "t_agua": 19,
           "uv_max": 5
         },
         {
           "fecha": "20260930",
-          "cielo": "nuboso",
+          "cielo": "despejado",
           "viento": "flojo",
           "oleaje": "débil",
           "t_max": 24,
           "t_agua": 19,
           "uv_max": 4
+        },
+        {
+          "fecha": "20261001",
+          "cielo": "muy nuboso",
+          "viento": "flojo",
+          "oleaje": "débil",
+          "t_max": 20,
+          "t_agua": 21,
+          "uv_max": 4
         }
       ],
-      "forecast_4d_elaborado": "2026-09-28T08:51:14"
+      "forecast_4d_elaborado": "2026-09-29T00:00:26"
     },
     {
       "name": "Cueva",
@@ -491,5 +509,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-09-28T21:59:41.186879+00:00"
+  "generated_at": "2026-09-29T01:56:11.135936+00:00"
 }
