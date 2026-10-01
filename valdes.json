@@ -1,96 +1,24 @@
 {
   "real_time": {
-    "ts": "2026-10-01T05:00:00+0000",
-    "temp_c": 12.0,
-    "wind_kmh": 17.3,
-    "wind_dir": 176.0,
-    "gust_kmh": 20.9,
-    "pres_hpa": 1018.0,
-    "pres_tendencia": "subiendo",
-    "humedad": 85.0
+    "ts": "2026-10-01T12:00:00+0000",
+    "temp_c": 18.3,
+    "wind_kmh": 9.4,
+    "wind_dir": 326.0,
+    "gust_kmh": 13.0,
+    "pres_hpa": 1020.6,
+    "pres_tendencia": "estable",
+    "humedad": 65.0
   },
   "recomendacion": {
     "score": 100,
     "etiqueta": "Buen día de playa — la presión está subiendo"
   },
   "que_se_acerca": {
-    "sector": "S",
+    "sector": "NW",
     "disponible": false
   },
   "forecast_municipio": null,
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-10-01T07:00",
-      "temp": "13",
-      "sens_termica": "13",
-      "cielo": "Despejado",
-      "prob_precipitacion": "0",
-      "viento_dir": "S",
-      "viento_kmh": "10"
-    },
-    {
-      "fecha_hora": "2026-10-01T08:00",
-      "temp": "12",
-      "sens_termica": "12",
-      "cielo": "Despejado",
-      "prob_precipitacion": "0",
-      "viento_dir": "S",
-      "viento_kmh": "10"
-    },
-    {
-      "fecha_hora": "2026-10-01T09:00",
-      "temp": "14",
-      "sens_termica": "14",
-      "cielo": "Despejado",
-      "prob_precipitacion": "0",
-      "viento_dir": "S",
-      "viento_kmh": "10"
-    },
-    {
-      "fecha_hora": "2026-10-01T10:00",
-      "temp": "15",
-      "sens_termica": "15",
-      "cielo": "Despejado",
-      "prob_precipitacion": "0",
-      "viento_dir": "S",
-      "viento_kmh": "10"
-    },
-    {
-      "fecha_hora": "2026-10-01T11:00",
-      "temp": "17",
-      "sens_termica": "17",
-      "cielo": "Poco nuboso",
-      "prob_precipitacion": "0",
-      "viento_dir": "S",
-      "viento_kmh": "3"
-    },
-    {
-      "fecha_hora": "2026-10-01T12:00",
-      "temp": "17",
-      "sens_termica": "17",
-      "cielo": "Nubes altas",
-      "prob_precipitacion": "0",
-      "viento_dir": "N",
-      "viento_kmh": "5"
-    },
-    {
-      "fecha_hora": "2026-10-01T13:00",
-      "temp": "18",
-      "sens_termica": "18",
-      "cielo": "Poco nuboso",
-      "prob_precipitacion": "0",
-      "viento_dir": "N",
-      "viento_kmh": "9"
-    },
-    {
-      "fecha_hora": "2026-10-01T14:00",
-      "temp": "19",
-      "sens_termica": "19",
-      "cielo": "Muy nuboso",
-      "prob_precipitacion": "25",
-      "viento_dir": "N",
-      "viento_kmh": "10"
-    },
     {
       "fecha_hora": "2026-10-01T15:00",
       "temp": "19",
@@ -132,90 +60,40 @@
   "horaria_es_respaldo": true,
   "avisos": [],
   "maritima": {
-    "texto": "Variable 2 a 4, salvo W 4 a 6 al oeste de Peñas, amainando principalmente a Componente W 3 a 5 a partir de la noche, y a Variable 1 a 3 por la mañana, tendiendo a E al final. Marejada o fuerte marejada, disminuyendo a marejadilla por la tarde. Mar de fondo del NW de 1 a 2 m aumentando a 3 a 4 m por la tarde. Aguaceros ocasionales.",
+    "texto": "Variable 1 a 3 arreciando a componente E 3 o 4 al avanzar la tarde y a 4 o 5 mar adentro a partir de la madrugada. Rizada aumentando a marejadilla al avanzar la tarde y a marejada mar adentro al avanzar la madrugada. Mar de fondo del NW de 2 a 3 m aumentando pronto a 3 a 4 m, principalmente mar adentro, pero disminuyendo de nuevo a 2 a 3 m al final.",
     "segmentos": [
       {
         "zona": null,
-        "texto": "Variable 2 a 4, salvo W 4 a 6 al oeste de Peñas, amainando principalmente a Componente W 3 a 5 a partir de la noche, y a Variable 1 a 3 por la mañana, tendiendo a E al final. Marejada o fuerte marejada, disminuyendo a marejadilla por la tarde. Mar de fondo del NW de 1 a 2 m aumentando a 3 a 4 m por la tarde. Aguaceros ocasionales.",
+        "texto": "Variable 1 a 3 arreciando a componente E 3 o 4 al avanzar la tarde y a 4 o 5 mar adentro a partir de la madrugada. Rizada aumentando a marejadilla al avanzar la tarde y a marejada mar adentro al avanzar la madrugada. Mar de fondo del NW de 2 a 3 m aumentando pronto a 3 a 4 m, principalmente mar adentro, pero disminuyendo de nuevo a 2 a 3 m al final.",
         "direccion": null,
         "fuerza": null,
         "estado_mar": null
       }
     ],
     "avisos_texto": "No hay avisos.",
-    "vigencia_inicio": "2026-09-30T20:00:00",
-    "vigencia_fin": "2026-10-01T20:00:00"
+    "vigencia_inicio": "2026-10-01T12:00:00",
+    "vigencia_fin": "2026-10-02T12:00:00"
   },
   "netatmo_own": {
-    "ts": 1790833587,
-    "presion_hpa": 1024.1,
+    "ts": 1790860203,
+    "presion_hpa": 1026.4,
     "presion_tendencia": "up",
     "exterior": {
-      "temp_c": 11.1,
-      "humedad": 93,
-      "tendencia": "down"
+      "temp_c": 20.1,
+      "humedad": 78,
+      "tendencia": "up"
     },
     "viento": {
-      "kmh": 1,
-      "dir": 194,
-      "racha_kmh": 5
+      "kmh": 4,
+      "dir": 41,
+      "racha_kmh": 8
     },
     "lluvia": {
       "mm_1h": 0,
       "mm_24h": 0
     }
   },
-  "netatmo_vecinas": [
-    {
-      "lat": 43.53,
-      "lon": -6.39,
-      "ciudad": "Valdés",
-      "temp_c": 12.2,
-      "humedad": 83
-    },
-    {
-      "lat": 43.56,
-      "lon": -6.66,
-      "ciudad": "Navia",
-      "temp_c": 12.7,
-      "humedad": 82
-    },
-    {
-      "lat": 43.57,
-      "lon": -6.21,
-      "ciudad": "Cudillero",
-      "temp_c": 14.5,
-      "humedad": 79
-    },
-    {
-      "lat": 43.24,
-      "lon": -6.56,
-      "ciudad": "Allande",
-      "temp_c": 8.3,
-      "humedad": 86
-    },
-    {
-      "lat": 43.33,
-      "lon": -6.42,
-      "ciudad": "Tineo",
-      "temp_c": 8.3,
-      "humedad": 97
-    },
-    {
-      "lat": 43.4,
-      "lon": -6.25,
-      "ciudad": "Salas",
-      "temp_c": 12.6,
-      "humedad": 77
-    },
-    {
-      "lat": 43.43,
-      "lon": -6.76,
-      "ciudad": "Boal",
-      "temp_c": 12.1,
-      "humedad": 84
-    }
-  ],
+  "netatmo_vecinas": [],
   "lugares": [
     {
       "name": "Otur",
@@ -225,15 +103,6 @@
       "ficha_aemet": "Otur",
       "forecast_4d": [
         {
-          "fecha": "20260930",
-          "cielo": "nuboso",
-          "viento": "flojo",
-          "oleaje": "débil",
-          "t_max": 23,
-          "t_agua": 20,
-          "uv_max": 4
-        },
-        {
           "fecha": "20261001",
           "cielo": "despejado",
           "viento": "flojo",
@@ -261,7 +130,7 @@
           "uv_max": 4
         }
       ],
-      "forecast_4d_elaborado": "2026-10-01T00:00:26"
+      "forecast_4d_elaborado": "2026-10-01T08:51:14"
     },
     {
       "name": "Luarca (1ª, 2ª y 3ª playa)",
@@ -271,15 +140,6 @@
       "ficha_aemet": "Luarca",
       "forecast_4d": [
         {
-          "fecha": "20260930",
-          "cielo": "nuboso",
-          "viento": "flojo",
-          "oleaje": "débil",
-          "t_max": 23,
-          "t_agua": 19,
-          "uv_max": 4
-        },
-        {
           "fecha": "20261001",
           "cielo": "despejado",
           "viento": "flojo",
@@ -307,7 +167,7 @@
           "uv_max": 4
         }
       ],
-      "forecast_4d_elaborado": "2026-10-01T00:00:26"
+      "forecast_4d_elaborado": "2026-10-01T08:51:14"
     },
     {
       "name": "Cueva",
@@ -418,5 +278,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-10-01T05:50:00.202283+00:00"
+  "generated_at": "2026-10-01T13:11:00.550722+00:00"
 }
