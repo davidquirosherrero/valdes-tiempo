@@ -1,67 +1,24 @@
 {
   "real_time": {
-    "ts": "2026-10-03T16:00:00+0000",
-    "temp_c": 18.6,
-    "wind_kmh": 12.6,
-    "wind_dir": 66.0,
-    "gust_kmh": 23.4,
-    "pres_hpa": 1015.1,
+    "ts": "2026-10-03T20:00:00+0000",
+    "temp_c": 17.6,
+    "wind_kmh": 5.8,
+    "wind_dir": 118.0,
+    "gust_kmh": 15.1,
+    "pres_hpa": 1016.1,
     "pres_tendencia": "estable",
-    "humedad": 96.0
+    "humedad": 97.0
   },
   "recomendacion": {
-    "score": 15,
-    "etiqueta": "Aviso oficial activo — revisa AEMET antes de salir"
+    "score": 40,
+    "etiqueta": "Lluvia en las próximas horas"
   },
   "que_se_acerca": {
-    "sector": "NE",
-    "disponible": true,
-    "nombre": "Cabo Peñas",
-    "dist_km": 57,
-    "lloviendo": false,
-    "prec_mm": 0,
-    "temp_c": 18.4,
-    "cielo_despejado": false,
-    "eta_horas": 4.5
+    "sector": "SE",
+    "disponible": false
   },
   "forecast_municipio": null,
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-10-03T19:00",
-      "temp": "19",
-      "sens_termica": "19",
-      "cielo": "Cubierto con tormenta",
-      "prob_precipitacion": "95",
-      "viento_dir": "NE",
-      "viento_kmh": "5"
-    },
-    {
-      "fecha_hora": "2026-10-03T20:00",
-      "temp": "18",
-      "sens_termica": "18",
-      "cielo": "Cubierto con lluvia escasa",
-      "prob_precipitacion": "100",
-      "viento_dir": "SE",
-      "viento_kmh": "7"
-    },
-    {
-      "fecha_hora": "2026-10-03T21:00",
-      "temp": "18",
-      "sens_termica": "18",
-      "cielo": "Cubierto con lluvia",
-      "prob_precipitacion": "100",
-      "viento_dir": "N",
-      "viento_kmh": "6"
-    },
-    {
-      "fecha_hora": "2026-10-03T22:00",
-      "temp": "18",
-      "sens_termica": "18",
-      "cielo": "Cubierto con lluvia",
-      "prob_precipitacion": "100",
-      "viento_dir": "N",
-      "viento_kmh": "2"
-    },
     {
       "fecha_hora": "2026-10-03T23:00",
       "temp": "18",
@@ -190,53 +147,22 @@
     }
   ],
   "horaria_elaborado": "2026-10-03T16:17:08",
-  "horaria_es_respaldo": false,
-  "avisos": [
-    {
-      "evento": "Aviso de lluvias de nivel amarillo",
-      "nivel": "amarillo",
-      "onset": "2026-10-03T15:00:00+02:00",
-      "expires": "2026-10-03T23:59:59+02:00"
-    },
-    {
-      "evento": "Aviso de lluvias de nivel naranja",
-      "nivel": "naranja",
-      "onset": "2026-10-04T00:00:00+02:00",
-      "expires": "2026-10-04T17:59:59+02:00"
-    },
-    {
-      "evento": "Aviso de tormentas de nivel amarillo",
-      "nivel": "amarillo",
-      "onset": "2026-10-03T15:00:00+02:00",
-      "expires": "2026-10-04T17:59:59+02:00"
-    },
-    {
-      "evento": "Aviso de lluvias de nivel naranja",
-      "nivel": "naranja",
-      "onset": "2026-10-04T00:00:00+02:00",
-      "expires": "2026-10-04T13:59:59+02:00"
-    },
-    {
-      "evento": "Aviso de lluvias de nivel amarillo",
-      "nivel": "amarillo",
-      "onset": "2026-10-04T14:00:00+02:00",
-      "expires": "2026-10-04T17:59:59+02:00"
-    }
-  ],
+  "horaria_es_respaldo": true,
+  "avisos": [],
   "maritima": null,
   "netatmo_own": {
-    "ts": 1791047697,
-    "presion_hpa": 1021,
+    "ts": 1791061610,
+    "presion_hpa": 1021.7,
     "presion_tendencia": "stable",
     "exterior": {
-      "temp_c": 19.2,
+      "temp_c": 17.3,
       "humedad": 100,
-      "tendencia": "stable"
+      "tendencia": "down"
     },
     "viento": {
-      "kmh": 3,
-      "dir": 78,
-      "racha_kmh": 5
+      "kmh": 1,
+      "dir": 150,
+      "racha_kmh": 3
     },
     "lluvia": {
       "mm_1h": 0,
@@ -248,50 +174,50 @@
       "lat": 43.53,
       "lon": -6.39,
       "ciudad": "Valdés",
-      "temp_c": 20.4,
+      "temp_c": 18.3,
       "humedad": 86
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
-      "temp_c": 19.8,
-      "humedad": 87
+      "temp_c": 18.8,
+      "humedad": 90
     },
     {
       "lat": 43.57,
       "lon": -6.21,
       "ciudad": "Cudillero",
-      "temp_c": 19.9,
-      "humedad": 91
+      "temp_c": 18.7,
+      "humedad": 92
     },
     {
       "lat": 43.24,
       "lon": -6.56,
       "ciudad": "Allande",
-      "temp_c": 17.5,
-      "humedad": 81
+      "temp_c": 15.1,
+      "humedad": 87
     },
     {
       "lat": 43.33,
       "lon": -6.42,
       "ciudad": "Tineo",
-      "temp_c": 16.9,
-      "humedad": 93
+      "temp_c": 14.2,
+      "humedad": 98
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 19.8,
-      "humedad": 84
+      "temp_c": 17.9,
+      "humedad": 85
     },
     {
       "lat": 43.43,
       "lon": -6.76,
       "ciudad": "Boal",
-      "temp_c": 20.4,
-      "humedad": 85
+      "temp_c": 18.3,
+      "humedad": 86
     }
   ],
   "lugares": [
@@ -338,8 +264,36 @@
       "lon": -6.5426,
       "tipo": "playa",
       "ficha_aemet": "Luarca",
-      "forecast_4d": null,
-      "forecast_4d_elaborado": null
+      "forecast_4d": [
+        {
+          "fecha": "20261003",
+          "cielo": "muy nuboso con lluvia",
+          "viento": "flojo",
+          "oleaje": "débil",
+          "t_max": 22,
+          "t_agua": 21,
+          "uv_max": 4
+        },
+        {
+          "fecha": "20261004",
+          "cielo": "muy nuboso con lluvia",
+          "viento": "flojo",
+          "oleaje": "débil",
+          "t_max": 19,
+          "t_agua": 21,
+          "uv_max": 4
+        },
+        {
+          "fecha": "20261005",
+          "cielo": "despejado",
+          "viento": "flojo",
+          "oleaje": "débil",
+          "t_max": 22,
+          "t_agua": 19,
+          "uv_max": 4
+        }
+      ],
+      "forecast_4d_elaborado": "2026-10-03T08:51:15"
     },
     {
       "name": "Cueva",
@@ -450,5 +404,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-10-03T17:15:48.678029+00:00"
+  "generated_at": "2026-10-03T21:13:08.358014+00:00"
 }
