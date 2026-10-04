@@ -1,69 +1,31 @@
 {
   "real_time": {
-    "ts": "2026-10-04T05:00:00+0000",
-    "temp_c": 17.0,
-    "wind_kmh": 5.8,
-    "wind_dir": 27.0,
-    "gust_kmh": 16.9,
-    "pres_hpa": 1015.0,
+    "ts": "2026-10-04T17:00:00+0000",
+    "temp_c": 18.8,
+    "wind_kmh": 15.8,
+    "wind_dir": 269.0,
+    "gust_kmh": 35.6,
+    "pres_hpa": 1012.3,
     "pres_tendencia": "estable",
-    "humedad": 98.0
+    "humedad": 92.0
   },
   "recomendacion": {
-    "score": 15,
-    "etiqueta": "Aviso oficial activo — revisa AEMET antes de salir"
+    "score": 30,
+    "etiqueta": "Cielo muy nuboso"
   },
   "que_se_acerca": {
-    "sector": "NE",
-    "disponible": false
+    "sector": "W",
+    "disponible": true,
+    "nombre": "Ribadeo",
+    "dist_km": 44,
+    "lloviendo": false,
+    "prec_mm": 0,
+    "temp_c": 19.9,
+    "cielo_despejado": false,
+    "eta_horas": 2.8
   },
   "forecast_municipio": null,
   "forecast_horaria": [
-    {
-      "fecha_hora": "2026-10-04T14:00",
-      "temp": "18",
-      "sens_termica": "18",
-      "cielo": "Cubierto con lluvia escasa",
-      "prob_precipitacion": "100",
-      "viento_dir": "SO",
-      "viento_kmh": "7"
-    },
-    {
-      "fecha_hora": "2026-10-04T15:00",
-      "temp": "19",
-      "sens_termica": "19",
-      "cielo": "Cubierto con lluvia escasa",
-      "prob_precipitacion": "100",
-      "viento_dir": "O",
-      "viento_kmh": "13"
-    },
-    {
-      "fecha_hora": "2026-10-04T16:00",
-      "temp": "19",
-      "sens_termica": "19",
-      "cielo": "Cubierto con lluvia escasa",
-      "prob_precipitacion": "100",
-      "viento_dir": "O",
-      "viento_kmh": "13"
-    },
-    {
-      "fecha_hora": "2026-10-04T17:00",
-      "temp": "20",
-      "sens_termica": "20",
-      "cielo": "Muy nuboso con lluvia escasa",
-      "prob_precipitacion": "100",
-      "viento_dir": "SO",
-      "viento_kmh": "5"
-    },
-    {
-      "fecha_hora": "2026-10-04T18:00",
-      "temp": "20",
-      "sens_termica": "20",
-      "cielo": "Poco nuboso",
-      "prob_precipitacion": "100",
-      "viento_dir": "SO",
-      "viento_kmh": "10"
-    },
     {
       "fecha_hora": "2026-10-04T19:00",
       "temp": "19",
@@ -183,61 +145,36 @@
     }
   ],
   "horaria_elaborado": "2026-10-04T12:13:08",
-  "horaria_es_respaldo": false,
-  "avisos": [
-    {
-      "evento": "Aviso de lluvias de nivel naranja",
-      "nivel": "naranja",
-      "onset": "2026-10-04T00:00:00+02:00",
-      "expires": "2026-10-04T17:59:59+02:00"
-    },
-    {
-      "evento": "Aviso de tormentas de nivel amarillo",
-      "nivel": "amarillo",
-      "onset": "2026-10-03T15:00:00+02:00",
-      "expires": "2026-10-04T17:59:59+02:00"
-    },
-    {
-      "evento": "Aviso de lluvias de nivel naranja",
-      "nivel": "naranja",
-      "onset": "2026-10-04T00:00:00+02:00",
-      "expires": "2026-10-04T13:59:59+02:00"
-    },
-    {
-      "evento": "Aviso de lluvias de nivel amarillo",
-      "nivel": "amarillo",
-      "onset": "2026-10-04T14:00:00+02:00",
-      "expires": "2026-10-04T17:59:59+02:00"
-    }
-  ],
+  "horaria_es_respaldo": true,
+  "avisos": [],
   "maritima": {
-    "texto": "Ciclónico 2 a 4, localmente NE 4 o 5 al oeste de Peñas, amainando a componente E 2 a 4 desde la tarde y a Variable 1 a 3 desde la madrugada. Marejadilla o marejada disminuyendo a marejadilla. Mar de fondo N o NW de 1 a 2 m disminuyendo en torno a 1 m. Aguaceros y tormentas. Regular o mala.",
+    "texto": "Componente E 2 a 4 temporalmente a Variable 1 a 3 durante la madrugada. Marejadilla o marejada disminuyendo a marejadilla. Mar de fondo N o NW de 1 m disminuyendo. Aguaceros dispersos. Localmente regular",
     "segmentos": [
       {
         "zona": null,
-        "texto": "Ciclónico 2 a 4, localmente NE 4 o 5 al oeste de Peñas, amainando a componente E 2 a 4 desde la tarde y a Variable 1 a 3 desde la madrugada. Marejadilla o marejada disminuyendo a marejadilla. Mar de fondo N o NW de 1 a 2 m disminuyendo en torno a 1 m. Aguaceros y tormentas. Regular o mala.",
+        "texto": "Componente E 2 a 4 temporalmente a Variable 1 a 3 durante la madrugada. Marejadilla o marejada disminuyendo a marejadilla. Mar de fondo N o NW de 1 m disminuyendo. Aguaceros dispersos. Localmente regular",
         "direccion": null,
         "fuerza": null,
         "estado_mar": null
       }
     ],
     "avisos_texto": "No hay avisos.",
-    "vigencia_inicio": "2026-10-04T12:00:00",
-    "vigencia_fin": "2026-10-05T12:00:00"
+    "vigencia_inicio": "2026-10-04T20:00:00",
+    "vigencia_fin": "2026-10-05T20:00:00"
   },
   "netatmo_own": {
-    "ts": 1791115838,
-    "presion_hpa": 1019.9,
-    "presion_tendencia": "stable",
+    "ts": 1791135196,
+    "presion_hpa": 1018.4,
+    "presion_tendencia": "down",
     "exterior": {
-      "temp_c": 19.5,
-      "humedad": 100,
-      "tendencia": "up"
+      "temp_c": 19.8,
+      "humedad": 97,
+      "tendencia": "down"
     },
     "viento": {
-      "kmh": 13,
-      "dir": 162,
-      "racha_kmh": 38
+      "kmh": 0,
+      "dir": -1,
+      "racha_kmh": 1
     },
     "lluvia": {
       "mm_1h": 0,
@@ -250,42 +187,49 @@
       "lon": -6.39,
       "ciudad": "Valdés",
       "temp_c": 19.7,
-      "humedad": 88
+      "humedad": 84
     },
     {
       "lat": 43.56,
       "lon": -6.66,
       "ciudad": "Navia",
-      "temp_c": 19.3,
+      "temp_c": 20,
       "humedad": 95
     },
     {
       "lat": 43.57,
       "lon": -6.21,
       "ciudad": "Cudillero",
-      "temp_c": 19.3,
-      "humedad": 95
+      "temp_c": 20.8,
+      "humedad": 86
+    },
+    {
+      "lat": 43.24,
+      "lon": -6.56,
+      "ciudad": "Allande",
+      "temp_c": 17.9,
+      "humedad": 81
     },
     {
       "lat": 43.33,
       "lon": -6.42,
       "ciudad": "Tineo",
-      "temp_c": 16.5,
-      "humedad": 100
+      "temp_c": 17.7,
+      "humedad": 93
     },
     {
       "lat": 43.4,
       "lon": -6.25,
       "ciudad": "Salas",
-      "temp_c": 17.5,
-      "humedad": 93
+      "temp_c": 19.9,
+      "humedad": 83
     },
     {
       "lat": 43.43,
       "lon": -6.76,
       "ciudad": "Boal",
-      "temp_c": 19,
-      "humedad": 91
+      "temp_c": 19.1,
+      "humedad": 89
     }
   ],
   "lugares": [
@@ -416,5 +360,5 @@
       "tipo": "parroquia"
     }
   ],
-  "generated_at": "2026-10-04T12:19:35.698886+00:00"
+  "generated_at": "2026-10-04T17:34:04.465703+00:00"
 }
